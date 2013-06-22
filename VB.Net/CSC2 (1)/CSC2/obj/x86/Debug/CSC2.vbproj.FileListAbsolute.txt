@@ -1,0 +1,30 @@
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\bin\Debug\CSC2.exe
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\bin\Debug\CSC2.pdb
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\bin\Debug\CSC2.xml
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\CSC2.Resources.resources
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\CSC2.exe
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\CSC2.xml
+C:\Users\Robert\AppData\Local\Temporary Projects\CSC2\obj\x86\Debug\CSC2.pdb
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.exe
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.xml
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.pdb
+M:\teaching\Programming\VB.Net\CSC2\CSC2\bin\Debug\CSC2.exe
+M:\teaching\Programming\VB.Net\CSC2\CSC2\bin\Debug\CSC2.pdb
+M:\teaching\Programming\VB.Net\CSC2\CSC2\bin\Debug\CSC2.xml
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\ResolveAssemblyReference.cache
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.Resources.resources
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\GenerateResource.read.1.tlog
+M:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.exe
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.xml
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.pdb
+C:\teaching\Programming\VB.Net\CSC2\CSC2\bin\Debug\CSC2.exe
+C:\teaching\Programming\VB.Net\CSC2\CSC2\bin\Debug\CSC2.pdb
+C:\teaching\Programming\VB.Net\CSC2\CSC2\bin\Debug\CSC2.xml
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\CSC2.Resources.resources
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\teaching\Programming\VB.Net\CSC2\CSC2\obj\x86\Debug\GenerateResource.write.1.tlog

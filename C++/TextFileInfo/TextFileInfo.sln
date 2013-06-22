@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextFileInfo", "TextFileInfo\TextFileInfo.vcxproj", "{C5B5739C-2FAE-4311-9ADA-F110E4FB9C7D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountWindowsLines", "CountWindowsLines\CountWindowsLines.vcxproj", "{941831F3-8BEE-4856-86E6-5713A88D99AF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountUnixLines", "CountUnixLines\CountUnixLines.vcxproj", "{6DED4BF9-2541-49C7-AC35-9DAB157E9D6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5B5739C-2FAE-4311-9ADA-F110E4FB9C7D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5B5739C-2FAE-4311-9ADA-F110E4FB9C7D}.Debug|Win32.Build.0 = Debug|Win32
+		{C5B5739C-2FAE-4311-9ADA-F110E4FB9C7D}.Release|Win32.ActiveCfg = Release|Win32
+		{C5B5739C-2FAE-4311-9ADA-F110E4FB9C7D}.Release|Win32.Build.0 = Release|Win32
+		{941831F3-8BEE-4856-86E6-5713A88D99AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{941831F3-8BEE-4856-86E6-5713A88D99AF}.Debug|Win32.Build.0 = Debug|Win32
+		{941831F3-8BEE-4856-86E6-5713A88D99AF}.Release|Win32.ActiveCfg = Release|Win32
+		{941831F3-8BEE-4856-86E6-5713A88D99AF}.Release|Win32.Build.0 = Release|Win32
+		{6DED4BF9-2541-49C7-AC35-9DAB157E9D6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6DED4BF9-2541-49C7-AC35-9DAB157E9D6F}.Debug|Win32.Build.0 = Debug|Win32
+		{6DED4BF9-2541-49C7-AC35-9DAB157E9D6F}.Release|Win32.ActiveCfg = Release|Win32
+		{6DED4BF9-2541-49C7-AC35-9DAB157E9D6F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

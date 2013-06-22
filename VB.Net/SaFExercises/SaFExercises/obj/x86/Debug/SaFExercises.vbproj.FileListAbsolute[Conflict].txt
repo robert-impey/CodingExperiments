@@ -1,0 +1,23 @@
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\bin\Debug\SaFExercises.exe
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\bin\Debug\SaFExercises.pdb
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\bin\Debug\SaFExercises.xml
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\SaFExercises.Resources.resources
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\SaFExercises.exe
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\SaFExercises.xml
+C:\Users\Robert\AppData\Local\Temporary Projects\SaFExercises\obj\x86\Debug\SaFExercises.pdb
+M:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.exe
+M:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.xml
+M:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.pdb
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.exe
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.xml
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.pdb
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\bin\Debug\SaFExercises.exe
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\bin\Debug\SaFExercises.pdb
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\bin\Debug\SaFExercises.xml
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\SaFExercises.Resources.resources
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\teaching\Programming\VB.Net\SaFExercises\SaFExercises\obj\x86\Debug\GenerateResource.write.1.tlog

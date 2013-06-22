@@ -1,0 +1,8 @@
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\bin\Debug\GenericsInLists.exe
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\bin\Debug\GenericsInLists.pdb
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\bin\Debug\GenericsInLists.xml
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\obj\x86\Debug\GenericsInLists.Resources.resources
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\obj\x86\Debug\GenericsInLists.vbproj.GenerateResource.Cache
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\obj\x86\Debug\GenericsInLists.exe
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\obj\x86\Debug\GenericsInLists.xml
+C:\Users\Robert\Dropbox\code\VB.Net\GenericsInLists\obj\x86\Debug\GenericsInLists.pdb

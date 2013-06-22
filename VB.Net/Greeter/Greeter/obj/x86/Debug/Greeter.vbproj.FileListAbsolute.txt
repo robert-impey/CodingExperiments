@@ -1,0 +1,33 @@
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\bin\Debug\Greeter.exe
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\bin\Debug\Greeter.pdb
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\bin\Debug\Greeter.xml
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\Greeter.Resources.resources
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\Greeter.exe
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\Greeter.xml
+C:\Users\Robert\AppData\Local\Temporary Projects\Greeter\obj\x86\Debug\Greeter.pdb
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.exe
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.xml
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.pdb
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\bin\Debug\Greeter.exe
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\bin\Debug\Greeter.pdb
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\bin\Debug\Greeter.xml
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.Resources.resources
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\Greeter\Greeter\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\r.impey\My Documents\Google Drive\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.exe
+C:\Documents and Settings\r.impey\My Documents\Google Drive\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.xml
+C:\Documents and Settings\r.impey\My Documents\Google Drive\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.exe
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.xml
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\bin\Debug\Greeter.exe
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\bin\Debug\Greeter.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\bin\Debug\Greeter.xml
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\Greeter.Resources.resources
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\Greeter\Greeter\obj\x86\Debug\GenerateResource.write.1.tlog

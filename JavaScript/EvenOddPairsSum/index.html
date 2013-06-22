@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Even Odd Sum Pairs</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		// Find 100 - 99 + 98 - 97 + ... + 2 - 1
+		var max = 100;
+		var sum = 0;
+		
+		var firstTime = true;
+		for (var current = max; current > 0; current--) {
+			if (current % 2 == 0) {
+				if (firstTime) {
+					firstTime = false;
+				} else {
+					document.write(" + ");
+				}
+				
+				sum += current;
+			} else {
+				document.write(" - ");
+				sum -= current;
+			}
+			
+			document.write(current);
+		}
+		
+		document.write(" = ");
+		document.write(sum);
+		
+		// You can just divide max by 2.
+		// 100 - 99 = 1
+		// 98 - 97 = 1
+		// ...
+		// 2 - 1 = 1
+		// Therefore, there are 100 / 2 = 50 pairs of numbers that are different by 1.
+		</script>
+	</body>
+</html>

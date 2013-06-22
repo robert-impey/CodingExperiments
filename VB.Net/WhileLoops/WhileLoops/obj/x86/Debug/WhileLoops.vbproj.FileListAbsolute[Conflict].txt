@@ -1,0 +1,13 @@
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\bin\Debug\WhileLoops.exe
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\bin\Debug\WhileLoops.pdb
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\bin\Debug\WhileLoops.xml
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\ConsoleApplication1.Resources.resources
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\WhileLoops.exe
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\WhileLoops.xml
+C:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\WhileLoops.pdb
+M:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\WhileLoops.exe
+M:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\WhileLoops.xml
+M:\teaching\Programming\VB.Net\WhileLoops\WhileLoops\obj\x86\Debug\WhileLoops.pdb

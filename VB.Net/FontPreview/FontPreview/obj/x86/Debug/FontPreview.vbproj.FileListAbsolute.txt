@@ -1,0 +1,68 @@
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.exe
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.pdb
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.xml
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\ResolveAssemblyReference.cache
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.MainForm.resources
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.Resources.resources
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.read.1.tlog
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.write.1.tlog
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+M:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.exe
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.pdb
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.xml
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.MainForm.resources
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.Resources.resources
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.exe
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.pdb
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.xml
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.MainForm.resources
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.Resources.resources
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\r.impey\My Documents\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.exe
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.xml
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.MainForm.resources
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.Resources.resources
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Robert\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.exe
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.pdb
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.xml
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.MainForm.resources
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.Resources.resources
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\r.impey\My Documents\Dropbox\teaching\Programming\VB.Net\FontPreview\FontPreview\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\r.impey\My Documents\Google Drive\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+C:\Documents and Settings\r.impey\My Documents\Google Drive\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+C:\Documents and Settings\r.impey\My Documents\Google Drive\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.exe
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.xml
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.exe
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.pdb
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\bin\Debug\FontPreview.xml
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.MainForm.resources
+C:\Documents and Settings\Robert\My Documents\Dropbox\code\VB.Net\FontPreview\FontPreview\obj\x86\Debug\FontPreview.Resources.resources
+C:\Documents and Settings\Robert\My 

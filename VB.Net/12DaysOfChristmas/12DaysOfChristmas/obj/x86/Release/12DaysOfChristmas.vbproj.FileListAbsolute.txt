@@ -1,0 +1,10 @@
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\bin\Release\12DaysOfChristmas.exe
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\bin\Release\12DaysOfChristmas.pdb
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\bin\Release\12DaysOfChristmas.xml
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\_12DaysOfChristmas.Resources.resources
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\12DaysOfChristmas.exe
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\12DaysOfChristmas.xml
+C:\Users\Robert\Dropbox\code\VB.Net\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\12DaysOfChristmas.pdb
