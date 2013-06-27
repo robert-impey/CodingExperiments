@@ -11,3 +11,4 @@ if(capital_of_france == "Paris"):
     print "Well done!"
 else:
     print "Too bad!"
+    
