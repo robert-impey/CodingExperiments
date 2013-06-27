@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksAndMortar", "BricksAndMortar\BricksAndMortar.csproj", "{94FC6CD3-A82E-4967-BD3B-F43454B22864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FC6CD3-A82E-4967-BD3B-F43454B22864}.Debug|x86.ActiveCfg = Debug|x86
+		{94FC6CD3-A82E-4967-BD3B-F43454B22864}.Debug|x86.Build.0 = Debug|x86
+		{94FC6CD3-A82E-4967-BD3B-F43454B22864}.Release|x86.ActiveCfg = Release|x86
+		{94FC6CD3-A82E-4967-BD3B-F43454B22864}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
