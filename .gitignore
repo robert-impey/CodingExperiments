@@ -1,3 +1,5 @@
 .DS_Store
 *.exe
 
+/Java/ConcurrentIncrDecr/nbproject/private/
+/Java/ConcurrentIncrDecr/build/
