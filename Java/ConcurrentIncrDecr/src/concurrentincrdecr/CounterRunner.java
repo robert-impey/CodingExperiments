@@ -27,21 +27,15 @@ public class CounterRunner implements Runnable {
         int mistakes = 0;
 
         for (int i = 0; i < CYCLES; i++) {
-            int oldValue = counter.getValue();
-            int expectedValue = oldValue;
-            int newValue;
+            int expectedValue = counter.getValue() + (increment ? 1 : -1);
 
             if (increment) {
                 counter.increment();
-                newValue = counter.getValue();
-                expectedValue++;
             } else {
                 counter.decrement();
-                newValue = counter.getValue();
-                expectedValue--;
             }
-
-            if (newValue != expectedValue) {
+            
+            if (counter.getValue() != expectedValue) {
                 mistakes++;
             }
         }
