@@ -27,7 +27,7 @@ public class CounterRunner implements Runnable {
 
         for (int i = 0; i < CYCLES; i++) {
             int expectedValue, currentValue;
-            
+
             synchronized (counter) {
                 expectedValue = counter.value() + (increment ? 1 : -1);
 
@@ -39,7 +39,7 @@ public class CounterRunner implements Runnable {
 
                 currentValue = counter.value();
             }
-            
+
             if (currentValue != expectedValue) {
                 mistakes++;
             }

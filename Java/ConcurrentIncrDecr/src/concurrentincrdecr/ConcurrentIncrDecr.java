@@ -36,7 +36,7 @@ public class ConcurrentIncrDecr {
         for (CounterRunner counterRunner : counterRunners) {
             (new Thread(counterRunner)).start();
         }
-        
+
         System.out.printf("Final counter value, %d\n", counter.value());
     }
 }
