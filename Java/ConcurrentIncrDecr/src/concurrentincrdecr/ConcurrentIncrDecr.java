@@ -13,7 +13,8 @@ import java.util.List;
  */
 public class ConcurrentIncrDecr {
 
-    public static final int THREADS = 10;
+    public static final int THREADS = 1;
+    public static final int CYCLES = 1000000;
 
     /**
      * @param args the command line arguments
@@ -32,7 +33,7 @@ public class ConcurrentIncrDecr {
         System.out.printf(
                 "ID, Mistakes, Increment, Threads, %d, Cycles, %d\n",
                 THREADS,
-                CounterRunner.CYCLES);
+                CYCLES);
         for (CounterRunner counterRunner : counterRunners) {
             (new Thread(counterRunner)).start();
         }

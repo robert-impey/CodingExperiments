@@ -9,8 +9,6 @@ package concurrentincrdecr;
  * @author Robert Impey
  */
 public class CounterRunner implements Runnable {
-
-    public static final int CYCLES = 1000000;
     private final int id;
     private final Counter counter;
     private final boolean increment;
@@ -25,7 +23,7 @@ public class CounterRunner implements Runnable {
     public void run() {
         int mistakes = 0;
 
-        for (int i = 0; i < CYCLES; i++) {
+        for (int i = 0; i < ConcurrentIncrDecr.CYCLES; i++) {
             int expectedValue, currentValue;
 
             synchronized (counter) {
