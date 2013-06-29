@@ -11,9 +11,9 @@ package concurrentincrdecr;
 public class CounterRunner implements Runnable {
 
     public static final int CYCLES = 1000000;
-    private int id;
-    private Counter counter;
-    private boolean increment;
+    private final int id;
+    private final Counter counter;
+    private final boolean increment;
 
     public CounterRunner(int id, Counter counter, boolean increment) {
         this.id = id;
