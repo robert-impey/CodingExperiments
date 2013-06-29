@@ -10,17 +10,17 @@ package concurrentincrdecr;
  */
 public class Counter {
 
-    private int value = 0;
+    private int c = 0;
 
-    public synchronized int getValue() {
-        return value;
+    public int value() {
+        return c;
     }
 
-    public synchronized void increment() {
-        value++;
+    public void increment() {
+        c++;
     }
 
-    public synchronized void decrement() {
-        value--;
+    public void decrement() {
+        c--;
     }
 }

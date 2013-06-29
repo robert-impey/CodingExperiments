@@ -10,7 +10,7 @@ package concurrentincrdecr;
  */
 public class CounterRunner implements Runnable {
 
-    public static final int CYCLES = 10000000;
+    public static final int CYCLES = 1000000;
     private int id;
     private Counter counter;
     private boolean increment;
@@ -26,7 +26,7 @@ public class CounterRunner implements Runnable {
         int mistakes = 0;
 
         for (int i = 0; i < CYCLES; i++) {
-            int expectedValue = counter.getValue() + (increment ? 1 : -1);
+            int expectedValue = counter.value() + (increment ? 1 : -1);
 
             if (increment) {
                 counter.increment();
@@ -34,7 +34,7 @@ public class CounterRunner implements Runnable {
                 counter.decrement();
             }
 
-            if (counter.getValue() != expectedValue) {
+            if (counter.value() != expectedValue) {
                 mistakes++;
             }
         }
