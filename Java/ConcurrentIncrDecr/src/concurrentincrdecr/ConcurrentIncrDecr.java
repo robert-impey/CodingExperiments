@@ -28,7 +28,9 @@ public class ConcurrentIncrDecr {
         boolean increment = true;
 
         CountDownLatch countDownLatch = new CountDownLatch(THREADS);
-
+        
+        Object countingLocker = new Object();
+        
         /*
          * Create the runner objects.
          * Because they count up and down in turn, if we have an even
@@ -36,7 +38,7 @@ public class ConcurrentIncrDecr {
          * then the end count must be 0.
          */
         for (int i = 0; i < THREADS; i++) {
-            counterRunners.add(new CounterRunner(i, counter, increment, countDownLatch));
+            counterRunners.add(new CounterRunner(i, counter, increment, countDownLatch, countingLocker));
             increment = !increment;
         }
 
