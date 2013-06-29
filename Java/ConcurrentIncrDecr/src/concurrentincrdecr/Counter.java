@@ -1,14 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package concurrentincrdecr;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
- * @author Robert
+ * @author Robert Impey
  */
 public class Counter {
 

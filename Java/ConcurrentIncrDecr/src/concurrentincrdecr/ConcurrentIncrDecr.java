@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * The main method of the package.
  */
 package concurrentincrdecr;
 
@@ -12,7 +11,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Robert
+ * @author Robert Impey
  */
 public class ConcurrentIncrDecr {
 
@@ -30,6 +29,12 @@ public class ConcurrentIncrDecr {
 
         CountDownLatch countDownLatch = new CountDownLatch(THREADS);
 
+        /*
+         * Create the runner objects.
+         * Because they count up and down in turn, if we have an even
+         * number of threads that all complete the same number of cycles,
+         * then the end count must be 0.
+         */
         for (int i = 0; i < THREADS; i++) {
             counterRunners.add(new CounterRunner(i, counter, increment, countDownLatch));
             increment = !increment;
@@ -39,10 +44,18 @@ public class ConcurrentIncrDecr {
                 "ID, Mistakes, Increment, Threads, %d, Cycles, %d\n",
                 THREADS,
                 CYCLES);
+
+        /*
+         * Start the threads.
+         */
         for (CounterRunner counterRunner : counterRunners) {
             (new Thread(counterRunner)).start();
         }
 
+        /*
+         * Don't print off the final count until all the threads have
+         * completed.
+         */
         try {
             countDownLatch.await();
             System.out.printf("Final counter value, %d\n", counter.value());
