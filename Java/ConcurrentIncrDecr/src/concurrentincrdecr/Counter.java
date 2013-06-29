@@ -4,23 +4,25 @@
  */
 package concurrentincrdecr;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  *
  * @author Robert
  */
 public class Counter {
 
-    private int c = 0;
+    private AtomicInteger c = new AtomicInteger(0);
 
-    public synchronized int value() {
-        return c;
+    public int value() {
+        return c.get();
     }
 
-    public synchronized void increment() {
-        c++;
+    public void increment() {
+        c.incrementAndGet();
     }
 
-    public synchronized void decrement() {
-        c--;
+    public void decrement() {
+        c.decrementAndGet();
     }
 }
