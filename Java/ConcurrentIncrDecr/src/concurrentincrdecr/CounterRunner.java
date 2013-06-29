@@ -11,7 +11,6 @@ package concurrentincrdecr;
 public class CounterRunner implements Runnable {
 
     public static final int CYCLES = 10000000;
-    
     private int id;
     private Counter counter;
     private boolean increment;
@@ -34,12 +33,16 @@ public class CounterRunner implements Runnable {
             } else {
                 counter.decrement();
             }
-            
+
             if (counter.getValue() != expectedValue) {
                 mistakes++;
             }
         }
 
-        System.out.printf("%d, %d, %s\n", id, mistakes, (increment ? "Increment" : "Decrement"));
+        System.out.printf(
+                "%d, %d, %s\n",
+                id,
+                mistakes,
+                (increment ? "Increment" : "Decrement"));
     }
 }
