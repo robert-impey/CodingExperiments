@@ -4,6 +4,8 @@
  */
 package concurrentincrdecr;
 
+import java.util.concurrent.CountDownLatch;
+
 /**
  *
  * @author Robert Impey
@@ -12,11 +14,13 @@ public class CounterRunner implements Runnable {
     private final int id;
     private final Counter counter;
     private final boolean increment;
+    private final CountDownLatch countDownLatch;
 
-    public CounterRunner(int id, Counter counter, boolean increment) {
+    public CounterRunner(int id, Counter counter, boolean increment, CountDownLatch countDownLatch) {
         this.id = id;
         this.counter = counter;
         this.increment = increment;
+        this.countDownLatch = countDownLatch;
     }
 
     @Override
@@ -48,5 +52,6 @@ public class CounterRunner implements Runnable {
                 id,
                 mistakes,
                 (increment ? "Increment" : "Decrement"));
+        countDownLatch.countDown();
     }
 }

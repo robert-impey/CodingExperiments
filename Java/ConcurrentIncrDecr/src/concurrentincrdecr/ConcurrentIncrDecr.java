@@ -6,6 +6,9 @@ package concurrentincrdecr;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,7 +16,7 @@ import java.util.List;
  */
 public class ConcurrentIncrDecr {
 
-    public static final int THREADS = 1;
+    public static final int THREADS = 100;
     public static final int CYCLES = 1000000;
 
     /**
@@ -25,8 +28,10 @@ public class ConcurrentIncrDecr {
         Counter counter = new Counter();
         boolean increment = true;
 
+        CountDownLatch countDownLatch = new CountDownLatch(THREADS);
+
         for (int i = 0; i < THREADS; i++) {
-            counterRunners.add(new CounterRunner(i, counter, increment));
+            counterRunners.add(new CounterRunner(i, counter, increment, countDownLatch));
             increment = !increment;
         }
 
@@ -38,6 +43,11 @@ public class ConcurrentIncrDecr {
             (new Thread(counterRunner)).start();
         }
 
-        System.out.printf("Final counter value, %d\n", counter.value());
+        try {
+            countDownLatch.await();
+            System.out.printf("Final counter value, %d\n", counter.value());
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ConcurrentIncrDecr.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
