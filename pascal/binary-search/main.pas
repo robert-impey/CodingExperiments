@@ -2,7 +2,7 @@ Program BinarySearch;
 
 Const
     Max: Integer = 10;
-    Sought: Integer = 11;
+    Sought: Integer = 4;
     
 Var
     A: Array [1 .. Max] Of Integer;
