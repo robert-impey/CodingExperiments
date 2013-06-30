@@ -1,0 +1,93 @@
+/**
+ * Styles for the div with rounded corners.
+ *
+ * @copyright RFI 2008-01-24
+ */
+
+div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*
+ * Styles for the header.
+ */
+
+div.bw-rc div.h {
+	background-image: url('t.png');
+	background-repeat: repeat-x;
+	height: 14px;
+	clear: right;
+	/*background-position: top;*/
+}
+div.bw-rc div.h div.l {
+	background-image: url('tl.png');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	float: left;
+}
+div.bw-rc div.h div.r {
+	background-image: url('tr.png');
+	background-repeat: no-repeat;
+	float: right;
+	width: 14px;
+	height: 14px;
+}
+
+/*
+ * Styles for the middle.
+ */
+
+div.bw-rc div.m {
+	clear: right;
+	background-image: url('r.png');
+	background-repeat: repeat-y;
+	background-position: right;
+}
+
+div.bw-rc div.m div.content {
+	background-image: url('l.png');
+	background-repeat: repeat-y;
+	background-position: left;
+	padding-left: 14px;
+	margin-right: 14px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+div.bw-rc div.m div.content p,h1,h2,h3,h4,h5,h6,ul,ol,img,a {
+	padding-bottom: 0.5em;
+	margin: 0;
+}
+
+/*
+ * Styles for the footer.
+ */
+
+div.bw-rc div.f {
+	background-image: url('b.png');
+	background-repeat: repeat-x;
+	height: 14px;
+	clear: right;
+	background-position: bottom;
+}
+div.bw-rc div.f div.l {
+	background-image: url('bl.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	width: 14px;
+	height: 14px;
+	float: left;
+}
+div.bw-rc div.f div.r {
+	background-image: url('br.png');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	float: right;
+	background-position: bottom;
+}

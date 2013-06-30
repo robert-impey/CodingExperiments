@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.writeln("<h1>Scope</h1>");
+        
+        var foo = "foo in global";
+        
+        document.writeln("In global scope.<br />");
+        
+        var global = (function() { return this; })();
+        global.foo = "global.foo in global";
+        
+        var bar = "bar in global";
+        global.bar = "global.bar in global";
+        
+        document.writeln("foo: " + foo + "<br />");
+        document.writeln("global.foo: " + global.foo + "<br />");
+        document.writeln("bar: " + bar + "<br />");
+        document.writeln("global.bar: " + global.bar + "<br />");
+        document.writeln("<br />");
+        
+        (function() {
+            document.writeln("Within the first function.<br />");
+            
+            var foo = "foo in the first function.";
+            bar = "bar in the first function.";
+            
+            document.writeln("foo: " + foo + "<br />");
+            document.writeln("global.foo: " + global.foo + "<br />");
+            document.writeln("bar: " + bar + "<br />");
+            document.writeln("global.bar: " + global.bar + "<br />");
+            document.writeln("<br />");           
+        })();
+        
+        (function() {
+            document.writeln("Within the second function.<br />");
+            
+            document.writeln("foo: " + foo + "<br />");
+            document.writeln("global.foo: " + global.foo + "<br />");
+            document.writeln("bar: " + bar + "<br />");
+            document.writeln("global.bar: " + global.bar + "<br />");
+            document.writeln("<br />");
+        })();
+        
+        document.writeln("In global scope.<br />");
+        
+        document.writeln("foo: " + foo + "<br />");
+        document.writeln("global.foo: " + global.foo + "<br />");
+        document.writeln("bar: " + bar + "<br />");
+        document.writeln("global.bar: " + global.bar + "<br />");
+        document.writeln("<br />");
+    </script>
+</body>
+</html>

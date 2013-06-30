@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Pascal's Triangle in JavaScript</title>
+</head>
+<body>
+    <pre><script type="application/x-javascript">
+    var max = 20;
+    
+    function printUpToRow(x)
+    {
+        pascalsHelper(0, [1], x);
+    }
+    
+    function pascalsHelper(currentRow, previousRow, maxRow)
+    {
+        document.writeln(previousRow.join(' '));
+        
+        if (currentRow >= maxRow) {
+            document.writeln("Finished!");
+        } else {
+            var thisRow = [];
+            thisRow.push(1);
+            
+            for (var i = 1; i < previousRow.length; i++) {
+               thisRow.push(previousRow[i - 1] + previousRow[i]);
+            }
+            
+            thisRow.push(1);
+            
+            pascalsHelper(currentRow + 1, thisRow, maxRow);
+        }
+    }
+    
+    printUpToRow(max);
+    </script></pre>
+</body>
+</html>

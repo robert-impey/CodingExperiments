@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Fibonacci Numbers in JavaScript</title>
+</head>
+<body>
+    <pre><script type="application/x-javascript">
+    var i;
+    var max = 20;
+       
+    function fibonacci(x)
+    {
+        if (x <= 1) {
+            return 1;
+        } else {
+            return fibonacci(x - 2) + fibonacci(x - 1);
+        }
+    }
+    
+    for (i = 0; i <= max; i++) {
+        document.write(i);
+        document.write("\t");
+        document.writeln(fibonacci(i));
+    }
+    </script></pre>
+</body>
+</html>

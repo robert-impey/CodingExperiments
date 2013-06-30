@@ -1,0 +1,3 @@
+count-blanks < TEST_DATA_DIR/text-files/empty.txt
+
+0

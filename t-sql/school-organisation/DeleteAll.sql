@@ -1,0 +1,5 @@
+DELETE FROM dbo.Teacher;
+DBCC CHECKIDENT (Teacher, RESEED, 0);
+
+DELETE FROM dbo.Country;
+DBCC CHECKIDENT (Country, RESEED, 0);

@@ -1,0 +1,3 @@
+count-characters < TEST_DATA_DIR/text-files/woodlands-bed-and-breakfast-development-robert-qandisa.robertimpey.com-access.log
+
+27477

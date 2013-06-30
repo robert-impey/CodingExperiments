@@ -1,0 +1,8 @@
+CREATE TABLE  `experiments`.`trees` (
+	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	`name` VARCHAR( 255 ) NOT NULL ,
+	`parent_id` INT UNSIGNED NOT NULL ,
+	UNIQUE (
+	`name`
+	)
+) ENGINE = INNODB;

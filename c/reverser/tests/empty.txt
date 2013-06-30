@@ -1,0 +1,2 @@
+reverser TEST_DATA_DIR/text-files/empty.txt
+

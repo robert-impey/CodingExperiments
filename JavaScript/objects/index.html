@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Objects in JavaScript</title>
+</head>
+<body>
+	<pre><script type="application/x-javascript">
+	var myObject = new Object();
+	var i;
+	
+	myObject.foo = 10;
+	
+	document.writeln(myObject);
+	document.writeln(myObject.valueOf());
+	document.writeln(myObject.foo);
+	
+	var myArray = ['apples', 'bananas', 'coconuts'];
+	
+	for (i = 0; i < myArray.length; i++) {
+		document.writeln(myArray[i]);
+	}
+	
+	function animalFactory(species)
+	{
+		var animal = {};
+		switch (species) {
+			case 'cat':
+				animal.speak = function()
+				{
+					document.writeln('Miaow!');
+				}
+				break;
+			case 'dog':
+				animal.speak = function()
+				{
+					document.writeln('Woof!');
+				}
+				break;
+			default:
+				alert("Please set choose a valid animal!");
+		}
+		return animal;
+	}
+	
+	var animals = {};
+	i = 0;
+	animals[i++] = animalFactory('cat');
+	animals[i++] = animalFactory('dog');
+	//animals[i++] = animalFactory('unicorn');
+
+	for (i = 0; i < animals.length; i++) {
+		animals[i].speak();
+	}
+	</script></pre>
+</body>
+</html>

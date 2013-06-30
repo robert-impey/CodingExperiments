@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>jQuery Tutorials</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+            $("a").click(function(event){
+                alert("As you can see, the link no longer took you to jquery.com");
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+</body>
+</html>

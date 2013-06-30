@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebSchoolOrganisation", "WebSchoolOrganisation\WebSchoolOrganisation.vbproj", "{FDF71024-7EFE-48AF-A2BE-3FD1507D7301}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDF71024-7EFE-48AF-A2BE-3FD1507D7301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF71024-7EFE-48AF-A2BE-3FD1507D7301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF71024-7EFE-48AF-A2BE-3FD1507D7301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF71024-7EFE-48AF-A2BE-3FD1507D7301}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

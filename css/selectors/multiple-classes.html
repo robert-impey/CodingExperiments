@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Multiple Classes</title>
+    <style type="text/css">
+        .one {
+            background-color: red;
+            font-family: sans-serif;
+        }
+        
+        .two {
+            font-family: monospace;
+            border: 3px solid black;
+        }
+        p[class=one] {
+            padding-top: 1em;
+        }
+        p[class~=one] {
+            padding-left: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Classes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin leo tortor, rutrum dignissim rutrum quis, porta eget turpis. Mauris mattis, enim sed iaculis blandit, lorem nibh tincidunt libero, eu hendrerit orci odio in massa. Nam pharetra lacus quis turpis venenatis congue. Vivamus tristique ultrices elit, ut commodo arcu pretium vitae. Donec tempor ullamcorper mi sit amet egestas. Vestibulum sed nunc arcu, nec congue velit. Fusce pharetra posuere velit a blandit. Quisque tincidunt adipiscing nisl in aliquam. Sed sit amet mauris sed mi convallis tempor. In non dolor et odio consequat faucibus quis nec nulla. Nulla volutpat dignissim feugiat. Mauris ipsum risus, ornare non imperdiet at, viverra ut leo.</p>
+    <p class="one">Mauris porta orci ut risus malesuada blandit. Sed quis dapibus libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam pretium purus et neque cursus egestas. Quisque sodales sollicitudin dolor, eu gravida tellus feugiat vel. Pellentesque congue blandit risus, nec bibendum velit suscipit et. Proin eu enim nec mi volutpat venenatis in id dolor. Duis egestas dui a leo gravida eget imperdiet odio congue. Curabitur semper fermentum libero, sed vulputate dolor venenatis a. Morbi ullamcorper turpis non sem fermentum id lacinia ante venenatis. Nam dictum interdum magna et vulputate. Suspendisse aliquam tincidunt volutpat. Ut vel felis nulla, ut lacinia dolor. Duis mauris lectus, ullamcorper non pulvinar quis, lacinia et ipsum. Fusce varius dui quis sapien tristique ultrices. Nulla dignissim ante in lectus egestas volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+    <p class="one two">Pellentesque eleifend, lorem id gravida sollicitudin, neque nibh venenatis turpis, sed aliquet purus neque vel orci. Donec commodo volutpat tellus, ut mattis eros posuere at. Praesent eget nisi quis odio scelerisque convallis. Vestibulum in metus magna. Sed fringilla imperdiet cursus. Fusce id feugiat lectus. Proin semper eros non ipsum luctus in posuere diam lobortis. Nullam adipiscing erat vitae ante tristique in hendrerit risus mollis. Integer tincidunt iaculis tortor, sed auctor velit volutpat nec. Cras mattis, lorem eget rhoncus pretium, mi diam sagittis lectus, id congue lectus lorem at lectus. Duis ut urna in sem lobortis egestas et at urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin feugiat sem urna, sit amet eleifend orci. Suspendisse placerat lacus vel tellus rhoncus sit amet pretium magna rhoncus. Sed eu lacus placerat justo laoreet condimentum ac ac nulla. Pellentesque quis lorem bibendum velit congue pharetra sit amet suscipit quam.</p>
+    <p class="two one">Vivamus porttitor imperdiet nibh, sit amet dictum tellus luctus eu. Vestibulum aliquet fermentum tincidunt. Sed tincidunt, magna at bibendum pulvinar, dolor diam mattis massa, sit amet mollis odio dolor iaculis nisi. Cras tincidunt varius massa id fermentum. Curabitur lectus lectus, tempus in rhoncus non, viverra in sem. Sed congue scelerisque nibh eu commodo. Duis commodo rutrum elit, sit amet feugiat quam consectetur ut. Nullam sed pulvinar est. Phasellus in lacus odio, elementum posuere dui. Aenean luctus ullamcorper magna, non tempus neque ornare congue. Fusce felis sem, lacinia ut porttitor at, eleifend non quam. Pellentesque posuere diam eu mauris dapibus sit amet cursus odio malesuada. Proin ac venenatis neque. Sed euismod sagittis pulvinar.</p>
+    <p class="one" class="two">Donec congue, magna at ultrices ornare, justo eros dapibus nisi, sed porttitor velit sapien sit amet leo. Aenean pulvinar imperdiet purus vel facilisis. Suspendisse sollicitudin ipsum a mi accumsan volutpat quis id elit. Proin dictum viverra ultricies. Proin ultrices tellus vel lacus auctor placerat. Phasellus molestie, dolor non dictum pulvinar, quam sapien ultrices orci, ut suscipit lacus quam ac turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam malesuada augue sit amet orci molestie posuere. Aliquam non condimentum justo. Vivamus sodales elit a lorem interdum elementum sodales turpis luctus. Nam nec mauris turpis. Nullam sagittis semper magna rhoncus faucibus. Nullam eleifend blandit massa quis condimentum. Cras in ligula justo, sed feugiat purus. Maecenas viverra pulvinar sem a ultricies. Maecenas hendrerit, turpis ut convallis pharetra, velit justo volutpat diam, eget commodo purus urna et neque. Quisque blandit lectus et augue auctor hendrerit auctor urna ornare. Aenean id nulla magna. Sed iaculis lacinia mi sit amet aliquam.</p>
+    <p class="two" class="one">Aenean ut orci nec velit elementum pellentesque pretium sit amet dolor. Proin sollicitudin varius imperdiet. Sed augue neque, malesuada eget aliquet in, tristique sagittis mi. Aliquam vel tortor lacus. Maecenas mattis massa molestie eros volutpat vel condimentum risus congue. Praesent placerat pellentesque tempus. Cras vitae magna a nisl volutpat ornare quis nec ligula. Aenean ut leo arcu, sed iaculis purus. Aliquam sodales nisl nec felis mollis congue. Cras dapibus nunc ut massa accumsan feugiat. Nunc ut justo velit. Nulla sit amet lobortis mi. Donec tincidunt consectetur leo non condimentum. Nam dapibus erat sit amet dolor malesuada ut tristique est euismod. Mauris rutrum lorem vitae eros vestibulum porta. Aenean ornare diam a erat lacinia interdum eget a mauris. Integer pulvinar elit id enim condimentum sed pellentesque ipsum tristique.</p>
+</body>
+</html>

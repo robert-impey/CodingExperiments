@@ -1,0 +1,14 @@
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Edible Plants', 0);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Fruits', 1);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Vegetables', 1);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Apples', 2);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Bananas', 2);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Coconuts', 2);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Legumes', 3);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Bulbs', 3);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Green Beans', 7);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Snap Peas', 7);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Soybeans', 7);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Onions', 8);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Shallots', 8);
+INSERT INTO `experiments`.`trees` (name, parent_id) values ('Garlic', 8);

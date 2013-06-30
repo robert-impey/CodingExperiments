@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <title>Families</title>
+    <style type="text/css">
+        .highlighted {
+            background-color: red;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input:radio").click(function () {
+                $("#families *").removeClass("highlighted");
+                
+                switch ($(this).val()) {
+                    case "havingChildren":
+                        $("#families > li").filter(":has(ul)").find("h2").addClass("highlighted");
+                        break;
+                    case "havingNoChildren":
+                        $("#families > li").not(":has(ul)").find("h2").addClass("highlighted");
+                        break;
+                    case "justChildren":
+                        $("#families > li").filter(":has(ul)").find("li").addClass("highlighted");
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Families</h1>
+    
+    <ul id="families">
+        <li>
+            <h2>Charlotte &amp; Jim</h2>
+            <ul>
+                <li>Tabby</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Vanessa &amp; Boris</h2>
+            <ul>
+                <li>Luca</li>
+                <li>Ana</li>
+                <li>Danny</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Assunta &amp; Rob</h2>
+        </li>
+        <li>
+            <h2>Georgina &amp; Joel</h2>
+        </li>
+    </ul>
+    
+    <ul>
+        <li>
+            <label for="noHighlightRadio">No Highlight</label>
+            <input type="radio" name="selection" value="noHighlightChildren" id="noHighlightRadio" checked="checked" />
+        </li>
+        <li>
+            <label for="havingChildrenRadio">Having Children</label>
+            <input type="radio" name="selection" value="havingChildren" id="havingChildrenRadio" />
+        </li>
+        <li>
+            <label for="havingNoChildrenRadio">Having no Children</label>
+            <input type="radio" name="selection" value="havingNoChildren" id="havingNoChildrenRadio" />
+        </li>
+        <li>
+            <label for="justChildrenRadio">Just Children</label>
+            <input type="radio" name="selection" value="justChildren" id="justChildrenRadio" />
+        </li>
+    </ul>
+</body>
+</html>
