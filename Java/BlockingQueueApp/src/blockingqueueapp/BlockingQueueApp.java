@@ -20,7 +20,7 @@ public class BlockingQueueApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int numberOfProducers = 50;
+        int numberOfProducers = 100;
         int numberOfMessages = 500;
 
         int expectedMessagesConsumed = numberOfProducers * numberOfMessages;
@@ -34,19 +34,21 @@ public class BlockingQueueApp {
         BlockingQueue<String> drop;
         drop = new ArrayBlockingQueue<>(queueCapacity, accessFairness);
 
-        CountDownLatch countDownLatch = new CountDownLatch(numberOfProducers + 1);
+        CountDownLatch producingCountDownLatch = new CountDownLatch(numberOfProducers);
+        CountDownLatch consumingcountDownLatch = new CountDownLatch(1);
 
         long start = System.nanoTime();
-        for (int i = 0; i < numberOfProducers; i++) {
-            (new Thread(new Producer(i, numberOfMessages, drop, countDownLatch))).start();
-        }
 
-        Consumer consumer = new Consumer(drop, countDownLatch);
+        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingcountDownLatch);
 
         (new Thread(consumer)).start();
 
+        for (int i = 0; i < numberOfProducers; i++) {
+            (new Thread(new Producer(i, numberOfMessages, drop, producingCountDownLatch))).start();
+        }
+
         try {
-            countDownLatch.await();
+            consumingcountDownLatch.await();
             long stop = System.nanoTime();
             System.out.printf(
                     "Messages recieved: %d\tExpected Messages: %d\tDiff: %d\tTime: %f\n",

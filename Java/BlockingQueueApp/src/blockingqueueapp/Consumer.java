@@ -14,24 +14,28 @@ import java.util.concurrent.CountDownLatch;
 public class Consumer implements Runnable {
 
     private final BlockingQueue<String> drop;
-    private final CountDownLatch countDownLatch;
+    private final CountDownLatch producingCountDownLatch, consumingcountDownLatch;
     private int messagesReceived = 0;
 
-    public Consumer(BlockingQueue<String> drop, CountDownLatch countDownLatch) {
+    public Consumer(
+            BlockingQueue<String> drop, 
+            CountDownLatch producingCountDownLatch,
+            CountDownLatch consumingcountDownLatch) {
         this.drop = drop;
-        this.countDownLatch = countDownLatch;
+        this.producingCountDownLatch = producingCountDownLatch;
+        this.consumingcountDownLatch = consumingcountDownLatch;
     }
 
     @Override
     public void run() {
         try {
             String msg;
-            while (!drop.isEmpty()) {
+            while (producingCountDownLatch.getCount() > 0 || !drop.isEmpty()) {
                 msg = drop.take();
                 messagesReceived++;
                 System.out.println(msg);
             }
-            countDownLatch.countDown();
+            consumingcountDownLatch.countDown();
         } catch (InterruptedException intEx) {
             System.out.println(intEx);
         }
