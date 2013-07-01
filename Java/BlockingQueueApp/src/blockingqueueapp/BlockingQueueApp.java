@@ -4,6 +4,9 @@
  */
 package blockingqueueapp;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
 /**
  *
  * @author Robert
@@ -14,6 +17,8 @@ public class BlockingQueueApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        BlockingQueue<String> drop = new ArrayBlockingQueue(1, true);
+        (new Thread(new Producer(drop))).start();
+        (new Thread(new Consumer(drop))).start();
     }
 }
