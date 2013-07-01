@@ -13,7 +13,8 @@ import java.util.concurrent.BlockingQueue;
  * @author Robert
  */
 public class Producer implements Runnable {
-
+    
+    private final int id;
     private BlockingQueue<String> drop;
     List<String> messages = Arrays.asList(
             "Mares eat oats",
@@ -21,15 +22,16 @@ public class Producer implements Runnable {
             "Little lambs eat ivy",
             "Wouldn't you eat ivy too?");
 
-    public Producer(BlockingQueue<String> d) {
-        this.drop = d;
+    public Producer(int id, BlockingQueue<String> drop) {
+        this.id = id;
+        this.drop = drop;
     }
 
     @Override
     public void run() {
         try {
             for (String s : messages) {
-                drop.put(s);
+                drop.put(id + " " + s);
             }
             drop.put("DONE");
         } catch (InterruptedException intEx) {

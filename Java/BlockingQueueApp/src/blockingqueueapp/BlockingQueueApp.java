@@ -17,8 +17,18 @@ public class BlockingQueueApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BlockingQueue<String> drop = new ArrayBlockingQueue(1, true);
-        (new Thread(new Producer(drop))).start();
+        int queueCapacity = 1;
+        boolean accessFairness = true;
+        
+        int numberOfProducers = 5;
+        
+        BlockingQueue<String> drop;
+        drop = new ArrayBlockingQueue(queueCapacity, accessFairness);
+        
+        for (int i = 0; i < numberOfProducers; i++) {
+            (new Thread(new Producer(i, drop))).start();
+        }
+        
         (new Thread(new Consumer(drop))).start();
     }
 }
