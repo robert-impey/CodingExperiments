@@ -21,12 +21,13 @@ public class BlockingQueueApp {
      */
     public static void main(String[] args) {
         int numberOfProducers = 50;
-        int numberOfMessages = 100;
+        int numberOfMessages = 500;
 
         int expectedMessagesConsumed = numberOfProducers * numberOfMessages;
 
         int queueCapacity;
         queueCapacity = 1;
+        //queueCapacity = 10;
         //queueCapacity = numberOfProducers * numberOfMessages;
         boolean accessFairness = true;
 
@@ -35,6 +36,7 @@ public class BlockingQueueApp {
 
         CountDownLatch countDownLatch = new CountDownLatch(numberOfProducers + 1);
 
+        long start = System.nanoTime();
         for (int i = 0; i < numberOfProducers; i++) {
             (new Thread(new Producer(i, numberOfMessages, drop, countDownLatch))).start();
         }
@@ -45,11 +47,13 @@ public class BlockingQueueApp {
 
         try {
             countDownLatch.await();
+            long stop = System.nanoTime();
             System.out.printf(
-                    "Messages recieved: %d\tExpected Messages: %s\tDiff: %s\n",
+                    "Messages recieved: %d\tExpected Messages: %d\tDiff: %d\tTime: %f\n",
                     consumer.getMessagesReceived(),
                     expectedMessagesConsumed,
-                    Math.abs(consumer.getMessagesReceived() - expectedMessagesConsumed));
+                    Math.abs(consumer.getMessagesReceived() - expectedMessagesConsumed),
+                    (stop - start) / 1000000000.0);
         } catch (InterruptedException ex) {
             Logger.getLogger(BlockingQueueApp.class.getName()).log(Level.SEVERE, null, ex);
         }
