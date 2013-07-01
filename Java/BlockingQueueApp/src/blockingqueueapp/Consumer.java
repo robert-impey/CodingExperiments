@@ -5,6 +5,7 @@
 package blockingqueueapp;
 
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CountDownLatch;
 
 /**
  *
@@ -13,21 +14,23 @@ import java.util.concurrent.BlockingQueue;
 public class Consumer implements Runnable {
 
     private BlockingQueue<String> drop;
+    private final CountDownLatch countDownLatch;
 
-    public Consumer(BlockingQueue<String> d) {
-        this.drop = d;
+    public Consumer(BlockingQueue<String> drop, CountDownLatch countDownLatch) {
+        this.drop = drop;
+        this.countDownLatch = countDownLatch;
     }
 
     @Override
     public void run() {
         try {
-            String msg = null;
-            while (!((msg = drop.take()).equals("DONE"))) {
+            String msg;
+            while (countDownLatch.getCount() > 0) {
+                msg = drop.take();
                 System.out.println(msg);
             }
         } catch (InterruptedException intEx) {
-            System.out.println("Interrupted! "
-                    + "Last one out, turn out the lights!");
+            System.out.println(intEx);
         }
     }
 }

@@ -4,9 +4,8 @@
  */
 package blockingqueueapp;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CountDownLatch;
 
 /**
  *
@@ -15,25 +14,24 @@ import java.util.concurrent.BlockingQueue;
 public class Producer implements Runnable {
     
     private final int id;
-    private BlockingQueue<String> drop;
-    List<String> messages = Arrays.asList(
-            "Mares eat oats",
-            "Does eat oats",
-            "Little lambs eat ivy",
-            "Wouldn't you eat ivy too?");
+    private final int numberOfMessages;
+    private final BlockingQueue<String> drop;
+    private final CountDownLatch countDownLatch;
 
-    public Producer(int id, BlockingQueue<String> drop) {
+    public Producer(int id, int numberOfMessages, BlockingQueue<String> drop, CountDownLatch countDownLatch) {
         this.id = id;
+        this.numberOfMessages = numberOfMessages;
         this.drop = drop;
+        this.countDownLatch = countDownLatch;
     }
 
     @Override
     public void run() {
         try {
-            for (String s : messages) {
-                drop.put(id + " " + s);
+            for (int i = 0; i < numberOfMessages; i++) {
+                drop.put(id + " " + i);
             }
-            drop.put("DONE");
+            countDownLatch.countDown();
         } catch (InterruptedException intEx) {
             System.out.println(intEx);
         }

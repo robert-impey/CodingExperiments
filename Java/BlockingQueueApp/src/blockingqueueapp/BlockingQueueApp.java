@@ -6,6 +6,7 @@ package blockingqueueapp;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CountDownLatch;
 
 /**
  *
@@ -21,14 +22,17 @@ public class BlockingQueueApp {
         boolean accessFairness = true;
         
         int numberOfProducers = 5;
+        int numberOfMessages = 100;
         
         BlockingQueue<String> drop;
-        drop = new ArrayBlockingQueue(queueCapacity, accessFairness);
+        drop = new ArrayBlockingQueue<>(queueCapacity, accessFairness);
+        
+        CountDownLatch countDownLatch = new CountDownLatch(numberOfProducers);
         
         for (int i = 0; i < numberOfProducers; i++) {
-            (new Thread(new Producer(i, drop))).start();
+            (new Thread(new Producer(i, numberOfMessages, drop, countDownLatch))).start();
         }
         
-        (new Thread(new Consumer(drop))).start();
+        (new Thread(new Consumer(drop, countDownLatch))).start();
     }
 }
