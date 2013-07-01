@@ -7,6 +7,8 @@ package blockingqueueapp;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,8 +23,8 @@ public class BlockingQueueApp {
         int queueCapacity = 1;
         boolean accessFairness = true;
         
-        int numberOfProducers = 5;
-        int numberOfMessages = 100;
+        int numberOfProducers = 2;
+        int numberOfMessages = 4;
         
         BlockingQueue<String> drop;
         drop = new ArrayBlockingQueue<>(queueCapacity, accessFairness);
@@ -33,6 +35,15 @@ public class BlockingQueueApp {
             (new Thread(new Producer(i, numberOfMessages, drop, countDownLatch))).start();
         }
         
-        (new Thread(new Consumer(drop, countDownLatch))).start();
+        Consumer consumer = new Consumer(drop, countDownLatch);
+        
+        (new Thread(consumer)).start();
+        
+        try {
+            countDownLatch.await();
+            System.out.printf("Messages recieved: %d\n", consumer.getMessagesReceived());
+        } catch (InterruptedException ex) {
+            Logger.getLogger(BlockingQueueApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
