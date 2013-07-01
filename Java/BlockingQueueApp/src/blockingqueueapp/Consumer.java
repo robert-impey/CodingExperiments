@@ -27,11 +27,12 @@ public class Consumer implements Runnable {
     public void run() {
         try {
             String msg;
-            while (countDownLatch.getCount() > 0) {
+            while (!drop.isEmpty()) {
                 msg = drop.take();
                 messagesReceived++;
                 System.out.println(msg);
             }
+            countDownLatch.countDown();
         } catch (InterruptedException intEx) {
             System.out.println(intEx);
         }

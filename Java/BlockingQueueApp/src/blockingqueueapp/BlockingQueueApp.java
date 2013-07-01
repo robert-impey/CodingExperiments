@@ -20,28 +20,36 @@ public class BlockingQueueApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int queueCapacity = 1;
+        int numberOfProducers = 50;
+        int numberOfMessages = 100;
+
+        int expectedMessagesConsumed = numberOfProducers * numberOfMessages;
+
+        int queueCapacity;
+        queueCapacity = 1;
+        //queueCapacity = numberOfProducers * numberOfMessages;
         boolean accessFairness = true;
-        
-        int numberOfProducers = 2;
-        int numberOfMessages = 4;
-        
+
         BlockingQueue<String> drop;
         drop = new ArrayBlockingQueue<>(queueCapacity, accessFairness);
-        
-        CountDownLatch countDownLatch = new CountDownLatch(numberOfProducers);
-        
+
+        CountDownLatch countDownLatch = new CountDownLatch(numberOfProducers + 1);
+
         for (int i = 0; i < numberOfProducers; i++) {
             (new Thread(new Producer(i, numberOfMessages, drop, countDownLatch))).start();
         }
-        
+
         Consumer consumer = new Consumer(drop, countDownLatch);
-        
+
         (new Thread(consumer)).start();
-        
+
         try {
             countDownLatch.await();
-            System.out.printf("Messages recieved: %d\n", consumer.getMessagesReceived());
+            System.out.printf(
+                    "Messages recieved: %d\tExpected Messages: %s\tDiff: %s\n",
+                    consumer.getMessagesReceived(),
+                    expectedMessagesConsumed,
+                    Math.abs(consumer.getMessagesReceived() - expectedMessagesConsumed));
         } catch (InterruptedException ex) {
             Logger.getLogger(BlockingQueueApp.class.getName()).log(Level.SEVERE, null, ex);
         }
