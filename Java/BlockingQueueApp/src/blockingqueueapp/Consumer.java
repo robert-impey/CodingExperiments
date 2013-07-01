@@ -15,7 +15,6 @@ public class Consumer implements Runnable {
 
     private final BlockingQueue<String> drop;
     private final CountDownLatch countDownLatch;
-    
     private int messagesReceived = 0;
 
     public Consumer(BlockingQueue<String> drop, CountDownLatch countDownLatch) {
@@ -37,7 +36,7 @@ public class Consumer implements Runnable {
             System.out.println(intEx);
         }
     }
-    
+
     public int getMessagesReceived() {
         return messagesReceived;
     }

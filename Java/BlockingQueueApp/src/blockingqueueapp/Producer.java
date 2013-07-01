@@ -12,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
  * @author Robert
  */
 public class Producer implements Runnable {
-    
+
     private final int id;
     private final int numberOfMessages;
     private final BlockingQueue<String> drop;
