@@ -33,11 +33,10 @@ public class Consumer implements Runnable {
             while (producingCountDownLatch.getCount() > 0 || !drop.isEmpty()) {
                 msg = drop.take();
                 messagesReceived++;
-                System.out.println(msg);
             }
             consumingcountDownLatch.countDown();
         } catch (InterruptedException intEx) {
-            System.out.println(intEx);
+            System.err.println(intEx);
         }
     }
 

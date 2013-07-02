@@ -7,8 +7,6 @@ package blockingqueueapp;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -57,7 +55,7 @@ public class BlockingQueueApp {
                     Math.abs(consumer.getMessagesReceived() - expectedMessagesConsumed),
                     (stop - start) / 1000000000.0);
         } catch (InterruptedException ex) {
-            Logger.getLogger(BlockingQueueApp.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println(ex);
         }
     }
 }

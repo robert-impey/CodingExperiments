@@ -4,6 +4,8 @@
  */
 package blockingqueueapp;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
@@ -43,11 +45,11 @@ public class BQATest {
 
     @Test
     public void producersAndConsumer() {
-        int numberOfProducers = 100;
-        int numberOfMessages = 500;
-        
+        int numberOfProducers = 10;
+        int numberOfMessages = 50;
+
         int expectedMessagesConsumed = numberOfProducers * numberOfMessages;
-        
+
         int queueCapacity = 1;
         boolean accessFairness = true;
 
@@ -56,19 +58,31 @@ public class BQATest {
         CountDownLatch producingCountDownLatch = new CountDownLatch(numberOfProducers);
         CountDownLatch consumingcountDownLatch = new CountDownLatch(1);
 
-        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingcountDownLatch);
+        List<Runnable> runnables = new ArrayList<>();
 
-        (new Thread(consumer)).start();
+        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingcountDownLatch);
+        runnables.add(consumer);
 
         for (int i = 0; i < numberOfProducers; i++) {
-            (new Thread(new Producer(i, numberOfMessages, drop, producingCountDownLatch))).start();
+            runnables.add(new Producer(i, numberOfMessages, drop, producingCountDownLatch));
         }
-        
+
+        runRunnables(runnables);
+
         try {
             consumingcountDownLatch.await();
             assertEquals(expectedMessagesConsumed, consumer.getMessagesReceived());
         } catch (InterruptedException ex) {
             Logger.getLogger(BlockingQueueApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /*
+     * Helpers
+     */
+    private static void runRunnables(List<Runnable> runnables) {
+        for (Runnable runnable : runnables) {
+            (new Thread(runnable)).start();
         }
     }
 }
