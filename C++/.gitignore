@@ -1,10 +1,7 @@
 *.sdf
-*.pdb
-*.suo
 *.obj
 *.log
 *.tlog
-*.user
 *.ilk
 *.idb
 *.lastbuildstate
