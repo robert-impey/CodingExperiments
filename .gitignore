@@ -3,6 +3,8 @@
 *.pdb
 *.suo
 *.user
+bin
+obj
 
 /Java/ConcurrentIncrDecr/nbproject/private/
 /Java/ConcurrentIncrDecr/build/
