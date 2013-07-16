@@ -43,3 +43,17 @@ List.iter printI [1..10]
 // 2013-05-29
 let isEven x = (x % 2 = 0)
 let moreEvens, moreOdds = List.partition isEven [1 .. 10]
+
+// 2013-07-16
+0b001
+0b010
+0b011
+0b100
+0b101
+0b110
+0b111
+
+0b001 <<< 2
+0b010 >>> 1
+0b001 <<< 1
+0b011 <<< 1
