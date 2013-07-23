@@ -1,6 +1,7 @@
+rows = int(raw_input("How many rows?"))
+
 number = 1
 row = 0
-rows = 5
 columns = 1
 
 while row < rows:
