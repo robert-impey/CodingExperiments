@@ -10,7 +10,7 @@ namespace LinqToObjects
     {
         static void Main(string[] args)
         {
-            // Set up the objects.
+            // Set up the objects...
             var a1 = new A
             {
                 Name = "A1",
