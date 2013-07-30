@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITubeStationFinder.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SequentialTubeStationFinder.cs" />
     <Compile Include="TubeStation.cs" />
     <Compile Include="TubeStationsFile.cs" />
   </ItemGroup>

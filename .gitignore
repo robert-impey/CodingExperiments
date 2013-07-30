@@ -5,6 +5,7 @@
 *.user
 bin
 obj
+~$*.xlsx
 
 /Java/ConcurrentIncrDecr/nbproject/private/
 /Java/ConcurrentIncrDecr/build/
