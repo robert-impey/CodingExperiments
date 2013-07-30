@@ -42,7 +42,7 @@ namespace NearestTube.Test
             ICollection<TubeStation> actualTubeStations;
             actualTubeStations = tubeStationsFile.TubeStations;
 
-            Assert.That(actualTubeStations, Is.EqualTo(expectedTubeStations));
+            Assert.That(expectedTubeStations, Is.EqualTo(actualTubeStations));
         }
     }
 }
