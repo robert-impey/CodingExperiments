@@ -5,7 +5,9 @@
 *.user
 bin
 obj
+publish
 ~$*.xlsx
+*_TemporaryKey.pfx
 
 /Java/ConcurrentIncrDecr/nbproject/private/
 /Java/ConcurrentIncrDecr/build/
