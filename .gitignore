@@ -20,3 +20,6 @@ publish
 /Java/BinarySearch/dist/
 /Java/RabbitMQTutorials/nbproject/private/
 /Java/RabbitMQTutorials/target/
+
+test-results
+
