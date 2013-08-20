@@ -22,4 +22,4 @@ publish
 /Java/RabbitMQTutorials/target/
 
 test-results
-
+TestResult.xml
