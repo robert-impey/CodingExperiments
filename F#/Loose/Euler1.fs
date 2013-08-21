@@ -38,4 +38,6 @@ let noisySum total next =
     printfn "Adding %d to %d" next total
     total + next
 
-let seqFoldSum = Seq.fold noisySum 0 <| divisibleBy3Or5
+let seqFoldSum = 
+    divisibleBy3Or5
+    |> Seq.fold noisySum 0
