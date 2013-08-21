@@ -4,7 +4,8 @@
 // See http://projecteuler.net/problem=1
 
 let max = 999
-let isDivisibleBy3Or5 = (fun x -> x % 3 = 0 || x % 5 = 0)
+let isDivisibleBy3Or5 x = 
+    x % 3 = 0 || x % 5 = 0
 
 // Using a list
 let listSum = 
