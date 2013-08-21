@@ -10,7 +10,6 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSharpFeatures</RootNamespace>
     <AssemblyName>CSharpFeatures</AssemblyName>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -27,7 +26,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -94,9 +93,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ProjectExtensions>
-    <MonoDevelop>
-      <Properties InternalTargetFrameworkVersion="3.5" />
-    </MonoDevelop>
-  </ProjectExtensions>
 </Project>

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Basic Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFeatures", "CSharpFeatures\CSharpFeatures.csproj", "{74685C82-525D-48EF-9E39-BA0F4579CAEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "Loops\Loops.csproj", "{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}"
@@ -15,27 +15,27 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Debug|x86.ActiveCfg = Debug|x86
-		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Debug|x86.Build.0 = Debug|x86
-		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Release|x86.ActiveCfg = Release|x86
-		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Release|x86.Build.0 = Release|x86
-		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Debug|x86.ActiveCfg = Debug|x86
-		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Debug|x86.Build.0 = Debug|x86
-		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Release|x86.ActiveCfg = Release|x86
-		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Release|x86.Build.0 = Release|x86
 		{493D85C0-CCC2-4EE3-B69A-58070153CB92}.Debug|x86.ActiveCfg = Debug|x86
 		{493D85C0-CCC2-4EE3-B69A-58070153CB92}.Debug|x86.Build.0 = Debug|x86
 		{493D85C0-CCC2-4EE3-B69A-58070153CB92}.Release|x86.ActiveCfg = Release|x86
 		{493D85C0-CCC2-4EE3-B69A-58070153CB92}.Release|x86.Build.0 = Release|x86
+		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Debug|x86.ActiveCfg = Debug|x86
+		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Debug|x86.Build.0 = Debug|x86
+		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Release|x86.ActiveCfg = Release|x86
+		{5BB5F046-446F-45C4-BD89-BE5BCEA52CAB}.Release|x86.Build.0 = Release|x86
+		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Debug|x86.ActiveCfg = Debug|x86
+		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Debug|x86.Build.0 = Debug|x86
+		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Release|x86.ActiveCfg = Release|x86
+		{74685C82-525D-48EF-9E39-BA0F4579CAEA}.Release|x86.Build.0 = Release|x86
 		{DCE673EE-8547-4A49-ABC0-1040B3319548}.Debug|x86.ActiveCfg = Debug|x86
 		{DCE673EE-8547-4A49-ABC0-1040B3319548}.Debug|x86.Build.0 = Debug|x86
 		{DCE673EE-8547-4A49-ABC0-1040B3319548}.Release|x86.ActiveCfg = Release|x86
 		{DCE673EE-8547-4A49-ABC0-1040B3319548}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ObjectsOrientation\ObjectsOrientation.csproj
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = CSharpFeatures\CSharpFeatures.csproj
 	EndGlobalSection
 EndGlobal

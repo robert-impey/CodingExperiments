@@ -9,7 +9,7 @@ namespace NearestTube
 {
     class Program
     {
-        private const string csvFileName = @"Resources\tube.csv";
+        private const string csvFileName = @"Resources/tube.csv";
 
         static void Main(string[] args)
         {
