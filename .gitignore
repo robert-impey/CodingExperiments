@@ -24,3 +24,5 @@ publish
 test-results
 TestResult.xml
 *.Test.VisualState.xml
+*.userprefs
+
