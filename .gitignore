@@ -26,3 +26,5 @@ TestResult.xml
 *.Test.VisualState.xml
 *.userprefs
 
+/Java/StringDecoratorDemo/nbproject/private/
+/Java/StringDecoratorDemo/build/
