@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceParentheses", "BalanceParentheses\BalanceParentheses.csproj", "{556ECD1D-835B-410A-B740-CDCCCC0AD0E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceParentheses.Test", "BalanceParentheses.Test\BalanceParentheses.Test.csproj", "{32D1156D-8C0A-421E-B45E-CD7B65803344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceParentheses.Lib", "BalanceParentheses.Lib\BalanceParentheses.Lib.csproj", "{F8ABDDBD-372F-4178-AC67-B9F124595E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{556ECD1D-835B-410A-B740-CDCCCC0AD0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556ECD1D-835B-410A-B740-CDCCCC0AD0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556ECD1D-835B-410A-B740-CDCCCC0AD0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556ECD1D-835B-410A-B740-CDCCCC0AD0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D1156D-8C0A-421E-B45E-CD7B65803344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D1156D-8C0A-421E-B45E-CD7B65803344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D1156D-8C0A-421E-B45E-CD7B65803344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D1156D-8C0A-421E-B45E-CD7B65803344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8ABDDBD-372F-4178-AC67-B9F124595E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8ABDDBD-372F-4178-AC67-B9F124595E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8ABDDBD-372F-4178-AC67-B9F124595E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8ABDDBD-372F-4178-AC67-B9F124595E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
