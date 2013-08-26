@@ -1,12 +1,9 @@
 # General variables and rules for Makefiles
 
-CC = gpc
+PC = fpc
 
-$(PROGRAM): main.pas
-	$(CC) main.pas -o $(PROGRAM)
-
-debug: main.pas
-	$(CC) -g main.pas -o $(PROGRAM)
+$(PROGRAM): $(PROGRAM).pas
+	$(PC) $(PROGRAM).pas
 
 clean:
-	$(RM) $(PROGRAM) $(PROGRAM).exe 
+	$(RM) $(PROGRAM) $(PROGRAM).exe $(PROGRAM).o
