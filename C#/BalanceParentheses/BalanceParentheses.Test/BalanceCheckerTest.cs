@@ -57,5 +57,11 @@ namespace BalanceParentheses.Test
         {
             Assert.IsFalse(BalanceChecker.IsStringBalanced("(()"));
         }
+
+        [TestMethod]
+        public void TestReversedBalanced()
+        {
+            Assert.IsFalse(BalanceChecker.IsStringBalanced(")("));
+        }
     }
 }

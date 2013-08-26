@@ -19,6 +19,9 @@ namespace BalanceParentheses.Lib
 
                 if (c == ')')
                     unbalancedParenthesesCount--;
+
+                if (unbalancedParenthesesCount < 0)
+                    return false;
             }
 
             return unbalancedParenthesesCount == 0;
