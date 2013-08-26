@@ -2,11 +2,11 @@ Program BinarySearch;
 
 Const
     Max: Integer = 10;
-    Sought: Integer = 4;
-    
+    Sought: Integer = 6;
+
 Var
-    A: Array [1 .. Max] Of Integer;
-    I, J, K: Integer;
+	A: Array [1 .. 10] Of Integer;
+	I, J, K: Integer;
     
 Begin
     For I := 1 To Max Do
