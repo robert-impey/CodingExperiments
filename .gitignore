@@ -31,3 +31,5 @@ TestResult.xml
 /Java/Gcd/nbproject/private/
 /Java/Gcd/build/
 packages
+Debug
+Release
