@@ -33,3 +33,4 @@ TestResult.xml
 packages
 Debug
 Release
+*.stackdump
