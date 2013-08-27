@@ -6,3 +6,4 @@
 *.idb
 *.lastbuildstate
 ipch
+*.opensdf
