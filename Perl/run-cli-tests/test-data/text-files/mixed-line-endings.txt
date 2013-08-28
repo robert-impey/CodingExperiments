@@ -1,0 +1,7 @@
+What if we mix
+the line endings
+within one file?
+... and add a few blank lines
+
+
+

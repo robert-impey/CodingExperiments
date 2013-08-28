@@ -1,0 +1,1 @@
+On the old Mac computers,new lines were done with the\r character

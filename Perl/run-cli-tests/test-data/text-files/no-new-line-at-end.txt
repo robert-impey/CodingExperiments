@@ -1,0 +1,4 @@
+A file that has several lines
+but does not have
+a new line character at
+the end of the file.
