@@ -34,3 +34,5 @@ packages
 Debug
 Release
 *.stackdump
+*.swp
+
