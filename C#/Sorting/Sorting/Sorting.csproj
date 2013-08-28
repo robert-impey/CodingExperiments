@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gnu.Getopt">
-      <HintPath>..\..\..\..\..\Downloads\gnu.getopt.net-0.9.1\Gnu.Getopt\obj\Debug\Gnu.Getopt.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Gnu.Getopt\Gnu.Getopt\bin\Release\Gnu.Getopt.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
