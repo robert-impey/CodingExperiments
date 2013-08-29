@@ -17,7 +17,7 @@ namespace PairCount.Test
         public void SingleElementArray()
         {
             int[] a = { 1 };
-            Assert.AreEqual(2, PairCounter.Count(2, a));
+            Assert.AreEqual(1, PairCounter.Count(2, a));
         }
 
         [TestMethod]
