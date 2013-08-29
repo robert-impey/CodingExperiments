@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairCount", "PairCount\PairCount.csproj", "{D7DC65CE-ECA7-4577-8EBC-1E871C9B79E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairCount.Lib", "PairCount.Lib\PairCount.Lib.csproj", "{19873520-317C-4966-B6AB-34BC3B839760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairCount.Test", "PairCount.Test\PairCount.Test.csproj", "{83A079AA-F714-448D-9178-C10A735FE762}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7DC65CE-ECA7-4577-8EBC-1E871C9B79E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DC65CE-ECA7-4577-8EBC-1E871C9B79E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DC65CE-ECA7-4577-8EBC-1E871C9B79E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DC65CE-ECA7-4577-8EBC-1E871C9B79E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19873520-317C-4966-B6AB-34BC3B839760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19873520-317C-4966-B6AB-34BC3B839760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19873520-317C-4966-B6AB-34BC3B839760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19873520-317C-4966-B6AB-34BC3B839760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A079AA-F714-448D-9178-C10A735FE762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A079AA-F714-448D-9178-C10A735FE762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A079AA-F714-448D-9178-C10A735FE762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A079AA-F714-448D-9178-C10A735FE762}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
