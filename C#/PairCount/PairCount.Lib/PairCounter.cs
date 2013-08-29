@@ -8,5 +8,9 @@ namespace PairCount.Lib
 {
     public class PairCounter
     {
+        public static int Count(int k, int[] a)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
