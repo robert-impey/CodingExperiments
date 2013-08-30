@@ -7,6 +7,21 @@ using System.ServiceModel;
 
 namespace Microsoft.ServiceModel.Samples
 {
+    /// <summary>
+    /// A service for arithmetic.
+    /// 
+    /// You need to run CMD as Admin and run:
+    /// netsh http add urlacl url=http://+:8000/ServiceModelSamples/Service user=DOMAIN\User
+    /// 
+    /// For this to work.
+    /// 
+    /// Check that the URL has been reserved for you with:
+    /// 
+    /// netsh http show urlacl
+    /// 
+    /// Tidy up after yourself with:
+    /// netsh http delete urlacl url=http://+:8000/ServiceModelSamples/Service
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
