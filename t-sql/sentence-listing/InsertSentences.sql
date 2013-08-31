@@ -1,4 +1,7 @@
-INSERT INTO [SentenceListing].[dbo].[Sentences]
+USE SentenceListing;
+GO
+
+INSERT INTO Sentences
 	(Sentence)
 VALUES
 	('Jane runs.'),
