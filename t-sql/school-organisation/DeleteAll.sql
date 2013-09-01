@@ -1,5 +1,7 @@
-DELETE FROM dbo.Teacher;
-DBCC CHECKIDENT (Teacher, RESEED, 0);
+USE SchoolOrganisation;
 
-DELETE FROM dbo.Country;
-DBCC CHECKIDENT (Country, RESEED, 0);
+DELETE FROM Teachers;
+DBCC CHECKIDENT (Teachers, RESEED, 0);
+
+DELETE FROM Countries;
+DBCC CHECKIDENT (Countries, RESEED, 0);
