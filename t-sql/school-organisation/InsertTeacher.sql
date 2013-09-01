@@ -1,8 +1,9 @@
-INSERT INTO Teacher
-	(FirstName, LastName, CountryId)
+USE SchoolOrganisation;
+
+INSERT INTO Teachers
+	(Name, CountryId)
 VALUES
-	('Robert', 'Impey', 2),
-	('Adam', 'Reid', 3),
-	('Alex', 'Klimkewicz', 1),
-	('Arron', 'Mitchell', 3);
-	
+	('Robert Impey', 2),
+	('Adam Reid', 3),
+	('Alex Klimkewicz', 1),
+	('Arron Mitchell', 3);

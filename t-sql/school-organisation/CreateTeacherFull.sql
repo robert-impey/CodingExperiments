@@ -1,22 +1,18 @@
-USE [SchoolOrganisation]
+USE SchoolOrganisation;
 GO
 
-/****** Object:  View [dbo].[TeacherFull]    Script Date: 09/05/2010 16:49:46 ******/
-SET ANSI_NULLS ON
+IF OBJECT_ID('dbo.TeachersFull') IS NOT NULL
+BEGIN
+  DROP VIEW dbo.TeachersFull;
+END
 GO
 
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE VIEW [dbo].[TeacherFull]
+CREATE VIEW TeachersFull
 AS
 SELECT     
 	t.Id, 
-	t.FirstName, 
-	t.LastName, 
-	c.Name
+	t.Name AS Teacher, 
+	c.Name AS Country
 FROM
-	dbo.Teacher AS t 
-		INNER JOIN dbo.Country AS c ON t.CountryId = c.Id
-
-GO
+	Teachers AS t 
+		INNER JOIN Countries AS c ON t.CountryId = c.Id

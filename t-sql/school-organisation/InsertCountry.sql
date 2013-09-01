@@ -1,7 +1,8 @@
-INSERT INTO [SchoolOrganisation].[dbo].[Country]
+USE SchoolOrganisation;
+
+INSERT INTO Countries
 	(Name)
 VALUES
 	('USA'),
 	('UK'),
 	('Canada');
-	
