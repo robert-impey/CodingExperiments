@@ -1,4 +1,4 @@
-USE SchoolOrganisation;
+USE [SchoolOrganisation]
 GO
 
 IF OBJECT_ID('dbo.Countries') IS NOT NULL
@@ -7,7 +7,22 @@ BEGIN
 END
 GO
 
-CREATE TABLE Countries (
-	Id int IDENTITY(1,1) NOT NULL,
-	Name nvarchar(max) NOT NULL
-) ON "PRIMARY";
+/****** Object:  Table [dbo].[Countries]    Script Date: 2013-09-01 19:00:28 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Countries](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Countries] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+

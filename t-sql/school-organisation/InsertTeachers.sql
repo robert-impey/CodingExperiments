@@ -37,4 +37,4 @@ SELECT
 FROM
 	Countries
 WHERE
-	Name = 'Candada';
+	Name = 'Canada';
