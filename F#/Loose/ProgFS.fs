@@ -57,3 +57,7 @@ let moreEvens, moreOdds = List.partition isEven [1 .. 10]
 0b010 >>> 1
 0b001 <<< 1
 0b011 <<< 1
+
+// 2013-09-02 - loc: 1915
+
+["Pipe"; "Forward"] |> List.iter (fun s -> printfn "%s has length %d" s s.Length)
