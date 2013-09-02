@@ -25,3 +25,5 @@ let findMin currentMinSln candidateSln =
     | false -> candidateSln
 
 let minSln = Seq.fold findMin firstCandidate remainingCandidates
+
+printfn "f %f = %f" (fst minSln) (snd minSln)
