@@ -4,6 +4,6 @@ open System
 
 [<EntryPoint>]
 let main args = 
-    let addressee = 8
+    let addressee = "world"
     printf "Hello, %s\n" addressee
     0
