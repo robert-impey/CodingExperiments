@@ -37,3 +37,5 @@ let findMinimum currentMinSln candidateSln =
     | false -> currentMinSln
 
 let minSln = Seq.fold findMinimum candidateSolution candidates
+
+printfn "Min sln: %A" minSln
