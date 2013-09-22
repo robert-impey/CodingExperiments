@@ -32,9 +32,7 @@ let candidateSolution = xMin, yMin, f xMin yMin
 let findMinimum currentMinSln candidateSln =
     let (_, _, currentMinCost) = currentMinSln
     let (_, _, candidateSlnCost) = candidateSln
-    match currentMinCost > candidateSlnCost with
-    | true -> candidateSln
-    | false -> currentMinSln
+    if currentMinCost > candidateSlnCost then candidateSln else currentMinSln
 
 let minSln = Seq.fold findMinimum candidateSolution candidates
 
