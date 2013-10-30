@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(os.Getenv("HOME"))
+	fmt.Println(os.Getenv("HOME")) // Works on Mac OSX
 	fmt.Println(os.Getenv("HOMEDIR"))
 	fmt.Println(os.Getenv("USERPROFILE")) // Works on Windows
 }
