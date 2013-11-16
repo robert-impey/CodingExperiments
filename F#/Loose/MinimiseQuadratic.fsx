@@ -20,9 +20,7 @@ let firstCandidate = f min, min
 let remainingCandidates = seq { for c in min + step .. step .. max do yield f c, c }
 
 let findMin currentMinSln candidateSln =
-    match fst currentMinSln < fst candidateSln with
-    | true -> currentMinSln
-    | false -> candidateSln
+    if fst currentMinSln < fst candidateSln then currentMinSln else candidateSln
 
 let minSln = Seq.fold findMin firstCandidate remainingCandidates
 
