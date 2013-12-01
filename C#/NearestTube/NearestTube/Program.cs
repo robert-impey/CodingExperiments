@@ -27,9 +27,9 @@ namespace NearestTube
                             var tubeStationsFile = new TubeStationsFile(csvReader);
                             var tubeStations = tubeStationsFile.TubeStations;
 
-                            var finder = new SequentialTubeStationFinder(tubeStations);
+                            var finder = new SequentialTubeStationFinder();
 
-                            var nearestTubeStation = finder.FindNearestTubeStation(currentLocation);
+                            var nearestTubeStation = finder.FindNearestTubeStation(tubeStations, currentLocation);
 
                             Console.WriteLine(String.Format("The nearest station is {0}.", nearestTubeStation.Name));
                         }

@@ -7,14 +7,7 @@ namespace NearestTube.Lib
 {
     public class SequentialTubeStationFinder : ITubeStationFinder
     {
-        private readonly ICollection<TubeStation> tubeStations;
-
-        public SequentialTubeStationFinder(ICollection<TubeStation> someTubeStations)
-        {
-            tubeStations = someTubeStations;
-        }
-
-        public TubeStation FindNearestTubeStation(Point point)
+        public TubeStation FindNearestTubeStation(ICollection<TubeStation> tubeStations, Point point)
         {
             return (from tubeStation in tubeStations
                     orderby tubeStation.Point.Distance(point)

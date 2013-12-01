@@ -7,6 +7,6 @@ namespace NearestTube.Lib
 {
     interface ITubeStationFinder
     {
-        TubeStation FindNearestTubeStation(Point point);
+        TubeStation FindNearestTubeStation(ICollection<TubeStation> tubeStations, Point point);
     }
 }

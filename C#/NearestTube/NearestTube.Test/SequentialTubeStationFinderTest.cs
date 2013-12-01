@@ -21,10 +21,10 @@ namespace NearestTube.Test
             tubeStations.AddLast(new TubeStation("Chiswick Park",
                 new Point(51.494371,-0.267737)));
 
-            var finder = new SequentialTubeStationFinder(tubeStations);
+            var finder = new SequentialTubeStationFinder();
 
             var expectedNearestTubeStationName = "Acton Town";
-            var foundNearestTubeStation = finder.FindNearestTubeStation(point);
+            var foundNearestTubeStation = finder.FindNearestTubeStation(tubeStations, point);
 
             Assert.AreEqual(expectedNearestTubeStationName, foundNearestTubeStation.Name);
         }
