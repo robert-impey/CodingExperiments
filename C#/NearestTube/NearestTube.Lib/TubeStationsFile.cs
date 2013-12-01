@@ -8,39 +8,39 @@ namespace NearestTube.Lib
 {
     public class TubeStationsFile
     {
-        private TextReader reader;
-
         public TubeStationsFile(TextReader aReader)
         {
-            reader = aReader;
+            TubeStations = ReadTubeStations(aReader);
         }
 
         public ICollection<TubeStation> TubeStations
         {
-            get
+            get; private set;
+        }
+
+        private static ICollection<TubeStation> ReadTubeStations(TextReader tubeStationsReader)
+        {
+            var tubeStations = new LinkedList<TubeStation>();
+
+            string line;
+            while ((line = tubeStationsReader.ReadLine()) != null)
             {
-                var tubeStations = new LinkedList<TubeStation>();
+                var values = line.Split(new char[] { ',' });
 
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                var name = values[0];
+                var quotes = new char[] { '"' };
+                name = name.TrimStart(quotes).TrimEnd(quotes);
+
+                double latitude, longitude;
+                if (Double.TryParse(values[1], out latitude)
+                    && Double.TryParse(values[2], out longitude))
                 {
-                    var values = line.Split(new char[] { ',' });
-
-                    var name = values[0];
-                    var quotes = new char[] { '"' };
-                    name = name.TrimStart(quotes).TrimEnd(quotes);
-
-                    double latitude, longitude;
-                    if (Double.TryParse(values[1], out latitude)
-                        && Double.TryParse(values[2], out longitude))
-                    {
-                        tubeStations.AddLast(new TubeStation(name,
-                            new Point(latitude, longitude)));
-                    }
+                    tubeStations.AddLast(new TubeStation(name,
+                        new Point(latitude, longitude)));
                 }
-
-                return tubeStations;
             }
+
+            return tubeStations;
         }
     }
 }
