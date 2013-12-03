@@ -46,3 +46,10 @@ type ``Given an empty sequence of integers`` () =
     [<Test>]
     member x.``When a number is sent Then none should be returned`` () =
         SelectionHelper.getLowestOrLowestItemGreaterThan 10 Seq.empty |> should be Null
+
+[<TestFixture>]
+type ``Given a very large sequence of integers`` () =
+    [<Test>]
+    member x.``When a number is sent Then the next number should be returned`` () =
+        let items = seq { for i in 1 .. pown 2 30 do yield i }
+        SelectionHelper.getLowestOrLowestItemGreaterThan 10 items |> should equal (Some 11)
