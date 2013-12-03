@@ -13,7 +13,7 @@ Target "Clean" (fun _ ->
 )
 
 Target "BuildApp" (fun _ ->
-    !! @"src\app\**\*.fsproj"
+    !! @"src\App\**\*.fsproj"
       |> MSBuildDebug buildDir "Build"
       |> Log "AppBuild-Output: "
 )
