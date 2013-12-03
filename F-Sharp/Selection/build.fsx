@@ -29,7 +29,7 @@ Target "Test" (fun _ ->
       |> NUnit (fun p ->
           {p with
              DisableShadowCopy = true;
-             OutputFile = testDir + "TestResults.xml" })
+             OutputFile = testDir + "/TestResults.xml" })
 )
 
 "Clean" 
