@@ -27,14 +27,13 @@ type
 procedure TBinarySearch.DoRun;
 Const
     Max: Integer = 10;
-    Sought: Integer = 6;
 var
   ErrorMsg: String;
   A: Array [1 .. 10] Of Integer;
-  I, J, K: Integer;
+  Sought, I, J, K: Integer;
 begin
   // quick check parameters
-  ErrorMsg:=CheckOptions('h','help');
+  ErrorMsg:=CheckOptions('hs','help sought');
   if ErrorMsg<>'' then begin
     ShowException(Exception.Create(ErrorMsg));
     Terminate;
@@ -48,13 +47,28 @@ begin
     Exit;
   end;
 
+  If HasOption('s','sought') Then
+    begin
+      Sought := StrToInt((GetOptionValue('s', 'sought')));
+      Write('Looking for ');
+      WriteLn(Sought);
+    end
+  Else
+  Begin
+      WriteHelp;
+      Terminate;
+      Exit;
+  End;
+
+  // Searching
+
   For I := 1 To Max Do
       Begin
           A[I] := I;
           WriteLn(A[I]);
       End;
 
-  {Simple Search}
+  WriteLn('Simple Search');
   I := 0;
   Repeat I := I + 1 Until (A[I] = Sought) Or (I = Max);
   If A[I] = Sought Then
@@ -62,7 +76,7 @@ begin
   Else
       WriteLn('Not found!');
 
-  {Binary Search}
+  WriteLn('Binary Search');
   I := 1;
   J := Max;
   Repeat K := (I + J) Div 2;
@@ -94,8 +108,9 @@ end;
 
 procedure TBinarySearch.WriteHelp;
 begin
-  { add your help code here }
   writeln('Usage: ',ExeName,' -h');
+  WriteLn('Options');
+  WriteLn('-s|--sought [INT]');
 end;
 
 var
