@@ -27,11 +27,11 @@ type
 procedure TBinarySearch.DoRun;
 var
   ErrorMsg: String;
-  A: Array [1 .. 10] Of Integer;
+  A: Array Of Integer;
   Sought, Max, I, J, K: Integer;
 begin
   // quick check parameters
-  ErrorMsg:=CheckOptions('hs','help sought');
+  ErrorMsg:=CheckOptions('hsm','help sought max');
   if ErrorMsg<>'' then begin
     ShowException(Exception.Create(ErrorMsg));
     Terminate;
@@ -58,12 +58,24 @@ begin
       Exit;
   End;
 
-  Max := Length(A);
+  If HasOption('m','max') Then
+    begin
+      Max := StrToInt((GetOptionValue('m', 'max')));
+      Write('Max value ');
+      WriteLn(Max);
+    end
+  Else
+  Begin
+      WriteHelp;
+      Terminate;
+      Exit;
+  End;
 
-  For I := 1 To Max Do
+  SetLength(A, Max);
+
+  For I := 0 To Max - 1Do
       Begin
-          A[I] := I;
-          WriteLn(A[I]);
+          A[I] := I + 1;
       End;
 
   // Searching
