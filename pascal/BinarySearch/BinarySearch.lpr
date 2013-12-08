@@ -25,12 +25,10 @@ type
 { TBinarySearch }
 
 procedure TBinarySearch.DoRun;
-Const
-    Max: Integer = 10;
 var
   ErrorMsg: String;
   A: Array [1 .. 10] Of Integer;
-  Sought, I, J, K: Integer;
+  Sought, Max, I, J, K: Integer;
 begin
   // quick check parameters
   ErrorMsg:=CheckOptions('hs','help sought');
@@ -60,7 +58,7 @@ begin
       Exit;
   End;
 
-  // Searching
+  Max := Length(A);
 
   For I := 1 To Max Do
       Begin
@@ -68,6 +66,7 @@ begin
           WriteLn(A[I]);
       End;
 
+  // Searching
   WriteLn('Simple Search');
   I := 0;
   Repeat I := I + 1 Until (A[I] = Sought) Or (I = Max);
