@@ -43,7 +43,7 @@ begin
     Exit;
   end;
 
-  { add your program here }
+  WriteLn('Hello, world!');
 
   // stop program loop
   Terminate;
@@ -72,7 +72,6 @@ begin
   Application:=THelloWorld.Create(nil);
   Application.Title:='Hello World';
   Application.Run;
-  WriteLn('Hello, world!');
   Application.Free;
 end.
 
