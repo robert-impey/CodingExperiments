@@ -35,4 +35,4 @@ Debug
 Release
 *.stackdump
 *.swp
-
+Thumbs.db
