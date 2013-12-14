@@ -73,7 +73,7 @@ begin
 
   SetLength(A, Max);
 
-  For I := 0 To Max - 1Do
+  For I := 0 To Max - 1 Do
       Begin
           A[I] := I + 1;
       End;
