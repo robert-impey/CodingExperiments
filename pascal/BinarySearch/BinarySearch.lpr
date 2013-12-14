@@ -73,34 +73,47 @@ begin
 
   SetLength(A, Max);
 
-  For I := 0 To Max - 1 Do
-      Begin
-          A[I] := I + 1;
-      End;
+  For I := 0 To Max - 1 Do A[I] := I + 1;
 
   // Searching
-  WriteLn('Simple Search');
-  I := 0;
+  WriteLn('Sequential Search');
+  I := -1;
+
   Repeat I := I + 1 Until (A[I] = Sought) Or (I = Max);
+
   If A[I] = Sought Then
       WriteLn('Found!')
   Else
       WriteLn('Not found!');
 
   WriteLn('Binary Search');
-  I := 1;
-  J := Max;
-  Repeat K := (I + J) Div 2;
+  I := 0;
+  J := Max - 1;
+
+  Repeat
+      K := (I + J) Div 2;
       If Sought > A[K] Then
           I := K + 1
       Else
           J := K - 1
   Until (A[K] = Sought) Or (I > J);
 
-  If (A[K] = Sought) Then
+  If A[K] = Sought Then
       WriteLn('Found!')
   Else
       WriteLn('Not found!');
+
+  WriteLn('Sequential Search with Sentinel');
+  SetLength(A, Max + 1);
+  A[Max] := Sought;
+  I := -1;
+
+  Repeat I := I + 1 Until (A[I] = Sought);
+
+  If I = Max Then
+     WriteLn('Not found!')
+  Else
+     WriteLn('Found!');
 
   // stop program loop
   Terminate;

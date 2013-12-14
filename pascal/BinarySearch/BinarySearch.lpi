@@ -30,7 +30,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="-s 12311 -m 1000000000"/>
+        <CommandLineParams Value="-s 101 -m 100"/>
       </local>
     </RunParams>
     <Units Count="1">
