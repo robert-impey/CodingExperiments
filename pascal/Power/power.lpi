@@ -9,7 +9,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="Binary Search"/>
+      <Title Value="Power"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -30,14 +30,13 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="-s 101 -m 100"/>
       </local>
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="BinarySearch.lpr"/>
+        <Filename Value="power.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="BinarySearch"/>
+        <UnitName Value="power"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -45,7 +44,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="BinarySearch"/>
+      <Filename Value="power"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

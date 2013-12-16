@@ -3,3 +3,5 @@ lib
 *.lps
 *.exe
 *.o
+link.res
+ppas.bat
