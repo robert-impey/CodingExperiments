@@ -23,20 +23,48 @@ type
 
   { TPeople }
 
+type
+  Person = record
+    id: integer;
+    Name: string;
+    sex: (male, female);
+    link: integer;
+  end;
+
+Procedure PrintPerson (const person : Person);
+begin
+  with person do
+        begin
+          Write(id);
+          Write(' ');
+          Write(Name);
+          Write(' ');
+          Write(sex);
+          Write(' ');
+          Write(link);
+          Write(' ');
+          WriteLn();
+        end;
+end;
+
+Function GetSucc (const people : array of Person; const personId1 : integer; const personId2: integer) : Person;
+Var
+  succId: integer;
+  person2 : Person;
+Begin
+  person2 := people[personId2];
+  succId := personId1 + person2.link;
+  GetSucc := people[succId];
+End;
+
   procedure TPeople.DoRun;
-  type
-    Person = record
-      id: integer;
-      Name: string;
-      sex: (male, female);
-      link: integer;
-    end;
   const
     n = 10;
   var
     ErrorMsg: string;
     people: array[1..n] of Person;
     i: integer;
+    succ : Person;
   begin
     // quick check parameters
     ErrorMsg := CheckOptions('h', 'help');
@@ -128,19 +156,13 @@ type
       link := 3;
     end;
 
-    for i := 1 to n do
-      with people[i] do
-      begin
-        Write(id);
-        Write(' ');
-        Write(Name);
-        Write(' ');
-        Write(sex);
-        Write(' ');
-        Write(link);
-        Write(' ');
-        WriteLn();
-      end;
+    for i := 1 to n do PrintPerson(people[i]);
+
+    // Traverse the women
+    WriteLn('Traverse the women');
+
+    succ := GetSucc(people, 1, 3);
+    PrintPerson(succ);
 
     // stop program loop
     Terminate;
