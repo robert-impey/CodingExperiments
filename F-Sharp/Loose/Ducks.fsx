@@ -15,3 +15,23 @@ let rover = Dog()
 
 speak ellie
 speak rover
+
+type ISpeaker = 
+    abstract Speak : unit -> string
+
+type Cat () =
+    interface ISpeaker with
+        member this.Speak () = "Meow!"
+
+type Canary () =
+    interface ISpeaker with
+        member this.Speak () = "Tweet!"
+
+let speakWithInterface (speaker : ISpeaker) =
+    let x = speaker.Speak()
+    printfn "With an interface, it said %s" x
+
+let sylvester = Cat()
+let tweetyPie = Canary()
+speakWithInterface sylvester
+speakWithInterface tweetyPie
