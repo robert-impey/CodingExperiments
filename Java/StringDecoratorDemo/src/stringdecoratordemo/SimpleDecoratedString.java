@@ -10,7 +10,7 @@ package stringdecoratordemo;
  */
 public class SimpleDecoratedString implements DecoratedString
 {
-    private String theString;
+    private final String theString;
     
     public SimpleDecoratedString(String theString)
     {
