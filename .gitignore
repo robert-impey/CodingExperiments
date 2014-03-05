@@ -36,3 +36,5 @@ Release
 *.stackdump
 *.swp
 Thumbs.db
+/Java/AnimalFarm/nbproject/private/
+/Java/AnimalFarm/build/
