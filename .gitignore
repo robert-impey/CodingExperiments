@@ -38,4 +38,5 @@ Release
 Thumbs.db
 /Java/AnimalFarm/nbproject/private/
 /Java/AnimalFarm/build/
-UpgradeLog.htm
+UpgradeLog*.htm
+Backup
