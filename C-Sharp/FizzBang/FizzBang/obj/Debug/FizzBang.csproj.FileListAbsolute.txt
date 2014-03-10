@@ -1,6 +1,0 @@
-C:\Users\Robert\Dropbox\code\C#\FizzBang\FizzBang\bin\Debug\FizzBang.exe.config
-C:\Users\Robert\Dropbox\code\C#\FizzBang\FizzBang\bin\Debug\FizzBang.exe
-C:\Users\Robert\Dropbox\code\C#\FizzBang\FizzBang\bin\Debug\FizzBang.pdb
-C:\Users\Robert\Dropbox\code\C#\FizzBang\FizzBang\obj\Debug\FizzBang.csprojResolveAssemblyReference.cache
-C:\Users\Robert\Dropbox\code\C#\FizzBang\FizzBang\obj\Debug\FizzBang.exe
-C:\Users\Robert\Dropbox\code\C#\FizzBang\FizzBang\obj\Debug\FizzBang.pdb
