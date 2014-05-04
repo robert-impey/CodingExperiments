@@ -8,4 +8,5 @@ object Euclid {
   gcd(21,14)                                      //> res1: Int = 7
   gcd(21, 84)                                     //> res2: Int = 21
   gcd(21, 70)                                     //> res3: Int = 7
+  gcd(13, 17)                                     //> res4: Int = 1
 }
