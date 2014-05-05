@@ -6,7 +6,7 @@ object Factorial {
 
   factorial(0)                                    //> res0: Int = 1
   factorial(1)                                    //> res1: Int = 1
-  factorial(6)                                    //> res2: Int = 720
+  factorial(31)                                   //> res2: Int = 738197504
 
   def trFact(n: Int): Int =
     {
@@ -19,5 +19,5 @@ object Factorial {
 
   trFact(0)                                       //> res3: Int = 1
   trFact(1)                                       //> res4: Int = 1
-  trFact(6)                                       //> res5: Int = 720
+  trFact(31)                                      //> res5: Int = 738197504
 }
