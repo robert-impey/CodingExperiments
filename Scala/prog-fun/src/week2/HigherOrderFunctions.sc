@@ -15,6 +15,7 @@ object HigherOrderFunctions {
 
   sumCube(1, 10)                                  //> res1: Int = 3025
 
+  // With tail recursion
   def sumTr(f: Int => Int, a: Int, b: Int): Int = {
     def loop(a: Int, acc: Int): Int = {
       if (a > b) acc
@@ -33,4 +34,17 @@ object HigherOrderFunctions {
                                                   //> sumTrCube: (a: Int, b: Int)Int
 
   sumTrCube(1, 10)                                //> res3: Int = 3025
+
+  // with currying
+  def sumCur(f: Int => Int): (Int, Int) => Int = {
+    def sumF(a: Int, b: Int): Int = {
+      if (a > b) 0
+      else f(a) + sumF(a + 1, b)
+    }
+    sumF
+  }                                               //> sumCur: (f: Int => Int)(Int, Int) => Int
+
+  def sumCurId = sumCur(x => x)                   //> sumCurId: => (Int, Int) => Int
+
+  sumCurId(1, 10)                                 //> res4: Int = 55
 }
