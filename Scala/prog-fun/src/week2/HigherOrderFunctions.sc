@@ -23,7 +23,7 @@ object HigherOrderFunctions {
 
     loop(a, 0)
   }                                               //> sumTr: (f: Int => Int, a: Int, b: Int)Int
-	
+
   def sumTrId(a: Int, b: Int) = sumTr(x => x, a, b)
                                                   //> sumTrId: (a: Int, b: Int)Int
 
