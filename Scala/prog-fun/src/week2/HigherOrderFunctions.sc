@@ -36,15 +36,8 @@ object HigherOrderFunctions {
   sumTrCube(1, 10)                                //> res3: Int = 3025
 
   // with currying
-  def sumCur(f: Int => Int): (Int, Int) => Int = {
-    def sumF(a: Int, b: Int): Int = {
-      if (a > b) 0
-      else f(a) + sumF(a + 1, b)
-    }
-    sumF
-  }                                               //> sumCur: (f: Int => Int)(Int, Int) => Int
+  def sumCur(f: Int => Int)(a: Int, b: Int): Int =
+    if (a > b) 0 else f(a) + sumCur(f)(a + 1, b)  //> sumCur: (f: Int => Int)(a: Int, b: Int)Int
 
-  def sumCurId = sumCur(x => x)                   //> sumCurId: => (Int, Int) => Int
-
-  sumCurId(1, 10)                                 //> res4: Int = 55
+  sumCur(x => x)(1, 10)                           //> res4: Int = 55
 }
