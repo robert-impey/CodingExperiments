@@ -13,7 +13,7 @@ object SqrtAvgDamp {
   def fixedPoint(f: Double => Double)(firstGuess : Double) = {
   	def iterate(guess : Double): Double = {
   		println("guess = " + guess)
-  		val next = averageDamp(f)(guess)
+  		val next = f(guess)
   		if (isCloseEnough(guess, next)) next
   		else iterate(next)
   	}
@@ -21,7 +21,7 @@ object SqrtAvgDamp {
   }                                               //> fixedPoint: (f: Double => Double)(firstGuess: Double)Double
   
                                                   
- 	def sqrt(x: Double) = fixedPoint(y => x /y)(x)
+ 	def sqrt(x: Double) = fixedPoint(averageDamp(y => x /y))(x)
                                                   //> sqrt: (x: Double)Double
   sqrt(2.0)                                       //> guess = 2.0
                                                   //| guess = 1.5
