@@ -12,6 +12,8 @@ object Rationals {
   y.div(x)                                        //> res4: week2.Rational = 15/7
   
   x.sub(y).sub(z)                                 //> res5: week2.Rational = -79/42
+  
+  x.neg()                                         //> res6: week2.Rational = -1/3
 }
 
 class Rational(x: Int, y: Int) {
@@ -36,5 +38,9 @@ class Rational(x: Int, y: Int) {
   
   def div(that: Rational) = {
   	new Rational(this.numer * that.denom, this.denom * that.numer)
+  }
+  
+  def neg() = {
+  	new Rational(-1 * this.numer, this.denom)
   }
 }
