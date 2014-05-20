@@ -5,16 +5,16 @@ object Rationals {
   val y = new Rational(5, 7)                      //> y  : week2.Rational = 5/7
   val z = new Rational(3, 2)                      //> z  : week2.Rational = 3/2
 
-  x.add(y)                                        //> res0: week2.Rational = 22/21
-  x.sub(y)                                        //> res1: week2.Rational = 8/-21
-  x.mult(y)                                       //> res2: week2.Rational = 5/21
-  x.div(y)                                        //> res3: week2.Rational = 7/15
-  y.div(x)                                        //> res4: week2.Rational = 15/7
+  x + y                                           //> res0: week2.Rational = 22/21
+  x - y                                           //> res1: week2.Rational = 8/-21
+  x * y                                           //> res2: week2.Rational = 5/21
+  x / y                                           //> res3: week2.Rational = 7/15
+  y / x                                           //> res4: week2.Rational = 15/7
 
-  x.sub(y).sub(z)                                 //> res5: week2.Rational = -79/42
+  x - y - z                                       //> res5: week2.Rational = -79/42
 
-  x.neg()                                         //> res6: week2.Rational = 1/-3
-  y.add(y)                                        //> res7: week2.Rational = 10/7
+  -x                                              //> res6: week2.Rational = 1/-3
+  y + y                                           //> res7: week2.Rational = 10/7
 }
 
 class Rational(x: Int, y: Int) {
@@ -28,23 +28,23 @@ class Rational(x: Int, y: Int) {
     numer / g + "/" + denom / g
   }
 
-  def add(that: Rational) = {
+  def +(that: Rational) = {
     new Rational(this.numer * that.denom + that.numer * this.denom, this.denom * that.denom)
   }
 
-  def sub(that: Rational) = {
-    new Rational(this.numer * that.denom - that.numer * this.denom, this.denom * that.denom)
+  def -(that: Rational) = {
+    this + -that
   }
 
-  def mult(that: Rational) = {
+  def *(that: Rational) = {
     new Rational(this.numer * that.numer, this.denom * that.denom)
   }
 
-  def div(that: Rational) = {
+  def /(that: Rational) = {
     new Rational(this.numer * that.denom, this.denom * that.numer)
   }
 
-  def neg() = {
+  def unary_- : Rational = {
     new Rational(-1 * this.numer, this.denom)
   }
 }
