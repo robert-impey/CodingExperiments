@@ -19,6 +19,16 @@
         End If
     End Function
 
+    Public Overrides Function Contains(x As Integer) As Boolean
+        If x < elem Then
+            Return left.Contains(x)
+        ElseIf x > elem Then
+            Return right.Contains(x)
+        Else
+            Return True
+        End If
+    End Function
+
     Public Overrides Function ToString() As String
         Return "{" & left.ToString() & elem & right.ToString() & "}"
     End Function

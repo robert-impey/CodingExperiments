@@ -4,6 +4,10 @@
         Return New NonEmpty(x, New Empty, New Empty)
     End Function
 
+    Public Overrides Function Contains(x As Integer) As Boolean
+        Return False
+    End Function
+
     Public Overrides Function ToString() As String
         Return "."
     End Function

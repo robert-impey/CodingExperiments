@@ -12,6 +12,9 @@
         Dim t3 = t2.Incl(4)
 
         Console.WriteLine(t3)
+
+        Console.WriteLine(t3.Contains(3))
+        Console.WriteLine(t3.Contains(2))
     End Sub
 
 End Module
