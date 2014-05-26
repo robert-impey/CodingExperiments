@@ -15,6 +15,10 @@
 
         Console.WriteLine(t3.Contains(3))
         Console.WriteLine(t3.Contains(2))
+
+        Dim t4 = t1.Incl(6)
+
+        Console.WriteLine(t3.Union(t4))
     End Sub
 
 End Module

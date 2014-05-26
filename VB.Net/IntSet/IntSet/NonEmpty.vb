@@ -19,7 +19,7 @@
         End If
     End Function
 
-    Public Overrides Function Contains(x As Integer) As Boolean
+    Overrides Function Contains(x As Integer) As Boolean
         If x < elem Then
             Return left.Contains(x)
         ElseIf x > elem Then
@@ -27,6 +27,10 @@
         Else
             Return True
         End If
+    End Function
+
+    Public Overrides Function Union(other As IntSet) As IntSet
+        Return left.Union(right).Union(other).Incl(elem)
     End Function
 
     Public Overrides Function ToString() As String

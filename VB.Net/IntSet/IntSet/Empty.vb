@@ -4,8 +4,12 @@
         Return New NonEmpty(x, New Empty, New Empty)
     End Function
 
-    Public Overrides Function Contains(x As Integer) As Boolean
+    Overrides Function Contains(x As Integer) As Boolean
         Return False
+    End Function
+
+    Public Overrides Function Union(other As IntSet) As IntSet
+        Return other
     End Function
 
     Public Overrides Function ToString() As String
