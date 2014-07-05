@@ -1,3 +1,5 @@
+#!/usr/bin/env lua
+
 t = {}
 
 t.one = 1
@@ -37,4 +39,17 @@ function print_by_keys(t)
 end
 
 print_by_keys(t)
+
+print(#t)
+print(table.maxn(t))
+
+function count_table(t)
+	c = 0
+	for _ in pairs(t) do
+		c = c + 1
+	end
+	return c
+end
+
+print(count_table(t))
 
