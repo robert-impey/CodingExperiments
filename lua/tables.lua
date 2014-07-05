@@ -22,3 +22,19 @@ table.sort(t, function(a, b) return a[1] < b[1] end)
 
 print_table(t)
 
+function print_by_keys(t)
+	print "Print sorted by keys"
+	local sorted_keys = {}
+	for k, _ in pairs(t) do
+		table.insert(sorted_keys, k)
+	end
+
+	table.sort(sorted_keys)
+	
+	for _, v in pairs(sorted_keys) do
+		print(v, t[v])
+	end	
+end
+
+print_by_keys(t)
+
