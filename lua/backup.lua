@@ -1,3 +1,5 @@
+#!/usr/bin/env lua
+
 io.input('file-to-backup.txt')
 io.output('backup.txt')
 
