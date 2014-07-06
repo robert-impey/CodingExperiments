@@ -30,9 +30,7 @@ function print_by_keys(t)
 	for k, _ in pairs(t) do
 		table.insert(sorted_keys, k)
 	end
-
 	table.sort(sorted_keys)
-	
 	for _, v in pairs(sorted_keys) do
 		print(v, t[v])
 	end	
