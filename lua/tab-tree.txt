@@ -1,6 +1,6 @@
 one
-	01 Foo
 	02 Bar
+	01 Foo
 two
 	oranges
 	apples
