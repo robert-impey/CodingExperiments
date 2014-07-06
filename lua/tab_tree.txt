@@ -1,0 +1,22 @@
+one
+	01 Foo
+	02 Bar
+two
+	oranges
+	apples
+	bananas
+		Costa Rica
+		Columbia
+		Brazil
+		Ghana
+	figs
+	olives
+		Spain
+		Italy
+		Greece
+three
+	shirts
+	trousers
+	socks
+	shoes
+	hats
