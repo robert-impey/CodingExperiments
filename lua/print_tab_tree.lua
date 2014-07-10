@@ -8,9 +8,17 @@ function count_leading_tabs(line)
 	return tabs
 end
 
+-- Read the file
+
 tab_tree = {}
 
+current_table = tab_tree
+current_items = {}
+
+tab_tree.items = current_items
+
 previous_indent = 0
+previous_title = nil
 for line in io.lines() do
 	-- Remove leading white space
 	line_wo_lws, _ = line:gsub("%s*", "")
@@ -18,13 +26,28 @@ for line in io.lines() do
 	current_indent = count_leading_tabs(line)
 
 	if current_indent > previous_indent then
-		print("down")
+		parent_table = current_table
+		current_table = {}
 	elseif current_indent < previous_indent then
-		print("up")	
+		current_table = parent_table
 	else
-		print("same")
+		table.insert(current_items, line_wo_lws)
 	end
 
 	previous_indent = current_indent
+	previous_title = line_wo_lws
 end
+
+-- Print the table sorted
+function print_table(table)
+	if table.title then
+		print(table.title)
+	end
+
+	if table.items then
+		
+	end	
+end
+
+print_table(tab_tree)
 
