@@ -38,6 +38,8 @@ end
 
 print_by_keys(t)
 
+print("Finding the size of the tables")
+
 print(#t)
 print(table.maxn(t))
 
