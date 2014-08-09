@@ -1,4 +1,8 @@
+#include <iostream>
 #include <stdio.h>
+
+using std::cout;
+using std::endl;
 
 int j;
 
@@ -19,11 +23,13 @@ void incr()
 
 int main()
 {
-	int i;
+	cout << "i" << endl;
 
-	for (i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		printf("i - %d\n", i);
 	}
+
+	cout << "j" << endl;
 
 	for (init(); check(); incr())
 	{
