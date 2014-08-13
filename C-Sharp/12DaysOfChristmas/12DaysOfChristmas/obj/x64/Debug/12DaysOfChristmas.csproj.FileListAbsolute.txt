@@ -1,5 +1,0 @@
-C:\Users\Robert\Dropbox\code\C#\12DaysOfChristmas\12DaysOfChristmas\bin\x64\Debug\12DaysOfChristmas.exe.config
-C:\Users\Robert\Dropbox\code\C#\12DaysOfChristmas\12DaysOfChristmas\bin\x64\Debug\12DaysOfChristmas.exe
-C:\Users\Robert\Dropbox\code\C#\12DaysOfChristmas\12DaysOfChristmas\bin\x64\Debug\12DaysOfChristmas.pdb
-C:\Users\Robert\Dropbox\code\C#\12DaysOfChristmas\12DaysOfChristmas\obj\x64\Debug\12DaysOfChristmas.exe
-C:\Users\Robert\Dropbox\code\C#\12DaysOfChristmas\12DaysOfChristmas\obj\x64\Debug\12DaysOfChristmas.pdb

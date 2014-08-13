@@ -1,5 +1,0 @@
-C:\Documents and Settings\r.impey\My Documents\Google Drive\code\C#\12DaysOfChristmas\12DaysOfChristmas\bin\Release\12DaysOfChristmas.exe
-C:\Documents and Settings\r.impey\My Documents\Google Drive\code\C#\12DaysOfChristmas\12DaysOfChristmas\bin\Release\12DaysOfChristmas.pdb
-C:\Documents and Settings\r.impey\My Documents\Google Drive\code\C#\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Documents and Settings\r.impey\My Documents\Google Drive\code\C#\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\12DaysOfChristmas.exe
-C:\Documents and Settings\r.impey\My Documents\Google Drive\code\C#\12DaysOfChristmas\12DaysOfChristmas\obj\x86\Release\12DaysOfChristmas.pdb
