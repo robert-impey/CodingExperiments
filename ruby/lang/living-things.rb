@@ -35,6 +35,8 @@ class Monkey < Mammal
   end
 end
 
+# Apparently, they can regulate their temperature
+# http://en.wikipedia.org/wiki/Nelumbo_nucifera
 class SacredLotus < Plant
   include ThermoRegulator
   def float_on_pond
