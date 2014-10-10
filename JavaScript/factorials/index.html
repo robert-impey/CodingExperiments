@@ -18,10 +18,27 @@
         }
     }
     
+    // Tail Recursive Variation
+    function factTR(x)
+    {
+        function f(acc, y)
+        {
+            if (y <= 1) {
+                return acc;
+            } else {
+                return f(acc * y, y - 1);
+            }
+        }
+        
+        return f(1, x)
+    }
+    
     for (i = 0; i <= max; i++) {
         document.write(i);
         document.write("\t");
-        document.writeln(factorial(i));
+        document.write(factorial(i));
+        document.write("\t");
+        document.writeln(factTR(i));
     }
     </script></pre>
 </body>
