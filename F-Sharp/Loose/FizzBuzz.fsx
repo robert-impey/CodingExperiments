@@ -1,13 +1,13 @@
 type NumberChecker = int -> string option
 
-let checkNumber (divisor, message) number = 
+let numberCheckerMaker (divisor, message) number = 
     if number % divisor = 0 then
         Some message
     else    
         None
 
-let fizz = checkNumber (3, "Fizz!")
-let buzz = checkNumber (5, "Buzz!")
+let fizz = numberCheckerMaker (3, "Fizz!")
+let buzz = numberCheckerMaker (5, "Buzz!")
 
 let andNumberChecker (f : NumberChecker, g : NumberChecker) = 
     (fun x -> 
