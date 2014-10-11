@@ -1,3 +1,5 @@
+// See http://www.reversing-entropy.com/?p=455
+
 type NumberChecker = int -> string option
 
 let isEven x = 
