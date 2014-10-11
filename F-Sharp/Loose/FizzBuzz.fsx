@@ -42,12 +42,10 @@ let numberCheckerMaker (divisor, message) number =
 let fizz = numberCheckerMaker (3, "Fizz!")
 let buzz = numberCheckerMaker (5, "Buzz!")
 
-let andNumberChecker (f : NumberChecker, g : NumberChecker) = 
-    (fun x -> 
-        match f x, g x with
-        | Some messageF, Some messageG -> messageF + " " + messageG |> Some
-        | _ -> None
-    )
+let andNumberChecker (f : NumberChecker, g : NumberChecker) x  = 
+    match f x, g x with
+    | Some messageF, Some messageG -> messageF + " " + messageG |> Some
+    | _ -> None
 
 let fizzBuzz = andNumberChecker (fizz, buzz)
 
