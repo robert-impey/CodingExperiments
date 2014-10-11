@@ -33,14 +33,14 @@ numberCheckerPrinter isEven 3
 numberCheckerPrinter isOdd 2
 numberCheckerPrinter isOdd 3
 
-let numberCheckerMaker (divisor, message) number = 
+let divisorNumberChecker (divisor, message) number = 
     if number % divisor = 0 then
         Some message
     else    
         None
 
-let fizz = numberCheckerMaker (3, "Fizz!")
-let buzz = numberCheckerMaker (5, "Buzz!")
+let fizz = divisorNumberChecker (3, "Fizz!")
+let buzz = divisorNumberChecker (5, "Buzz!")
 
 fizz 3
 fizz 4
