@@ -42,6 +42,9 @@ let numberCheckerMaker (divisor, message) number =
 let fizz = numberCheckerMaker (3, "Fizz!")
 let buzz = numberCheckerMaker (5, "Buzz!")
 
+fizz 3
+fizz 4
+
 let andNumberChecker (f : NumberChecker, g : NumberChecker) x  = 
     match f x, g x with
     | Some messageF, Some messageG -> messageF + " " + messageG |> Some
@@ -49,16 +52,22 @@ let andNumberChecker (f : NumberChecker, g : NumberChecker) x  =
 
 let fizzBuzz = andNumberChecker (fizz, buzz)
 
-let numberCheckers = [ fizzBuzz; fizz; buzz ]
-
-[1 .. 30 ]
-|> List.iter (fun x -> 
+let doManyChecks (numberCheckers : NumberChecker list) number =
     let message = 
         List.fold (fun message' numberChecker ->
             match message' with 
             | Some _ -> message'
-            | None -> numberChecker x
+            | None -> numberChecker number
         ) None numberCheckers
     match message with
     | Some message' -> printfn "%s" message'
-    | None -> printfn "%d" x)
+    | None -> printfn "%d" number   
+
+let doFizzBuzzChecks = doManyChecks [ fizzBuzz; fizz; buzz ]
+
+doFizzBuzzChecks 3
+doFizzBuzzChecks 4
+doFizzBuzzChecks 5
+doFizzBuzzChecks 15
+
+[ 1 .. 30 ] |> List.iter doFizzBuzzChecks
