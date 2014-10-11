@@ -54,9 +54,9 @@ let fizzBuzz = andNumberChecker (fizz, buzz)
 
 let doManyChecks (numberCheckers : NumberChecker list) number =
     let message = 
-        List.fold (fun message' numberChecker ->
-            match message' with 
-            | Some _ -> message'
+        List.fold (fun message numberChecker ->
+            match message with 
+            | Some _ -> message
             | None -> numberChecker number
         ) None numberCheckers
     match message with
