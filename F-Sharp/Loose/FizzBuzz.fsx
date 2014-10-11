@@ -4,6 +4,25 @@ let isEven x =
     if x % 2 = 0 then Some "That number's even!"
     else None
 
+let number = 4
+
+match isEven number with
+| Some message -> printfn "%s" message
+| None -> printfn "%d" number
+
+let isOdd x =
+    if x % 2 = 1 then Some "That number's odd!"
+    else None
+
+match isOdd number with
+| Some message -> printfn "%s" message
+| None -> printfn "%d" number
+
+let otherNumber = 5
+match isOdd otherNumber with
+| Some message -> printfn "%s" message
+| None -> printfn "%d" otherNumber
+
 let numberCheckerPrinter (numberChecker : NumberChecker) number =
     match numberChecker number with
     | Some message -> printfn "%s" message
@@ -11,6 +30,8 @@ let numberCheckerPrinter (numberChecker : NumberChecker) number =
 
 numberCheckerPrinter isEven 2
 numberCheckerPrinter isEven 3
+numberCheckerPrinter isOdd 2
+numberCheckerPrinter isOdd 3
 
 let numberCheckerMaker (divisor, message) number = 
     if number % divisor = 0 then
