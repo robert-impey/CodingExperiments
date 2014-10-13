@@ -28,11 +28,12 @@ public class BinarySearch {
             System.out.printf("Seeking: %d\n", soughtNumber);
             
             // Simple Search
+            System.out.print("Searching with a loop: ");
             i = 0;
             while (!((i == max - 1) || (as[i] == soughtNumber))) {
                 i++;
             }
-
+            
             if (as[i] == soughtNumber) {
                 System.out.println("Found!");
             } else {
@@ -40,6 +41,7 @@ public class BinarySearch {
             }
 
             // Binary Search
+            System.out.print("Searching with binary search: ");
             i = 0;
             j = max - 1;
             do {
