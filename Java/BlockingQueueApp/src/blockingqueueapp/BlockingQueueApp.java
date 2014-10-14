@@ -24,8 +24,7 @@ public class BlockingQueueApp {
         int expectedMessagesConsumed = numberOfProducers * numberOfMessages;
 
         int queueCapacity;
-        queueCapacity = 1;
-        //queueCapacity = 10;
+        queueCapacity = 100;
         //queueCapacity = numberOfProducers * numberOfMessages;
         boolean accessFairness = true;
 
@@ -33,11 +32,11 @@ public class BlockingQueueApp {
         drop = new ArrayBlockingQueue<>(queueCapacity, accessFairness);
 
         CountDownLatch producingCountDownLatch = new CountDownLatch(numberOfProducers);
-        CountDownLatch consumingcountDownLatch = new CountDownLatch(1);
+        CountDownLatch consumingCountDownLatch = new CountDownLatch(1);
 
         long start = System.nanoTime();
 
-        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingcountDownLatch);
+        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingCountDownLatch);
 
         (new Thread(consumer)).start();
 
@@ -46,7 +45,7 @@ public class BlockingQueueApp {
         }
 
         try {
-            consumingcountDownLatch.await();
+            consumingCountDownLatch.await();
             long stop = System.nanoTime();
             System.out.printf(
                     "Messages recieved: %d\tExpected Messages: %d\tDiff: %d\tTime: %f\n",

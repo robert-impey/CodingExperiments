@@ -56,11 +56,11 @@ public class BQATest {
         BlockingQueue<String> drop = new ArrayBlockingQueue<>(queueCapacity, accessFairness);
 
         CountDownLatch producingCountDownLatch = new CountDownLatch(numberOfProducers);
-        CountDownLatch consumingcountDownLatch = new CountDownLatch(1);
+        CountDownLatch consumingCountDownLatch = new CountDownLatch(1);
 
         List<Runnable> runnables = new ArrayList<>();
 
-        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingcountDownLatch);
+        Consumer consumer = new Consumer(drop, producingCountDownLatch, consumingCountDownLatch);
         runnables.add(consumer);
 
         for (int i = 0; i < numberOfProducers; i++) {
@@ -70,7 +70,7 @@ public class BQATest {
         runRunnables(runnables);
 
         try {
-            consumingcountDownLatch.await();
+            consumingCountDownLatch.await();
             assertEquals(expectedMessagesConsumed, consumer.getMessagesReceived());
         } catch (InterruptedException ex) {
             Logger.getLogger(BlockingQueueApp.class.getName()).log(Level.SEVERE, null, ex);
