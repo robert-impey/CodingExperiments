@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BalanceParentheses.Lib;
 
 namespace BalanceParentheses.Test
@@ -10,10 +9,7 @@ namespace BalanceParentheses.Test
         [TestMethod]
         public void TestEmptyString()
         {
-            var expected = true;
-            var actual = BalanceChecker.IsStringBalanced("");
-
-            Assert.AreEqual(expected, actual);
+            Assert.IsTrue(BalanceChecker.IsStringBalanced(""));
         }
 
         [TestMethod]
