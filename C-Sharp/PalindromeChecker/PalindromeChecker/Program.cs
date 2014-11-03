@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PalindromeChecker.Lib;
 
 /**
  * For searching a dictionary file for palindromes.
@@ -31,7 +26,7 @@ namespace PalindromeChecker
 
                         var wordToCheck = line.Trim();
 
-                        if (PalindromeChecker.Lib.PalindromeChecker.IsPalindrome(wordToCheck))
+                        if (Lib.PalindromeChecker.IsPalindrome(wordToCheck))
                             Console.WriteLine(wordToCheck);
                     }
                 }

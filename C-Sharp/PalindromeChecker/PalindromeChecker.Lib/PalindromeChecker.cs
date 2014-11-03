@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PalindromeChecker.Lib
 {
@@ -16,7 +12,7 @@ namespace PalindromeChecker.Lib
             var tempStack = new Stack<char>();
 
             var i = 0;
-            for (; i < (int)(possiblePalindrome.Length / 2); i++)
+            for (; i < possiblePalindrome.Length / 2; i++)
             {
                 tempStack.Push(possiblePalindrome[i]);
             }

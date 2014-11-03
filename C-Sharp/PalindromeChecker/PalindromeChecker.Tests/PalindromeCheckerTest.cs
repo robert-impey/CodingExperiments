@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PalindromeChecker.Lib;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PalindromeChecker.Tests
 {
@@ -10,43 +8,43 @@ namespace PalindromeChecker.Tests
         [TestMethod]
         public void EmptyString()
         {
-            Assert.IsFalse(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome(""));
+            Assert.IsFalse(Lib.PalindromeChecker.IsPalindrome(""));
         }
 
         [TestMethod]
         public void SingleLetter()
         {
-            Assert.IsTrue(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome("a"));
+            Assert.IsTrue(Lib.PalindromeChecker.IsPalindrome("a"));
         }
 
         [TestMethod]
         public void TwoLetterPalindrome()
         {
-            Assert.IsTrue(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome("aa"));
+            Assert.IsTrue(Lib.PalindromeChecker.IsPalindrome("aa"));
         }
 
         [TestMethod]
         public void TwoDifferentLetters()
         {
-            Assert.IsFalse(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome("ab"));
+            Assert.IsFalse(Lib.PalindromeChecker.IsPalindrome("ab"));
         }
 
         [TestMethod]
         public void ThreeLetterPalindrome()
         {
-            Assert.IsTrue(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome("aba"));
+            Assert.IsTrue(Lib.PalindromeChecker.IsPalindrome("aba"));
         }
 
         [TestMethod]
         public void FourLetterPalindrome()
         {
-            Assert.IsTrue(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome("abba"));
+            Assert.IsTrue(Lib.PalindromeChecker.IsPalindrome("abba"));
         }
 
         [TestMethod]
         public void FourLetterRepeats()
         {
-            Assert.IsFalse(PalindromeChecker.Lib.PalindromeChecker.IsPalindrome("abab"));
+            Assert.IsFalse(Lib.PalindromeChecker.IsPalindrome("abab"));
         }
     }
 }
