@@ -15,7 +15,24 @@ int main(int argc, char *argv[])
 	b = atof(argv[2]);
 	c = atof(argv[3]);
 	
-	cout << a << " * x ** 2 + " << b << " * x + " << c << " = ";
-	cout << a << " * (x - " << -1 * (b / (2 * a)) << ") ** 2 + " << c - ((b * b) / (4 * a));
+	cout << "(" << a << " * x ** 2) + ";
+	cout << "(" << b << " * x) + ";
+	cout << c;
+
+	cout << " = ";
+	
+	float xSubtractor = -1 * (b / (2 * a));
+	cout << a << " * (x";
+	
+	if (xSubtractor >= 0.0) {
+		cout << " - ";
+		cout << xSubtractor;
+	} else {
+		cout << " + ";
+		cout << (-1.0 * xSubtractor);
+	}
+
+	cout << ") ** 2 + "; 
+	cout << c - ((b * b) / (4 * a));
 	cout << endl;		
 }
