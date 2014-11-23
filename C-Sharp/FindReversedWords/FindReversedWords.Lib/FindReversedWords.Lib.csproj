@@ -48,6 +48,7 @@
     <Compile Include="IReversedWordFinder.cs" />
     <Compile Include="NaiveReversedWordFinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReversedWordPair.cs" />
     <Compile Include="StackReversedStringChecker.cs" />
   </ItemGroup>
   <ItemGroup>

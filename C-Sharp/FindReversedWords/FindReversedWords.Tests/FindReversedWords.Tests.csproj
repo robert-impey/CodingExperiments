@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StackReversedStringCheckerTests.cs" />
+    <Compile Include="NaiveReversedWordFinderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FindReversedWords.Lib\FindReversedWords.Lib.csproj">

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FindReversedWords.Lib
 {
-    interface IReversedWordFinder
+    public interface IReversedWordFinder
     {
-        IEnumerable<string> FindReversedWords(IEnumerable<string> allWords);
+        IEnumerable<ReversedWordPair> FindReversedWords(IEnumerable<string> allWords);
     }
 }
