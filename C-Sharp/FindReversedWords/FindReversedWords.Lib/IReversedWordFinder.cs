@@ -8,6 +8,6 @@ namespace FindReversedWords.Lib
 {
     public interface IReversedWordFinder
     {
-        IEnumerable<ReversedWordPair> FindReversedWords(IEnumerable<string> allWords);
+        IEnumerable<ReversedWordPair> FindReversedWords(IQueryable<string> allWords);
     }
 }
