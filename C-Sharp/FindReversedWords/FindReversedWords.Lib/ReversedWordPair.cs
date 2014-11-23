@@ -34,5 +34,10 @@
             this.firstWord = firstWord;
             this.secondWord = secondWord;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0} <-> {1}", firstWord, secondWord);
+        }
     }
 }
