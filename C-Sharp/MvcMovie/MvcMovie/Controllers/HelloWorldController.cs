@@ -14,6 +14,7 @@ namespace MvcMovie.Controllers
             return "This is my <b>default</b> action...";
         }
 
+        // Try http://localhost:49646/HelloWorld/Welcome/Harry/5
         public string Welcome(string name, int ID)
         {
             return HttpUtility.HtmlEncode("Hello, " + name + ", ID is " + ID);
