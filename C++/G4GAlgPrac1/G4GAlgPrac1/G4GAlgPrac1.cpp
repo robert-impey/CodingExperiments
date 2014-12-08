@@ -24,17 +24,27 @@ unsigned fun1(unsigned n)
 	return 2 * fun1(n - 1);
 }
 
+unsigned fun2(unsigned n)
+{
+	if (n == 0) return 1;
+	if (n == 1) return 2;
+	
+	unsigned tmp = fun2(n / 2);
+	return n % 2 == 0 ? tmp * tmp : 2 * tmp * tmp;
+}
+
 int main(array<System::String ^> ^args)
 {
-	Console::WriteLine("i,fun0(i),fun1(i)");
+	Console::WriteLine("i,fun0(i),fun1(i),fun2(i)");
 
 	for (int i = 0; i <= 10; i++)
 	{
 		printf(
-			"%d,%d,%d\n", 
+			"%d,%d,%d,%d\n", 
 			i, 
 			fun0(i),
-			fun1(i)
+			fun1(i),
+			fun2(i)
 		);
 	}
 
