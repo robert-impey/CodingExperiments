@@ -1,14 +1,14 @@
-print "Hello there! What's your name?"
-name = raw_input()
+print("Hello there! What's your name?")
+name = input()
 
-print "Hello, " + name + "!"
-print "Good luck in the quiz today!"
+print("Hello, " + name + "!")
+print("Good luck in the quiz today!")
 
-print "What's the capital of France?"
-capital_of_france = raw_input()
+print("What's the capital of France?")
+capital_of_france = input()
 
 if(capital_of_france == "Paris"):
-    print "Well done!"
+    print("Well done!")
 else:
-    print "Too bad!"
+    print("Too bad!")
     
