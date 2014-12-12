@@ -1,10 +1,10 @@
 def spam():
     food = "Spam"
-    print food
+    print(food)
 
 def eggs():
     food = "Eggs"
-    print food
+    print(food)
 
 spam()
 eggs()

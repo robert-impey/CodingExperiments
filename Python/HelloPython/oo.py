@@ -9,4 +9,4 @@ f.add("Hello, Objects")
 f.add("More stuff")
 
 for d in f.data:
-    print d
+    print(d)
