@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class PrimeGeneratorContext {
 
-    private PrimeGeneratorStrategy primeGeneratorStrategy;
+    private final PrimeGeneratorStrategy primeGeneratorStrategy;
 
     public PrimeGeneratorContext(PrimeGeneratorStrategy primeGeneratorStrategy) {
         this.primeGeneratorStrategy = primeGeneratorStrategy;
