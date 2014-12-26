@@ -36,9 +36,7 @@ public class FarmyardPolymorphism {
         animals.add(new Cat());
         animals.add(new Dog());
         
-        for (Iterator<Animal> it = animals.iterator(); it.hasNext();) {
-            Animal animal = it.next();
-            
+        for (Animal animal : animals) {
             System.out.println(animal.speak());
         }
     }
