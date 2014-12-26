@@ -9,7 +9,7 @@ package gcd;
  * @author Robert
  */
 public class GcdFinderContext {
-    private GcdFinder gcdFinder;
+    private final GcdFinder gcdFinder;
     
     public GcdFinderContext(GcdFinder gcdFinder)
     {
