@@ -1,8 +1,13 @@
-#!/usr/bin/perl -w
-use strict;
+#!/usr/bin/env perl
 
-my @dad = qw(T T);
-my @mum =  qw(T t);
+use strict;
+use warnings;
+
+my $dadStr = shift @ARGV;
+my $mumStr = shift @ARGV;
+
+my @dad = split //, $dadStr;
+my @mum = split //, $mumStr;
 
 print ' |';
 
