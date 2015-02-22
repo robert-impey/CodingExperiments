@@ -8,7 +8,7 @@ let population =
       (Brown, 5000) ]
     |> Map.ofList
 
-let numberOfPicks = pown 10 7
+let numberOfPicks = pown 10 6
 
 let rec simPicks remainingPicks picks = 
     if remainingPicks = 0 then picks
@@ -19,6 +19,4 @@ let rec simPicks remainingPicks picks =
 let picks = simPicks numberOfPicks []
 let newPopulation = colourListToPopulation picks
 
-newPopulation
-|> Map.toSeq
-|> Seq.iter (fun (colour, count) -> printfn "%s - %d" (colourToString colour) count)
+printPopulation newPopulation

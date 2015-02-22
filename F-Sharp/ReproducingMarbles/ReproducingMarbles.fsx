@@ -5,3 +5,13 @@
 #load "ReproducingMarbles.fs"
 
 open ReproducingMarbles
+
+let population = 
+    [ (Blue, 1000)
+      (Brown, 1000) ]
+    |> Map.ofList
+
+let numberOfGenerations = 50
+let finalPopulation = evolve numberOfGenerations population
+
+printPopulation finalPopulation

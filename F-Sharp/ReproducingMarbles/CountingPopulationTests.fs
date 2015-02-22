@@ -1,8 +1,8 @@
 ﻿namespace CountingPopulation.Tests
 
-open ReproducingMarbles
 open FsUnit
 open NUnit.Framework
+open ReproducingMarbles
 
 [<TestFixture>]
 type ``Given a population When it is counted``() = 

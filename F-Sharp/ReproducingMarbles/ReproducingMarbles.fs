@@ -48,12 +48,22 @@ let colourToString =
     function 
     | Blue -> "Blue"
     | Brown -> "Brown"
-//let rec evolve generations (marbles : Population ) = 
-//    if generations = 0 then marbles
-//    else
-//        let rec reproduce (newMarbles : Population) =
-//            if countPopulation marbles = countPopulation newMarbles then 
-//                newMarbles
-//            else
-//                newMarbles
-//                    
+
+let rec evolve generations (marbles : Population) = 
+    if generations = 0 then marbles
+    else 
+        let populationSize = countPopulation marbles
+        
+        let rec reproduce (currentMarbles : Colour list) = 
+            if currentMarbles.Length = populationSize then currentMarbles
+            else 
+                let newMarble = pickFromPopulation marbles
+                reproduce (newMarble :: currentMarbles)
+        []
+        |> reproduce
+        |> colourListToPopulation
+
+let printPopulation (population : Population) = 
+    population
+    |> Map.toSeq
+    |> Seq.iter (fun (colour, count) -> printfn "%s - %d" (colourToString colour) count)

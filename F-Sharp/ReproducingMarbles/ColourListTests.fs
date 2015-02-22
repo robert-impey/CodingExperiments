@@ -1,8 +1,8 @@
 ﻿module ColourList.Tests
 
-open ReproducingMarbles
 open FsUnit
 open NUnit.Framework
+open ReproducingMarbles
 
 [<TestFixture>]
 type ``Given an empty list When it is converted to a Population``() = 
