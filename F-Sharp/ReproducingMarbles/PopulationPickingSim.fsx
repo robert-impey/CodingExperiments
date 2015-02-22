@@ -8,7 +8,7 @@ let population =
       (Brown, 5000) ]
     |> Map.ofList
 
-let numberOfPicks = pown 10 4
+let numberOfPicks = pown 10 7
 
 let rec simPicks remainingPicks picks = 
     if remainingPicks = 0 then picks
