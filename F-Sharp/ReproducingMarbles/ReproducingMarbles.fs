@@ -24,7 +24,7 @@ let pickFromPopulation (population : Population) =
                match pickedColour with
                | None -> 
                    let newTaken = taken + size
-                   if newTaken >= randomIndex then Some colour, 0
+                   if newTaken > randomIndex then Some colour, 0
                    else None, newTaken
                | Some _ -> pickedColour, 0) (None, 0)
         |> fst
