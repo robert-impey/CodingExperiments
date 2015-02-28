@@ -7,11 +7,11 @@
 open ReproducingMarbles
 
 let population = 
-    [ (Blue, 10)
-      (Brown, 10) ]
+    [ (Blue, 50)
+      (Brown, 50) ]
     |> Map.ofList
 
-let numberOfGenerations = pown 10 4
+let numberOfGenerations = 50
 let finalPopulation = evolve numberOfGenerations population
 
 printPopulation finalPopulation
