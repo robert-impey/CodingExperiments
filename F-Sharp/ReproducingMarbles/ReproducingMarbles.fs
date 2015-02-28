@@ -11,9 +11,10 @@ let countPopulation (population : Population) =
     |> Map.toSeq
     |> Seq.sumBy snd
 
+let private randomNumberGenerator = new System.Random()
+
 let pickFromPopulation (population : Population) = 
     let size = countPopulation population
-    let randomNumberGenerator = new System.Random()
     let randomIndex = randomNumberGenerator.Next size
     
     let pickedColour = 
