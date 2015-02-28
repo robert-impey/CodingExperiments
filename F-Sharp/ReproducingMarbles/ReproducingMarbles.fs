@@ -45,19 +45,25 @@ let colourToString =
     | Blue -> "Blue"
     | Brown -> "Brown"
 
-let rec evolve generations (marbles : Population) = 
-    if generations = 0 then marbles
-    else 
-        let populationSize = countPopulation marbles
-        
-        let rec reproduce (currentMarbles : Colour list) = 
-            if currentMarbles.Length = populationSize then currentMarbles
-            else 
-                let newMarble = pickFromPopulation marbles
-                reproduce (newMarble :: currentMarbles)
-        []
-        |> reproduce
-        |> colourListToPopulation
+let reproduce (population : Population) = 
+    let populationSize = countPopulation population
+    
+    let rec reproduce' (currentPopulation : Colour list) = 
+        if currentPopulation.Length = populationSize then currentPopulation
+        else 
+            let newIndividual = pickFromPopulation population
+            reproduce' (newIndividual :: currentPopulation)
+    []
+    |> reproduce'
+    |> colourListToPopulation
+
+let evolve generations (population : Population) = 
+    let rec evolve' currentGeneration currentPopulation = 
+        if currentGeneration = generations then currentPopulation
+        else 
+            let newPopulation = reproduce currentPopulation
+            evolve' (currentGeneration + 1) newPopulation
+    evolve' 0 population
 
 let printPopulation (population : Population) = 
     population
