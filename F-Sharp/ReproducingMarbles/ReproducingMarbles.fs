@@ -32,18 +32,13 @@ let pickFromPopulation (population : Population) =
     | Some pickedColour' -> pickedColour'
     | None -> failwith "No colour picked!"
 
-let colourListToPopulation (picks : Colour list) = 
-    let rec colourListToPopulation' (picks : Colour list) (population : Population) = 
-        match picks with
-        | [] -> population
-        | hd :: tl -> 
-            let newColourCount = 
-                if Map.containsKey hd population then population.[hd] + 1
-                else 1
-            
-            let newPopulation = Map.add hd newColourCount population
-            colourListToPopulation' tl newPopulation
-    colourListToPopulation' picks Map.empty
+let addColourToPopulation (population : Population) (colour : Colour) = 
+    let newColourCount = 
+        if Map.containsKey colour population then population.[colour] + 1
+        else 1
+    Map.add colour newColourCount population
+
+let colourListToPopulation : Colour list -> Population = List.fold addColourToPopulation Map.empty
 
 let colourToString = 
     function 
