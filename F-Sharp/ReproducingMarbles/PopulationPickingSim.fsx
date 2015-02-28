@@ -4,11 +4,11 @@
 open ReproducingMarbles
 
 let population = 
-    [ (Blue, 5000)
-      (Brown, 5000) ]
+    [ (Blue, 1)
+      (Brown, 1) ]
     |> Map.ofList
 
-let numberOfPicks = pown 10 6
+let numberOfPicks = pown 10 4
 
 let rec simPicks remainingPicks picks = 
     if remainingPicks = 0 then picks
