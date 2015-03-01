@@ -37,9 +37,9 @@
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')" />
   <ItemGroup>
     <Compile Include="ReproducingMarbles.fs" />
-    <None Include="PopulationPickingSim.fsx" />
     <Compile Include="CountingPopulationTests.fs" />
     <Compile Include="ColourListTests.fs" />
+    <None Include="PopulationPickingSim.fsx" />
     <None Include="ReproducingMarbles.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
