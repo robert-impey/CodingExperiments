@@ -52,7 +52,8 @@ let reproduce (population : Population) =
         if currentPopulation.Length = populationSize then currentPopulation
         else 
             let newIndividual = pickFromPopulation population
-            reproduce' (newIndividual :: currentPopulation)
+            let newPopulation = newIndividual :: currentPopulation
+            reproduce' newPopulation
     []
     |> reproduce'
     |> colourListToPopulation
@@ -62,7 +63,8 @@ let evolve generations (population : Population) =
         if currentGeneration = generations then currentPopulation
         else 
             let newPopulation = reproduce currentPopulation
-            evolve' (currentGeneration + 1) newPopulation
+            let newGeneration = currentGeneration + 1
+            evolve' newGeneration newPopulation
     evolve' 0 population
 
 let printPopulation (population : Population) = 
