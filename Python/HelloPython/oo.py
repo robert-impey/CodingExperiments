@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class F:
     def __init__(self):
         self.data = []
