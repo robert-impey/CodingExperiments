@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 sum_of_numbers = 0
 max_number = 1000

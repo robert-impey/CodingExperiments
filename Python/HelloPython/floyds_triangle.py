@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 rows = int(input("How many rows?"))
 
 number = 1
