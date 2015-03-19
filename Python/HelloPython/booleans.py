@@ -20,11 +20,12 @@ def i_say_what_i_get(boolean_expression):
         print("I got a false expression!")
     print()
 
-i_say_what_i_get(tell_me_false(1) and not tell_me_true(2) or tell_me_false(3))
-i_say_what_i_get(tell_me_false(1) or tell_me_false(2))
-i_say_what_i_get(tell_me_true(1) or tell_me_false(2))
-i_say_what_i_get(tell_me_false(1) and tell_me_true(2) or tell_me_false(3))
-i_say_what_i_get(tell_me_true(1) and tell_me_false(2) or tell_me_false(3))
-i_say_what_i_get(tell_me_true(1) and tell_me_true(2) or tell_me_false(3))
-i_say_what_i_get(tell_me_true(1) and not tell_me_false(2) or tell_me_false(3))
-
+if __name__ == "__main__":
+    i_say_what_i_get(tell_me_false(1) and not tell_me_true(2) or tell_me_false(3))
+    i_say_what_i_get(tell_me_false(1) or tell_me_false(2))
+    i_say_what_i_get(tell_me_true(1) or tell_me_false(2))
+    i_say_what_i_get(tell_me_false(1) and tell_me_true(2) or tell_me_false(3))
+    i_say_what_i_get(tell_me_true(1) and tell_me_false(2) or tell_me_false(3))
+    i_say_what_i_get(tell_me_true(1) and tell_me_true(2) or tell_me_false(3))
+    i_say_what_i_get(tell_me_true(1) and not tell_me_false(2) or tell_me_false(3))
+    
