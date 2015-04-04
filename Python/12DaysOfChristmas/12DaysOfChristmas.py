@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 totalGifts = 0
 
 for dayOfChristmas in range(1, 12 + 1):
