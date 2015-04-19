@@ -3,6 +3,9 @@
 xs = [1, 2, 3]
 ys = [6, 7, 8, 9]
 
+sum = 0
 for x in xs:
     for y in ys:
-        print "%d * %d = %d" % (x, y, x * y)
+        sum += x * y
+
+print sum
