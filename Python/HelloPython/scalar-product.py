@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 xs = [1, 2, 3]
-ys = [9, 8, 7, 6]
+ys = [6, 7, 8, 9]
 
 for x in xs:
     for y in ys:
