@@ -1,0 +1,15 @@
+# Info from Wikipedia
+star-wars: 
+    title: Star Wars
+    director: George Lucas
+    actors:
+        - Harrison Ford
+        - Mark Hamill
+        - Carrie Fisher
+tron:
+    title: Tron
+    director: Steven Lisberger
+    actors:
+        - Jeff Bridges
+        - Bruce Boxleitner
+        - David Warner
