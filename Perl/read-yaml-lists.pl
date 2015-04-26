@@ -13,4 +13,5 @@ for my $file (@ARGV) {
 
     my $first_ref = shift @ary;
     print join "\n", @{$first_ref};
+    print "\n";
 }
