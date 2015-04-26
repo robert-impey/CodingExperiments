@@ -8,6 +8,7 @@ my %hash_of_arrays;
 push @{$hash_of_arrays{first}}, 'foo', 'bar', 'baz';
 push @{$hash_of_arrays{second}}, 'fee', 'fi', 'fo', 'fum';
 
+print "The HoA sorted by ??? \n";
 for my $hash_key (sort {@{$hash_of_arrays{$b}} <=> @{$hash_of_arrays{$a}}} keys %hash_of_arrays) {
     print "$hash_key: ", join(", ", sort @{ $hash_of_arrays{$hash_key}}), "\n";
 }
