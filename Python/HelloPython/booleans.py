@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def i_say_which_function_i_am(order):
-    print("I'm function number ", order) 
+    print("I'm function number", order) 
 
 def tell_me_true(order):
     i_say_which_function_i_am(order)
