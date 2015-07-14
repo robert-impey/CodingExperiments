@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 class Foo:
     def __init__(self, text, number):
@@ -13,12 +13,12 @@ class Foo:
 
 a_foo = Foo('a', 1)
 
-print "a_foo: %s" % a_foo
+print("a_foo: %s" % a_foo)
 
 b_foo = Foo('b', 2)
 
-print "b_foo: %s" % b_foo
+print("b_foo: %s" % b_foo)
 
 foos = [a_foo, b_foo]
 
-print "foos: %s" % foos
+print("foos: %s" % foos)
