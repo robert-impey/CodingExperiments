@@ -31,7 +31,7 @@ function print_by_keys(t)
 		table.insert(sorted_keys, k)
 	end
 	table.sort(sorted_keys)
-	for _, v in pairs(sorted_keys) do
+	for _, v in ipairs(sorted_keys) do
 		print(v, t[v])
 	end	
 end
