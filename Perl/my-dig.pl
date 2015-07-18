@@ -22,7 +22,9 @@ if ($query) {
 	foreach my $rr ($query->answer) {
 		print '-' x 20, "\n";
 		foreach (qw(name type class ttl rdata rdlength)) {
-			print "$_: $rr->{$_}\n";
+			if ($_ and $rr->{$_}) {
+				print "$_: $rr->{$_}\n";
+			}
 		}
 	}
 	print '-' x 20, "\n";
