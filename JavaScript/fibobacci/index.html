@@ -17,11 +17,30 @@
             return fibonacci(x - 2) + fibonacci(x - 1);
         }
     }
+
+    function fibTR(x)
+    {
+        function f(prev, acc, cur)
+        {
+            if (cur >= x)
+            {
+                return acc;
+            }
+            else
+            {
+                return f(acc, prev + acc, cur + 1);
+            }
+        }
+
+        return f(1, 1, 1);
+    }
     
     for (i = 0; i <= max; i++) {
         document.write(i);
         document.write("\t");
-        document.writeln(fibonacci(i));
+        document.write(fibonacci(i));
+        document.write("\t");
+        document.writeln(fibTR(i));
     }
     </script></pre>
 </body>
