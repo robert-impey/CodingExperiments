@@ -8,29 +8,29 @@
     <pre><script type="application/x-javascript">
     var max = 20;
     
-    function printUpToRow(x)
+    function printUpToRow(maxRow)
     {
-        pascalsHelper(0, [1], x);
-    }
-    
-    function pascalsHelper(currentRow, previousRow, maxRow)
-    {
-        document.writeln(previousRow.join(' '));
-        
-        if (currentRow >= maxRow) {
-            document.writeln("Finished!");
-        } else {
-            var thisRow = [];
-            thisRow.push(1);
+        function f(currentRow, previousRow)
+        {
+            document.writeln(previousRow.join(' '));
             
-            for (var i = 1; i < previousRow.length; i++) {
-               thisRow.push(previousRow[i - 1] + previousRow[i]);
+            if (currentRow >= maxRow) {
+                document.writeln("Finished!");
+            } else {
+                var thisRow = [];
+                thisRow.push(1);
+                
+                for (var i = 1; i < previousRow.length; i++) {
+                   thisRow.push(previousRow[i - 1] + previousRow[i]);
+                }
+                
+                thisRow.push(1);
+                
+                f(currentRow + 1, thisRow, maxRow);
             }
-            
-            thisRow.push(1);
-            
-            pascalsHelper(currentRow + 1, thisRow, maxRow);
         }
+
+        f(0, [1]);
     }
     
     printUpToRow(max);
