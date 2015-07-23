@@ -43,11 +43,10 @@
 		return animal;
 	}
 	
-	var animals = {};
-	i = 0;
-	animals[i++] = animalFactory('cat');
-	animals[i++] = animalFactory('dog');
-	//animals[i++] = animalFactory('unicorn');
+	var animals = [];
+	animals.push(animalFactory('cat'));
+	animals.push(animalFactory('dog'));
+	animals.push(animalFactory('unicorn'));
 
 	for (i = 0; i < animals.length; i++) {
 		animals[i].speak();
