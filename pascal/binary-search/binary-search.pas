@@ -2,20 +2,27 @@ Program BinarySearch;
 
 Const
     Max: Integer = 10;
-    Sought: Integer = 6;
+    Sought: Integer = 10;
 
 Var
 	A: Array [1 .. 10] Of Integer;
 	I, J, K: Integer;
     
 Begin
+    Write('Seeking: ');
+    WriteLn(Sought);
+
+    Write('A: ');
     For I := 1 To Max Do
         Begin
             A[I] := I;
-            WriteLn(A[I]);
+            Write(A[I]);
+            If I < Max Then
+                Write(', ');
         End;
-    
-    {Simple Search}
+    WriteLn();
+
+    Write('Using Simple Search... ');
     I := 0;
     Repeat I := I + 1 Until (A[I] = Sought) Or (I = Max);
     If A[I] = Sought Then
@@ -23,7 +30,7 @@ Begin
     Else
         WriteLn('Not found!');
     
-    {Binary Search}
+    Write('Using Binary Search... ');
     I := 1;
     J := Max;
     Repeat K := (I + J) Div 2;
