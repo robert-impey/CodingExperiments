@@ -5,7 +5,7 @@ Const
     Sought: Integer = 10;
 
 Var
-	A: Array [1 .. 10] Of Integer;
+	A: Array Of Integer;
 	I, J, K: Integer;
     
 Begin
@@ -13,6 +13,7 @@ Begin
     WriteLn(Sought);
 
     Write('A: ');
+    SetLength(A, Max);
     For I := 1 To Max Do
         Begin
             A[I] := I;
