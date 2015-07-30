@@ -25,12 +25,14 @@ type
 
   procedure TBinarySearch.DoRun;
   var
-    ErrorMsg: string;
+    ErrorMsg, SearchMethod: string;
     A: array of integer;
     Sought, Max, I, J, K: integer;
+    Verbose, Found: boolean;
+
   begin
     // quick check parameters
-    ErrorMsg := CheckOptions('hsm', 'help sought max');
+    ErrorMsg := CheckOptions('hsmvr', 'help sought max verbose search');
     if ErrorMsg <> '' then
     begin
       ShowException(Exception.Create(ErrorMsg));
@@ -49,8 +51,6 @@ type
     if HasOption('s', 'sought') then
     begin
       Sought := StrToInt((GetOptionValue('s', 'sought')));
-      Write('Looking for ');
-      WriteLn(Sought);
     end
     else
     begin
@@ -62,8 +62,19 @@ type
     if HasOption('m', 'max') then
     begin
       Max := StrToInt((GetOptionValue('m', 'max')));
-      Write('Max value ');
-      WriteLn(Max);
+    end
+    else
+    begin
+      WriteHelp;
+      Terminate;
+      Exit;
+    end;
+
+    Verbose := HasOption('v', 'verbose');
+
+    if HasOption('r', 'search') then
+    begin
+      SearchMethod := (GetOptionValue('r', 'search'));
     end
     else
     begin
@@ -73,53 +84,85 @@ type
     end;
 
     SetLength(A, Max);
+    for I := 1 to Max do
+    begin
+      A[I] := I;
+    end;
 
-    for I := 0 to Max - 1 do
-      A[I] := I + 1;
+    if Verbose then
+    begin
+      Write('Sought: ');
+      WriteLn(Sought);
+
+      Write('Max: ');
+      WriteLn(Max);
+
+      Write('A: ');
+      for I := 1 to Max do
+      begin
+        Write(A[I]);
+        if I < Max then
+          Write(', ');
+      end;
+      WriteLn();
+
+      Write('Search Method: ');
+      WriteLn(SearchMethod);
+    end;
 
     // Searching
-    WriteLn('Sequential Search');
-    I := -1;
 
-    repeat
-      I := I + 1
-    until (A[I] = Sought) or (I = Max);
+    if SearchMethod = 'sequential' then
+    begin
+      if Verbose then Write('Using Sequential Search... ');
+      I := 0;
 
-    if A[I] = Sought then
+      repeat
+        I := I + 1
+      until (A[I] = Sought) or (I = Max);
+
+      Found := A[I] = Sought;
+    end
+    else if SearchMethod = 'binary' then
+    begin
+      if Verbose then Write('Using Binary Search... ');
+      I := 1;
+      J := Max;
+
+      repeat
+        K := (I + J) div 2;
+        if Sought > A[K] then
+          I := K + 1
+        else
+          J := K - 1
+      until (A[K] = Sought) or (I > J);
+
+      Found := A[K] = Sought;
+    end
+    else if SearchMethod = 'sentinel' then
+    begin
+      if Verbose then Write('Using Sequential Search with Sentinel... ');
+      SetLength(A, Max + 1);
+      A[Max + 1] := Sought;
+      I := 1;
+
+      repeat
+        I := I + 1
+      until (A[I] = Sought);
+
+      Found := I = Max + 1;
+    end
+    else
+    begin
+      WriteLn('Unknown search method!');
+      Terminate;
+      Exit;
+    end;
+
+    if Found then
       WriteLn('Found!')
     else
       WriteLn('Not found!');
-
-    WriteLn('Binary Search');
-    I := 0;
-    J := Max - 1;
-
-    repeat
-      K := (I + J) div 2;
-      if Sought > A[K] then
-        I := K + 1
-      else
-        J := K - 1
-    until (A[K] = Sought) or (I > J);
-
-    if A[K] = Sought then
-      WriteLn('Found!')
-    else
-      WriteLn('Not found!');
-
-    WriteLn('Sequential Search with Sentinel');
-    SetLength(A, Max + 1);
-    A[Max] := Sought;
-    I := -1;
-
-    repeat
-      I := I + 1
-    until (A[I] = Sought);
-
-    if I = Max then
-      WriteLn('Not found!')
-    else
-      WriteLn('Found!');
 
     // stop program loop
     Terminate;
@@ -141,6 +184,9 @@ type
     writeln('Usage: ', ExeName, ' -h');
     WriteLn('Options');
     WriteLn('-s|--sought [INT]');
+    WriteLn('-m|--max [INT]');
+    WriteLn('-v|--verbose');
+    WriteLn('r|--search');
   end;
 
 var
