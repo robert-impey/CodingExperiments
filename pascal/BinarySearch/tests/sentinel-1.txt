@@ -1,0 +1,3 @@
+BinarySearch -s 1 -m 101 -r sentinel 
+
+Found!
