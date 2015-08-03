@@ -27,7 +27,7 @@ type
   var
     ErrorMsg, SearchMethod: string;
     A: array of integer;
-    Sought, Max, I, J, K: integer;
+    Sought, Max, Current, I, J, K, Temp: integer;
     Verbose, Found: boolean;
 
   begin
@@ -114,7 +114,8 @@ type
 
     if SearchMethod = 'sequential' then
     begin
-      if Verbose then Write('Using Sequential Search... ');
+      if Verbose then
+        Write('Using Sequential Search... ');
       I := 0;
 
       repeat
@@ -125,7 +126,8 @@ type
     end
     else if SearchMethod = 'binary' then
     begin
-      if Verbose then Write('Using Binary Search... ');
+      if Verbose then
+        Write('Using Binary Search... ');
       I := 1;
       J := Max;
 
@@ -141,16 +143,19 @@ type
     end
     else if SearchMethod = 'sentinel' then
     begin
-      if Verbose then Write('Using Sequential Search with Sentinel... ');
-      SetLength(A, Max + 1);
-      A[Max + 1] := Sought;
-      I := 1;
+      if Verbose then
+        Write('Using Sequential Search with Sentinel... ');
+      Temp := A[Max];
+      A[Max] := Sought;
+      I := 0;
 
       repeat
-        I := I + 1
-      until (A[I] = Sought);
+        I := I + 1;
+        Current := A[I];
+      until Current = Sought;
 
-      Found := I = Max + 1;
+      A[Max] := Temp;
+      Found := (I < Max) or (A[Max] = Sought);
     end
     else
     begin
@@ -186,7 +191,7 @@ type
     WriteLn('-s|--sought [INT]');
     WriteLn('-m|--max [INT]');
     WriteLn('-v|--verbose');
-    WriteLn('r|--search');
+    WriteLn('-r|--search');
   end;
 
 var
@@ -196,4 +201,4 @@ begin
   Application.Title := 'Binary Search';
   Application.Run;
   Application.Free;
-end.
+end.

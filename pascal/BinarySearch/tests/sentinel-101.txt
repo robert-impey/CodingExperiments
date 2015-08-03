@@ -1,3 +1,3 @@
-BinarySearch -s 101 -m 101 -r sentinel 
+BinarySearch -s 101 -m 100 -r sentinel 
 
 Not found!

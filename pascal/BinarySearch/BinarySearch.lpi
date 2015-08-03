@@ -30,7 +30,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="-s 0  -m 100 -r sequential"/>
+        <CommandLineParams Value="-s 2 -m 3 -r sentinel -v"/>
       </local>
     </RunParams>
     <Units Count="1">
@@ -71,4 +71,4 @@
       </Item3>
     </Exceptions>
   </Debugging>
-</CONFIG>
+</CONFIG>
