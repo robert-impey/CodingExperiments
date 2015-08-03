@@ -27,12 +27,31 @@ type
   var
     ErrorMsg, SearchMethod: string;
     A: array of integer;
-    Sought, Max, Current, I, J, K, Temp: integer;
-    Verbose, Found: boolean;
+    Sought, Max, Current, I, J, K, Temp, StartTime: integer;
+    Verbose, Found, Times: boolean;
+    TS: TTimeStamp;
+
+    procedure MarkTime(Message: string);
+    var
+      CurrentTime: integer;
+    begin
+      if Times then
+      begin
+        TS := DateTimeToTimeStamp(Now);
+        CurrentTime := TS.Time;
+        Write(Message);
+        Write(' at ');
+
+        WriteLn(CurrentTime - StartTime);
+      end;
+    end;
 
   begin
+    TS := DateTimeToTimeStamp(Now);
+    StartTime := TS.Time;
+
     // quick check parameters
-    ErrorMsg := CheckOptions('hsmvr', 'help sought max verbose search');
+    ErrorMsg := CheckOptions('hsmvrt', 'help sought max verbose search times');
     if ErrorMsg <> '' then
     begin
       ShowException(Exception.Create(ErrorMsg));
@@ -83,11 +102,17 @@ type
       Exit;
     end;
 
+    Times := HasOption('t', 'times');
+
+    MarkTime('Initializing array');
+
     SetLength(A, Max);
     for I := 1 to Max do
     begin
       A[I] := I;
     end;
+
+    MarkTime('Printing inputs');
 
     if Verbose then
     begin
@@ -109,6 +134,8 @@ type
       Write('Search Method: ');
       WriteLn(SearchMethod);
     end;
+
+    MarkTime('Searching');
 
     // Searching
 
@@ -163,6 +190,8 @@ type
       Terminate;
       Exit;
     end;
+
+    MarkTime('Finished searching');
 
     if Found then
       WriteLn('Found!')
