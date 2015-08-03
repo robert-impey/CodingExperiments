@@ -27,28 +27,33 @@ type
   var
     ErrorMsg, SearchMethod: string;
     A: array of integer;
-    Sought, Max, Current, I, J, K, Temp, StartTime: integer;
+    Sought, Max, Current, I, J, K, Temp, PreviousTime: integer;
     Verbose, Found, Times: boolean;
     TS: TTimeStamp;
 
     procedure MarkTime(Message: string);
     var
-      CurrentTime: integer;
+      CurrentTime, TimeDiff: integer;
     begin
       if Times then
       begin
         TS := DateTimeToTimeStamp(Now);
         CurrentTime := TS.Time;
-        Write(Message);
-        Write(' at ');
+        TimeDiff := CurrentTime - PreviousTime;
+        PreviousTime := CurrentTime;
 
-        WriteLn(CurrentTime - StartTime);
+        Write(Message);
+        Write(' after ');
+        Write(TimeDiff);
+        Write(' milliseconds');
+
+        WriteLn();
       end;
     end;
 
   begin
     TS := DateTimeToTimeStamp(Now);
-    StartTime := TS.Time;
+    PreviousTime := TS.Time;
 
     // quick check parameters
     ErrorMsg := CheckOptions('hsmvrt', 'help sought max verbose search times');
