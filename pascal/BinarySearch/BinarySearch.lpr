@@ -27,7 +27,7 @@ type
   var
     ErrorMsg, SearchMethod: string;
     A: array of integer;
-    Sought, Max, Current, I, J, K, Temp, PreviousTime: integer;
+    Sought, Max, I, J, K, Temp, PreviousTime: integer;
     Verbose, Found, Times: boolean;
     TS: TTimeStamp;
 
@@ -183,8 +183,7 @@ type
 
       repeat
         I := I + 1;
-        Current := A[I];
-      until Current = Sought;
+      until A[I] = Sought;
 
       A[Max] := Temp;
       Found := (I < Max) or (A[Max] = Sought);
