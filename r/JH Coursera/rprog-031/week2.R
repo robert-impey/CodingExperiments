@@ -1,3 +1,5 @@
+# Question 3
+
 f <- function(x) {
   g <- function(y) {
     y + z
@@ -10,10 +12,28 @@ z <- 10
 
 f(3)
 
+# Question 4
+
 x <- 5
 
 y <- if (x < 5) {
   NA
 } else {
   10
+}
+
+# Question 5
+
+h <- function(x, y = NULL, d = 3L) {
+  z <- cbind(x, d)
+  if (!is.null(y)) {
+    z <- z + y
+  } else {
+    z <- z + f
+  }
+  g <- x + y / z
+  if (d == 3L)
+    return(g)
+  g <- g + 10
+  g
 }
