@@ -1,5 +1,6 @@
 .worksheet
 .cache
+.cache-main
 lib_managed
 target/
 .history
