@@ -2,15 +2,17 @@
 
 var xs = new List<System.Int32>() { 1, 2, 3 };
 
-IList<int> ys;
+//IList<int> ys;
 
-ys = new List<int>();
-foreach (var x in xs)
-{
-	ys.Add(x * 2);
-}
+//ys = new List<int>();
+//foreach (var x in xs)
+//{
+//	ys.Add(x * 2);
+//}
 
 //ys = xs.Select(x => x * 2).ToList();
+
+IEnumerable<int> ys = xs.Select(x => x * 2);
 
 foreach (var y in ys)
 {
