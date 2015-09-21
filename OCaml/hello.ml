@@ -1,2 +1,2 @@
-print_string "Bonjour, le monde!"
+print_endline "Bonjour, le monde!"
 

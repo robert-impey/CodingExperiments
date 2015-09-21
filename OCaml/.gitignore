@@ -1,4 +1,6 @@
 a.out
 *.cmi
 *.cmo
+*.native
+_build
 
