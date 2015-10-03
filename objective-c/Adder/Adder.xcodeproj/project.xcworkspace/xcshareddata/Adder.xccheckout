@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>538D9864-F95E-4717-98D5-170DABB5DA92</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Adder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0D3BF2C46445B3A9E2131E2375913EC8867A5F6C</key>
+		<string>github.com:robert-impey/CodingExperiments.git</string>
+		<key>79A53222DD2AF5D8D44656E91F2E93A2BE5F9601</key>
+		<string>kiya.robertimpey.com:~/code.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>objective-c/Adder/Adder.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0D3BF2C46445B3A9E2131E2375913EC8867A5F6C</key>
+		<string>../../../..</string>
+		<key>79A53222DD2AF5D8D44656E91F2E93A2BE5F9601</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:robert-impey/CodingExperiments.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0D3BF2C46445B3A9E2131E2375913EC8867A5F6C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>79A53222DD2AF5D8D44656E91F2E93A2BE5F9601</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0D3BF2C46445B3A9E2131E2375913EC8867A5F6C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CodingExperiments</string>
+		</dict>
+	</array>
+</dict>
+</plist>
