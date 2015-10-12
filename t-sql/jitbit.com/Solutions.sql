@@ -1,5 +1,7 @@
 -- Solutions to http://www.jitbit.com/news/181-jitbits-sql-interview-questions/
 
+USE [JitBit];
+
 -- List employees (names) who have a bigger salary than their boss
 
 SELECT
