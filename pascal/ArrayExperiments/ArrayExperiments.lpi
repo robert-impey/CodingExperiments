@@ -34,7 +34,6 @@
       <Unit0>
         <Filename Value="ArrayExperiments.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="ArrayExperiments"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -47,12 +46,6 @@
       <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
