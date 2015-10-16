@@ -9,7 +9,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="People"/>
+      <Title Value="PeopleLister"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -34,9 +34,9 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="people.lpr"/>
+        <Filename Value="PeopleLister.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="people"/>
+        <UnitName Value="PeopleLister"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -44,7 +44,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="people"/>
+      <Filename Value="PeopleLister"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
