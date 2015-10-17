@@ -43,7 +43,7 @@ var
   i, Count: integer;
   succ: Person;
 begin
-  { See page 20 of A + DS = P by NW }
+  { See Section 1.7 of A + DS = P by NW }
 
   with people[1] do
   begin
