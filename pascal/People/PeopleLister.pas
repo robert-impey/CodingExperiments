@@ -24,14 +24,14 @@ type
     end;
   end;
 
-  function GetSucc(const people: array of Person; const personId1: integer;
-  const personId2: integer): Person;
+  function GetSucc(const people: array of Person; const predId: integer;
+  const currId: integer): Person;
   var
     succId: integer;
-    person2: Person;
+    curr: Person;
   begin
-    person2 := people[personId2 - 1];
-    succId := personId1 + person2.link;
+    curr := people[currId - 1];
+    succId := predId + curr.link;
     GetSucc := people[succId - 1];
   end;
 
