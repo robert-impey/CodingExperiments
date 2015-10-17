@@ -40,7 +40,7 @@ const
 var
 
   people: array[1..n] of Person;
-  i: integer;
+  i, Count: integer;
   succ: Person;
 begin
   { See page 20 of A + DS = P by NW }
@@ -116,13 +116,22 @@ begin
     link := 3;
   end;
 
+  WriteLn('Print the people');
   for i := 1 to n do
     PrintPerson(people[i]);
 
-  // Traverse the women
-  WriteLn('Traverse the women');
+  WriteLn('Count the women');
+  Count := 0;
+  for i := 1 to n do
+    with people[i] do
+      if sex = female then
+        Count := Count + 1;
+  Write('There are ');
+  Write(Count);
+  WriteLn(' women.');
 
+  WriteLn('Traverse the women');
   succ := GetSucc(people, 1, 3);
   PrintPerson(succ);
 
-end.
+end.
