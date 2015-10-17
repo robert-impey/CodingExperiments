@@ -30,9 +30,9 @@ type
     succId: integer;
     person2: Person;
   begin
-    person2 := people[personId2];
+    person2 := people[personId2 - 1];
     succId := personId1 + person2.link;
-    GetSucc := people[succId];
+    GetSucc := people[succId - 1];
   end;
 
 const
@@ -41,7 +41,7 @@ var
 
   people: array[1..n] of Person;
   i, Count: integer;
-  succ: Person;
+  pred, curr, succ: Person;
 begin
   { See Section 1.7 of A + DS = P by NW }
 
@@ -131,7 +131,19 @@ begin
   WriteLn(' women.');
 
   WriteLn('Traverse the women');
-  succ := GetSucc(people, 1, 3);
+
+  pred := people[1];
+  curr := people[3];
+  succ := GetSucc(people, pred.id, curr.id);
   PrintPerson(succ);
 
+  pred := curr;
+  curr := succ;
+  succ := GetSucc(people, pred.id, curr.id);
+  PrintPerson(succ);
+
+  pred := curr;
+  curr := succ;
+  succ := GetSucc(people, pred.id, curr.id);
+  PrintPerson(succ);
 end.
