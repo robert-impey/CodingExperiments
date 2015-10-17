@@ -159,9 +159,19 @@ begin
   succ := GetSucc(people, pred, curr);
   PrintPerson(succ);
 
+  pred := curr;
+  curr := succ;
+  succ := GetSucc(people, pred, curr);
+  PrintPerson(succ);
+
   WriteLn('Traverse the men backwards');
   succ := GetPersonById(people, 10);
   curr := GetPersonById(people, 7);
+  pred := GetPred(people, succ, curr);
+  PrintPerson(pred);
+
+  succ := curr;
+  curr := pred;
   pred := GetPred(people, succ, curr);
   PrintPerson(pred);
 
