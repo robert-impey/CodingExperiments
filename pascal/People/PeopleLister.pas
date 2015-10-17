@@ -35,6 +35,17 @@ type
     GetSucc := people[succId - 1];
   end;
 
+  function GetPred(const people: array of Person; const succId: integer;
+  const currId: integer): Person;
+  var
+    predId: integer;
+    curr: Person;
+  begin
+    curr := people[currId - 1];
+    predId := succId - curr.link;
+    GetPred := people[predId - 1];
+  end;
+
 const
   n = 10;
 var
@@ -146,4 +157,20 @@ begin
   curr := succ;
   succ := GetSucc(people, pred.id, curr.id);
   PrintPerson(succ);
+
+  WriteLn('Traverse the men backwards');
+  succ := people[10];
+  curr := people[7];
+  pred := GetPred(people, succ.id, curr.id);
+  PrintPerson(pred);
+
+  succ := curr;
+  curr:= pred;
+  pred := GetPred(people, succ.id, curr.id);
+  PrintPerson(pred);
+
+  succ := curr;
+  curr:= pred;
+  pred := GetPred(people, succ.id, curr.id);
+  PrintPerson(pred);
 end.
