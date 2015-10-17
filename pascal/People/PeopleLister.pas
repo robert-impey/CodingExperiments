@@ -24,15 +24,20 @@ type
     end;
   end;
 
+  function GetPersonById(const people: array of Person; const id: integer): Person;
+  begin
+    GetPersonById := people[id - 1];
+  end;
+
   function GetSucc(const people: array of Person; const predId: integer;
   const currId: integer): Person;
   var
     succId: integer;
     curr: Person;
   begin
-    curr := people[currId - 1];
+    curr := GetPersonById(people, currId);
     succId := predId + curr.link;
-    GetSucc := people[succId - 1];
+    GetSucc := GetPersonById(people, succId);
   end;
 
   function GetPred(const people: array of Person; const succId: integer;
@@ -41,9 +46,9 @@ type
     predId: integer;
     curr: Person;
   begin
-    curr := people[currId - 1];
+    curr := GetPersonById(people, currId);
     predId := succId - curr.link;
-    GetPred := people[predId - 1];
+    GetPred := GetPersonById(people, predId);
   end;
 
 const
@@ -143,8 +148,8 @@ begin
 
   WriteLn('Traverse the women');
 
-  pred := people[1];
-  curr := people[3];
+  pred := GetPersonById(people, 1);
+  curr := GetPersonById(people, 3);
   succ := GetSucc(people, pred.id, curr.id);
   PrintPerson(succ);
 
@@ -159,18 +164,18 @@ begin
   PrintPerson(succ);
 
   WriteLn('Traverse the men backwards');
-  succ := people[10];
-  curr := people[7];
+  succ := GetPersonById(people, 10);
+  curr := GetPersonById(people, 7);
   pred := GetPred(people, succ.id, curr.id);
   PrintPerson(pred);
 
   succ := curr;
-  curr:= pred;
+  curr := pred;
   pred := GetPred(people, succ.id, curr.id);
   PrintPerson(pred);
 
   succ := curr;
-  curr:= pred;
+  curr := pred;
   pred := GetPred(people, succ.id, curr.id);
   PrintPerson(pred);
 end.
