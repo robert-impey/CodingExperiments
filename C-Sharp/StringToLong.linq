@@ -4,6 +4,7 @@ void Main()
 {
 	var inputs = new[]{
 		"1234",
+		"1234L",
 		"",
 		"12.34",
 		"One Two Three Four"
