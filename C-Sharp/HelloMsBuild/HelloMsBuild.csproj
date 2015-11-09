@@ -1,4 +1,4 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTarget="Build" >
 	<PropertyGroup>
 		<AssemblyName>MsBuildSample</AssemblyName>
 		<OutputPath>Bin\</OutputPath>
@@ -10,4 +10,8 @@
 		<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
 		<Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
 	</Target>
+	<Target Name="Clean">
+		<Delete Files="$(OutputPath)$(AssemblyName).exe" />
+	</Target>
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build;" />
 </Project>
