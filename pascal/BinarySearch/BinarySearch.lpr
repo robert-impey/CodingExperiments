@@ -27,7 +27,7 @@ type
   var
     ErrorMsg, SearchMethod: string;
     A: array of integer;
-    Sought, Max, I, J, K, Temp, PreviousTime: integer;
+    Sought, Max, I, PreviousTime: integer;
     Verbose, Found, Times: boolean;
     TS: TTimeStamp;
 
@@ -49,6 +49,65 @@ type
 
         WriteLn();
       end;
+    end;
+
+    function SequentialSearch: boolean;
+    var
+      Found: boolean;
+    begin
+      if Verbose then
+        Write('Using Sequential Search... ');
+      I := 0;
+
+      repeat
+        I := I + 1
+      until (A[I] = Sought) or (I = Max);
+
+      Found := A[I] = Sought;
+      Result := Found;
+    end;
+
+    function BinarySearch: boolean;
+    var
+      Found: boolean;
+      K: integer;
+      J: integer;
+    begin
+      if Verbose then
+        Write('Using Binary Search... ');
+      I := 1;
+      J := Max;
+
+      repeat
+        K := (I + J) div 2;
+        if Sought > A[K] then
+          I := K + 1
+        else
+          J := K - 1
+      until (A[K] = Sought) or (I > J);
+
+      Found := A[K] = Sought;
+      Result := Found;
+    end;
+
+    function SentinelSearch: boolean;
+    var
+      Found: boolean;
+      Temp: integer;
+    begin
+      if Verbose then
+        Write('Using Sequential Search with Sentinel... ');
+      Temp := A[Max];
+      A[Max] := Sought;
+      I := 0;
+
+      repeat
+        I := I + 1;
+      until A[I] = Sought;
+
+      A[Max] := Temp;
+      Found := (I < Max) or (A[Max] = Sought);
+      Result := Found;
     end;
 
   begin
@@ -145,49 +204,11 @@ type
     // Searching
 
     if SearchMethod = 'sequential' then
-    begin
-      if Verbose then
-        Write('Using Sequential Search... ');
-      I := 0;
-
-      repeat
-        I := I + 1
-      until (A[I] = Sought) or (I = Max);
-
-      Found := A[I] = Sought;
-    end
+      Found := SequentialSearch
     else if SearchMethod = 'binary' then
-    begin
-      if Verbose then
-        Write('Using Binary Search... ');
-      I := 1;
-      J := Max;
-
-      repeat
-        K := (I + J) div 2;
-        if Sought > A[K] then
-          I := K + 1
-        else
-          J := K - 1
-      until (A[K] = Sought) or (I > J);
-
-      Found := A[K] = Sought;
-    end
+      Found := BinarySearch
     else if SearchMethod = 'sentinel' then
-    begin
-      if Verbose then
-        Write('Using Sequential Search with Sentinel... ');
-      Temp := A[Max];
-      A[Max] := Sought;
-      I := 0;
-
-      repeat
-        I := I + 1;
-      until A[I] = Sought;
-
-      A[Max] := Temp;
-      Found := (I < Max) or (A[Max] = Sought);
-    end
+      Found := SentinelSearch
     else
     begin
       WriteLn('Unknown search method!');
@@ -234,4 +255,4 @@ begin
   Application.Title := 'Binary Search';
   Application.Run;
   Application.Free;
-end.
+end.
