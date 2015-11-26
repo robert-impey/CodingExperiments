@@ -5,3 +5,5 @@ lib
 *.o
 link.res
 ppas.bat
+ppaslink.sh
+
