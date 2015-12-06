@@ -1,0 +1,3 @@
+SubstringChecker -n "at" -s "caat" 
+
+Found!
