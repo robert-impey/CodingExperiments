@@ -9,7 +9,11 @@ int main(int argc, char *argv[])
     int retCode = 0;
     NSAutoreleasePool *pool = [NSAutoreleasePool new];
     
-    // Get file handle for standard input, and read in a string of numbers 
+    // Prompt for the user
+    NSLog(@"Enter the numbers, separated by spaces.");
+    NSLog(@"When you're done hit ENTER then CTRL-D.");
+    
+    // Get file handle for standard input, and read in a string of numbers
     NSFileHandle *fileHandle = [NSFileHandle fileHandleWithStandardInput];
     NSData *inputData = [fileHandle readDataToEndOfFile];
     NSString *inputString = 
