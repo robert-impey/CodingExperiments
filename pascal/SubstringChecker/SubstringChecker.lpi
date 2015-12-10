@@ -31,11 +31,16 @@
         <CommandLineParams Value="-s &quot;caat&quot; -n &quot;at&quot;"/>
       </local>
     </RunParams>
-    <Units Count="1">
+    <Units Count="2">
       <Unit0>
         <Filename Value="SubstringChecker.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="substringchecking.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SubstringChecking"/>
+      </Unit1>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
