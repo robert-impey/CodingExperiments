@@ -6,7 +6,8 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
   cthreads, {$ENDIF} {$ENDIF}
   Classes,
   SysUtils,
-  CustApp { you can add units after this };
+  CustApp,
+  SubstringChecking;
 
 type
 
@@ -26,36 +27,6 @@ type
   procedure TSubstringChecker.DoRun;
   var
     ErrorMsg, Haystack, Needle: string;
-    Found: boolean;
-
-    procedure Search;
-    var
-      HaystackIndex, NeedleIndex: integer;
-    begin
-      HaystackIndex := 0;
-      Found := False;
-
-      if (Length(Haystack) >= Length(Needle)) and (Length(Needle) > 0) then
-      begin
-        while (HaystackIndex <= Length(Haystack)) and (not Found) do
-        begin
-          Inc(HaystackIndex);
-          NeedleIndex := 1;
-          while (Haystack[HaystackIndex + NeedleIndex - 1] = Needle[NeedleIndex]) and
-            (not Found) do
-          begin
-            if NeedleIndex = Length(Needle) then
-            begin
-              Found := True;
-            end
-            else
-            begin
-              Inc(NeedleIndex);
-            end;
-          end;
-        end;
-      end;
-    end;
 
   begin
     // quick check parameters
@@ -98,8 +69,7 @@ type
     end;
 
     // Program logic
-    Search;
-    if Found then
+    if Search(Haystack, Needle) then
     begin
       WriteLn('Found!');
     end
