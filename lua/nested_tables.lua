@@ -21,9 +21,9 @@ print("Sorted fruits")
 print_fruits(fruits)
 
 nested_fruits = {}
-nested_fruits.apples = { "Golden Delicious", "Granny Smith", "Queen Cox" }
+nested_fruits.apples = { "Golden Delicious", "Queen Cox", "Granny Smith" }
 nested_fruits.bananas = { "Cavendish", "Williams", "Pisang Raja" }
-nested_fruits.coconuts = { "Camaroon Red", "Malayan Yellow", "Nias Green" }
+nested_fruits.coconuts = { "Malayan Yellow", "Camaroon Red", "Nias Green" }
 
 function print_nested_fruits(these_nested_fruits)
 	for fruit, varieties in pairs(these_nested_fruits) do
@@ -32,8 +32,6 @@ function print_nested_fruits(these_nested_fruits)
 		for _, v in pairs(varieties) do
 			table.insert(sorted_varieties, v)
 		end
-
-		table.sort(sorted_varieties)
 
 		for _, v in pairs(sorted_varieties) do
 			print("\t", v)
