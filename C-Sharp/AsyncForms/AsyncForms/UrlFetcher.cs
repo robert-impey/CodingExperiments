@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -11,13 +12,40 @@ namespace AsyncForms
             InitializeComponent();
         }
 
-        private async void goFetchButton_Click(object sender, EventArgs e)
+        private void fetchButton_Click(object sender, EventArgs e)
         {
-            urlContentTextBox.Text = "Fetching...";
+            statusTextBox.Text = "Fetching...";
+
+            using (var httpClient = new WebClient())
+            {
+                urlContentTextBox.Text = httpClient.DownloadString(urlTextBox.Text);
+            }
+
+            statusTextBox.Text = string.Empty;
+        }
+
+        private async void fetchAsyncButton_Click(object sender, EventArgs e)
+        {
+            UIState = false;
+
+            statusTextBox.Text = "Fetching...";
 
             using (var httpClient = new HttpClient())
             {
                 urlContentTextBox.Text = await httpClient.GetStringAsync(urlTextBox.Text);
+            }
+
+            statusTextBox.Text = string.Empty;
+            UIState = true;
+        }
+
+        private bool UIState
+        {
+            set 
+            {
+                fetchButton.Enabled = value;
+                fetchAsyncButton.Enabled = value;
+                urlTextBox.ReadOnly = !value;
             }
         }
     }
