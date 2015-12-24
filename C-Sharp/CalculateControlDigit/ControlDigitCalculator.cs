@@ -13,7 +13,7 @@ namespace CalculateControlDigit
             int inputNumber;
             if (int.TryParse(input, out inputNumber))
             {
-                return Calculate(inputNumber);
+                return CheckAndCalculate(inputNumber);
             }
             else
             {
@@ -21,13 +21,20 @@ namespace CalculateControlDigit
             }
         }
 
-        internal static Tuple<int?, string> Calculate(int inputNumber)
+        private static Tuple<int?, string> CheckAndCalculate(int inputNumber)
         {
             if (inputNumber < 0)
             {
                 return new Tuple<int?, string>(null, "The input number must be positive!");
             }
 
+            var result = Calculate(inputNumber);
+
+            return new Tuple<int?, string>(result, "");
+        }
+
+        private static int Calculate(int inputNumber)
+        {
             var number = inputNumber;
             var sum = 0;
             var pos = 0;
@@ -58,7 +65,7 @@ namespace CalculateControlDigit
                 result = 1;
             }
 
-            return new Tuple<int?, string>(result, "");
+            return result;
         }
     }
 }
