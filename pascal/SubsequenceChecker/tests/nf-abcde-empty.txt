@@ -1,3 +1,3 @@
-SubsequenceChecker -s abcde -n ""
+SubsequenceChecker -n "" -s abcde 
 
 Not found!
