@@ -2,18 +2,16 @@
 
 co = coroutine.create(function()
     for i = 0, 9 do
-        io.write(i .. ' ')
-        coroutine.yield()
+        coroutine.yield(i)
     end
 end)
 
-charNum = string.byte('a')
+aCode = string.byte('a')
 while true do
-    coroutine.resume(co)
+    errorFree, num = coroutine.resume(co)
     if coroutine.status(co) == 'dead' then
         break
     end
-    print(string.char(charNum))
-    charNum = charNum + 1
+    print(num, string.char(aCode + num))
 end
 
