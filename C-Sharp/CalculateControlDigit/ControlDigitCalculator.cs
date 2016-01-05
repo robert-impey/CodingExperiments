@@ -36,23 +36,14 @@ namespace CalculateControlDigit
         private static int Calculate(int inputNumber)
         {
             var sum = 0;
-            var pos = 0;
 
             var digits = GetDigits(inputNumber);
+            var factors = GetFactors().GetEnumerator();
 
             foreach (var digit in digits)
             {
-                int value;
-                if (pos % 2 == 0)
-                {
-                    value = 3 * digit;
-                }
-                else
-                {
-                    value = digit;
-                }
-
-                sum += value;
+                sum += digit * factors.Current;
+                factors.MoveNext();
             }
 
             var result = sum % 11;
@@ -78,6 +69,14 @@ namespace CalculateControlDigit
                 number /= 10;
             } while (number > 0);
             return digits;
+        }
+
+        private static IEnumerable<int> GetFactors()
+        {
+            for (var i = 0; true; i++)
+            {
+                yield return i % 2 == 0 ? 3 : 1;
+            }
         }
     }
 }
