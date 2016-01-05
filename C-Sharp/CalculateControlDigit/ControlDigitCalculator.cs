@@ -35,14 +35,13 @@ namespace CalculateControlDigit
 
         private static int Calculate(int inputNumber)
         {
-            var number = inputNumber;
             var sum = 0;
             var pos = 0;
 
-            do
-            {
-                var digit = inputNumber % 10;
+            var digits = GetDigits(inputNumber);
 
+            foreach (var digit in digits)
+            {
                 int value;
                 if (pos % 2 == 0)
                 {
@@ -54,9 +53,7 @@ namespace CalculateControlDigit
                 }
 
                 sum += value;
-
-                number /= 10;
-            } while (number > 0);
+            }
 
             var result = sum % 11;
 
@@ -66,6 +63,21 @@ namespace CalculateControlDigit
             }
 
             return result;
+        }
+
+        private static IEnumerable<int> GetDigits(int number)
+        {
+            var digits = new List<int>();
+
+            do
+            {
+                var digit = number % 10;
+
+                digits.Add(digit);
+
+                number /= 10;
+            } while (number > 0);
+            return digits;
         }
     }
 }
