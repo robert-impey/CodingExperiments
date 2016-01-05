@@ -35,16 +35,11 @@ namespace CalculateControlDigit
 
         private static int Calculate(int inputNumber)
         {
-            var sum = 0;
-
             var digits = GetDigits(inputNumber);
             var factors = GetFactors().GetEnumerator();
+            var weightedDigits = GetWeightedDigits(digits, factors);
 
-            foreach (var digit in digits)
-            {
-                sum += digit * factors.Current;
-                factors.MoveNext();
-            }
+            var sum = weightedDigits.Sum();
 
             var result = sum % 11;
 
@@ -54,6 +49,15 @@ namespace CalculateControlDigit
             }
 
             return result;
+        }
+
+        private static IEnumerable<int> GetWeightedDigits(IEnumerable<int> digits, IEnumerator<int> factors)
+        {
+            foreach (var digit in digits)
+            {
+                factors.MoveNext();
+                yield return digit * factors.Current;
+            }
         }
 
         private static IEnumerable<int> GetDigits(int number)
