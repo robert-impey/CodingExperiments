@@ -11,7 +11,7 @@ namespace Sorting
         {
             var g = new Getopt("Sorting", args, "a:f:o:");
 
-            string algorithm = "", shuffledListsFileName = "", outputDirectory = "";
+            string algorithm = "", shuffledListsFileName = "", outputDirectory = ".";
 
             int c;
             while ((c = g.getopt()) != -1)
