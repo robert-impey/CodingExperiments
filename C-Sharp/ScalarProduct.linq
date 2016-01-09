@@ -18,6 +18,6 @@ Console.WriteLine(sum);
 var linqSum = 
 	(from x in xs
 	from y in ys
-	select x * y).Sum(x => x);
+	select x * y).Sum();
 	
 Console.WriteLine(linqSum);
