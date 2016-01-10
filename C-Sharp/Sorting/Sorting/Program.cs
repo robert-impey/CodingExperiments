@@ -33,24 +33,20 @@ namespace Sorting
             if (algorithm.Length > 0 && shuffledListsFileName.Length > 0 && outputDirectory.Length > 0)
             {
                 var listsToSort = ParseShuffledListsFile(shuffledListsFileName);
-                int[,] sortedLists = new int[listsToSort.GetLength(0), listsToSort.GetLength(1)];
+                int[,] sortedLists = new int[listsToSort.NumberOfLists, listsToSort.SizeOfLists];
 
                 switch (algorithm)
                 {
                     case "built_in":
-                        BuiltInSorting(listsToSort, ref sortedLists);
+                        BuiltInSorting(listsToSort.Lists, ref sortedLists);
                         break;
                     default:
                         Console.WriteLine("Please set a valid sorting algorithm!");
                         break;
                 }
 
-                var output 
-                    = new StreamWriter(outputDirectory + "/" 
-                        + "sorted-c_sharp-" + algorithm 
-                        + "-" + sortedLists.GetLength(0)
-                        + "-" + sortedLists.GetLength(1)
-                        + ".txt"
+                var output
+                    = new StreamWriter(GetOutputFileName(algorithm, outputDirectory, listsToSort)
                     );
                 PrintListOfLists(sortedLists, output);
                 output.Close();
@@ -61,9 +57,18 @@ namespace Sorting
             }
         }
 
+        private static string GetOutputFileName(string algorithm, string outputDirectory, ShuffledLists shuffledLists)
+        {
+            return outputDirectory + "/"
+                                    + "sorted-c_sharp-" + algorithm
+                                    + "-" + shuffledLists.NumberOfLists
+                                    + "-" + shuffledLists.SizeOfLists
+                                    + ".txt";
+        }
+
         #region IO
 
-        private static int[,] ParseShuffledListsFile(string shuffledListsFileName)
+        private static ShuffledLists ParseShuffledListsFile(string shuffledListsFileName)
         {
             int numberOfLists, sizeOfLists;
 
@@ -94,7 +99,7 @@ namespace Sorting
                     listIndex++;
                 }
 
-                return listsToSort;
+                return new ShuffledLists(numberOfLists, sizeOfLists, listsToSort);
             }
             else
             {
