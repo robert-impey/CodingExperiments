@@ -10,3 +10,5 @@ ipch
 .objs
 *.depend
 *.layout
+*.opendb
+
