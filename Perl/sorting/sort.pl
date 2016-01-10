@@ -5,12 +5,12 @@ use Getopt::Long;
 use Time::HiRes qw(gettimeofday tv_interval);
 use Statistics::Descriptive;
 
-my ($shuffled_lists_file, $algorithm, $results_file);
+my ($shuffled_lists_file, $algorithm, $results_directory);
 
 GetOptions(
 	's|shuffled-lists-file=s' => \$shuffled_lists_file,
 	'a|algorithm=s' => \$algorithm,
-	'r|results-file=s' => \$results_file
+	'r|results-directory=s' => \$results_directory
 );
 
 if ($shuffled_lists_file =~ /shuffled-lists-(\d+)-(\d+).txt/) {
@@ -53,9 +53,10 @@ if ($shuffled_lists_file =~ /shuffled-lists-(\d+)-(\d+).txt/) {
 	}
 	close SHUF;
 	close SORT;
-	
+
+    my $results_file = get_results_file_name($algorithm, $results_directory, $number_of_lists, $size_of_lists);
 	open RSLT, '>>', $results_file or die $!;
-	print RSLT "$algorithm,$number_of_lists,$size_of_lists,", $times_stat->min(), ",", $times_stat->max(), ",", $times_stat->mean(), "\n";
+	print RSLT "#$algorithm,$number_of_lists,$size_of_lists,", $times_stat->min(), ",", $times_stat->max(), ",", $times_stat->mean(), "\n";
 	close RSLT;
 } else {
 	die "Unable to parse file name of the shuffled lists!\n";
@@ -71,3 +72,16 @@ sub swap
 	@$array_ref[$first_index] = @$array_ref[$second_index];
 	@$array_ref[$second_index] = $temp;
 }
+
+sub get_results_file_name
+{
+    my $algorithm = shift;
+    my $results_directory = shift;
+    my $number_of_lists = shift;
+    my $size_of_lists = shift;
+
+    $results_directory = '.' unless $results_directory;
+
+    return "$results_directory/sorted-perl-$algorithm-$number_of_lists-$size_of_lists.txt";
+}
+
