@@ -1,9 +1,10 @@
 <xsl:stylesheet version="2.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:foo="http://whatever">
+	<xsl:output indent="yes" />
 
 	<!-- Using code from http://www.xml.com/pub/a/2003/09/03/trxml.html -->
-  
+
 	<!-- Compare two strings ignoring case, returning same
        values as compare(). -->
 	<xsl:function name="foo:compareCI">
