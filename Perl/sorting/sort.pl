@@ -8,6 +8,10 @@ use Time::HiRes qw(gettimeofday tv_interval);
 use Statistics::Descriptive;
 
 use Sorting qw(built_in bubble);
+use Sorting::Files qw(
+make_sorted_file_name
+parse_shuffled_file_name
+);
 
 my ($shuffled_lists_file, $algorithm, $results_directory);
 
@@ -17,9 +21,12 @@ GetOptions(
     'r|results-directory=s' => \$results_directory
 );
 
-if ($shuffled_lists_file =~ /shuffled-lists-(\d+)-(\d+).txt/) {
-    my ($number_of_lists, $size_of_lists) = ($1, $2);
-    my $sorted_lists_file = "sorted-perl-$algorithm-$number_of_lists-$size_of_lists.txt";
+if (my %sorted_lists_dimensions = parse_shuffled_file_name($shuffled_lists_file)) {
+    my $sorted_lists_file = make_sorted_file_name(
+        $algorithm,
+        $results_directory,
+        $sorted_lists_dimensions{number_of_lists}, 
+        $sorted_lists_dimensions{size_of_lists});
     open SORT, '>', $sorted_lists_file or die $!;
 
     my $times_stat = Statistics::Descriptive::Full->new();
@@ -45,25 +52,10 @@ if ($shuffled_lists_file =~ /shuffled-lists-(\d+)-(\d+).txt/) {
         print SORT join(',', @sorted_list_of_integers), "\n";
     }
     close SHUF;
-    close SORT;
 
-    my $results_file = get_results_file_name($algorithm, $results_directory, $number_of_lists, $size_of_lists);
-    open RSLT, '>>', $results_file or die $!;
-    print RSLT "#$algorithm,$number_of_lists,$size_of_lists,", $times_stat->min(), ",", $times_stat->max(), ",", $times_stat->mean(), "\n";
-    close RSLT;
+    print SORT "#$algorithm,$sorted_lists_dimensions{number_of_lists},$sorted_lists_dimensions{size_of_lists},", $times_stat->min(), ",", $times_stat->max(), ",", $times_stat->mean(), "\n";
+    close SORT;
 } else {
     die "Unable to parse file name of the shuffled lists!\n";
-}
-
-sub get_results_file_name
-{
-    my $algorithm = shift;
-    my $results_directory = shift;
-    my $number_of_lists = shift;
-    my $size_of_lists = shift;
-
-    $results_directory = '.' unless $results_directory;
-
-    return "$results_directory/sorted-perl-$algorithm-$number_of_lists-$size_of_lists.txt";
 }
 
