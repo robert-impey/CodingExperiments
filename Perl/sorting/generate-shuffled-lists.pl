@@ -8,6 +8,10 @@ use Pod::Usage;
 
 use List::Util qw(shuffle);
 
+use Sorting::Files qw(
+make_shuffled_file_name
+);
+
 my $man  = 0;
 my $help = 0;
 
@@ -25,7 +29,7 @@ pod2usage( -exitstatus => 0, -verbose => 2 ) if $man;
 
 pod2usage(1) unless ($number_of_lists and $size_of_lists);
 
-my $output_file_name = "shuffled-lists-$number_of_lists-$size_of_lists.txt";
+my $output_file_name = make_shuffled_file_name($number_of_lists, $size_of_lists);
 
 open FILE, '>', $output_file_name or die $!;
 
