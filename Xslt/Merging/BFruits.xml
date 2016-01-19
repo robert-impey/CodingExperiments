@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<fruits>
+	<fruit>
+		<name>apple</name>
+		<name>banana</name>
+	</fruit>
+</fruits>
