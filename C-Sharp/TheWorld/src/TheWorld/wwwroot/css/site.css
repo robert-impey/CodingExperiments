@@ -1,6 +1,7 @@
 ﻿body {
     font-family: sans-serif;
     font-size: 14pt;
+    margin: 0;
 }
 
 label {
@@ -14,15 +15,22 @@ input[type="text"], input[type="password"], textarea {
 
 #main {
     background-color: #eee;
+    padding: 5px;
 }
 
 #footer {
     background-color: #222;
     color: #eee;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .headshot {
     max-width: 50px;
+    padding: 3px;
+    border: 1px solid #eee ;
 }
 
 .menu {
@@ -36,3 +44,16 @@ input[type="text"], input[type="password"], textarea {
         .menu li.active {
             font-weight: bold;
         }
+
+#sidebar {
+    background-color: #2a2a2a;
+    width: 250px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    height: 100%;
+}
+
+#wrapper {
+    margin-left: 250px;
+}
