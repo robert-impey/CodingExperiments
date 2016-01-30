@@ -17,12 +17,33 @@ namespace ArrayAndListAccess
                 {
                     WriteLine($"Experimenting with a sequence of {sizeOfSequence} numbers.");
 
+                    TestEmpty(sizeOfSequence);
                     TestArray(sizeOfSequence);
                     TestList(sizeOfSequence);
                     TestListElementAt(sizeOfSequence);
                     TestLinkedList(sizeOfSequence);
                 }
             }
+        }
+
+        private static void TestEmpty(int sizeOfSequence)
+        {
+            WriteLine("Testing doing nothing");
+
+            var stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+
+            var rand = new Random();
+
+            for (var i = 0; i < sizeOfSequence; i++)
+            {
+                var index = rand.Next(sizeOfSequence);
+            }
+
+            stopwatch.Stop();
+
+            WriteLine($"Nothing accessed in {stopwatch.ElapsedMilliseconds} ms.");
         }
 
         private static void TestArray(int sizeOfSequence)
