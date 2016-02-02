@@ -19,17 +19,12 @@ class GetMaxPriorityQueue:
             if (current_max < self.members[i]):
                 current_max = self.members[i]
 
-        new_members = []
-        max_found = False
-        for m in self.members:
-            if (m == current_max):
-                if (not max_found):
-                    max_found = True
-                    continue
-            
-            new_members.append(m)
-
-        self.members = new_members
+        i = 0
+        while (True):
+            if (self.members[i] == current_max):
+                del(self.members[i])
+                break
+            i += 1
         
         return current_max
     
