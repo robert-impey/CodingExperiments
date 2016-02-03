@@ -2,6 +2,33 @@
 
 from sys import argv
 from random import shuffle
+import time
+
+class Stopwatch:
+    def __init__(self):
+        self.start_time = None
+        self.end_time = None
+
+    def start(self):
+        if (self.start_time != None):
+            raise Exception("Stopwatch already started!")
+
+        self.start_time = time.clock()
+
+    def stop(self):
+        if (self.start_time == None):
+            raise Exception("Stopwatch not started!")
+
+        self.end_time = time.clock()
+
+    def reset(self):
+        self.start_time= None
+        self.end_time = None
+        self.start()
+
+    def report(self, task):
+        self.stop()
+        print("Time to %s: %f seconds" % (task, (self.end_time - self.start_time)))
 
 class GetMaxPriorityQueue:
     def __init__(self):
@@ -32,7 +59,8 @@ class GetMaxPriorityQueue:
         return len(self.members)
 
 if __name__ == '__main__':
-    max = 10
+    max = 10000
+    should_print = max <= 20
     if len(argv) == 2:
         max = argv[1]
 
@@ -40,23 +68,39 @@ if __name__ == '__main__':
 
     shuffle(numbers)
     
-    print("The numbers: ")
-    for n in numbers:
-        print(n, end=' ')
-    print()
+    if should_print:
+        print("The numbers: ")
+        for n in numbers:
+            print(n, end=' ')
+        print()
 
+    stopwatch = Stopwatch()
+
+    stopwatch.start()
     get_max_priority_queue = GetMaxPriorityQueue()
+    stopwatch.report("initialize the get_max_priority_queue")
 
+    stopwatch.reset()
     for n in numbers:
         get_max_priority_queue.enqueue(n)
+    stopwatch.report("enqueue members")
 
+    stopwatch.reset()
     print('get_max_priority_queue.count(): ', get_max_priority_queue.count())
+    stopwatch.report("count members when full")
 
+    stopwatch.reset()
     while (True):
         m = get_max_priority_queue.dequeue()
         if m == None:
             break
-        print(m, end=' ')
-    print()
+        if should_print:
+            print(m, end=' ')
 
+    if should_print:
+        print()
+    stopwatch.report("dequeue members")
+
+    stopwatch.reset()
     print('get_max_priority_queue.count(): ', get_max_priority_queue.count())
+    stopwatch.report("count members when empty")
