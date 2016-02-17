@@ -30,10 +30,14 @@ class Stopwatch:
         self.stop()
         print("Time to %s: %f seconds" % (task, (self.end_time - self.start_time)))
 
-class GetMaxPriorityQueue:
+class PriorityQueue:
     def __init__(self):
         self.members = []
+    
+    def count(self):
+        return len(self.members)
 
+class GetMaxPriorityQueue(PriorityQueue):
     def enqueue(self, new_member):
         self.members.append(new_member)
 
@@ -54,16 +58,40 @@ class GetMaxPriorityQueue:
             i += 1
         
         return current_max
-    
-    def count(self):
-        return len(self.members)
+
+class InsertInOrderPriorityQueue(PriorityQueue):
+    def enqueue(self, new_member):
+        if len(self.members) == 0:
+            self.members.append(new_member)
+        else:
+            i = len(self.members)
+            while i >= 0:
+                i -= 1
+                if self.members[i] < new_member:
+                    self.members.insert(i + 1, new_member)
+                    break
+
+            if i == -1:
+                self.members.insert(0, new_member)
+
+    def dequeue(self):
+        if len(self.members) == 0:
+            return None
+        
+        return self.members.pop()
 
 if __name__ == '__main__':
     max = 10000
-    should_print = max <= 20
-    if len(argv) == 2:
-        max = argv[1]
+    if len(argv) > 1:
+        max = int(argv[1])
 
+    algo = 'GetMax'
+    if len(argv) > 2:
+        algo = argv[2]
+
+    print("Enqueuing and dequeuing {0} integers using a {1} priority queue.".format(max, algo))
+
+    should_print = max <= 20
     numbers = list(range(max))
 
     shuffle(numbers)
@@ -77,21 +105,27 @@ if __name__ == '__main__':
     stopwatch = Stopwatch()
 
     stopwatch.start()
-    get_max_priority_queue = GetMaxPriorityQueue()
-    stopwatch.report("initialize the get_max_priority_queue")
+    if algo == 'GetMax':
+        priority_queue = GetMaxPriorityQueue()
+    elif algo == 'InsertInOrder':
+        priority_queue = InsertInOrderPriorityQueue()
+    else:
+        raise Exception("Unrecognised algo: {0}".format(algo))
+
+    stopwatch.report("initialize the priority_queue")
 
     stopwatch.reset()
     for n in numbers:
-        get_max_priority_queue.enqueue(n)
+        priority_queue.enqueue(n)
     stopwatch.report("enqueue members")
 
     stopwatch.reset()
-    print('get_max_priority_queue.count(): ', get_max_priority_queue.count())
+    print('priority_queue.count(): ', priority_queue.count())
     stopwatch.report("count members when full")
 
     stopwatch.reset()
     while (True):
-        m = get_max_priority_queue.dequeue()
+        m = priority_queue.dequeue()
         if m == None:
             break
         if should_print:
@@ -102,5 +136,5 @@ if __name__ == '__main__':
     stopwatch.report("dequeue members")
 
     stopwatch.reset()
-    print('get_max_priority_queue.count(): ', get_max_priority_queue.count())
+    print('priority_queue.count(): ', priority_queue.count())
     stopwatch.report("count members when empty")
