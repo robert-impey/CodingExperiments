@@ -37,7 +37,7 @@ class PriorityQueue:
     def count(self):
         return len(self.members)
 
-class GetMaxPriorityQueue(PriorityQueue):
+class GetMinPriorityQueue(PriorityQueue):
     def enqueue(self, new_member):
         self.members.append(new_member)
 
@@ -45,19 +45,19 @@ class GetMaxPriorityQueue(PriorityQueue):
         if len(self.members) == 0:
             return None
 
-        current_max = self.members[0]
+        current_min = self.members[0]
         for i in range(1, len(self.members)):
-            if (current_max < self.members[i]):
-                current_max = self.members[i]
+            if (current_min > self.members[i]):
+                current_min = self.members[i]
 
         i = 0
         while (True):
-            if (self.members[i] == current_max):
+            if (self.members[i] == current_min):
                 del(self.members[i])
                 break
             i += 1
         
-        return current_max
+        return current_min
 
 class InsertInOrderPriorityQueue(PriorityQueue):
     def enqueue(self, new_member):
@@ -67,7 +67,7 @@ class InsertInOrderPriorityQueue(PriorityQueue):
             i = len(self.members)
             while i >= 0:
                 i -= 1
-                if self.members[i] < new_member:
+                if self.members[i] > new_member:
                     self.members.insert(i + 1, new_member)
                     break
 
@@ -81,18 +81,18 @@ class InsertInOrderPriorityQueue(PriorityQueue):
         return self.members.pop()
 
 if __name__ == '__main__':
-    max = 10000
+    size = 10000
     if len(argv) > 1:
-        max = int(argv[1])
+        size = int(argv[1])
 
-    algo = 'GetMax'
+    algo = 'GetMin'
     if len(argv) > 2:
         algo = argv[2]
 
-    print("Enqueuing and dequeuing {0} integers using a {1} priority queue.".format(max, algo))
+    print("Enqueuing and dequeuing {0} integers using a {1} priority queue.".format(size, algo))
 
-    should_print = max <= 20
-    numbers = list(range(max))
+    should_print = size <= 20
+    numbers = list(range(size))
 
     shuffle(numbers)
     
@@ -105,8 +105,8 @@ if __name__ == '__main__':
     stopwatch = Stopwatch()
 
     stopwatch.start()
-    if algo == 'GetMax':
-        priority_queue = GetMaxPriorityQueue()
+    if algo == 'GetMin':
+        priority_queue = GetMinPriorityQueue()
     elif algo == 'InsertInOrder':
         priority_queue = InsertInOrderPriorityQueue()
     else:
