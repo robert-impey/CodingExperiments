@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
+import time
 from sys import argv
 from random import shuffle
-import time
+from heapq import heappush, heappop
 
 class Stopwatch:
     def __init__(self):
@@ -80,6 +81,16 @@ class InsertInOrderPriorityQueue(PriorityQueue):
         
         return self.members.pop()
 
+class HeapqPriorityQueue(PriorityQueue):
+    def enqueue(self, new_member):
+        heappush(self.members, new_member)
+
+    def dequeue(self):
+        if len(self.members) == 0:
+            return None
+        
+        return heappop(self.members)
+
 if __name__ == '__main__':
     size = 10000
     if len(argv) > 1:
@@ -109,6 +120,8 @@ if __name__ == '__main__':
         priority_queue = GetMinPriorityQueue()
     elif algo == 'InsertInOrder':
         priority_queue = InsertInOrderPriorityQueue()
+    elif algo == 'Heapq':
+        priority_queue = HeapqPriorityQueue()
     else:
         raise Exception("Unrecognised algo: {0}".format(algo))
 
