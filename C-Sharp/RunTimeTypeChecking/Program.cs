@@ -126,7 +126,6 @@ namespace RunTimeTypeChecking
                 WriteLine(swictchableFood.DescribeFlavour());
             }
 
-
             var firstSwitchableFood = swictchableFoods.First();
             WriteLine("Timing switching");
             foodCount = chickenSandwichCount = 0;
