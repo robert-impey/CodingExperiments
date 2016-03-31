@@ -39,7 +39,7 @@ namespace EnumerableCounting
             var l = new List<int>();
             for (var i = 0; i < max; i++)
             {
-                l.Add(max);
+                l.Add(i);
             }
             stopWatch.Stop();
             WriteLine("Time to initialise: " + stopWatch.ElapsedMilliseconds);
@@ -67,7 +67,7 @@ namespace EnumerableCounting
             var ll = new LinkedList<int>();
             for (var i = 0; i < max; i++)
             {
-                ll.AddLast(max);
+                ll.AddLast(i);
             }
             stopWatch.Stop();
             WriteLine("Time to initialise: " + stopWatch.ElapsedMilliseconds);

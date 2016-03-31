@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static System.Console;
 
 namespace RunTimeTypeChecking
@@ -125,7 +122,6 @@ namespace RunTimeTypeChecking
             {
                 WriteLine(swictchableFood.DescribeFlavour());
             }
-
 
             var firstSwitchableFood = swictchableFoods.First();
             WriteLine("Timing switching");
