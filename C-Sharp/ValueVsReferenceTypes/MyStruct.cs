@@ -1,6 +1,6 @@
 ﻿namespace ValueVsReferenceTypes
 {
-    struct MyStruct
+    public struct MyStruct
     {
         public int MyInt { get; set; }
     }

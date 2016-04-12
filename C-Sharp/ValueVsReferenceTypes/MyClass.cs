@@ -1,6 +1,6 @@
 ﻿namespace ValueVsReferenceTypes
 {
-    class MyClass
+    public class MyClass
     {
         public int MyInt { get; set; }        
     }

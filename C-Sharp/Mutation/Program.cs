@@ -1,6 +1,7 @@
-﻿using static System.Console;
+﻿using ValueVsReferenceTypes;
+using static System.Console;
 
-namespace ValueVsReferenceTypes
+namespace Mutation
 {
     class Program
     {
