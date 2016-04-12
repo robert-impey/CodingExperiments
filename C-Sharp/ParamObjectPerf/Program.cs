@@ -53,7 +53,7 @@ namespace ParamObjectPerf
 
                 stopWatch.Stop();
 
-                WriteLine("Foo with ints: " + stopWatch.ElapsedMilliseconds);
+                WriteLine("Foo with ParamObj: " + stopWatch.ElapsedMilliseconds);
             }
         }
     }
