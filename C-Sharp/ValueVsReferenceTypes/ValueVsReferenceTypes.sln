@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueVsReferenceTypes", "ValueVsReferenceTypes.csproj", "{7B1179DC-A49C-4C59-8771-F2E4031128A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueVsReferenceTypes", "ValueVsReferenceTypes\ValueVsReferenceTypes.csproj", "{7B1179DC-A49C-4C59-8771-F2E4031128A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutation", "..\Mutation\Mutation.csproj", "{6FB1236C-1648-4BA0-AB33-645977BC6E02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutation", "Mutation\Mutation.csproj", "{6FB1236C-1648-4BA0-AB33-645977BC6E02}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7B1179DC-A49C-4C59-8771-F2E4031128A3} = {7B1179DC-A49C-4C59-8771-F2E4031128A3}
 	EndProjectSection
