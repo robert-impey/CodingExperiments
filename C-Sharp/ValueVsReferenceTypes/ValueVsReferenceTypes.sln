@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutation", "Mutation\Mutati
 		{7B1179DC-A49C-4C59-8771-F2E4031128A3} = {7B1179DC-A49C-4C59-8771-F2E4031128A3}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitializationPerformance", "InitializationPerformance\InitializationPerformance.csproj", "{3B48B499-5DA3-4A43-A23A-FE370351EACF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{6FB1236C-1648-4BA0-AB33-645977BC6E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB1236C-1648-4BA0-AB33-645977BC6E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FB1236C-1648-4BA0-AB33-645977BC6E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B48B499-5DA3-4A43-A23A-FE370351EACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B48B499-5DA3-4A43-A23A-FE370351EACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B48B499-5DA3-4A43-A23A-FE370351EACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B48B499-5DA3-4A43-A23A-FE370351EACF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
