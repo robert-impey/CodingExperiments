@@ -1,9 +1,29 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using static System.Console;
-
-namespace BookFinding
+﻿namespace BookFinding
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using static System.Console;
+
+    enum Colour
+    {
+        Red,
+        Blue
+    }
+
+    class Book
+    {
+        internal Book(string name, int numberOfPages, Colour colour)
+        {
+            Name = name;
+            NumberOfPages = numberOfPages;
+            Colour = colour;
+        }
+
+        internal string Name { get; }
+        internal int NumberOfPages { get; }
+        internal Colour Colour { get; }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +41,7 @@ namespace BookFinding
             PrintRedBooksWithMoreThan500PagesQuery(books);
         }
 
-        private static void PrintRedBooksWithMoreThan500PagesImperative(IList<Book> books)
+        static void PrintRedBooksWithMoreThan500PagesImperative(List<Book> books)
         {
             WriteLine("Finding the books in the imperative style");
 
@@ -34,7 +54,7 @@ namespace BookFinding
             }
         }
 
-        private static void PrintRedBooksWithMoreThan500PagesFluent(IList<Book> books)
+        static void PrintRedBooksWithMoreThan500PagesFluent(List<Book> books)
         {
             WriteLine("Finding the books with fluent linq");
 
@@ -46,7 +66,7 @@ namespace BookFinding
             }
         }
 
-        private static void PrintRedBooksWithMoreThan500PagesQuery(IList<Book> books)
+        static void PrintRedBooksWithMoreThan500PagesQuery(List<Book> books)
         {
             WriteLine("Finding the books with a linq query");
 
