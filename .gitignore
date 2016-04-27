@@ -24,3 +24,5 @@ UpgradeLog*.htm
 Backup
 StyleCop.cache
 pingme.txt
+private.xml
+
