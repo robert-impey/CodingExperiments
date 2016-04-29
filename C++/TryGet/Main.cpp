@@ -3,6 +3,29 @@
 
 using namespace std;
 
+bool isVowel(char c)
+{
+	return c == 'a'
+		|| c == 'e'
+		|| c == 'i'
+		|| c == 'o'
+		|| c == 'u';
+}
+
+bool isDigit(char c)
+{
+	return c == '0'
+		|| c == '1'
+		|| c == '2'
+		|| c == '3'
+		|| c == '4'
+		|| c == '5'
+		|| c == '6'
+		|| c == '7'
+		|| c == '8'
+		|| c == '9';
+}
+
 int countVowels(string word)
 {
 	int count = 0;
@@ -10,25 +33,12 @@ int countVowels(string word)
 	string::iterator it;
 	for (it = word.begin(); it < word.end(); it++)
 	{
-		if (*it == 'a'
-			|| *it == 'e'
-			|| *it == 'i'
-			|| *it == 'o'
-			|| *it == 'u')
+		if (isVowel(*it))
 		{
 			count++;
 		}
 
-		if (*it == '0'
-			|| *it == '1'
-			|| *it == '2'
-			|| *it == '3'
-			|| *it == '4'
-			|| *it == '5'
-			|| *it == '6'
-			|| *it == '7'
-			|| *it == '8'
-			|| *it == '9')
+		if (isdigit(*it))
 		{
 			return -1;
 		}
