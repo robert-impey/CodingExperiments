@@ -47,20 +47,45 @@ int countVowels(string word)
 	return count;
 }
 
+bool tryCountVowels(string word, int &count)
+{
+	count = countVowels(word);
+
+	return count >= 0;
+}
+
+void printCount(string word)
+{
+	int count = countVowels(word);
+
+	cout << "I found " << count << " vowels in '" << word << "'." << endl;
+}
+
+void printValidatedCount(string word)
+{
+	int attemptedCount;
+	if (tryCountVowels(word, attemptedCount))
+	{
+		cout << "I found " << attemptedCount << " vowels in '" << word << "'." << endl;
+	}
+	else {
+		cout << "The '" << word << "' is not valid." << endl;
+	}
+}
+
 int main()
 {
 	string withVowels = "banana";
 	string withoutVowels = "bcdf";
 	string withNumbers = "de4d";
 
-	int countWithVowels = countVowels(withVowels);
-	cout << "Count of string with vowels: " << countWithVowels << endl;
+	printCount(withVowels);
+	printCount(withoutVowels);
+	printCount(withNumbers);
 
-	int countWithoutVowels = countVowels(withoutVowels);
-	cout << "Count of string without vowels: " << countWithoutVowels << endl;
-
-	int countWithNumbers = countVowels(withNumbers);
-	cout << "Count of string with numbers: " << countWithNumbers << endl;
+	printValidatedCount(withVowels);
+	printValidatedCount(withoutVowels);
+	printValidatedCount(withNumbers);
 
 	return 0;
 }
