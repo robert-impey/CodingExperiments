@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<t>
+  <property>value1</property>
+  <property type="Do not replace">value2</property>
+  <property type="Replace me!">value2</property>
+</t>

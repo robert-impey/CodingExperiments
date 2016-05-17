@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" >
+	<Target Name="Build" DependsOnTargets="ReplaceAttributes" />
+	<Target Name="Clean">
+		<Delete Files="Output.xml" />
+	</Target>
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build;" />
+	<Target Name="ReplaceAttributes" Inputs="Transform.xsl;Colours.xml" Outputs="Output.xml">
+		<XslTransformation
+    XslInputPath="Transform.xsl"
+	XmlInputPaths="Input.xml"
+    OutputPaths="Output.xml" />
+	</Target>
+</Project>
