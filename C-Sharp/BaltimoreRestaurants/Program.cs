@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System.Linq;
+using System.Xml.Linq;
 using static System.Console;
 
 /// <summary>
@@ -22,25 +23,9 @@ namespace BaltimoreRestaurants
                 var restaurantsFile = args[0];
                 var restaurantsXml = XElement.Load(restaurantsFile);
 
-                var restaurantRows = restaurantsXml?.Element("row")?.Elements();
-                if (restaurantRows == null)
+                foreach (var restaurant in RestaurantReader.ReadXml(restaurantsXml).OrderBy(r => r.Name))
                 {
-                    WriteLine("Unable to parse restaurants!");
-                }
-                else
-                {
-                    foreach (var restaurantRow in restaurantRows)
-                    {
-                        var restaurantName = restaurantRow.Element("name");
-                        if (restaurantName == null)
-                        {
-                            WriteLine("No name found");
-                        }
-                        else
-                        {
-                            WriteLine($"Name - {restaurantName.Value}");
-                        }
-                    }
+                    WriteLine($"Name - {restaurant.Name}");
                 }
             }
         }
