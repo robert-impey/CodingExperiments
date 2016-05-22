@@ -32,19 +32,15 @@ end
 
 if __FILE__ == $0 then
 	puts <<HLP
-Try to guess the sequence.
-
 I am thinking of an infinite sequence of numbers.
 
 You need to try to guess the sequence.
 
 You can find out about the sequence by giving me lists of 3 numbers.
 
-I will say "Yes" or "No" depending on whether the numbers appear
-in the sequence in the same order.
+I will say "Yes" or "No" depending on whether the numbers appear in the sequence in the same order.
 
-To get you started, I will give you these three numbers that meet
-the criteria for saying "Yes":
+To get you started, I will give you these three numbers that meet the criteria for saying "Yes":
 
 2 4 6
 
