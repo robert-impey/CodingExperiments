@@ -1,4 +1,4 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.3
 
 io.input('file-to-backup.txt')
 io.output('backup.txt')
