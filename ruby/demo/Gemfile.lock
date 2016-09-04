@@ -91,7 +91,7 @@ GEM
       ansi
       minitest (~> 4)
     tzinfo (0.3.51)
-    uglifier (3.0.1)
+    uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
