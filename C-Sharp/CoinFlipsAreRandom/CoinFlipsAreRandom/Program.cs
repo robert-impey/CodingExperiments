@@ -7,7 +7,6 @@ namespace CoinFlipsAreRandom
     {
         static void Main(string[] args)
         {
-            WriteLine($"heads, tails, flips, heads ratio");
 
             var runs = 1000;
 
