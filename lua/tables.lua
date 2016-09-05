@@ -1,4 +1,4 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.3
 
 t = {}
 
@@ -41,7 +41,6 @@ print_by_keys(t)
 print("Finding the size of the tables")
 
 print(#t)
-print(table.maxn(t))
 
 function count_table(t)
 	c = 0
