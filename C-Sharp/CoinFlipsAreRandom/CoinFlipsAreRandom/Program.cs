@@ -11,7 +11,8 @@ namespace CoinFlipsAreRandom
 
             var runs = 1000;
 
-            var flips = 33577342;
+            // Taken from http://www.bbc.co.uk/news/politics/eu_referendum/results
+            var flips = 33551983;
 
             var randomNumberGenerator = new Random();
 
