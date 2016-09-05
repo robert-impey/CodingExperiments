@@ -1,4 +1,4 @@
-#!/usr/bin/env lua5.3
+#!/usr/bin/env lua
 
 co = coroutine.create(function()
     for i = 0, 9 do

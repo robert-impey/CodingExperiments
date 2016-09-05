@@ -1,4 +1,4 @@
-#!/usr/bin/env lua5.3
+#!/usr/bin/env lua
 
 function foo (a)
   print("foo", a)
