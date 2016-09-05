@@ -1,4 +1,4 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.3
 
 for line in io.lines() do
 	new_line, _ = line:gsub("%s*", "")
