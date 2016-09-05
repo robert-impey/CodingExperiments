@@ -7,6 +7,7 @@ namespace CoinFlipsAreRandom
     {
         static void Main(string[] args)
         {
+            WriteLine("heads, tails, flips, heads share");
 
             var runs = 1000;
 
