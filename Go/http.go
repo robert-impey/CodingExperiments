@@ -15,5 +15,5 @@ func (h Hello) ServeHTTP(
 
 func main() {
 	var h Hello
-	http.ListenAndServe("localhost:4000", h)
+	http.ListenAndServe(":4000", h)
 }
