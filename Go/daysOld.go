@@ -18,7 +18,13 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Unable to parse your date of birth: %s\n", dOBParseError)
 		} else {
 			var age = time.Since(dateOfBirth)
-			fmt.Printf("Days old: %.0f\n", math.Floor(age.Hours()/24))
+			var ageInDays = math.Floor(age.Hours() / 24)
+
+			if ageInDays < 0 {
+				os.Stderr.WriteString("Wow! I must be talking to a foetus!\n")
+			} else {
+				fmt.Printf("Days old: %.0f\n", ageInDays)
+			}
 		}
 	}
 }
