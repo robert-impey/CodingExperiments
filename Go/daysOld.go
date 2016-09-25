@@ -15,10 +15,10 @@ func main() {
 		var dateOfBirth, dOBParseError = time.Parse(layout, os.Args[1])
 
 		if dOBParseError != nil {
-            fmt.Fprintf(os.Stderr, "Unable to parse your date of birth: %s\n", dOBParseError)
+			fmt.Fprintf(os.Stderr, "Unable to parse your date of birth: %s\n", dOBParseError)
 		} else {
 			var age = time.Since(dateOfBirth)
-            fmt.Printf("Days old: %.0f\n", math.Floor(age.Hours()/24))
+			fmt.Printf("Days old: %.0f\n", math.Floor(age.Hours()/24))
 		}
 	}
 }
