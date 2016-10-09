@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0D3BF2C46445B3A9E2131E2375913EC8867A5F6C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0D3BF2C46445B3A9E2131E2375913EC8867A5F6C" : 0,
+    "79A53222DD2AF5D8D44656E91F2E93A2BE5F9601" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "538D9864-F95E-4717-98D5-170DABB5DA92",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0D3BF2C46445B3A9E2131E2375913EC8867A5F6C" : "CodingExperiments\/",
+    "79A53222DD2AF5D8D44656E91F2E93A2BE5F9601" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Adder",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "objective-c\/Adder\/Adder.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:robert-impey\/CodingExperiments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0D3BF2C46445B3A9E2131E2375913EC8867A5F6C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "kiya.robertimpey.com:~\/code.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79A53222DD2AF5D8D44656E91F2E93A2BE5F9601"
+    }
+  ]
+}
