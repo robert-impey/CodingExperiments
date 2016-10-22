@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SumOfProperDivisors.Lib
 {
@@ -20,7 +16,7 @@ namespace SumOfProperDivisors.Lib
                 {
                     sum += i;
                     var other = (input / i);
-                    if (i != other)
+                    if (i != other && other != input)
                     {
                         sum += other;
                     }

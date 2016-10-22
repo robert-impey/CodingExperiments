@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static SumOfProperDivisors.Lib.SumOfProperDivisors;
 
 namespace SumOfProperDivisors.Tests
@@ -20,14 +19,24 @@ namespace SumOfProperDivisors.Tests
         }
 
         /// <summary>
-        /// Divisors of 24 are
-        /// 1, 2, 3, 4, 6, 8, 12, 24
-        /// Sum: 60
+        /// Proper divisors of 10 are
+        /// 1, 2, 5
+        /// Sum: 8
         /// </summary>
         [TestMethod]
-        public void SumOfDivisorsOf24()
+        public void SumOfDivisorsOf10()
         {
-            Assert.AreEqual(60, Calculate(24));
+            Assert.AreEqual(8, Calculate(10));
+        }
+
+        /// <summary>
+        /// Proper divisors of 36 are
+        /// 1 + 2 + 3 + 4 + 6 + 9 + 12 + 18 = 55 
+        /// </summary>
+        [TestMethod]
+        public void SumOfDivisorsOf36()
+        {
+            Assert.AreEqual(55, Calculate(36));
         }
     }
 }
