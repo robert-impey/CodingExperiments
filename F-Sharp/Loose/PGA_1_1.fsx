@@ -16,6 +16,8 @@ let yMax = 10.0
 // See https://github.com/robert-impey/PracticalGeneticAlgorithms/blob/master/PracticalGeneticAlgorithms.Test/ExhaustiveSearchF1_1Tests.vb
 let vbMinSln = f 9.039 8.668
 
+printfn "The solution from VB: %f" vbMinSln
+
 // Exhaustive search
 let xStep = 0.01
 let yStep = 0.01
