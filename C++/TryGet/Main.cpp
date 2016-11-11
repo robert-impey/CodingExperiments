@@ -19,7 +19,7 @@ void printValidatedCount(string word)
 		cout << "I found " << attemptedCount << " vowels in '" << word << "'." << endl;
 	}
 	else {
-		cout << "The '" << word << "' is not valid." << endl;
+		cout << "The word '" << word << "' is not valid." << endl;
 	}
 }
 
