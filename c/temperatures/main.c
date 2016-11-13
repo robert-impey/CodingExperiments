@@ -12,19 +12,21 @@
 
 float fahr_to_cel(float);
 
-main()
+int main()
 {
-	float fahr, cel;
-	
-	fahr = LOWER;
-	while (fahr <= UPPER) {
-		cel = fahr_to_cel(fahr);
-		printf("%6.1f\t%6.1f\n", fahr, cel);
-		fahr += STEP;
-	}
+    float fahr, cel;
+
+    fahr = LOWER;
+    while (fahr <= UPPER) {
+        cel = fahr_to_cel(fahr);
+        printf("%6.1f\t%6.1f\n", fahr, cel);
+        fahr += STEP;
+    }
+
+    return 0;
 }
 
 float fahr_to_cel(float fahr)
 {
-	return 5 * (fahr - 32) / 9;
+    return 5 * (fahr - 32) / 9;
 }
