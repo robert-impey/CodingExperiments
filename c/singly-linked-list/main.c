@@ -7,21 +7,22 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
- struct Node
- {
-   int Data;
-   struct Node *Next;
- }; 
+struct Node
+{
+    int Data;
+    struct Node *Next;
+}; 
 
 int main(int argc, char **argv)
 {
-	int i;
-	for (i = 1; i < argc; i++) {
-		printf("%d - %d\n", i, atoi(argv[i]));
-	}
-	
-	printf("\n");
-	
-	return 0;
+    int i;
+    for (i = 1; i < argc; i++) {
+        printf("%d - %d\n", i, atoi(argv[i]));
+    }
+
+    printf("\n");
+
+    return 0;
 }
