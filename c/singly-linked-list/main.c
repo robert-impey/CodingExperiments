@@ -15,6 +15,20 @@ struct Node
     struct Node *Next;
 }; 
 
+void print_linked_list(struct Node *current)
+{
+    while (1) {
+        printf("%d", current->Data);
+        if (current->Next == NULL) {
+            printf("\n");
+            return;
+        } else {
+            printf(" ");
+            current = current->Next;
+        }
+    }
+}
+
 int main(int argc, char **argv)
 {
     if (argc > 1) {
@@ -38,18 +52,7 @@ int main(int argc, char **argv)
             }
         }
 
-        struct Node *current;
-        current = head;
-        while (1) {
-            printf("%d", current->Data);
-            if (current->Next == NULL) {
-                printf("\n");
-                break;
-            } else {
-                printf(" ");
-                current = current->Next;
-            }
-        }
+        print_linked_list(head);
     }
 
     return 0;
