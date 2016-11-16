@@ -23,14 +23,16 @@ float abs_float(float);
 
 int main(int argc, char *argv[])
 {
-    float area;
-    struct rectangle my_rectangle;
+    if (argc > 1) {
+        float area;
+        struct rectangle my_rectangle;
 
-    my_rectangle = make_rectangle_from_floats(atof(argv[1]), atof(argv[2]), atof(argv[3]), atof(argv[4]));
+        my_rectangle = make_rectangle_from_floats(atof(argv[1]), atof(argv[2]), atof(argv[3]), atof(argv[4]));
 
-    area = find_area_of_rectangle(my_rectangle);
+        area = find_area_of_rectangle(my_rectangle);
 
-    printf("%.1f\n", area);
+        printf("%.1f\n", area);
+    }
 
     return 0;
 }
