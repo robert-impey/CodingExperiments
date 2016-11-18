@@ -13,7 +13,32 @@ struct Node
 {
     int Data;
     struct Node *Next;
-}; 
+};
+
+struct Node *make_linked_list_from_args(int args_start, int args_length, char **args)
+{
+    struct Node *head;
+
+    int i;
+    for (i = args_length - 1; i >= args_start; i--) {
+        int current_arg = atoi(args[i]);
+
+        struct Node *temp;
+
+        temp = (struct Node *)malloc(sizeof (struct Node));
+        temp->Data = current_arg;
+
+        if (i == args_length - 1) {
+            head = temp;
+            head->Next = NULL;
+        } else {
+            temp->Next = head;
+            head = temp;
+        }
+    }
+
+    return head;
+}
 
 void print_linked_list(struct Node *current)
 {
@@ -32,25 +57,7 @@ void print_linked_list(struct Node *current)
 int main(int argc, char **argv)
 {
     if (argc > 1) {
-        struct Node *head;
-
-        int i;
-        for (i = argc - 1; i > 0; i--) {
-            int current_arg = atoi(argv[i]);
-
-            struct Node *temp;
-
-            temp = (struct Node *)malloc(sizeof (struct Node));
-            temp->Data = current_arg;
-
-            if (head == NULL) {
-                head = temp;
-                head->Next = NULL;
-            } else {
-                temp->Next = head;
-                head = temp;
-            }
-        }
+        struct Node *head = make_linked_list_from_args(1, argc, argv);
 
         print_linked_list(head);
     }
