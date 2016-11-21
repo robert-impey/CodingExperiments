@@ -21,7 +21,8 @@ struct Args {
 
 // Functions.
 
-Args process_args(int argc, char** argv);
+void init_args(Args *args);
+bool process_args(int argc, char** argv, Args* args);
 
 #ifdef	__cplusplus
 }
