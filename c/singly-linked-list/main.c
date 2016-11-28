@@ -15,9 +15,60 @@ struct Node
     struct Node *Next;
 };
 
-struct Node *make_linked_list_from_args(int args_start, int args_length, char **args)
+struct LinkedList
 {
-    struct Node *head;
+    struct Node *Head;
+};
+
+struct LinkedList *make_linked_list()
+{
+    struct LinkedList *linked_list;
+
+    linked_list = (struct LinkedList *)malloc(sizeof (struct LinkedList));
+
+    linked_list->Head = NULL;
+
+    return linked_list;
+}
+
+int is_final(struct Node *head)
+{
+    return head->Next == NULL ? 1 : 0;
+}
+
+int is_empty(struct LinkedList *linked_list)
+{
+    return linked_list == NULL ? 1 : 0;
+}
+
+struct Node *make_node(int data)
+{
+    struct Node *node;
+
+    node = (struct Node *)malloc(sizeof (struct Node));
+
+    node->Data = data;
+    node->Next = NULL;
+
+    return node;
+}
+
+void add_node_to_linked_list(struct LinkedList *linked_list, struct Node *addendum)
+{
+    if (is_empty(linked_list) == 1)
+    {
+        linked_list->Head = addendum;
+    }
+    else
+    {
+        addendum->Next = linked_list->Head;
+        linked_list->Head = addendum;
+    }
+}
+
+struct LinkedList *make_linked_list_from_args(int args_start, int args_length, char **args)
+{
+    struct LinkedList *linked_list = make_linked_list();
 
     int i;
     for (i = args_length - 1; i >= args_start; i--) {
@@ -25,31 +76,31 @@ struct Node *make_linked_list_from_args(int args_start, int args_length, char **
 
         struct Node *temp;
 
-        temp = (struct Node *)malloc(sizeof (struct Node));
-        temp->Data = current_arg;
+        temp = make_node(current_arg);
 
-        if (i == args_length - 1) {
-            head = temp;
-            head->Next = NULL;
-        } else {
-            temp->Next = head;
-            head = temp;
-        }
+        add_node_to_linked_list(linked_list, temp);
     }
 
-    return head;
+    return linked_list;
 }
 
-void print_linked_list(struct Node *current)
+void print_linked_list(struct LinkedList *linked_list)
 {
-    while (1) {
-        printf("%d", current->Data);
-        if (current->Next == NULL) {
-            printf("\n");
-            return;
-        } else {
-            printf(" ");
-            current = current->Next;
+    if (is_empty(linked_list) == 0)
+    {
+        struct Node *current;
+
+        current = linked_list->Head;
+
+        while (1) {
+            printf("%d", current->Data);
+            if (is_final(current) == 1) {
+                printf("\n");
+                return;
+            } else {
+                printf(" ");
+                current = current->Next;
+            }
         }
     }
 }
@@ -57,9 +108,9 @@ void print_linked_list(struct Node *current)
 int main(int argc, char **argv)
 {
     if (argc > 1) {
-        struct Node *head = make_linked_list_from_args(1, argc, argv);
+        struct LinkedList *linked_list = make_linked_list_from_args(1, argc, argv);
 
-        print_linked_list(head);
+        print_linked_list(linked_list);
     }
 
     return 0;
