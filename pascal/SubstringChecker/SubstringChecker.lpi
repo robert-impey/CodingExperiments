@@ -28,7 +28,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="-s &quot;caat&quot; -n &quot;at&quot;"/>
+        <CommandLineParams Value="-n &quot;ab&quot; -s &quot;katab&quot;"/>
       </local>
     </RunParams>
     <Units Count="2">
