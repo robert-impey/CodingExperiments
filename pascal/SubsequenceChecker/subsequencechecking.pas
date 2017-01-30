@@ -19,21 +19,21 @@ begin
   NeedleLength := Length(Needle);
   HaystackLength := Length(Haystack);
 
-  if (NeedleLength > 0) and (HaystackLength > 0) then
+  if (NeedleLength > 0) and (HaystackLength > NeedleLength) then
   begin
-    NeedleIndex := 0;
-    HaystackIndex := 0;
+    NeedleIndex := 1;
+    HaystackIndex := 1;
 
-    while (NeedleIndex < NeedleLength) and (HaystackIndex < HaystackLength) do
+    while (NeedleIndex <= NeedleLength) and (HaystackIndex <= HaystackLength) do
     begin
       if Needle[NeedleIndex] = Haystack[HaystackIndex] then
       begin
-        NeedleIndex := NeedleIndex + 1;
+        Inc(NeedleIndex);
       end;
-      HaystackIndex := HaystackIndex + 1;
+      Inc(HaystackIndex);
     end;
 
-    Result := NeedleLength = NeedleIndex;
+    Result := NeedleLength = NeedleIndex - 1;
   end;
 end;
 
