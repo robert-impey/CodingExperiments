@@ -1,0 +1,3 @@
+HammingDistance -f karolin -s kathrin
+
+3

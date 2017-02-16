@@ -1,0 +1,3 @@
+HammingDistance -f a -s ab
+
+-1
