@@ -9,4 +9,4 @@ debug: main.c
 	$(CC) -g main.c -o $(PROGRAM)
 
 clean:
-	$(RM) $(PROGRAM) $(PROGRAM).exe 
+	$(RM) $(PROGRAM) $(PROGRAM).exe $(PROGRAM).exe.stackdump
