@@ -92,11 +92,12 @@ void print_linked_list(struct LinkedList *linked_list)
 
         current = linked_list->Head;
 
-        while (1) {
+        int reached_end = 0;
+        while (reached_end == 0) {
             printf("%d", current->Data);
             if (is_final(current) == 1) {
                 printf("\n");
-                return;
+                reached_end = 1;
             } else {
                 printf(" ");
                 current = current->Next;
