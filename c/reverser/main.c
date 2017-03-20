@@ -7,52 +7,92 @@
  * @copyright 2010-10-17, Robert Impey
  */
 
+#include <stdlib.h>
 #include <stdio.h>
 
-typedef struct stack {
-	char data;
-	struct stack *next;
+typedef struct frame 
+{
+    char data;
+    struct frame *next;
+} FRAME;
+
+typedef struct stack
+{
+    FRAME *top;
 } STACK;
 
-void push(STACK **head, char value)
+int is_empty(STACK *stack)
 {
-	STACK *node = malloc(sizeof(STACK));  /* create a new node */
-
-	if (node == NULL){
-		fputs("Error: no space available for node\n", stderr);
-		abort();
-	} else {                                      /* initialize node */
-		node->data = value;
-		node->next = empty(*head) ? NULL : *head; /* insert new head if any */
-		*head = node;
-	}
+    return stack->top == NULL ? 1 : 0;
 }
 
-int pop(STACK **head)
+int is_bottom(FRAME *frame)
 {
-	if (empty(*head)) {                          /* stack is empty */
-		fputs("Error: stack underflow\n", stderr);
-		abort();
-	} else {                                     /* pop a node */
-		STACK *top = *head;
-		char value = top->data;
-		*head = top->next;
-		free(top);
-		return value;
-	}
+    return frame->next == NULL ? 1 : 0;
 }
+
+FRAME *make_frame(char data)
+{
+    FRAME *frame = malloc(sizeof(FRAME));
+
+    frame->data = data;
+    frame->next = NULL;
+
+    return frame;
+}
+
+STACK *make_stack()
+{
+    STACK *stack = malloc(sizeof(STACK));
+
+    stack->top = NULL;
+
+    return stack;
+}
+
+void push(STACK *stack, char value)
+{
+    FRAME *new_frame = make_frame(value);
+
+    if (is_empty(stack) == 0)
+    {
+        new_frame->next = stack->top;
+    }
+
+    stack->top = new_frame;
+}
+
+char pop(STACK *stack)
+{
+    if (is_empty(stack) == 1) {                          /* stack is empty */
+        fputs("Error: stack underflow\n", stderr);
+        abort();
+    } else {                                     /* pop a node */
+        FRAME *top = stack->top;
+
+        char value = top->data;
+
+        stack->top = top->next;
+        free(top);
+
+        return value;
+    }
+}
+
 
 int main()
 {
-	char c;
-	while (c = getchar() != EOF) {
-		push(stack, c);
-	}
+    STACK *stack = make_stack();
 
-	while (!empty(*stack)) {
-		print(pop(stack));
-	}
-
-	return 0;
+    char c;
+    while ((c = getchar()) != EOF) {
+        push(stack, c);
+    }
+	
+    while (is_empty(stack) != 1) {
+        printf("%c", pop(stack));
+    }
+	
+    return 0;
 }
 
