@@ -18,5 +18,5 @@ func wordCount(s string) map[string]int {
 }
 
 func main() {
-	fmt.Println(wordCount("How much would would a woodchuck chuck if a woodchuck could chuck wood?"))
+	fmt.Println(wordCount("How much wood would a woodchuck chuck if a woodchuck could chuck wood?"))
 }
