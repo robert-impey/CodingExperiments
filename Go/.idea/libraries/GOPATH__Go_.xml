@@ -6,6 +6,7 @@
       <root url="file://C:/tools/go/src/io" />
       <root url="file://C:/tools/go/src/compress" />
       <root url="file://C:/tools/go/src/index" />
+      <root url="file://$USER_HOME$/go/src/golang.org" />
       <root url="file://C:/tools/go/src/testing" />
       <root url="file://C:/tools/go/src/sort" />
       <root url="file://C:/tools/go/src/archive" />
@@ -53,6 +54,7 @@
       <root url="file://C:/tools/go/src/io" />
       <root url="file://C:/tools/go/src/compress" />
       <root url="file://C:/tools/go/src/index" />
+      <root url="file://$USER_HOME$/go/src/golang.org" />
       <root url="file://C:/tools/go/src/testing" />
       <root url="file://C:/tools/go/src/sort" />
       <root url="file://C:/tools/go/src/archive" />
