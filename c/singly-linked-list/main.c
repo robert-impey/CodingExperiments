@@ -38,7 +38,7 @@ int is_final(struct Node *head)
 
 int is_empty(struct LinkedList *linked_list)
 {
-    return linked_list == NULL ? 1 : 0;
+    return  linked_list == NULL || linked_list->Head == NULL ? 1 : 0;
 }
 
 struct Node *make_node(int data)
