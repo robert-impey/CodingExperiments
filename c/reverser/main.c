@@ -79,7 +79,6 @@ char pop(STACK *stack)
     }
 }
 
-
 int main()
 {
     STACK *stack = make_stack();
