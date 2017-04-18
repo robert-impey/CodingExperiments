@@ -1,9 +1,13 @@
 #!/usr/bin/perl
 
 use strict;
+use warnings;
+
 use Getopt::Long;
 use Cwd;
 use File::Find::Rule;
+use IPC::Open3;
+use IO::Select;
 
 {
     my $dir = '.';
@@ -45,16 +49,17 @@ use File::Find::Rule;
             foreach my $test_file (sort @test_files) {
                 $tests++;
 
-                &print_separator if $verbose;
+                my $success = run_test($test_file, $test_data_dir, $verbose, 'out');
+                $successes += $success ? 1 : 0;
+            }
 
-                if (run_test($test_file, $test_data_dir, $verbose)) {
-                    print "OK\n";
-                    $successes++;
-                } else {
-                    print "FAIL\n";
-                }
+            my @err_test_files = glob "$tests_dir/*.err";
 
-                &print_separator if $verbose;
+            foreach my $test_file (sort @err_test_files) {
+                $tests++;
+
+                my $success = run_test($test_file, $test_data_dir, $verbose, 'err');
+                $successes += $success ? 1 : 0;
             }
         }
 
@@ -70,35 +75,57 @@ use File::Find::Rule;
 
 # Subs
 
-sub print_separator
-{
-    my $char = shift || '-';
-    my $repetitions = shift || 40;
-
-    print "\n", $char x $repetitions, "\n";
-}
-
 sub run_test
 {
     my $test_file = shift;
     my $test_data_dir = shift;
     my $verbose = shift;
+    my $test_type = shift;
 
     $test_file = Cwd::abs_path($test_file);
 
+    &print_separator if $verbose;
 
     print "Test file: $test_file", $verbose ? "\n" : ' ';
 
     my $test_file_data_ref = read_test_file($test_file, $test_data_dir, $verbose);
-    my $test_output = $$test_file_data_ref{test_output};
-    my $command = $$test_file_data_ref{command};
 
+    my $test_output = $$test_file_data_ref{test_output};
     print "Test output:\n$test_output\n" if $verbose;
 
-    my $command_output = `$command`;
+    my $command = $$test_file_data_ref{command};
+    chomp $command;
+    
+    my $pid = open3(undef, \*READ, \*ERROR, $command);
+    waitpid($pid, 1);
+    
+    my $command_output = '';
+    if ($test_type eq 'out') {
+        my $selread = new IO::Select();
+        
+        $selread->add(\*READ);
+
+        sysread(READ, $command_output, 4096) if $selread->can_read(0);
+    } elsif ($test_type eq 'err') {
+        my $selerror = new IO::Select();
+        
+        $selerror->add(\*ERROR);
+        
+        sysread(ERROR, $command_output, 4096) if $selerror->can_read(0);
+    }
+    
     print "Command output:\n$command_output\n" if $verbose;
 
-    return $command_output eq $test_output;
+    my $success = $command_output eq $test_output;
+    if ($success) {
+        print "OK\n";
+    } else {
+        print "FAIL\n";
+    }
+    
+    &print_separator if $verbose;
+    
+    return $success;
 }
 
 sub read_test_file
@@ -130,4 +157,10 @@ sub read_test_file
     };
 }
 
+sub print_separator
+{
+    my $char = shift || '-';
+    my $repetitions = shift || 40;
 
+    print "\n", $char x $repetitions, "\n";
+}
