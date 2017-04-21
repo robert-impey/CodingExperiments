@@ -6,8 +6,8 @@ use warnings;
 use Getopt::Long;
 use Cwd;
 use File::Find::Rule;
-use IPC::Open3;
-use IO::Select;
+
+use Capture::Tiny qw/capture/;
 
 {
     my $dir = '.';
@@ -91,30 +91,36 @@ sub run_test
     my $test_file_data_ref = read_test_file($test_file, $test_data_dir, $verbose);
 
     my $test_output = $$test_file_data_ref{test_output};
-    print "Test output:\n$test_output\n" if $verbose;
+    chomp $test_output;
+
+    if ($verbose) {
+        print "Test output:\n";
+        print_separator('.');
+        print "$test_output\n";
+        print_separator('.');
+    }
 
     my $command = $$test_file_data_ref{command};
     chomp $command;
-    
-    my $pid = open3(undef, \*READ, \*ERROR, $command);
-    waitpid($pid, 1);
-    
-    my $command_output = '';
-    if ($test_type eq 'out') {
-        my $selread = new IO::Select();
-        
-        $selread->add(\*READ);
 
-        sysread(READ, $command_output, 4096) if $selread->can_read(0);
+    my ($stdout, $stderr, $exit) = capture {
+        system( $command, qw// );
+    };
+
+    my $command_output;
+    if ($test_type eq 'out') {
+        $command_output = $stdout;
     } elsif ($test_type eq 'err') {
-        my $selerror = new IO::Select();
-        
-        $selerror->add(\*ERROR);
-        
-        sysread(ERROR, $command_output, 4096) if $selerror->can_read(0);
+        $command_output = $stderr;
     }
-    
-    print "Command output:\n$command_output\n" if $verbose;
+    chomp $command_output;
+
+    if ($verbose) {
+        print "Command output:\n";
+        print_separator('.');
+        print "$command_output\n" ;
+        print_separator('.');
+    }
 
     my $success = $command_output eq $test_output;
     if ($success) {
@@ -122,9 +128,9 @@ sub run_test
     } else {
         print "FAIL\n";
     }
-    
+
     &print_separator if $verbose;
-    
+
     return $success;
 }
 
