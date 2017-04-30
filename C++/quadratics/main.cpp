@@ -13,16 +13,16 @@ int main(int argc, char *argv[])
 
     if (process_args(argc, argv, &args)) {
         float a, b, c;
-        bool d;
+        bool just_discriminant;
 
         a = args.a;
         b = args.b;
         c = args.c;
-        d = args.d;
+        just_discriminant = args.d;
 
         float discriminant = (b * b) - (4 * a * c);
 
-        if (d) {
+        if (just_discriminant) {
             cout << "The discriminant is " << discriminant << "." << endl;
         } else {
             if (discriminant < 0) {
