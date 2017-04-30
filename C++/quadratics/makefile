@@ -14,4 +14,4 @@ process_args.o: process_args.hpp process_args.cpp
 	$(CC) -c process_args.cpp -o process_args.o
 
 clean:
-	$(RM) $(PROGRAM) $(OBJECT_FILES)
+	$(RM) $(PROGRAM) $(PROGRAM).exe $(OBJECT_FILES)
