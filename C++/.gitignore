@@ -11,4 +11,5 @@ ipch
 *.depend
 *.layout
 *.opendb
+*.o
 

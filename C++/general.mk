@@ -5,7 +5,7 @@ CC = g++
 $(PROGRAM): main.cpp
 	$(CC) main.cpp -o $(PROGRAM)
 
-debug: main.c
+debug: main.cpp
 	$(CC) -g main.cpp -o $(PROGRAM)
 
 clean:
