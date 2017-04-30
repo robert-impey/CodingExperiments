@@ -1,0 +1,3 @@
+quadratics -a 4 -b 4 -c 1 -d
+
+The discriminant is 0.

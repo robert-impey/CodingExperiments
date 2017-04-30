@@ -2,6 +2,7 @@ struct Args {
     float a;
     float b;
     float c;
+    bool d;
 };
 
 void init_args(Args *args);
