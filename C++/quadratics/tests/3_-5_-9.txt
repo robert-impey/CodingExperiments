@@ -1,3 +1,0 @@
-quadratics -a 3 -b -5 -c -9
-
-The curve crosses the x axis at 2.75543 and -1.08876.
