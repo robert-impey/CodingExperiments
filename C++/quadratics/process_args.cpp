@@ -3,7 +3,7 @@
 
 #include "process_args.hpp"
 
-void init_args(Args *args) 
+void init_args(Args* args) 
 {
     args->a = 0.0;
     args->b = 0.0;

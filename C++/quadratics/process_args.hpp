@@ -5,6 +5,6 @@ struct Args {
     bool d;
 };
 
-void init_args(Args *args);
+void init_args(Args* args);
 bool process_args(int argc, char** argv, Args* args);
 
