@@ -15,7 +15,11 @@ int main(int argc, char *argv[])
     b = atof(argv[2]);
     c = atof(argv[3]);
 
-    cout << "(" << a << " * x ** 2) ";
+    cout << "(";
+    if (a != 1.0) {
+        cout << a << " * ";
+    }
+    cout << "x ** 2) ";
 
     if (b >= 0) {
         cout << "+ (" << b;
