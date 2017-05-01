@@ -33,7 +33,11 @@ int main(int argc, char *argv[])
     cout << " = ";
 
     float xSubtractor = -1 * (b / (2 * a));
-    cout << a << " * (x";
+
+    if (a != 1.0) {
+        cout << a << " * ";
+    }
+    cout << "(x";
 
     if (xSubtractor >= 0.0) {
         cout << " - ";
