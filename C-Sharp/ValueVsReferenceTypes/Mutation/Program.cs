@@ -37,6 +37,10 @@ namespace Mutation
             MyMutatingProcedure(myStruct);
             WriteLine($"myStruct.MyInt: {myStruct.MyInt}");
             WriteLine($"my2ndStruct.MyInt: {my2ndStruct.MyInt}");
+
+            MyMutatingRefProcedure(ref myStruct);
+            WriteLine($"myStruct.MyInt: {myStruct.MyInt}");
+            WriteLine($"my2ndStruct.MyInt: {my2ndStruct.MyInt}");
         }
 
         static void MyMutatingProcedure(MyClass myClass)
@@ -50,6 +54,13 @@ namespace Mutation
         {
             WriteLine("Inside MyMutatingProcedure(MyStruct myStruct)");
             myStruct.MyInt = 21;
+            WriteLine($"myStruct.MyInt: {myStruct.MyInt}");
+        }
+
+        static void MyMutatingRefProcedure(ref MyStruct myStruct)
+        {
+            WriteLine("Inside MyMutatingProcedure(MyStruct myStruct)");
+            myStruct.MyInt = 28;
             WriteLine($"myStruct.MyInt: {myStruct.MyInt}");
         }
     }
