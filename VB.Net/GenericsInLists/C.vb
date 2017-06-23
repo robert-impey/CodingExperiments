@@ -13,4 +13,5 @@ Friend Class C
             Return _bar
         End Get
     End Property
+
 End Class

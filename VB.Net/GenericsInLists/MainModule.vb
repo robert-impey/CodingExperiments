@@ -24,10 +24,10 @@ Module MainModule
         'aFooHolder.Foo = New BFoo(5) ' We can't set this property to this.
 
         'Dim bFooHolder As FooHolder(Of BFoo) = New FooHolder(Of BFoo)(New AFoo(5))  ' We can't give an AFoo to a holder of a BFoo.
-        																			' However, this compiles in MonoDevelop on a Mac.
+        ' However, this compiles in MonoDevelop on a Mac.
         'Dim fooBarFromBFooHolder As Integer = bFooHolder.Foo.Bar
         'Console.WriteLine(String.Format("fooBarFromBFooHolder: {0}", fooBarFromBFooHolder))
-        
+
         'Dim cHolder As FooHolder(Of C) = New FooHolder(Of C)(New C(6)) ' Even though the types match, this holder is constrained to IFoos.
     End Sub
 
