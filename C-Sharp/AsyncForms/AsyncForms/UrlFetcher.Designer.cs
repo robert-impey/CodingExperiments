@@ -44,7 +44,7 @@
             this.fetchAsyncButton.TabIndex = 2;
             this.fetchAsyncButton.Text = "Fetch Async";
             this.fetchAsyncButton.UseVisualStyleBackColor = true;
-            this.fetchAsyncButton.Click += new System.EventHandler(this.fetchAsyncButton_Click);
+            this.fetchAsyncButton.Click += new System.EventHandler(this.FetchAsyncButton_Click);
             // 
             // urlTextBox
             // 
@@ -76,7 +76,7 @@
             this.fetchButton.TabIndex = 1;
             this.fetchButton.Text = "Fetch";
             this.fetchButton.UseVisualStyleBackColor = true;
-            this.fetchButton.Click += new System.EventHandler(this.fetchButton_Click);
+            this.fetchButton.Click += new System.EventHandler(this.FetchButton_Click);
             // 
             // statusTextBox
             // 

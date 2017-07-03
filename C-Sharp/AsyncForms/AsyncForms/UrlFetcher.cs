@@ -12,7 +12,7 @@ namespace AsyncForms
             InitializeComponent();
         }
 
-        private void fetchButton_Click(object sender, EventArgs e)
+        private void FetchButton_Click(object sender, EventArgs e)
         {
             statusTextBox.Text = "Fetching...";
 
@@ -24,7 +24,7 @@ namespace AsyncForms
             statusTextBox.Text = string.Empty;
         }
 
-        private async void fetchAsyncButton_Click(object sender, EventArgs e)
+        private async void FetchAsyncButton_Click(object sender, EventArgs e)
         {
             UIState = false;
 
