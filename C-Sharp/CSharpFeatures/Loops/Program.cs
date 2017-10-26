@@ -18,7 +18,7 @@ namespace Loops
             }
             Console.WriteLine();
 
-            var myArray = new [] { 1, 2, 3 };
+            var myArray = new[] {1, 2, 3};
             PrintIntArray(myArray);
             for (var i = 0; i < myArray.Length; i++)
             {
