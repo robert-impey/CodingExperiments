@@ -1,6 +1,7 @@
 cbrt
 coinToss
 daysOld
+echo
 env
 fibonacci
 fizzBuzz
