@@ -15,3 +15,5 @@ time
 use-averages
 wordCount
 stop-watch
+join-echo
+loop-echo
