@@ -17,6 +17,7 @@ func main() {
 			total += j
 		}
 	}
+	fmt.Printf("Total: %d\n", total)
 
 	fmt.Printf("Elapsed nanoseconds %d\n", time.Since(start).Nanoseconds())
 }
