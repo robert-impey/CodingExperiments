@@ -1,6 +1,7 @@
 cbrt
 coinToss
 daysOld
+dup1
 echo
 env
 fibonacci
@@ -9,12 +10,12 @@ go-eu-ref.csv
 helloworld
 http
 httpLover
-multiples
-newton
-time
-use-averages
-wordCount
-stop-watch
 join-echo
 loop-echo
+multiples
+newton
+stop-watch
+time
+use-averages
 walk-files
+wordCount
