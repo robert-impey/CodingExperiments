@@ -2,6 +2,7 @@ cbrt
 coinToss
 daysOld
 dup1
+dup2
 echo
 env
 fibonacci
