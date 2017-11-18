@@ -27,6 +27,7 @@ func main() {
 			}
 			lineCountsInFiles[line][filename]++
 		}
+		f.Close()
 	}
 
 	for line, n := range counts {
