@@ -45,7 +45,7 @@ sub print_what_you_see
 {
     my $file_name = shift;
 
-    if (-f $korean_file_name) {
+    if (-f $file_name) {
         print "I can see $file_name.\n";
     } else {
         print "I can't see $file_name!\n";
