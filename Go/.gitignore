@@ -1,3 +1,7 @@
+# Gifs
+lissajous.gif
+
+# Executables
 cbrt
 coinToss
 daysOld
@@ -21,3 +25,4 @@ use-averages
 walk-files
 wordCount
 dup-with-names
+lissajous
