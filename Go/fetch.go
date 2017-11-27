@@ -23,5 +23,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Couldn't read the body: %v\n", err)
 		}
 		resp.Body.Close()
+
+		fmt.Println(resp.Status)
 	}
 }
