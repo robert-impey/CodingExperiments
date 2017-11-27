@@ -9,6 +9,7 @@ dup1
 dup2
 echo
 env
+fetch
 fibonacci
 fizzBuzz
 go-eu-ref.csv
