@@ -10,7 +10,7 @@ namespace IsUnique
         {
             foreach (var arg in args)
             {
-                Console.WriteLine($"Is '{arg}' all unique? {IsUnique(arg)}");
+                Console.WriteLine($"Is '{arg}' all unique? {IsUnique(arg)} {IsUniqueNoDataStructure(arg)}");
             }
         }
 
@@ -32,6 +32,22 @@ namespace IsUnique
             }
 
             return !counts.Any(kv => kv.Value > 1);
+        }
+
+        private static bool IsUniqueNoDataStructure(string str)
+        {
+            for (var i = 0; i < str.Length; i++)
+            {
+                for (var j = 0; j < i; j++)
+                {
+                    if (str[j] == str[i])
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }
