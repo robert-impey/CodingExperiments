@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IsUnique": {
+      "commandName": "Project",
+      "commandLineArgs": "a \"\" ab aba"
+    }
+  }
+}
