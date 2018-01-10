@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IsPermutation": {
+      "commandName": "Project",
+      "commandLineArgs": "lemon lemon"
+    }
+  }
+}
