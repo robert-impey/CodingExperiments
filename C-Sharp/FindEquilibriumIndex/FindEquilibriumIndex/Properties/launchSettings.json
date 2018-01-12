@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FindEquilibriumIndex": {
+      "commandName": "Project",
+      "commandLineArgs": "-f C:\\tmp\\start.txt"
+    }
+  }
+}

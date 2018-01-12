@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GenerateRandomIntsFile": {
+      "commandName": "Project",
+      "commandLineArgs": "-n 1 -m 10 -r 10"
+    }
+  }
+}
