@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
     {
-        // GET: HelloWorld
-        public ActionResult Index()
+        // GET: /HelloWorld/
+        public string Index()
         {
-            return View();
+            return "This is my default action...";
         }
 
-        public ActionResult Welcome(string name, int numTimes)
+        // /HelloWorld/Welcome/
+        public string Welcome(string name, int numTimes = 1)
         {
-            ViewBag.Message = "Hello " + name;
-            ViewBag.NumTimes = numTimes;
-
-            return View();
+            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is {numTimes}");
         }
     }
 }
