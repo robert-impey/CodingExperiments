@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
+
 class LivingThing
   attr_accessor :name
+
   def live
     puts "#{@name} - So far, so good!"
   end
@@ -24,6 +26,7 @@ end
 
 class Mammal < LivingThing
   include ThermoRegulator
+
   def give_birth_to_live_young
     puts "#{@name} - Pop! pop! pop!"
   end
@@ -39,6 +42,7 @@ end
 # http://en.wikipedia.org/wiki/Nelumbo_nucifera
 class SacredLotus < Plant
   include ThermoRegulator
+
   def float_on_pond
     puts "#{@name} - I'm floating on a pond"
   end
