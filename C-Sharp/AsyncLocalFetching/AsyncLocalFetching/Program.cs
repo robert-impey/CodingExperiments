@@ -19,7 +19,8 @@ namespace AsyncLocalFetching
             {
                 "https://msdn.microsoft.com/en-us/library/dn906268(v=vs.110).aspx",
                 "https://referencesource.microsoft.com/#mscorlib/system/threading/asynclocal.cs",
-                "https://stackoverflow.com/questions/11564506/nesting-await-in-parallel-foreach/11565317#11565317"
+                "https://stackoverflow.com/questions/11564506/nesting-await-in-parallel-foreach/11565317#11565317",
+                "https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library"
             };
 
             int widerScopeTextLength;
