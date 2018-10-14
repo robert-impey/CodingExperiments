@@ -5,38 +5,41 @@ from sys import argv
 from random import shuffle
 from heapq import heappush, heappop
 
+
 class Stopwatch:
     def __init__(self):
         self.start_time = None
         self.end_time = None
 
     def start(self):
-        if (self.start_time != None):
+        if self.start_time is not None:
             raise Exception("Stopwatch already started!")
 
-        self.start_time = time.clock()
+        self.start_time = time.perf_counter_ns()
 
     def stop(self):
-        if (self.start_time == None):
+        if self.start_time is None:
             raise Exception("Stopwatch not started!")
 
-        self.end_time = time.clock()
+        self.end_time = time.perf_counter_ns()
 
     def reset(self):
-        self.start_time= None
+        self.start_time = None
         self.end_time = None
         self.start()
 
     def report(self, task):
         self.stop()
-        print("Time to %s: %f seconds" % (task, (self.end_time - self.start_time)))
+        print("Time to %s: %f ns" % (task, (self.end_time - self.start_time)))
+
 
 class PriorityQueue:
     def __init__(self):
         self.members = []
-    
+
     def count(self):
         return len(self.members)
+
 
 class GetMinPriorityQueue(PriorityQueue):
     def enqueue(self, new_member):
@@ -48,17 +51,18 @@ class GetMinPriorityQueue(PriorityQueue):
 
         current_min = self.members[0]
         for i in range(1, len(self.members)):
-            if (current_min > self.members[i]):
+            if current_min > self.members[i]:
                 current_min = self.members[i]
 
         i = 0
-        while (True):
-            if (self.members[i] == current_min):
-                del(self.members[i])
+        while True:
+            if self.members[i] == current_min:
+                del (self.members[i])
                 break
             i += 1
-        
+
         return current_min
+
 
 class InsertInOrderPriorityQueue(PriorityQueue):
     def enqueue(self, new_member):
@@ -78,8 +82,9 @@ class InsertInOrderPriorityQueue(PriorityQueue):
     def dequeue(self):
         if len(self.members) == 0:
             return None
-        
+
         return self.members.pop()
+
 
 class HeapqPriorityQueue(PriorityQueue):
     def enqueue(self, new_member):
@@ -88,8 +93,9 @@ class HeapqPriorityQueue(PriorityQueue):
     def dequeue(self):
         if len(self.members) == 0:
             return None
-        
+
         return heappop(self.members)
+
 
 if __name__ == '__main__':
     size = 10000
@@ -106,7 +112,7 @@ if __name__ == '__main__':
     numbers = list(range(size))
 
     shuffle(numbers)
-    
+
     if should_print:
         print("The numbers: ")
         for n in numbers:
@@ -137,9 +143,9 @@ if __name__ == '__main__':
     stopwatch.report("count members when full")
 
     stopwatch.reset()
-    while (True):
+    while True:
         m = priority_queue.dequeue()
-        if m == None:
+        if m is None:
             break
         if should_print:
             print(m, end=' ')
