@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 
 using std::cout;
 using std::endl;
@@ -25,7 +25,7 @@ int main()
 {
 	cout << "i" << endl;
 
-	for (int i = 0; i < 10; i++) {
+	for (auto i = 0; i < 10; i++) {
 		printf("i - %d\n", i);
 	}
 
