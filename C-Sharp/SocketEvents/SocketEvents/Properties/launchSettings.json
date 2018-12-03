@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SocketEvents": {
+      "commandName": "Project",
+      "commandLineArgs": "www.reversing-entropy.com"
+    }
+  }
+}
