@@ -7,14 +7,15 @@ namespace SocketEvents
 {
     internal class Program
     {
+        private const string Eol = "\r\n";
+
         private static void Main(string[] args)
         {
             foreach (var domain in args)
             {
-                var eol = "\r\n";
-                var request = $"HEAD / HTTP/1.1{eol}" +
-                              $"Host: {domain}{eol}" +
-                              $"Connection: Close{eol}{eol}";
+                var request = $"HEAD / HTTP/1.1{Eol}" +
+                              $"Host: {domain}{Eol}" +
+                              $"Connection: Close{Eol}{Eol}";
 
                 var bytesSent = Encoding.ASCII.GetBytes(request);
                 var bytesReceived = new byte[256];
