@@ -27,8 +27,31 @@ namespace Worker
                         var message = Encoding.UTF8.GetString(body);
                         Console.WriteLine(" [x] Received {0}", message);
 
-                        var dots = message.Split('.').Length - 1;
-                        Thread.Sleep(dots * 5000);
+                        var parts = message.Split(" ");
+
+                        if (parts.Length == 2)
+                        {
+                            Console.WriteLine(parts[0]);
+
+                            if (int.TryParse(parts[1], out var work))
+                            {
+                                for (var i = 0; i < work; i++)
+                                {
+                                    Console.Write(".");
+                                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                                }
+
+                                Console.WriteLine();
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Unable to parse '{parts[1]}' to an int.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Unable to split '{message}'.");
+                        }
 
                         Console.WriteLine(" [x] Done");
 
