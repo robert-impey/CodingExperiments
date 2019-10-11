@@ -28,3 +28,5 @@ wordCount
 dup-with-names
 lissajous
 server1
+sha256diff
+print-bytes
