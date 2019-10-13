@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"./mybytes"
+	"mybytes"
 )
 
 func main() {

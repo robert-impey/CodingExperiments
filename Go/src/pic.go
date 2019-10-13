@@ -1,7 +1,7 @@
 // See http://tour.golang.org/#36
 package main
 
-import "code.google.com/p/go-tour/pic"
+import "golang.org/x/tour/pic"
 
 func Pic(dx, dy int) [][]uint8 {
 	s := make([][]uint8, dy)

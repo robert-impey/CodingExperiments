@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./golang-book/chapter11/math"
+	"golang-book/chapter11/math"
 	"fmt"
 )
 

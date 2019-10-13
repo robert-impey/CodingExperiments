@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./mybytes"
+	"mybytes"
 )
 
 func main() {
