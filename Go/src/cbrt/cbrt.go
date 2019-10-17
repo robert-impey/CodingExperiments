@@ -5,7 +5,7 @@ import (
 	"math/cmplx"
 )
 
-func Cbrt(x complex128) complex128 {
+func cbrt(x complex128) complex128 {
 	z := complex128(1)
 
 	for i := 0; i < 5; i++ { // How do we calculate how many iterations we need for it not to change the output?
@@ -16,5 +16,5 @@ func Cbrt(x complex128) complex128 {
 }
 
 func main() {
-	fmt.Println(Cbrt(complex128(2)))
+	fmt.Println(cbrt(complex128(2)))
 }
