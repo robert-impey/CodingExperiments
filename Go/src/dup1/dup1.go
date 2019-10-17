@@ -9,15 +9,20 @@ import (
 )
 
 func main() {
-	counts := make(map[string]int)
-	input := bufio.NewScanner(os.Stdin)
-	for input.Scan() {
-		counts[input.Text()]++
-	}
+	counts := count(bufio.NewScanner(os.Stdin))
 	// NOTE: Ignoring potential errors form input.Error()
 	for line, n := range counts {
 		if n > 1 {
 			fmt.Printf("%d, %s\n", n, line)
 		}
 	}
+}
+
+func count(s *bufio.Scanner) map[string]int {
+	counts := make(map[string]int)
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan() {
+		counts[input.Text()]++
+	}
+	return counts
 }
