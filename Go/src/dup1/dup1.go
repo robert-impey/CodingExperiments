@@ -9,20 +9,22 @@ import (
 )
 
 func main() {
-	counts := count(bufio.NewScanner(os.Stdin))
-	// NOTE: Ignoring potential errors form input.Error()
-	for line, n := range counts {
-		if n > 1 {
-			fmt.Printf("%d, %s\n", n, line)
-		}
+	duplicateCounts := countDuplicates(bufio.NewScanner(os.Stdin))
+	for line, n := range duplicateCounts {
+		fmt.Printf("%d, %s\n", n, line)
 	}
 }
 
-func count(s *bufio.Scanner) map[string]int {
+func countDuplicates(s *bufio.Scanner) map[string]int {
 	counts := make(map[string]int)
-	input := bufio.NewScanner(os.Stdin)
-	for input.Scan() {
-		counts[input.Text()]++
+	for s.Scan() {
+		counts[s.Text()]++
 	}
-	return counts
+	duplicates := make(map[string]int)
+	for line, n := range counts {
+		if n > 1 {
+			duplicates[line] = n
+		}
+	}
+	return duplicates
 }

@@ -2,28 +2,52 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"testing"
 )
 
-func getFileCounts(file string) map[string]int {
-	f, _ := os.Open("empty.txt")
-	return count(bufio.NewScanner(f))
+func getFileDuplicateCounts(file string) map[string]int {
+	f, err := os.Open(file)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Unable to open '%s'", file)
+	}
+	return countDuplicates(bufio.NewScanner(f))
 }
 
-func TestEmpty(t *testing.T) {
+func TestFiles(t *testing.T) {
+	cases := []struct {
+		file          string
+		expectedCount int
+	}{
+		{"empty.txt", 0},
+		{"single-fruit.txt", 0},
+		{"single-fruits.txt", 0},
+		{"duplicated-fruit.txt", 2},
+	}
 
-	counts := getFileCounts("empty.txt")
-
-	if len(counts) != 0 {
-		t.Errorf("Expected the empty file to return 0 counts, got %d", len(counts))
+	for _, c := range cases {
+		got := getFileDuplicateCounts(c.file)
+		if len(got) != c.expectedCount {
+			t.Errorf("Expected '%s' to return %d counts, got %d", c.file, c.expectedCount, len(got))
+		}
 	}
 }
 
-func TestSingleFruit(t *testing.T) {
-	counts := getFileCounts("single-fruit.txt")
+func TestDuplicatedFruit(t *testing.T) {
+	cases := []struct {
+		fruit         string
+		expectedCount int
+	}{
+		{"apples", 3},
+		{"bananas", 2},
+	}
 
-	if len(counts) != 0 {
-		t.Errorf("Expected the single fruits file to return 0 count, got %d", len(counts))
+	counts := getFileDuplicateCounts("duplicated-fruit.txt")
+	for _, c := range cases {
+
+		if counts[c.fruit] != c.expectedCount {
+			t.Errorf("Expected %d '%s', got %d", c.expectedCount, c.fruit, counts[c.fruit])
+		}
 	}
 }
