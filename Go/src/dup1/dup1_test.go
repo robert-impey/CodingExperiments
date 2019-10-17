@@ -6,9 +6,14 @@ import (
 	"testing"
 )
 
-func TestEmpty(t *testing.T) {
+func getFileCounts(file string) map[string]int {
 	f, _ := os.Open("empty.txt")
-	counts := count(bufio.NewScanner(f))
+	return count(bufio.NewScanner(f))
+}
+
+func TestEmpty(t *testing.T) {
+
+	counts := getFileCounts("empty.txt")
 
 	if len(counts) != 0 {
 		t.Errorf("Expected the empty file to return 0 counts, got %d", len(counts))
@@ -16,8 +21,7 @@ func TestEmpty(t *testing.T) {
 }
 
 func TestSingleFruit(t *testing.T) {
-	f, _ := os.Open("single-fruit.txt")
-	counts := count(bufio.NewScanner(f))
+	counts := getFileCounts("single-fruit.txt")
 
 	if len(counts) != 0 {
 		t.Errorf("Expected the single fruits file to return 0 count, got %d", len(counts))
