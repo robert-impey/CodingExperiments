@@ -1,8 +1,8 @@
 package main
 
 import (
-	"golang-book/chapter11/math"
 	"fmt"
+	"golang-book/chapter11/math"
 )
 
 func main() {
