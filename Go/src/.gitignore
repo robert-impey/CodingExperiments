@@ -1,6 +1,5 @@
 # Executables
 go-eu-ref.csv
-print-bytes
 sha256diff
 stop-watch
 time
