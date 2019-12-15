@@ -7,7 +7,7 @@ defmodule Chop do
     
     def guess(target, low..high) do
         range = high - low
-        min_guesses = Kernel.trunc(:math.ceil(:math.log(range)))
+        min_guesses = round(:math.ceil(:math.log(range)))
         allowed_guesses = min_guesses + 2
         IO.puts "< I'm going to allow you #{allowed_guesses} guesses."
         guess(target, low..high, allowed_guesses)
