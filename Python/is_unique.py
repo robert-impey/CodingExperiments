@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def is_unique(input_str):
     already_seen = dict()
 
