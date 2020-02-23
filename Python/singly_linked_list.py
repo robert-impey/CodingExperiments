@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 class Node:
-    def __init__(self, datum, next = None):
+    def __init__(self, datum = None, next = None):
         self.datum = datum
         self.next = next
 
 class SinglyLinkedList:
     def __init__(self):
-        self.head = None
+        self.head = Node()
 
     def enumerate(self):
         if self.head is None:
@@ -17,14 +17,10 @@ class SinglyLinkedList:
         while head.next is not None:
             yield head.datum
             head = head.next
-        yield head.datum
         
     def add_front(self, datum):
-        if self.head is None:
-            self.head = Node(datum)
-        else:
-            next = Node(datum, self.head)
-            self.head = next
+        next = Node(datum, self.head)
+        self.head = next
 
 def test_empty():
     empty_list = SinglyLinkedList()
