@@ -13,10 +13,10 @@ class SinglyLinkedList:
         if self.head is None:
             return []
         
-        head = self.head
-        while head.next is not None:
-            yield head.datum
-            head = head.next
+        current = self.head
+        while current.next is not None:
+            yield current.datum
+            current = current.next
         
     def add_front(self, datum):
         next = Node(datum, self.head)
