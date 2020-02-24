@@ -29,6 +29,22 @@ def in_order_traversal(tree):
         return acc
     return helper(tree, [])
 
+def pre_order_traversal(tree):
+    def helper(tree, acc):
+        acc.append(tree.datum)
+        if tree.left is not None:
+            acc = helper(tree.left, acc)
+        if tree.right is not None:
+            acc = helper(tree.right, acc)
+        return acc
+    return helper(tree, [])
+    
+
 def test_in_order_traversal():
     traversed = in_order_traversal(one)
     assert traversed == [4, 5, 3, 1, 8, 0]
+    
+def test_pre_order_traversal():
+    traversed = pre_order_traversal(one)
+    assert traversed == [1, 5, 4, 3, 8, 0]
+    
