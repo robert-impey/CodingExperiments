@@ -45,9 +45,8 @@ def test_single_entry():
     sll.add_front(1)
     
     enumerated = list(sll.enumerate())
-    assert len(enumerated) == 1
-    assert enumerated[0] == 1
-
+    assert enumerated == [1]
+    
 def test_front_filled():
     sll = SinglyLinkedList()
     
@@ -56,10 +55,7 @@ def test_front_filled():
     sll.add_front(3)
     
     enumerated = list(sll.enumerate())
-    assert len(enumerated) == 3
-    assert enumerated[0] == 3
-    assert enumerated[1] == 2
-    assert enumerated[2] == 1
+    assert enumerated == [3, 2, 1]
     
 def test_back_filled():
     sll = SinglyLinkedList()
@@ -69,7 +65,5 @@ def test_back_filled():
     sll.add_back(3)
     
     enumerated = list(sll.enumerate())
-    assert len(enumerated) == 3
-    assert enumerated[0] == 1
-    assert enumerated[1] == 2
-    assert enumerated[2] == 3
+    assert enumerated == [1, 2, 3]
+    
