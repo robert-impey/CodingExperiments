@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 
 def count_possible_steps(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    if n == 2:
-        return 2
-    if n == 3:
-        return 4
-    return count_possible_steps(n - 1) + count_possible_steps(n - 2) + count_possible_steps(n - 3)
+    def helper(n, memo):
+        if memo[n] is None:
+            memo[n] = count_possible_steps(n - 1) + count_possible_steps(n - 2) + count_possible_steps(n - 3)
+        return memo[n]
+    
+    memo = []
+    
+    for i in range(max(4, n + 1)):
+        memo.append(None)
+    
+    memo[0] = 0
+    memo[1] = 1
+    memo[2] = 2
+    memo[3] = 4
+    
+    return helper(n, memo)
     
 def test_count():
     tests = [
