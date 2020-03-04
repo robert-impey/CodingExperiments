@@ -9,14 +9,9 @@ def insert(n, m, i, j):
     n_bytes = get_bytes(n)
     m_bytes = get_bytes(m)
     
-    n_bytes.reverse()
-    m_bytes.reverse()
-    
     for index in range(i, j + 1):
-        n_bytes[index] = m_bytes[index - i]
+        n_bytes[-index-1] = m_bytes[-index-1 + i]
 
-    n_bytes.reverse()
-    
     return n_bytes.decode("utf-8")
     
 def test_insert():
