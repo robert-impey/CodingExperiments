@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 
-def get_bytes(in_string):
-    ba = bytearray()
-    ba.extend(map(ord, in_string))
-    return ba
-    
+from bytes import get_bytes
+
 def make_one(bits, bit):
     bytes = get_bytes(bits)
     

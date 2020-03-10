@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-def get_bytes(str):
-    str_bytes = bytearray()
-    str_bytes.extend(map(ord, str))
-    return str_bytes
+from bytes import get_bytes
 
 def insert(n, m, i, j):
     n_bytes = get_bytes(n)
