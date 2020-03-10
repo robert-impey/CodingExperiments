@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def get_bytes(in_string):
     ba = bytearray()
