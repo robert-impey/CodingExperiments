@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a40be882-2872-4c10-9f36-d7ad808d3f2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Python.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/is_palindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/is_palindrome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +23,10 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/is_palindrome.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/binary_tree.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.pytest in binary_tree.py">
     <configuration default="true" type="tests" factoryName="py.test">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -43,7 +38,22 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/is_palindrome.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/binary_tree.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in binary_tree.py" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/binary_tree.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -62,6 +72,10 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python tests.pytest in is_palindrome.py" />
+      <item itemvalue="Python tests.pytest in binary_tree.py" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -77,41 +91,49 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1174" y="355" width="1092" height="877" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583107906540">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="305" y="0" width="832" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583942256601">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="305" y="0" width="832" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1583942256601" />
     <state x="1174" y="355" width="1092" height="877" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1583107906540" />
     <state x="1449" y="489" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583107808804">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1449" y="489" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1583107808804" />
-    <state x="1500" y="455" key="FileChooserDialogImpl" timestamp="1583107869612">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="558" y="191" key="FileChooserDialogImpl" timestamp="1583942195961">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="558" y="191" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1583942195961" />
     <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1583107869612" />
-    <state width="3419" height="401" key="GridCell.Tab.0.bottom" timestamp="1583107920058">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1259" height="267" key="GridCell.Tab.0.bottom" timestamp="1583942262609">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="267" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
     <state width="3419" height="401" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state width="3419" height="401" key="GridCell.Tab.0.center" timestamp="1583107920058">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1259" height="267" key="GridCell.Tab.0.center" timestamp="1583942262609">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="267" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
     <state width="3419" height="401" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state width="3419" height="401" key="GridCell.Tab.0.left" timestamp="1583107920058">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1259" height="267" key="GridCell.Tab.0.left" timestamp="1583942262609">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="267" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
     <state width="3419" height="401" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state width="3419" height="401" key="GridCell.Tab.0.right" timestamp="1583107920058">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1259" height="267" key="GridCell.Tab.0.right" timestamp="1583942262609">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="267" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
     <state width="3419" height="401" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state x="1221" y="342" key="SettingsEditor" timestamp="1583107454774">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="284" y="0" key="SettingsEditor" timestamp="1583942077552">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="284" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1583942077552" />
     <state x="1221" y="342" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1583107454774" />
-    <state x="1416" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1583107181636">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="527" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1583941838361">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="527" y="255" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1583941838361" />
     <state x="1416" y="524" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1583107181636" />
   </component>
 </project>
