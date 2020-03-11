@@ -27,6 +27,27 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python tests.pytest in binary_tree.py">
+    <configuration name="binary_tree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/binary_tree.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,7 +96,13 @@
     <list>
       <item itemvalue="Python tests.pytest in is_palindrome.py" />
       <item itemvalue="Python tests.pytest in binary_tree.py" />
+      <item itemvalue="Python.binary_tree" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.binary_tree" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -105,26 +132,42 @@
     </state>
     <state x="558" y="191" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1583942195961" />
     <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1583107869612" />
-    <state width="1259" height="267" key="GridCell.Tab.0.bottom" timestamp="1583942262609">
+    <state width="1259" height="204" key="GridCell.Tab.0.bottom" timestamp="1583942520981">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="267" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
+    <state width="1259" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583942520981" />
     <state width="3419" height="401" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state width="1259" height="267" key="GridCell.Tab.0.center" timestamp="1583942262609">
+    <state width="1259" height="204" key="GridCell.Tab.0.center" timestamp="1583942520981">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="267" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
+    <state width="1259" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583942520981" />
     <state width="3419" height="401" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state width="1259" height="267" key="GridCell.Tab.0.left" timestamp="1583942262609">
+    <state width="1259" height="204" key="GridCell.Tab.0.left" timestamp="1583942520981">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="267" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
+    <state width="1259" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583942520981" />
     <state width="3419" height="401" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
-    <state width="1259" height="267" key="GridCell.Tab.0.right" timestamp="1583942262609">
+    <state width="1259" height="204" key="GridCell.Tab.0.right" timestamp="1583942520981">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="267" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583942262609" />
+    <state width="1259" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583942520981" />
     <state width="3419" height="401" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1583107920058" />
+    <state width="1259" height="204" key="GridCell.Tab.1.bottom" timestamp="1583942522547">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583942522547" />
+    <state width="1259" height="204" key="GridCell.Tab.1.center" timestamp="1583942522547">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1583942522547" />
+    <state width="1259" height="204" key="GridCell.Tab.1.left" timestamp="1583942522547">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1583942522547" />
+    <state width="1259" height="204" key="GridCell.Tab.1.right" timestamp="1583942522547">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1583942522547" />
     <state x="284" y="0" key="SettingsEditor" timestamp="1583942077552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -135,5 +178,16 @@
     </state>
     <state x="527" y="255" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1583941838361" />
     <state x="1416" y="524" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1583107181636" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/binary_tree.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
