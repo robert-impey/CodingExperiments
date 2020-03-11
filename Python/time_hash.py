@@ -25,5 +25,5 @@ if __name__ == '__main__':
     
     finish = time.process_time()
     
-    print("Time take: {} s".format(finish - start))
-    
+    print("Time taken: {} s".format(finish - start))
+
