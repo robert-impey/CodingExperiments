@@ -29,12 +29,18 @@ namespace Sorting.Lib
                 return false;
             }
 
-            Array.Sort(array1);
-            Array.Sort(array2);
+            var arrayForComparing1 = new int[array1.Length];
+            Array.Copy(array1, 0, arrayForComparing1, 0, array1.Length);
 
-            for (var i = 0; i < array1.Length; i++)
+            var arrayForComparing2 = new int[array2.Length];
+            Array.Copy(array2, 0, arrayForComparing2, 0, array2.Length);
+
+            Array.Sort(arrayForComparing1);
+            Array.Sort(arrayForComparing2);
+
+            for (var i = 0; i < arrayForComparing1.Length; i++)
             {
-                if (array1[i] != array2[i])
+                if (arrayForComparing1[i] != arrayForComparing2[i])
                 {
                     return false;
                 }

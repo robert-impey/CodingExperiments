@@ -40,5 +40,22 @@ namespace Sorting.Test.SortingChecker
         {
             Lib.SortingChecker.ArePermutations(null, null).Should().BeFalse();
         }
+
+        [Fact]
+        public void InputsAreNotChanged()
+        {
+            var input1 = new int[] { 2, 3, 1 };
+            var input2 = new int[] { 3, 1, 2 };
+
+            Lib.SortingChecker.ArePermutations(input1, input2);
+
+            input1[0].Should().Be(2);
+            input1[1].Should().Be(3);
+            input1[2].Should().Be(1);
+
+            input2[0].Should().Be(3);
+            input2[1].Should().Be(1);
+            input2[2].Should().Be(2);
+        }
     }
 }
