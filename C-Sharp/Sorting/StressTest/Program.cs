@@ -1,4 +1,5 @@
 ﻿using Sorting.Lib;
+using Sorting.Lib.Algorithms;
 using System;
 
 namespace StressTest

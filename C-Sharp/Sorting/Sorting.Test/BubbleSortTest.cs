@@ -1,5 +1,5 @@
 using FluentAssertions;
-using Sorting.Lib;
+using Sorting.Lib.Algorithms;
 using System;
 using Xunit;
 

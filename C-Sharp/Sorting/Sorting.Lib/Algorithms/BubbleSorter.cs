@@ -1,4 +1,4 @@
-﻿namespace Sorting.Lib
+﻿namespace Sorting.Lib.Algorithms
 {
     public class BubbleSorter : IIntSorter
     {
