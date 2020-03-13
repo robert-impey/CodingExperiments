@@ -14,5 +14,10 @@
 
             return true;
         }
+
+        public bool ArePermutations(int[] array1, int[] array2)
+        {
+            return false;
+        }
     }
 }

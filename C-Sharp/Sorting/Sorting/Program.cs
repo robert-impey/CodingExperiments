@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Gnu.Getopt;
+using System;
 using System.IO;
 using System.Text.RegularExpressions;
-using Gnu.Getopt;
 
 namespace Sorting
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var g = new Getopt("Sorting", args, "a:f:o:");
 
@@ -21,9 +21,11 @@ namespace Sorting
                     case 'a':
                         algorithm = g.Optarg;
                         break;
+
                     case 'f':
                         shuffledListsFileName = g.Optarg;
                         break;
+
                     case 'o':
                         outputDirectory = g.Optarg;
                         break;
@@ -40,6 +42,7 @@ namespace Sorting
                     case "built_in":
                         BuiltInSorting(listsToSort.Lists, ref sortedLists);
                         break;
+
                     default:
                         Console.WriteLine("Please set a valid sorting algorithm!");
                         break;
@@ -123,7 +126,7 @@ namespace Sorting
             }
         }
 
-        #endregion
+        #endregion IO
 
         #region Sorting
 
@@ -139,7 +142,7 @@ namespace Sorting
             }
         }
 
-        #endregion
+        #endregion Sorting
 
         #region Helpers
 
@@ -163,6 +166,6 @@ namespace Sorting
             }
         }
 
-        #endregion
+        #endregion Helpers
     }
 }

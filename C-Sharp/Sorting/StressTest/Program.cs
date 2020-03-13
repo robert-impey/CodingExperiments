@@ -3,9 +3,9 @@ using System;
 
 namespace StressTest
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var arraysSorted = 0;
             while (arraysSorted < int.MaxValue)

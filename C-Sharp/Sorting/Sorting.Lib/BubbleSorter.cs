@@ -24,7 +24,7 @@
                 {
                     break;
                 }
-            } 
+            }
 
             return items;
         }

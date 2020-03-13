@@ -28,7 +28,7 @@ namespace Sorting.Test
         {
             var sorted = new BubbleSorter().Sort(new int[] { 2, 1, 3 });
 
-            SortingChecker.IsInOrder(sorted).Should().BeTrue();
+            Lib.SortingChecker.IsInOrder(sorted).Should().BeTrue();
         }
     }
 }
