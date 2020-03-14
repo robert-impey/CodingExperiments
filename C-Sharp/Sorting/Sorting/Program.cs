@@ -11,6 +11,15 @@ namespace StressTest
         {
             [Option('a', "algorithm", Required = true, HelpText = "The sorting algorithm to use.")]
             public string Algorith { get; set; }
+
+            [Option('s', "size", Required = false, Default = 1000, HelpText = "The size of the array to sort.")]
+            public int Size { get; set; }
+
+            [Option('r', "range", Required = false, Default = 1000, HelpText = "The range of integers in the random array.")]
+            public int Range { get; set; }
+
+            [Option('n', "runs", Required = false, Default = int.MaxValue, HelpText = "The number of runs.")]
+            public int Runs { get; set; }
         }
 
         private static void Main(string[] args)
@@ -44,22 +53,22 @@ namespace StressTest
                                Console.WriteLine($"Unrecognised sorter - {args[0]}!");
                                return;
                        }
-                       StressTest(sorter);
+                       StressTest(sorter, o.Size, o.Range, o.Runs);
                    });
         }
 
-        private static void StressTest(IIntSorter sorter)
+        private static void StressTest(IIntSorter sorter, int size, int range, int runs)
         {
             var arraysSorted = 0;
-            while (arraysSorted < int.MaxValue)
+            while (arraysSorted < runs)
             {
-                var randomArray = new int[1000];
+                var randomArray = new int[size];
 
                 var random = new Random();
 
                 for (var i = 0; i < randomArray.Length; i++)
                 {
-                    randomArray[i] = random.Next(1000);
+                    randomArray[i] = random.Next(range);
                 }
 
                 var sorted = sorter.Sort(randomArray);

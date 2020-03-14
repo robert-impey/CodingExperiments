@@ -2,7 +2,7 @@
   "profiles": {
     "StressTest": {
       "commandName": "Project",
-      "commandLineArgs": "-a selection"
+      "commandLineArgs": "--algorithm selection --size 500"
     }
   }
 }
