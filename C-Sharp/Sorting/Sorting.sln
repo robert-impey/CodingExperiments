@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting.Lib", "Sorting.Lib\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting.Test", "Sorting.Test\Sorting.Test.csproj", "{909AE51B-A70F-44D1-8568-64BBD4A25CAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StressTest", "StressTest\StressTest.csproj", "{641F64EC-43FA-4F24-B437-DA534F688475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting", "Sorting\Sorting.csproj", "{641F64EC-43FA-4F24-B437-DA534F688475}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
