@@ -8,6 +8,12 @@ namespace StressTest
     {
         private static void Main(string[] args)
         {
+            //StressTest(new BubbleSorter());
+            StressTest(new InsertionSorter());
+        }
+
+        private static void StressTest(IIntSorter sorter)
+        {
             var arraysSorted = 0;
             while (arraysSorted < int.MaxValue)
             {
@@ -20,7 +26,7 @@ namespace StressTest
                     randomArray[i] = random.Next(1000);
                 }
 
-                var sorted = new BubbleSorter().Sort(randomArray);
+                var sorted = sorter.Sort(randomArray);
                 arraysSorted++;
 
                 if (!SortingChecker.IsInOrder(sorted))
