@@ -1,12 +1,25 @@
-﻿using System;
-
-namespace Sorting.Lib.Algorithms
+﻿namespace Sorting.Lib.Algorithms
 {
+    // https://en.wikipedia.org/wiki/Gnome_sort
     public class GnomeSorter : IIntSorter
     {
         public int[] Sort(int[] items)
         {
-            throw new NotImplementedException();
+            var pos = 0;
+            while (pos < items.Length)
+            {
+                if (pos == 0 || items[pos] >= items[pos - 1])
+                {
+                    pos++;
+                }
+                else
+                {
+                    Swapper.Swap(items, pos, pos - 1);
+                    pos--;
+                }
+            }
+
+            return items;
         }
     }
 }
