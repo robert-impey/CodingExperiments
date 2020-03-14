@@ -31,6 +31,11 @@ namespace StressTest
                     sorter = new SelectionSorter();
                     break;
 
+                case "gnome":
+
+                    sorter = new GnomeSorter();
+                    break;
+
                 default:
                     Console.WriteLine($"Unrecognised sorter - {args[0]}!");
                     return;
