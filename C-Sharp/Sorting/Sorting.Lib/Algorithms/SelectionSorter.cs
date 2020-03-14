@@ -6,7 +6,7 @@
         {
             for (var i = 0; i < items.Length - 1; i++)
             {
-                int minIndexInUnsorted = i;
+                var minIndexInUnsorted = i;
 
                 for (var j = i + 1; j < items.Length; j++)
                 {
