@@ -26,6 +26,11 @@ namespace StressTest
                     sorter = new InsertionSorter();
                     break;
 
+                case "selection":
+
+                    sorter = new SelectionSorter();
+                    break;
+
                 default:
                     Console.WriteLine($"Unrecognised sorter - {args[0]}!");
                     return;
