@@ -2,7 +2,7 @@
   "profiles": {
     "StressTest": {
       "commandName": "Project",
-      "commandLineArgs": "gnome"
+      "commandLineArgs": "-a selection"
     }
   }
 }

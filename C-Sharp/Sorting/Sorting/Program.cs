@@ -1,4 +1,5 @@
-﻿using Sorting.Lib;
+﻿using CommandLine;
+using Sorting.Lib;
 using Sorting.Lib.Algorithms;
 using System;
 
@@ -6,41 +7,45 @@ namespace StressTest
 {
     internal class Program
     {
+        public class Options
+        {
+            [Option('a', "algorithm", Required = true, HelpText = "The sorting algorithm to use.")]
+            public string Algorith { get; set; }
+        }
+
         private static void Main(string[] args)
         {
-            if (args.Length < 1)
-            {
-                Console.WriteLine("Please tell me which algorithm you want to stress test!");
-                return;
-            }
+            Parser.Default.ParseArguments<Options>(args)
+                   .WithParsed(o =>
+                   {
+                       IIntSorter sorter;
+                       switch (o.Algorith)
+                       {
+                           case "bubble":
+                               sorter = new BubbleSorter();
+                               break;
 
-            IIntSorter sorter;
-            switch (args[0])
-            {
-                case "bubble":
-                    sorter = new BubbleSorter();
-                    break;
+                           case "insertion":
 
-                case "insertion":
+                               sorter = new InsertionSorter();
+                               break;
 
-                    sorter = new InsertionSorter();
-                    break;
+                           case "selection":
 
-                case "selection":
+                               sorter = new SelectionSorter();
+                               break;
 
-                    sorter = new SelectionSorter();
-                    break;
+                           case "gnome":
 
-                case "gnome":
+                               sorter = new GnomeSorter();
+                               break;
 
-                    sorter = new GnomeSorter();
-                    break;
-
-                default:
-                    Console.WriteLine($"Unrecognised sorter - {args[0]}!");
-                    return;
-            }
-            StressTest(sorter);
+                           default:
+                               Console.WriteLine($"Unrecognised sorter - {args[0]}!");
+                               return;
+                       }
+                       StressTest(sorter);
+                   });
         }
 
         private static void StressTest(IIntSorter sorter)
