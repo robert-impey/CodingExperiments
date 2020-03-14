@@ -8,8 +8,8 @@ namespace StressTest
     {
         private static void Main(string[] args)
         {
-            //StressTest(new BubbleSorter());
-            StressTest(new InsertionSorter());
+            StressTest(new BubbleSorter());
+            //StressTest(new InsertionSorter());
         }
 
         private static void StressTest(IIntSorter sorter)

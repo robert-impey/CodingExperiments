@@ -12,9 +12,7 @@
                 {
                     if (items[i] > key)
                     {
-                        var temp = items[i];
-                        items[i] = key;
-                        items[i + 1] = temp;
+                        Swapper.Swap(items, i, i + 1);
                     }
                 }
             }

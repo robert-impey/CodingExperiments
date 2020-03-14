@@ -1,0 +1,20 @@
+﻿using FluentAssertions;
+using Sorting.Lib;
+using Xunit;
+
+namespace Sorting.Test
+{
+    public class SwapperTest
+    {
+        [Fact]
+        public void Swap()
+        {
+            var ary = new int[] { 1, 2 };
+
+            Swapper.Swap(ary, 0, 1);
+
+            ary[0].Should().Be(2);
+            ary[1].Should().Be(1);
+        }
+    }
+}
