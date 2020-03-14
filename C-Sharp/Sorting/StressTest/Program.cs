@@ -8,8 +8,29 @@ namespace StressTest
     {
         private static void Main(string[] args)
         {
-            StressTest(new BubbleSorter());
-            //StressTest(new InsertionSorter());
+            if (args.Length < 1)
+            {
+                Console.WriteLine("Please tell me which algorithm you want to stress test!");
+                return;
+            }
+
+            IIntSorter sorter;
+            switch (args[0])
+            {
+                case "bubble":
+                    sorter = new BubbleSorter();
+                    break;
+
+                case "insertion":
+
+                    sorter = new InsertionSorter();
+                    break;
+
+                default:
+                    Console.WriteLine($"Unrecognised sorter - {args[0]}!");
+                    return;
+            }
+            StressTest(sorter);
         }
 
         private static void StressTest(IIntSorter sorter)
