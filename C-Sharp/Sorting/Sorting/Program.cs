@@ -49,6 +49,11 @@ namespace StressTest
                                sorter = new GnomeSorter();
                                break;
 
+                           case "top-down-list-merge":
+
+                               sorter = new TopDownListMergeSorter();
+                               break;
+
                            default:
                                Console.WriteLine($"Unrecognised sorter - {args[0]}!");
                                return;
