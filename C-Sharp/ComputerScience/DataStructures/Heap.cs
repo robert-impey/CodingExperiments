@@ -1,18 +1,12 @@
-﻿using System;
-
-namespace DataStructures
+﻿namespace DataStructures
 {
     public class Heap
     {
-        public static bool IsMaxHeap(int[] ary)
+        public static bool IsMaxHeap(int[] array)
         {
-            var oneBassedArray = new int[ary.Length + 1];
-
-            Array.Copy(ary, 0, oneBassedArray, 1, ary.Length);
-
-            for (var i = oneBassedArray.Length - 1; i >= 2; i--)
+            for (var i = array.Length - 1; i >= 2; i--)
             {
-                if (oneBassedArray[i] > oneBassedArray[GetParentIndex(oneBassedArray, i)])
+                if (array[i] > array[GetParentIndex(i)])
                 {
                     return false;
                 }
@@ -21,14 +15,38 @@ namespace DataStructures
             return true;
         }
 
-        public static int GetParentIndex(int[] heap, int index)
+        public static int GetParentIndex(int index)
         {
-            if (index < 1 || index > heap.Length - 1)
+            return index / 2;
+        }
+
+        public static int GetLeftIndex(int index)
+        {
+            return 2 * index;
+        }
+
+        public static int GetRightIndex(int index)
+        {
+            return (2 * index) + 1;
+        }
+
+        public static void MaxHeapify(int[] array, int index)
+        {
+            var l = GetLeftIndex(index);
+            var r = GetRightIndex(index);
+
+            var largest = (l < array.Length && array[l] > array[index]) ? l : index;
+
+            if (r <= array.Length && array[r] > array[largest])
             {
-                throw new IndexOutOfRangeException();
+                largest = r;
             }
 
-            return index / 2;
+            if (largest != index)
+            {
+                Swapper.Swap(array, index, largest);
+                MaxHeapify(array, largest);
+            }
         }
     }
 }

@@ -12,7 +12,7 @@
                     var i = j - 1;
                     if (items[i] > items[j])
                     {
-                        Swapper.Swap(items, i, j);
+                        DataStructures.Swapper.Swap(items, i, j);
 
                         swapped = true;
                     }

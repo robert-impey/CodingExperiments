@@ -12,7 +12,7 @@
                 {
                     if (items[i] > key)
                     {
-                        Swapper.Swap(items, i, i + 1);
+                        DataStructures.Swapper.Swap(items, i, i + 1);
                     }
                 }
             }

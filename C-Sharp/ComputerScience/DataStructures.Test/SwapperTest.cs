@@ -1,8 +1,7 @@
 ﻿using FluentAssertions;
-using Sorting.Lib;
 using Xunit;
 
-namespace Sorting.Test
+namespace DataStructures.Test
 {
     public class SwapperTest
     {

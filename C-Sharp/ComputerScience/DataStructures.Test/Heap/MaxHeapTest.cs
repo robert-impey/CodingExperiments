@@ -1,40 +1,40 @@
 using FluentAssertions;
 using Xunit;
 
-namespace DataStructures.Test
+namespace DataStructures.Test.Heap
 {
     public class MaxHeapTest
     {
         [Fact]
         public void Empty()
         {
-            Heap.IsMaxHeap(System.Array.Empty<int>()).Should().BeTrue();
+            DataStructures.Heap.IsMaxHeap(new int[] { default }).Should().BeTrue();
         }
 
         [Fact]
         public void Single()
         {
-            Heap.IsMaxHeap(new int[] { 1 }).Should().BeTrue();
+            DataStructures.Heap.IsMaxHeap(new int[] { default, 1 }).Should().BeTrue();
         }
 
         [Fact]
         public void NonMaxHeap()
         {
-            Heap.IsMaxHeap(new int[] { 1 , 2 }).Should().BeFalse();
+            DataStructures.Heap.IsMaxHeap(new int[] { default, 1, 2 }).Should().BeFalse();
         }
 
         [Fact]
         public void ManyItemsMaxHeap()
         {
-            var heapAry = new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 4, 12 };
-            Heap.IsMaxHeap(heapAry).Should().BeTrue();
+            var heapAry = new int[] { default, 23, 17, 14, 6, 13, 10, 1, 5, 4, 12 };
+            DataStructures.Heap.IsMaxHeap(heapAry).Should().BeTrue();
         }
 
         [Fact]
         public void ManyItemsNonMaxHeap()
         {
-            var heapAry = new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 };
-            Heap.IsMaxHeap(heapAry).Should().BeFalse();
+            var heapAry = new int[] { default, 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 };
+            DataStructures.Heap.IsMaxHeap(heapAry).Should().BeFalse();
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿namespace Sorting.Lib
-{
+﻿namespace DataStructures
+{ 
     public static class Swapper
     {
         public static void Swap(int[] ary, int firstIndex, int secondIndex)

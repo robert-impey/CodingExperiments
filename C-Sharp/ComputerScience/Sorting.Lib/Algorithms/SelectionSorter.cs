@@ -18,7 +18,7 @@
 
                 if (minIndexInUnsorted != i)
                 {
-                    Swapper.Swap(items, i, minIndexInUnsorted);
+                    DataStructures.Swapper.Swap(items, i, minIndexInUnsorted);
                 }
             }
 

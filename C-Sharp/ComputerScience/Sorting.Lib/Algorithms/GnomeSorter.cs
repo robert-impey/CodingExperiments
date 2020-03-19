@@ -14,7 +14,7 @@
                 }
                 else
                 {
-                    Swapper.Swap(items, pos, pos - 1);
+                    DataStructures.Swapper.Swap(items, pos, pos - 1);
                     pos--;
                 }
             }
