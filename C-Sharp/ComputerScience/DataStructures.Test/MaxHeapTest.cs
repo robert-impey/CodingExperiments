@@ -8,7 +8,7 @@ namespace DataStructures.Test
         [Fact]
         public void Empty()
         {
-            Heap.IsMaxHeap(new int[0]).Should().BeTrue();
+            Heap.IsMaxHeap(System.Array.Empty<int>()).Should().BeTrue();
         }
 
         [Fact]
@@ -26,14 +26,14 @@ namespace DataStructures.Test
         [Fact]
         public void ManyItemsMaxHeap()
         {
-            var heapAry = new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7 };
+            var heapAry = new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 };
             Heap.IsMaxHeap(heapAry).Should().BeTrue();
         }
 
         [Fact]
         public void ManyItemsNonMaxHeap()
         {
-            var heapAry = new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 };
+            var heapAry = new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7, 12, 14 };
             Heap.IsMaxHeap(heapAry).Should().BeFalse();
         }
     }
