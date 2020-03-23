@@ -48,5 +48,13 @@
                 MaxHeapify(array, largest);
             }
         }
+
+        public static void BuildMaxHeap(int[] array)
+        {
+            for (var i = array.Length / 2; i >= 1; i--)
+            {
+                MaxHeapify(array, i);
+            }
+        }
     }
 }
