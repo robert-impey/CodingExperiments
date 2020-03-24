@@ -9,8 +9,8 @@ namespace DataStructures.Test.Heap
         [Fact]
         public void BuildMaxHeap()
         {
-            var array = new int[] { default, 5, 3, 17, 10, 84, 19, 6, 22, 9 };
-            
+            var array = new int[] { 5, 3, 17, 10, 84, 19, 6, 22, 9 };
+
             TestBuilding(array);
         }
 
@@ -21,7 +21,7 @@ namespace DataStructures.Test.Heap
 
             var array = new int[1000];
 
-            for (var i = 1; i < array.Length; i++)
+            for (var i = 0; i < array.Length; i++)
             {
                 array[i] = rand.Next(10000);
             }
@@ -31,9 +31,11 @@ namespace DataStructures.Test.Heap
 
         private static void TestBuilding(int[] array)
         {
-            DataStructures.Heap.BuildMaxHeap(array);
+            var heap = new DataStructures.Heap(array);
 
-            DataStructures.Heap.IsMaxHeap(array).Should().BeTrue();
+            heap.BuildMaxHeap();
+
+            heap.IsMaxHeap().Should().BeTrue();
         }
     }
 }

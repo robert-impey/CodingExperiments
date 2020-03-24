@@ -8,33 +8,36 @@ namespace DataStructures.Test.Heap
         [Fact]
         public void Empty()
         {
-            DataStructures.Heap.IsMaxHeap(new int[] { default }).Should().BeTrue();
+            var heap = new DataStructures.Heap(System.Array.Empty<int>());
+            heap.IsMaxHeap().Should().BeTrue();
         }
 
         [Fact]
         public void Single()
         {
-            DataStructures.Heap.IsMaxHeap(new int[] { default, 1 }).Should().BeTrue();
+            var heap = new DataStructures.Heap(new int[] { 1 });
+            heap.IsMaxHeap().Should().BeTrue();
         }
 
         [Fact]
         public void NonMaxHeap()
         {
-            DataStructures.Heap.IsMaxHeap(new int[] { default, 1, 2 }).Should().BeFalse();
+            var heap = new DataStructures.Heap(new int[] { 1, 2 });
+            heap.IsMaxHeap().Should().BeFalse();
         }
 
         [Fact]
         public void ManyItemsMaxHeap()
         {
-            var heapAry = new int[] { default, 23, 17, 14, 6, 13, 10, 1, 5, 4, 12 };
-            DataStructures.Heap.IsMaxHeap(heapAry).Should().BeTrue();
+            var heap = new DataStructures.Heap(new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 4, 12 });
+            heap.IsMaxHeap().Should().BeTrue();
         }
 
         [Fact]
         public void ManyItemsNonMaxHeap()
         {
-            var heapAry = new int[] { default, 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 };
-            DataStructures.Heap.IsMaxHeap(heapAry).Should().BeFalse();
+            var heap = new DataStructures.Heap(new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 });
+            heap.IsMaxHeap().Should().BeFalse();
         }
     }
 }

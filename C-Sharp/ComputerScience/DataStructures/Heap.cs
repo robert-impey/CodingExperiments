@@ -1,12 +1,23 @@
-﻿namespace DataStructures
+﻿using System;
+
+namespace DataStructures
 {
     public class Heap
     {
-        public static bool IsMaxHeap(int[] array)
+        private readonly int[] _heap;
+
+        public Heap(int[] input)
         {
-            for (var i = array.Length - 1; i >= 2; i--)
+            _heap = new int[input.Length + 1];
+
+            Array.Copy(input, 0, _heap, 1, input.Length);
+        }
+
+        public bool IsMaxHeap()
+        {
+            for (var i = _heap.Length - 1; i >= 2; i--)
             {
-                if (array[i] > array[GetParentIndex(i)])
+                if (_heap[i] > _heap[GetParentIndex(i)])
                 {
                     return false;
                 }
@@ -15,46 +26,55 @@
             return true;
         }
 
-        public static int GetParentIndex(int index)
+        private static int GetParentIndex(int index)
         {
             return index / 2;
         }
 
-        public static int GetLeftIndex(int index)
+        private static int GetLeftIndex(int index)
         {
             return 2 * index;
         }
 
-        public static int GetRightIndex(int index)
+        private static int GetRightIndex(int index)
         {
             return (2 * index) + 1;
         }
 
-        public static void MaxHeapify(int[] array, int index)
+        public void MaxHeapify(int index)
         {
             var l = GetLeftIndex(index);
             var r = GetRightIndex(index);
 
-            var largest = (l < array.Length && array[l] > array[index]) ? l : index;
+            var largest = (l < _heap.Length && _heap[l] > _heap[index]) ? l : index;
 
-            if (r <= array.Length && array[r] > array[largest])
+            if (r < _heap.Length && _heap[r] > _heap[largest])
             {
                 largest = r;
             }
 
             if (largest != index)
             {
-                Swapper.Swap(array, index, largest);
-                MaxHeapify(array, largest);
+                Swapper.Swap(_heap, index, largest);
+                MaxHeapify(largest);
             }
         }
 
-        public static void BuildMaxHeap(int[] array)
+        public void BuildMaxHeap()
         {
-            for (var i = array.Length / 2; i >= 1; i--)
+            for (var i = _heap.Length / 2; i >= 1; i--)
             {
-                MaxHeapify(array, i);
+                MaxHeapify(i);
             }
+        }
+
+        public int[] ToArray()
+        {
+            var array = new int[_heap.Length - 1];
+
+            Array.Copy(_heap, 1, array, 0, array.Length);
+
+            return array;
         }
     }
 }

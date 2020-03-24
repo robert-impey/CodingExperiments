@@ -8,15 +8,19 @@ namespace DataStructures.Test.Heap
         [Fact]
         public void ManyElements()
         {
-            var array = new int[] { default, 16, 4, 10, 14, 7, 9, 3, 2, 8, 1 };
+            var array = new int[] { 16, 4, 10, 14, 7, 9, 3, 2, 8, 1 };
 
-            DataStructures.Heap.MaxHeapify(array, 2);
+            var heap = new DataStructures.Heap(array);
 
-            DataStructures.Heap.IsMaxHeap(array).Should().BeTrue();
+            heap.MaxHeapify(2);
 
-            array[2].Should().Be(14);
-            array[4].Should().Be(8);
-            array[9].Should().Be(4);
+            heap.IsMaxHeap().Should().BeTrue();
+
+            var heapArray = heap.ToArray();
+
+            heapArray[1].Should().Be(14);
+            heapArray[3].Should().Be(8);
+            heapArray[8].Should().Be(4);
         }
     }
 }
