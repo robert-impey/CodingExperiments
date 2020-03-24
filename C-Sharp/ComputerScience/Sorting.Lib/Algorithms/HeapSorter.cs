@@ -9,10 +9,9 @@ namespace Sorting.Lib.Algorithms
         {
             var heap = new Heap(items);
 
-            heap.BuildMaxHeap();
-
+            heap.Sort();
             
-            return items;
+            return heap.ToArray();
         }
     }
 }

@@ -43,12 +43,17 @@ namespace DataStructures
 
         public void MaxHeapify(int index)
         {
+            MaxHeapify(index, _heap.Length);
+        }
+
+        public void MaxHeapify(int index, int heapSize)
+        {
             var l = GetLeftIndex(index);
             var r = GetRightIndex(index);
 
-            var largest = (l < _heap.Length && _heap[l] > _heap[index]) ? l : index;
+            var largest = (l < heapSize && _heap[l] > _heap[index]) ? l : index;
 
-            if (r < _heap.Length && _heap[r] > _heap[largest])
+            if (r < heapSize && _heap[r] > _heap[largest])
             {
                 largest = r;
             }
@@ -75,6 +80,19 @@ namespace DataStructures
             Array.Copy(_heap, 1, array, 0, array.Length);
 
             return array;
+        }
+
+        public void Sort()
+        {
+            BuildMaxHeap();
+
+            var heapSize = _heap.Length;
+            for (var i = heapSize - 1; i >= 2; i--)
+            {
+                Swapper.Swap(_heap, 1, i);
+                heapSize--;
+                MaxHeapify(i, heapSize);
+            }
         }
     }
 }
