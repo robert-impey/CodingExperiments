@@ -43,7 +43,7 @@ namespace DataStructures
 
         public void MaxHeapify(int index)
         {
-            MaxHeapify(index, _heap.Length);
+            MaxHeapify(index, _heap.Length - 1);
         }
 
         public void MaxHeapify(int index, int heapSize)
@@ -61,7 +61,7 @@ namespace DataStructures
             if (largest != index)
             {
                 Swapper.Swap(_heap, index, largest);
-                MaxHeapify(largest);
+                MaxHeapify(largest, heapSize);
             }
         }
 
@@ -86,12 +86,12 @@ namespace DataStructures
         {
             BuildMaxHeap();
 
-            var heapSize = _heap.Length;
-            for (var i = heapSize - 1; i >= 2; i--)
+            var heapSize = _heap.Length - 1;
+            for (var i = heapSize; i >= 1; i--)
             {
                 Swapper.Swap(_heap, 1, i);
                 heapSize--;
-                MaxHeapify(i, heapSize);
+                MaxHeapify(1, heapSize);
             }
         }
     }

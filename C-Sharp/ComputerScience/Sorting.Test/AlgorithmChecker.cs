@@ -44,7 +44,9 @@ namespace Sorting.Test
 
         private static void OutOfOrder(IIntSorter intSorter)
         {
-            var sorted = intSorter.Sort(MakeRandomArray());
+            var input = MakeRandomArray();
+
+            var sorted = intSorter.Sort(input);
 
             Lib.SortingChecker.IsInOrder(sorted).Should().BeTrue();
         }
@@ -61,7 +63,7 @@ namespace Sorting.Test
             Lib.SortingChecker.ArePermutations(inputArray, sorted).Should().BeTrue();
         }
 
-        private static int[] MakeRandomArray(int size = 5, int range = 10000)
+        private static int[] MakeRandomArray(int size = 5, int range = 10)
         {
             var rand = new Random();
 
