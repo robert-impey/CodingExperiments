@@ -51,9 +51,9 @@ namespace DataStructures
             var l = GetLeftIndex(index);
             var r = GetRightIndex(index);
 
-            var largest = (l < heapSize && _heap[l] > _heap[index]) ? l : index;
+            var largest = (l <= heapSize && _heap[l] > _heap[index]) ? l : index;
 
-            if (r < heapSize && _heap[r] > _heap[largest])
+            if (r <= heapSize && _heap[r] > _heap[largest])
             {
                 largest = r;
             }

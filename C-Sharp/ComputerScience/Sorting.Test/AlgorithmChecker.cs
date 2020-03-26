@@ -8,11 +8,11 @@ namespace Sorting.Test
     {
         public static void TestSorter(IIntSorter intSorter)
         {
-            //TestEmptyArray(intSorter);
-            //SingleItem(intSorter);
-            //SameLength(intSorter);
+            TestEmptyArray(intSorter);
+            SingleItem(intSorter);
+            SameLength(intSorter);
             OutOfOrder(intSorter);
-            //ArePermutations(intSorter);
+            ArePermutations(intSorter);
         }
 
         private static void TestEmptyArray(IIntSorter intSorter)

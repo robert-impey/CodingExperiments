@@ -54,6 +54,11 @@ namespace StressTest
                                sorter = new TopDownListMergeSorter();
                                break;
 
+                           case "heap":
+
+                               sorter = new HeapSorter();
+                               break;
+
                            default:
                                Console.WriteLine($"Unrecognised sorter - {args[0]}!");
                                return;

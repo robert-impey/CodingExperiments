@@ -1,5 +1,4 @@
 ﻿using DataStructures;
-using System;
 
 namespace Sorting.Lib.Algorithms
 {
@@ -10,7 +9,7 @@ namespace Sorting.Lib.Algorithms
             var heap = new Heap(items);
 
             heap.Sort();
-            
+
             return heap.ToArray();
         }
     }

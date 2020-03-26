@@ -2,7 +2,7 @@
   "profiles": {
     "StressTest": {
       "commandName": "Project",
-      "commandLineArgs": "--algorithm top-down-list-merge --size 500"
+      "commandLineArgs": "--algorithm heap --size 1000"
     }
   }
 }

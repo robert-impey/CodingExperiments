@@ -19,14 +19,17 @@ namespace DataStructures.Test.Heap
         {
             var rand = new Random();
 
-            var array = new int[1000];
-
-            for (var i = 0; i < array.Length; i++)
+            for (var j = 0; j < 100; j++)
             {
-                array[i] = rand.Next(10000);
-            }
+                var array = new int[1000];
 
-            TestBuilding(array);
+                for (var i = 0; i < array.Length; i++)
+                {
+                    array[i] = rand.Next(10000);
+                }
+
+                TestBuilding(array);
+            }
         }
 
         private static void TestBuilding(int[] array)
