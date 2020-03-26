@@ -4,28 +4,28 @@ using System.Text;
 
 namespace ReverseString
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            if (args.Length == 1)
+            if (args.Length == 0)
             {
-                var stringToReverse = args[0];
+                Console.WriteLine("Give me a string to work with!");
+                return;
+            }
 
+            foreach (var stringToReverse in args)
+            {
                 var reversedString = ReverseString(stringToReverse);
 
                 Console.WriteLine(reversedString);
-            }
-            else
-            {
-                Console.WriteLine("Give me a string to work with!");
             }
         }
 
         private static string ReverseString(string stringToReverse)
         {
             var tempStack = new Stack<char>();
-            
+
             foreach (var c in stringToReverse)
             {
                 tempStack.Push(c);
