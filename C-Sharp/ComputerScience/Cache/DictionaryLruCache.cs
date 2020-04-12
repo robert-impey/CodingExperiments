@@ -4,9 +4,8 @@ using System.Linq;
 
 namespace Cache
 {
-    public class LruCache : IIntCache
+    public class DictionaryLruCache : ILruCache
     {
-        private readonly int _capacity;
         private readonly IDictionary<int, int> _values;
         private readonly IDictionary<int, int> _additions;
         private readonly IDictionary<int, int> _usages;
@@ -14,10 +13,10 @@ namespace Cache
         private int _currentAddition;
         private int _currentUsage;
         
-        public LruCache(int capacity)
+        public DictionaryLruCache(int capacity)
         {
-            _capacity = capacity;
-            
+            Capacity = capacity;
+
             _values = new Dictionary<int, int>();
             _additions = new Dictionary<int, int>();
             _usages = new Dictionary<int, int>();
@@ -25,7 +24,9 @@ namespace Cache
             _currentAddition = int.MinValue;
             _currentUsage = int.MinValue;
         }
-        
+
+        public int Capacity { get; }
+
         public int Get(int key)
         {
             if (!_values.ContainsKey(key))
@@ -42,7 +43,7 @@ namespace Cache
         public void Put(int key, int value)
         {
             // Possibly evict the least recently used
-            if (_values.Count >= _capacity)
+            if (_values.Count >= Capacity)
             {
                 if (_usages.Any())
                 {

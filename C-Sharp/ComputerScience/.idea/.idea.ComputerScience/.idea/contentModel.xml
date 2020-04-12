@@ -15,8 +15,11 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Cache" t="IncludeRecursive">
         <e p="Cache.csproj" t="IncludeRecursive" />
+        <e p="DictionaryFifoCache.cs" t="Include" />
+        <e p="DictionaryLruCache.cs" t="Include" />
+        <e p="IFifoCache.cs" t="Include" />
         <e p="IIntCache.cs" t="Include" />
-        <e p="LruCache.cs" t="Include" />
+        <e p="ILruCache.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -28,7 +31,11 @@
       </e>
       <e p="Cache.Test" t="IncludeRecursive">
         <e p="Cache.Test.csproj" t="IncludeRecursive" />
-        <e p="LruCacheTest.cs" t="Include" />
+        <e p="DictionaryFifoCacheTest.cs" t="Include" />
+        <e p="DictionaryLruCacheTest.cs" t="Include" />
+        <e p="FifoEvictionsTests.cs" t="Include" />
+        <e p="LruEvictionsTests.cs" t="Include" />
+        <e p="NoEvictionsTests.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
