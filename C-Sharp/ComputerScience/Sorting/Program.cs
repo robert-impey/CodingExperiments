@@ -1,9 +1,9 @@
-﻿using CommandLine;
+﻿using System;
+using CommandLine;
 using Sorting.Lib;
 using Sorting.Lib.Algorithms;
-using System;
 
-namespace StressTest
+namespace Sorting
 {
     internal class Program
     {
