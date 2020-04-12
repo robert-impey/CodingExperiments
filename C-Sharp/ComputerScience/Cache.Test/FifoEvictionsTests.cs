@@ -13,10 +13,10 @@ namespace Cache.Test
 
         public void Test()
         {
-            GetAfterEvictionsWithoutPreviousGet();
+            GetAfterEviction();
         }
         
-        private void GetAfterEvictionsWithoutPreviousGet()
+        private void GetAfterEviction()
         {
             _cache.Put(1, 1);
             _cache.Put(2, 2);
