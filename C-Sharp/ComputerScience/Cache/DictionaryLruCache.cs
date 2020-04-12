@@ -39,7 +39,7 @@ namespace Cache
         public void Put(int key, int value)
         {
             // Possibly evict the least recently used
-            if (_values.Count >= Capacity)
+            if (!_values.ContainsKey(key) && _values.Count >= Capacity)
             {
                 var minKey = _usages.Keys.First();
                 var currentMin = _usages[minKey];

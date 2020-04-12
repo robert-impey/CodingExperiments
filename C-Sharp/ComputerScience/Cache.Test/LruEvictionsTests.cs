@@ -16,6 +16,7 @@ namespace Cache.Test
         {
             GetAfterEvictionsWithoutPreviousGet();
             GetAfterEvictionsWithPreviousGet();
+            MultipleEvictions();
         }
 
         private void GetAfterEvictionsWithoutPreviousGet()
@@ -45,6 +46,19 @@ namespace Cache.Test
             cache.Get(1).Should().Be(1);
             cache.Get(2).Should().Be(-1);
             cache.Get(3).Should().Be(3);
+        }
+
+        private void MultipleEvictions()
+        {
+            var cache = _getCache(2);
+
+            cache.Get(2).Should().Be(-1);
+            cache.Put(2, 6);
+            cache.Get(1).Should().Be(-1);
+            cache.Put(1, 5);
+            cache.Put(1, 2);
+            cache.Get(1).Should().Be(2);
+            cache.Get(2).Should().Be(6);
         }
     }
 }
