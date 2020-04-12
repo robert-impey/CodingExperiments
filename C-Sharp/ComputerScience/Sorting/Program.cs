@@ -10,7 +10,7 @@ namespace Sorting
         public class Options
         {
             [Option('a', "algorithm", Required = true, HelpText = "The sorting algorithm to use.")]
-            public string Algorith { get; set; }
+            public string Algorithm { get; set; }
 
             [Option('s', "size", Required = false, Default = 1000, HelpText = "The size of the array to sort.")]
             public int Size { get; set; }
@@ -28,7 +28,7 @@ namespace Sorting
                    .WithParsed(o =>
                    {
                        IIntSorter sorter;
-                       switch (o.Algorith)
+                       switch (o.Algorithm)
                        {
                            case "bubble":
                                sorter = new BubbleSorter();
