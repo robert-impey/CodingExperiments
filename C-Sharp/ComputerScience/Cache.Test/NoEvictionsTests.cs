@@ -1,14 +1,15 @@
+using System;
 using FluentAssertions;
 
 namespace Cache.Test
 {
     internal class NoEvictionsTests
     {
-        private readonly IIntCache _cache;
+        private readonly Func<int, IIntCache> _getCache;
 
-        public NoEvictionsTests(IIntCache cache)
+        public NoEvictionsTests(Func<int, IIntCache> getCache)
         {
-            _cache = cache;
+            _getCache = getCache;
         }
 
         public void Test()
@@ -17,28 +18,33 @@ namespace Cache.Test
             GetValue();
             GetMissingValue();
         }
-        
+
         private void TestGetFromEmpty()
         {
-            var got = _cache.Get(1);
+            var cache = _getCache(1);
+            var got = cache.Get(1);
 
             got.Should().Be(-1);
         }
-        
+
         private void GetValue()
         {
-            _cache.Put(1, 1);
+            var cache = _getCache(1);
 
-            var got = _cache.Get(1);
+            cache.Put(1, 1);
+
+            var got = cache.Get(1);
 
             got.Should().Be(1);
         }
-        
+
         private void GetMissingValue()
         {
-            _cache.Put(1, 1);
+            var cache = _getCache(1);
 
-            var got = _cache.Get(2);
+            cache.Put(1, 1);
+
+            var got = cache.Get(2);
 
             got.Should().Be(-1);
         }

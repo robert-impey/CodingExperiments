@@ -33,7 +33,9 @@
         <e p="Cache.Test.csproj" t="IncludeRecursive" />
         <e p="DictionaryFifoCacheTest.cs" t="Include" />
         <e p="DictionaryLruCacheTest.cs" t="Include" />
+        <e p="FifoCacheTest.cs" t="Include" />
         <e p="FifoEvictionsTests.cs" t="Include" />
+        <e p="LruCacheTest.cs" t="Include" />
         <e p="LruEvictionsTests.cs" t="Include" />
         <e p="NoEvictionsTests.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

@@ -5,20 +5,11 @@ namespace Cache.Test
     public class DictionaryFifoCacheTest
     {
         [Fact]
-        public void NoEvictionsTests()
+        public void FifoTests()
         {
-            var noEvictionsTest = new NoEvictionsTests(new DictionaryFifoCache(1));
+            var fifoCacheTest = new FifoCacheTest(c => new DictionaryFifoCache(c));
 
-            noEvictionsTest.Test();
-        }
-        
-        
-        [Fact]
-        public void EvictionsTests()
-        {
-            var evictionsTests = new FifoEvictionsTests(new DictionaryFifoCache(2));
-            
-            evictionsTests.Test();
+            fifoCacheTest.Test();
         }
     }
 }
