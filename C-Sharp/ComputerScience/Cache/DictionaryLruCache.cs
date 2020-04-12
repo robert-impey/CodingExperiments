@@ -7,21 +7,17 @@ namespace Cache
     public class DictionaryLruCache : ILruCache
     {
         private readonly IDictionary<int, int> _values;
-        private readonly IDictionary<int, int> _additions;
         private readonly IDictionary<int, int> _usages;
 
-        private int _currentAddition;
         private int _currentUsage;
-        
+
         public DictionaryLruCache(int capacity)
         {
             Capacity = capacity;
 
             _values = new Dictionary<int, int>();
-            _additions = new Dictionary<int, int>();
             _usages = new Dictionary<int, int>();
 
-            _currentAddition = int.MinValue;
             _currentUsage = int.MinValue;
         }
 
@@ -45,52 +41,28 @@ namespace Cache
             // Possibly evict the least recently used
             if (_values.Count >= Capacity)
             {
-                if (_usages.Any())
+                var minKey = _usages.Keys.First();
+                var currentMin = _usages[minKey];
+
+                foreach (var (usageKey, usageValue) in _usages)
                 {
-                    var currentMin = int.MaxValue;
-                    int minKey = _usages.Keys.First();
-
-                    foreach (var (usageKey, usageValue) in _usages)
+                    if (usageValue <= currentMin)
                     {
-                        if (usageValue <= currentMin)
-                        {
-                            minKey = usageKey;
-                        }
-                    }
-
-                    _usages.Remove(minKey);
-                    _additions.Remove(minKey);
-                    _values.Remove(minKey);
-                }
-                else
-                {
-                    if (_additions.Any())
-                    {
-                        var currentMin = int.MaxValue;
-                        int minKey = _additions.Keys.First();
-
-                        foreach (var (additionKey, additionValue) in _additions)
-                        {
-                            if (additionValue <= currentMin)
-                            {
-                                minKey = additionKey;
-                            }
-                        }
-
-                        _additions.Remove(minKey);
-                        _values.Remove(minKey);
-                    }
-                    else
-                    {
-                        throw new Exception("No additions when over capacity!");
+                        minKey = usageKey;
                     }
                 }
+
+                _usages.Remove(minKey);
+                _values.Remove(minKey);
+            }
+
+            if (!_usages.ContainsKey(key))
+            {
+                _usages[key] = _currentUsage;
+                _currentUsage++;
             }
 
             _values[key] = value;
-
-            _additions[key] = _currentAddition;
-            _currentAddition++;
         }
     }
 }
