@@ -46,7 +46,7 @@ namespace Cache
 
                 foreach (var (usageKey, usageValue) in _usages)
                 {
-                    if (usageValue <= currentMin)
+                    if (usageValue < currentMin)
                     {
                         minKey = usageKey;
                     }
@@ -56,11 +56,8 @@ namespace Cache
                 _values.Remove(minKey);
             }
 
-            if (!_usages.ContainsKey(key))
-            {
-                _usages[key] = _currentUsage;
-                _currentUsage++;
-            }
+            _usages[key] = _currentUsage;
+            _currentUsage++;
 
             _values[key] = value;
         }

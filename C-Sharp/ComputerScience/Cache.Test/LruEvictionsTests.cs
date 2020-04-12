@@ -60,5 +60,18 @@ namespace Cache.Test
             cache.Get(1).Should().Be(2);
             cache.Get(2).Should().Be(6);
         }
+
+        private void MultiplePuts()
+        {
+            var cache = _getCache(2);
+            
+            cache.Put(2, 1);
+            cache.Put(1, 1);
+            cache.Put(2, 3);
+            cache.Put(4, 1);
+
+            cache.Get(1).Should().Be(-1);
+            cache.Get(2).Should().Be(3);
+        }
     }
 }
