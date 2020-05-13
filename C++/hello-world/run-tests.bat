@@ -1,2 +1,2 @@
 make
-perl ..\..\..\run-cli-tests\run-cli-tests.pl
+perl ..\..\..\run-cli-tests\run-cli-tests.pl %*
