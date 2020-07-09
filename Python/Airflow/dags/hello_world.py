@@ -1,5 +1,3 @@
-# See https://technofob.com/2019/05/30/get-started-developing-workflows-with-apache-airflow/
-
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
