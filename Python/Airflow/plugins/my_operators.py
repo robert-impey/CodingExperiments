@@ -4,6 +4,9 @@ from airflow.models import BaseOperator
 from airflow.plugins_manager import AirflowPlugin
 from airflow.utils.decorators import apply_defaults
 
+from datetime import datetime
+from airflow.operators.sensors import BaseSensorOperator
+
 log = logging.getLogger(__name__)
 
 class MyFirstOperator(BaseOperator):
@@ -17,7 +20,22 @@ class MyFirstOperator(BaseOperator):
         log.info("Hello, World!")
         log.info('operator_param: %s', self.operator_param)
 
+class MyFirstSensor(BaseSensorOperator):
+
+    @apply_defaults
+    def __init__(self, *args, **kwargs):
+        super(MyFirstSensor, self).__init__(*args, **kwargs)
+
+    def poke(self, context):
+        current_minute = datetime.now().minute
+        if current_minute % 3 != 0:
+            log.info('Current minute (%s) is not divisible by 3, sensor will retry.', current_minute)
+            return False
+
+        log.info('Current minute (%s) is divisible by 3, sensor finishing.', current_minute)
+        return True
+
 class MyFirstPlugin(AirflowPlugin):
     name='my_first_plugin'
-    operators=[MyFirstOperator]
+    operators=[MyFirstOperator, MyFirstSensor]
 
