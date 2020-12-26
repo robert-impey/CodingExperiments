@@ -1,3 +1,5 @@
+// See https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#
+
 print("Hello, world!")
 
 let float4: Float = 4
