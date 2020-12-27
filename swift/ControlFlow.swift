@@ -22,3 +22,8 @@ if let name = optionalName {
     greeting = "Hello, stranger!"
 }
 print(greeting)
+
+let nickname: String? = "Johnny" //nil
+let fullName: String = "John Appleseed"
+let informalGreeting = "Hi, \(nickname ?? fullName)"
+print(informalGreeting)
