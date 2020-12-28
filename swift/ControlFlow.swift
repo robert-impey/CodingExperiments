@@ -46,11 +46,18 @@ let interestingNumbers = [
     "Square": [1, 4, 9, 16, 25],
 ]
 var largest = 0
-for (_, numbers) in interestingNumbers {
+var largestKind: String? = nil
+for (kind, numbers) in interestingNumbers {
     for number in numbers {
         if number > largest {
             largest = number
+            largestKind = kind
         }
     }
 }
 print(largest)
+if case let lk? = largestKind {
+    print("The kind of the largest number was \(lk)")
+} else {
+    print("No largest kind found!")
+}
