@@ -9,3 +9,8 @@ func greet2(person: String, special: String) -> String {
     return "Hello \(person), today's special is \(special)."
 }
 print(greet2(person: "Alice", special: "beef stew"))
+
+func greet3(_ person: String, on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+print(greet3("John", on: "Wednesday"))
