@@ -36,3 +36,13 @@ print(statistics.sum)
 print(statistics.2)
 print(statistics.min)
 print(statistics.max)
+
+func returnFifteen() -> Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+print(returnFifteen())
