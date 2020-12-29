@@ -69,3 +69,15 @@ func lessThanTen(number: Int) -> Bool {
 }
 var numbers = [20, 19, 7, 12]
 print(hasAnyMatches(list: numbers, condition: lessThanTen))
+
+print(numbers.map({(number: Int) -> Int in
+    let result = 3 * number
+    return result
+}))
+
+print(numbers.map({(number: Int) -> Int in
+    if number % 2 == 0 {
+        return number
+    }
+    return 0
+}))
