@@ -12,3 +12,8 @@ class Shape {
         print("Painting the shape \(colour).")
     }
 }
+
+var shape = Shape()
+shape.numberOfSides = 7
+var shapeDescription = shape.simpleDescription()
+print(shapeDescription)
