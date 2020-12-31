@@ -131,3 +131,8 @@ print(triangleAndSquare.square.sideLength)
 print(triangleAndSquare.triangle.sideLength)
 triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
 print(triangleAndSquare.triangle.sideLength)
+
+let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+if case let foundSquare? = optionalSquare {
+    print(foundSquare.sideLength)
+}
