@@ -55,3 +55,25 @@ class Square: NamedShape {
 let test = Square(sideLength: 5.2, name: "my test square")
 print(test.area())
 print(test.simpleDescription())
+
+class Circle: NamedShape {
+    var radius: Double
+
+    init (radius: Double, name: String) {
+        self.radius = radius
+        super.init(name: name)
+        numberOfSides = 1
+    }
+
+    func area() -> Double {
+        return Double.pi * self.radius * self.radius
+    }
+
+    override func simpleDescription() -> String {
+        return "A circle with a radius of \(self.radius)."
+    }
+}
+
+let testCircle = Circle(radius: 3.4, name: "my test circle")
+print(testCircle.area())
+print(testCircle.simpleDescription())
