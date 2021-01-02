@@ -19,6 +19,10 @@ enum Rank: Int {
                 return String(self.rawValue)
         }
     }
+
+    func compare(_ other: Rank) -> Int {
+        return self.rawValue - other.rawValue
+    }
 }
 
 let ace = Rank.ace
@@ -26,3 +30,7 @@ let rawAce = ace.rawValue
 
 print(ace.simpleDescription())
 print(rawAce)
+
+print(ace.compare(Rank.king))
+print(Rank.five.compare(Rank.five))
+print(Rank.king.compare(ace))
