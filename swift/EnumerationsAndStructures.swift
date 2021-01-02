@@ -90,3 +90,16 @@ switch success {
     case let .specialResult(message):
         print("Special message \(message)")
 }
+
+struct Card {
+    var rank: Rank
+    var suit: Suit
+
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) or \(suit.simpleDescription())"
+    }
+}
+
+let threeOfSpades = Card(rank: .three, suit: .spades)
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+print(threeOfSpadesDescription)
