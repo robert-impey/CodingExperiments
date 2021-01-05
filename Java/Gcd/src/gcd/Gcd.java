@@ -14,8 +14,16 @@ public class Gcd {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[1]);
+        int a;
+        int b;
+        
+        if (args.length == 2) {
+            a = Integer.parseInt(args[0]);
+            b = Integer.parseInt(args[1]);
+        } else {
+            a = 42;
+            b = 56;
+        }
         
         GcdFinderContext gfc = new GcdFinderContext(new RecursiveEuclidGcdFinder());
         

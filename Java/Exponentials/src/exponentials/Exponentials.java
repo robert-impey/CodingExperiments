@@ -16,8 +16,16 @@ public class Exponentials
      */
     public static void main(String[] args) 
     {
-        double base = Double.parseDouble(args[0]);
-        int power = Integer.parseInt(args[1]);
+        double base; 
+        int power;
+        
+        if (args.length == 2) {
+            base = Double.parseDouble(args[0]);
+            power = Integer.parseInt(args[1]);
+        } else {
+            base = 2.0;
+            power = 8;
+        }
         
         Exponentiator loops = new LoopExponentiator();
         Exponentiator squaring = new SquaringExponentiator();
