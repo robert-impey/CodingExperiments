@@ -14,8 +14,14 @@ public class Sum {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int max = Integer.parseInt(args[0]);
+        int max;
         
+        if (args.length == 1) {
+            max = Integer.parseInt(args[0]);
+        } else {
+            max = 10;
+        }
+                
         System.out.printf("Max: %d\tLoops: %d\tMultiplication: %d\n", max, loops(max), multiplacation(max));
     }
     
