@@ -40,3 +40,30 @@ let bDescription = b.simpleDescription
 print(bDescription)
 print(b.augmentedDescription())
 print(b.simpleDescription)
+
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+    mutating func adjust() {
+        self += 42
+    }
+    func augmentedDescription() -> String {
+        return "\(self) (augmented)"
+    }
+}
+
+print(7.simpleDescription)
+
+extension Double {
+    func absoluteValue() -> Double {
+        if self >= 0.0 {
+            return self
+        }
+        return -1.0 * self
+    }
+}
+
+print(-1.0.absoluteValue())
+var d: Double = -1.0
+print(d.absoluteValue())
