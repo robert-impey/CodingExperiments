@@ -67,3 +67,8 @@ extension Double {
 print(-1.0.absoluteValue())
 var d: Double = -1.0
 print(d.absoluteValue())
+
+print(a.anotherPropery)
+let protocolValue: ExampleProtocol = a
+print(protocolValue.simpleDescription)
+//print(protocolValue.anotherPropery)
