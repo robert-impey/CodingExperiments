@@ -17,3 +17,15 @@ var a = SimpleClass()
 a.adjust()
 let aDescription = a.simpleDescription
 print(aDescription)
+
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+
+var b = SimpleStructure()
+b.adjust()
+let bDescription = b.simpleDescription
+print(bDescription)
