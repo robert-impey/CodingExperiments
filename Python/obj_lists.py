@@ -11,6 +11,7 @@ class Foo:
     def __repr__(self):
         return str(self)
 
+
 a_foo = Foo('a', 1)
 
 print("a_foo: %s" % a_foo)
