@@ -2,12 +2,14 @@
 
 from bytes import get_bytes
 
+
 def make_one(bits, bit):
-    bytes = get_bytes(bits)
+    got_bytes = get_bytes(bits)
     
-    bytes[-bit-1] = ord("1")
+    got_bytes[-bit - 1] = ord("1")
     
-    return bytes.decode("utf-8")
+    return got_bytes.decode("utf-8")
+
 
 def test_make_one():
     tests = [
