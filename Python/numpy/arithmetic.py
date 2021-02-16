@@ -20,3 +20,23 @@ mag_u = np.linalg.norm(u)
 print(mag_u)
 # Note that in the book this is given as sqrt(29)
 print(mag_u * mag_u)
+
+# See https://www.bbc.co.uk/bitesize/guides/zqykv9q/revision/2
+p = np.array([3, 7])
+mag_p = np.linalg.norm(p)
+print(mag_p * mag_p)  # Answer given as sqrt(58)
+
+p_to_q = np.array([5, 4, -2])
+mag_p_to_q = np.linalg.norm(p_to_q)
+print(mag_p_to_q)
+print(mag_p_to_q * mag_p_to_q)  # Answer given as sqrt(45)
+
+a = np.array([5, -1, 2])
+b = np.array([7, 9, -2])
+
+a_to_b = b - a
+print(a_to_b)
+
+mag_a_to_b = np.linalg.norm(a_to_b)
+print(mag_a_to_b)
+print(mag_a_to_b * mag_a_to_b)  # Answer given as sqrt(120)
