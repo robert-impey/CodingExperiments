@@ -9,13 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting.Test", "Sorting.Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting", "Sorting\Sorting.csproj", "{641F64EC-43FA-4F24-B437-DA534F688475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{09AB8DA0-8E58-444E-8C29-DCB4F4CE2A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{09AB8DA0-8E58-444E-8C29-DCB4F4CE2A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures.Test", "DataStructures.Test\DataStructures.Test.csproj", "{9502FEC3-CB9E-43D1-862F-CA261AFB7F98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures.Test", "DataStructures.Test\DataStructures.Test.csproj", "{9502FEC3-CB9E-43D1-862F-CA261AFB7F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache", "Cache\Cache.csproj", "{CEC5D3CC-1EAE-4EC0-8CA4-8F3B3B1A9B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cache", "Cache\Cache.csproj", "{CEC5D3CC-1EAE-4EC0-8CA4-8F3B3B1A9B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache.Test", "Cache.Test\Cache.Test.csproj", "{9434A6FB-3B01-4142-8198-A36DE9229B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cache.Test", "Cache.Test\Cache.Test.csproj", "{9434A6FB-3B01-4142-8198-A36DE9229B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permutations", "Permutations\Permutations.csproj", "{46566106-E157-4168-A2C1-F3B90F0C94A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{9434A6FB-3B01-4142-8198-A36DE9229B5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9434A6FB-3B01-4142-8198-A36DE9229B5B}.Release|x86.ActiveCfg = Release|Any CPU
 		{9434A6FB-3B01-4142-8198-A36DE9229B5B}.Release|x86.Build.0 = Release|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Debug|x86.Build.0 = Debug|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Release|x86.ActiveCfg = Release|Any CPU
+		{46566106-E157-4168-A2C1-F3B90F0C94A3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
