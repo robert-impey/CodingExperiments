@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Permutations": {
+      "commandName": "Project",
+      "commandLineArgs": "count three-unequal-pairs"
+    }
+  }
+}
