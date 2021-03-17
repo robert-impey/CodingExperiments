@@ -13,11 +13,22 @@ namespace Permutations
                     if (args.Length > 0)
                     {
                         Fraction? fraction = null;
-                        if (args[1] == "three-unequal-pairs")
+                        if (args[1] == "three-pairs")
+                        {
+                            fraction = new ThreePairsPermutationCounter().Count();
+                        } else if (args[1] == "three-unequal-pairs")
                         {
                             fraction = new ThreeUnequalPairsPermutationCounter().Count();
                         }
-                        
+                        else if (args[1] == "three-ascending-pairs")
+                        {
+                            fraction = new ThreeAscendingPairsPermutationCounter().Count();
+                        }
+                        else if (args[1] == "three-strictly-ascending-pairs")
+                        {
+                            fraction = new ThreeStrictlyAscendingPairsPermutationsCounter().Count();
+                        }
+
                         if (fraction.HasValue)
                         {
                             WriteLine($"Matching Count: {fraction.Value.Matching}");

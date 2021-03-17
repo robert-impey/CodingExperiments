@@ -2,7 +2,7 @@
   "profiles": {
     "Permutations": {
       "commandName": "Project",
-      "commandLineArgs": "count three-unequal-pairs"
+      "commandLineArgs": "count three-strictly-ascending-pairs"
     }
   }
 }
