@@ -10,13 +10,14 @@ namespace Permutations
             {
                 if (args[0] == "count")
                 {
-                    if (args.Length > 0)
+                    if (args.Length > 1)
                     {
                         Fraction? fraction = null;
                         if (args[1] == "three-pairs")
                         {
                             fraction = new ThreePairsPermutationCounter().Count();
-                        } else if (args[1] == "three-unequal-pairs")
+                        } 
+                        else if (args[1] == "three-unequal-pairs")
                         {
                             fraction = new ThreeUnequalPairsPermutationCounter().Count();
                         }
