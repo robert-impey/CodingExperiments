@@ -1,5 +1,3 @@
-object FlatMapExamples {
-  var fruits = Seq("apple", "bAnAnA", "orange")
-  println(fruits.map(_.toLowerCase))
-  println(fruits.flatMap(_.toUpperCase))
-}
+var fruits = Seq("apple", "bAnAnA", "orange")
+println(fruits.map(_.toLowerCase))
+println(fruits.flatMap(_.toUpperCase))

@@ -1,4 +1,4 @@
 println("Welcome to the Scala worksheet!")
-val x = 2
-def increase(i: Int) = i + 1
+val x = 3
+def increase(i: Int) = i + 2
 increase(x)
