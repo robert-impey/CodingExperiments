@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using static System.Console;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace MultipleAsync
 {

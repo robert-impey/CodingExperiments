@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleAsync", "MultipleAsync\MultipleAsync.csproj", "{ED489FEF-B272-495E-9DC7-522B4FA01610}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C-Sharp", "C-Sharp", "{251BEFF5-6819-42B5-B17E-E3B56D1C57F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleAsync", "C-Sharp\MultipleAsync\MultipleAsync.csproj", "{0F7ECBC3-3425-4D4B-90F9-2650D06DD3AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED489FEF-B272-495E-9DC7-522B4FA01610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED489FEF-B272-495E-9DC7-522B4FA01610}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED489FEF-B272-495E-9DC7-522B4FA01610}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED489FEF-B272-495E-9DC7-522B4FA01610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7ECBC3-3425-4D4B-90F9-2650D06DD3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7ECBC3-3425-4D4B-90F9-2650D06DD3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7ECBC3-3425-4D4B-90F9-2650D06DD3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7ECBC3-3425-4D4B-90F9-2650D06DD3AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F7ECBC3-3425-4D4B-90F9-2650D06DD3AF} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
 	EndGlobalSection
 EndGlobal
