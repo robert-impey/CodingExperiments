@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # See Chapter 5, Schaum's Outlines Discrete Mathematics, 2nd Ed. by Lipschutz and Lipson
 
 import numpy as np
