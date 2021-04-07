@@ -42,3 +42,8 @@ print(a_to_b)
 mag_a_to_b = np.linalg.norm(a_to_b)
 print(mag_a_to_b)
 print(mag_a_to_b * mag_a_to_b)  # Answer given as sqrt(120)
+
+xs = np.array([1, 2, 3])
+ys = np.array([6, 7, 8])
+print(np.dot(xs, ys))
+print(xs * ys)
