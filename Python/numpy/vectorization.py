@@ -25,7 +25,7 @@ c = np.dot(a, b)
 finish = time.time()
 
 print(c)
-print(f'Vectorized version: {1000 * (finish - start)} ms')
+print(f"Vectorized version: {1000 * (finish - start)} ms")
 
 c = 0
 start = time.time()
@@ -36,4 +36,4 @@ for i in range(size):
 finish = time.time()
 
 print(c)
-print(f'For loop version: {1000 * (finish - start)} ms')
+print(f"For loop version: {1000 * (finish - start)} ms")
