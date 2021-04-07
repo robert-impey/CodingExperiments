@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Foo:
     def __init__(self, text, number):
         self.text = text
@@ -12,11 +13,11 @@ class Foo:
         return str(self)
 
 
-a_foo = Foo('a', 1)
+a_foo = Foo("a", 1)
 
 print("a_foo: %s" % a_foo)
 
-b_foo = Foo('b', 2)
+b_foo = Foo("b", 2)
 
 print("b_foo: %s" % b_foo)
 

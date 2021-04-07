@@ -16,9 +16,8 @@ def test_palindromes():
         ("aa", True),
         ("aba", True),
         ("abba", True),
-
         ("ab", False),
-        ("abab", False)
+        ("abab", False),
     ]
 
     for (test_input, expectation) in tests:

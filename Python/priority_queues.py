@@ -57,7 +57,7 @@ class GetMinPriorityQueue(PriorityQueue):
         i = 0
         while True:
             if self.members[i] == current_min:
-                del (self.members[i])
+                del self.members[i]
                 break
             i += 1
 
@@ -97,16 +97,20 @@ class HeapqPriorityQueue(PriorityQueue):
         return heappop(self.members)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     size = 10000
     if len(argv) > 1:
         size = int(argv[1])
 
-    algo = 'GetMin'
+    algo = "GetMin"
     if len(argv) > 2:
         algo = argv[2]
 
-    print("Enqueuing and dequeuing {0} integers using a {1} priority queue.".format(size, algo))
+    print(
+        "Enqueuing and dequeuing {0} integers using a {1} priority queue.".format(
+            size, algo
+        )
+    )
 
     should_print = size <= 20
     numbers = list(range(size))
@@ -116,17 +120,17 @@ if __name__ == '__main__':
     if should_print:
         print("The numbers: ")
         for n in numbers:
-            print(n, end=' ')
+            print(n, end=" ")
         print()
 
     stopwatch = Stopwatch()
 
     stopwatch.start()
-    if algo == 'GetMin':
+    if algo == "GetMin":
         priority_queue = GetMinPriorityQueue()
-    elif algo == 'InsertInOrder':
+    elif algo == "InsertInOrder":
         priority_queue = InsertInOrderPriorityQueue()
-    elif algo == 'Heapq':
+    elif algo == "Heapq":
         priority_queue = HeapqPriorityQueue()
     else:
         raise Exception("Unrecognised algo: {0}".format(algo))
@@ -139,7 +143,7 @@ if __name__ == '__main__':
     stopwatch.report("enqueue members")
 
     stopwatch.reset()
-    print('priority_queue.count(): ', priority_queue.count())
+    print("priority_queue.count(): ", priority_queue.count())
     stopwatch.report("count members when full")
 
     stopwatch.reset()
@@ -148,12 +152,12 @@ if __name__ == '__main__':
         if m is None:
             break
         if should_print:
-            print(m, end=' ')
+            print(m, end=" ")
 
     if should_print:
         print()
     stopwatch.report("dequeue members")
 
     stopwatch.reset()
-    print('priority_queue.count(): ', priority_queue.count())
+    print("priority_queue.count(): ", priority_queue.count())
     stopwatch.report("count members when empty")

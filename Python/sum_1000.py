@@ -8,4 +8,3 @@ for i in range(1, max_number + 1):
     sum_of_numbers += i
 
 print("The sum_of_numbers: %d" % sum_of_numbers)
-

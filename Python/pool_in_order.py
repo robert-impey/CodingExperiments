@@ -6,7 +6,7 @@ from multiprocessing import Pool
 
 
 def f(x):
-    return x*x
+    return x * x
 
 
 def in_order(xs):
@@ -21,7 +21,7 @@ def in_order(xs):
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     with Pool(5) as p:
         squares = p.map(f, range(1000))
         print(in_order(squares))

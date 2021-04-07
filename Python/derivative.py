@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def get_slope(out_nudge: float, out_point: float, this_nudge: float) -> float:
     return (out_nudge - out_point) / this_nudge
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def is_unique(input_str):
     already_seen = dict()
 
@@ -11,6 +12,7 @@ def is_unique(input_str):
 
     return True
 
+
 def is_unique_no_data_structure(input_str):
     for i, c in enumerate(input_str):
         for j in range(i):
@@ -19,17 +21,19 @@ def is_unique_no_data_structure(input_str):
 
     return True
 
-def is_unique_rec(input_str, pivot = 0):
-    if (pivot < len(input_str)):
+
+def is_unique_rec(input_str, pivot=0):
+    if pivot < len(input_str):
         c = input_str[pivot]
 
         for i in range(pivot):
-            if (input_str[i] == c):
+            if input_str[i] == c:
                 return False
-        
+
         return is_unique_rec(input_str, pivot + 1)
 
     return True
+
 
 def print_uniqueness(input_str):
     is_unique_result = is_unique(input_str)
@@ -38,6 +42,7 @@ def print_uniqueness(input_str):
 
     algos_match = is_unique_result == no_ds_result == rec
     print(f"'{input_str}', {is_unique_result}, {no_ds_result}, {rec}, {algos_match}")
+
 
 print_uniqueness("")
 print_uniqueness("a")
