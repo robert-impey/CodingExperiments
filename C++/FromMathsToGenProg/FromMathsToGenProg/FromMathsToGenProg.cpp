@@ -50,9 +50,13 @@ int main()
 
 	cout << multiply1(5, 10) << endl;
 
-	auto result = multiply0_result(5, 10, { 0, 0 });
+	auto result0 = multiply0_result(5, 10, { 0, 0 });
 
-	cout << result.result << " " << result.steps << endl;
+	cout << result0.result << " " << result0.steps << endl;
+
+	auto result1 = multiply0_result(10, 5, { 0, 0 });
+
+	cout << result1.result << " " << result1.steps << endl;
 
 	return 0;
 }
