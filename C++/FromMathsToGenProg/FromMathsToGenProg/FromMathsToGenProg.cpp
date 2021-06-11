@@ -24,6 +24,21 @@ int multiply1(int n, int a)
 	return result;
 }
 
+struct Result
+{
+	int result;
+	int steps;
+};
+
+Result multiply0_result(int n, int a, Result result)
+{
+	if (n == 1) return { a, 0 };
+	auto new_result = multiply0_result(n - 1, a, result);
+	new_result.result += a;
+	new_result.steps++;
+	return new_result;
+}
+
 int main()
 {
 	cout << multiply0(5, 10) << endl;
@@ -34,6 +49,10 @@ int main()
 	}
 
 	cout << multiply1(5, 10) << endl;
+
+	auto result = multiply0_result(5, 10, { 0, 0 });
+
+	cout << result.result << " " << result.steps << endl;
 
 	return 0;
 }
