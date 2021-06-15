@@ -8,14 +8,30 @@
 
 using namespace std;
 
+// Helpers
+
+bool odd(int n) { return n & 0x1; }
+int half(int n) { return n >> 1; }
+
+int get_int_arg(int argc, char* argv[], int position, int default_value)
+{
+	if (argc > position)
+	{
+		string arg_str(argv[position]);
+
+		return stoi(arg_str);
+	}
+
+	return default_value;
+}
+
+// Chapter 1
+
 int multiply0(int n, int a)
 {
 	if (n == 1) return a;
 	return multiply0(n - 1, a) + a;
 }
-
-bool odd(int n) { return n & 0x1; }
-int half(int n) { return n >> 1; }
 
 int multiply1(int n, int a)
 {
@@ -24,12 +40,6 @@ int multiply1(int n, int a)
 	if (odd(n)) result = result + a;
 	return result;
 }
-
-struct ResultSteps
-{
-	int result;
-	int steps;
-};
 
 ResultSteps multiply0_steps(int n, int a, ResultSteps result)
 {
@@ -49,18 +59,6 @@ ResultSteps multiply1_steps(int n, int a, ResultSteps result)
 	return new_result;
 }
 
-int get_int_arg(int argc, char* argv[], int position, int default_value)
-{
-	if (argc > position)
-	{
-		string arg_str(argv[position]);
-
-		return stoi(arg_str);
-	}
-
-	return default_value;
-}
-
 int main(int argc, char* argv[])
 {
 	if (argc <= 1)
@@ -71,6 +69,7 @@ int main(int argc, char* argv[])
 
 	string task(argv[1]);
 
+	// Chapter 1
 	if (task == "half")
 	{
 		auto max = get_int_arg(argc, argv, 2, 10);
