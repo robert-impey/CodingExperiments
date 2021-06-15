@@ -49,6 +49,18 @@ Result multiply1_result(int n, int a, Result result)
 	return new_result;
 }
 
+int get_int_arg(int argc, char* argv[], int position, int default_value)
+{
+	if (argc > position)
+	{
+		string arg_str(argv[position]);
+
+		return stoi(arg_str);
+	}
+
+	return default_value;
+}
+
 int main(int argc, char* argv[])
 {
 	if (argc <= 1)
@@ -61,14 +73,7 @@ int main(int argc, char* argv[])
 
 	if (input == "half")
 	{
-		auto max = 10;
-
-		if (argc > 2)
-		{
-			string max_str(argv[2]);
-
-			max = stoi(max_str);
-		}
+		auto max = get_int_arg(argc, argv, 2, 10);
 
 		for (auto i = 1; i <= max; i++)
 		{
@@ -80,7 +85,9 @@ int main(int argc, char* argv[])
 
 	if (input == "odd")
 	{
-		for (auto i = 1; i < 10; i++)
+		auto max = get_int_arg(argc, argv, 2, 10);
+
+		for (auto i = 1; i <= max; i++)
 		{
 			cout << i << " " << odd(i) << endl;
 		}
