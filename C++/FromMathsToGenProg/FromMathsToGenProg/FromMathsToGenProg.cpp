@@ -4,6 +4,7 @@
 //
 
 #include "FromMathsToGenProg.h"
+#include <string>
 
 using namespace std;
 
@@ -48,36 +49,75 @@ Result multiply1_result(int n, int a, Result result)
 	return new_result;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-	cout << multiply0(5, 10) << endl;
-
-	for (auto i = 1; i < 10; i++)
+	if (argc <= 1)
 	{
-		cout << odd(i) << " " << half(i) << endl;
+		cerr << "Tell me what to do." << endl;
+		return 1;
 	}
 
-	cout << multiply1(5, 10) << endl;
+	string input(argv[1]);
 
-	auto result0 = multiply0_result(5, 10, { 0, 0 });
+	if (input == "half")
+	{
+		auto max = 10;
 
-	cout << result0.result << " " << result0.steps << endl;
+		if (argc > 2)
+		{
+			string max_str(argv[2]);
 
-	auto result1 = multiply0_result(10, 5, { 0, 0 });
+			max = stoi(max_str);
+		}
 
-	cout << result1.result << " " << result1.steps << endl;
+		for (auto i = 1; i <= max; i++)
+		{
+			cout << i << " " << half(i) << endl;
+		}
 
-	auto result0_a = multiply1_result(5, 10, { 0, 0 });
+		return 0;
+	}
 
-	cout << result0_a.result << " " << result0_a.steps << endl;
+	if (input == "odd")
+	{
+		for (auto i = 1; i < 10; i++)
+		{
+			cout << i << " " << odd(i) << endl;
+		}
 
-	auto result1_a = multiply1_result(10, 5, { 0, 0 });
+		return 0;
+	}
 
-	cout << result1_a.result << " " << result1_a.steps << endl;
+	if (input == "multiply0")
+	{
+		cout << multiply0(5, 10) << endl;
 
-	auto result2_a = multiply1_result(15, 5, { 0, 0 });
+		cout << multiply1(5, 10) << endl;
 
-	cout << result2_a.result << " " << result2_a.steps << endl;
+		auto result0 = multiply0_result(5, 10, { 0, 0 });
 
-	return 0;
+		cout << result0.result << " " << result0.steps << endl;
+
+		auto result1 = multiply0_result(10, 5, { 0, 0 });
+
+		cout << result1.result << " " << result1.steps << endl;
+
+		auto result0_a = multiply1_result(5, 10, { 0, 0 });
+
+		cout << result0_a.result << " " << result0_a.steps << endl;
+
+		auto result1_a = multiply1_result(10, 5, { 0, 0 });
+
+		cout << result1_a.result << " " << result1_a.steps << endl;
+
+		auto result2_a = multiply1_result(15, 5, { 0, 0 });
+
+		cout << result2_a.result << " " << result2_a.steps << endl;
+
+		return 0;
+	}
+
+	cerr << "Unrecognised task '" << input << "'" << endl;
+
+	return 1;
 }
