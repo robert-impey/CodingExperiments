@@ -97,29 +97,42 @@ int main(int argc, char* argv[])
 
 	if (input == "multiply0")
 	{
-		cout << multiply0(5, 10) << endl;
+		auto mult0 = get_int_arg(argc, argv, 2, 5);
+		auto mult1 = get_int_arg(argc, argv, 3, 10);
 
-		cout << multiply1(5, 10) << endl;
+		cout << multiply0(mult0, mult1) << endl;
+		return 0;
+	}
 
-		auto result0 = multiply0_result(5, 10, { 0, 0 });
+	if (input == "multiply1")
+	{
+		auto mult0 = get_int_arg(argc, argv, 2, 5);
+		auto mult1 = get_int_arg(argc, argv, 3, 10);
+
+		cout << multiply1(mult0, mult1) << endl;
+		return 0;
+	}
+
+	if (input == "multiply0_result")
+	{
+		auto mult0 = get_int_arg(argc, argv, 2, 5);
+		auto mult1 = get_int_arg(argc, argv, 3, 10);
+
+		auto result0 = multiply0_result(mult0, mult1, { 0, 0 });
 
 		cout << result0.result << " " << result0.steps << endl;
 
-		auto result1 = multiply0_result(10, 5, { 0, 0 });
+		return 0;
+	}
 
-		cout << result1.result << " " << result1.steps << endl;
+	if (input == "multiply1_result")
+	{
+		auto mult0 = get_int_arg(argc, argv, 2, 5);
+		auto mult1 = get_int_arg(argc, argv, 3, 10);
 
-		auto result0_a = multiply1_result(5, 10, { 0, 0 });
+		auto result0 = multiply1_result(mult0, mult1, { 0, 0 });
 
-		cout << result0_a.result << " " << result0_a.steps << endl;
-
-		auto result1_a = multiply1_result(10, 5, { 0, 0 });
-
-		cout << result1_a.result << " " << result1_a.steps << endl;
-
-		auto result2_a = multiply1_result(15, 5, { 0, 0 });
-
-		cout << result2_a.result << " " << result2_a.steps << endl;
+		cout << result0.result << " " << result0.steps << endl;
 
 		return 0;
 	}
