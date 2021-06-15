@@ -25,25 +25,25 @@ int multiply1(int n, int a)
 	return result;
 }
 
-struct Result
+struct ResultSteps
 {
 	int result;
 	int steps;
 };
 
-Result multiply0_result(int n, int a, Result result)
+ResultSteps multiply0_steps(int n, int a, ResultSteps result)
 {
 	if (n == 1) return { a, 1 };
-	auto new_result = multiply0_result(n - 1, a, result);
+	auto new_result = multiply0_steps(n - 1, a, result);
 	new_result.result += a;
 	new_result.steps++;
 	return new_result;
 }
 
-Result multiply1_result(int n, int a, Result result)
+ResultSteps multiply1_steps(int n, int a, ResultSteps result)
 {
 	if (n == 1) return { a, 1 };
-	auto new_result = multiply1_result(half(n), a + a, result);
+	auto new_result = multiply1_steps(half(n), a + a, result);
 	if (odd(n)) new_result.result += a;
 	new_result.steps++;
 	return new_result;
@@ -69,9 +69,9 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-	string input(argv[1]);
+	string task(argv[1]);
 
-	if (input == "half")
+	if (task == "half")
 	{
 		auto max = get_int_arg(argc, argv, 2, 10);
 
@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	if (input == "odd")
+	if (task == "odd")
 	{
 		auto max = get_int_arg(argc, argv, 2, 10);
 
@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	if (input == "multiply0")
+	if (task == "multiply0")
 	{
 		auto mult0 = get_int_arg(argc, argv, 2, 5);
 		auto mult1 = get_int_arg(argc, argv, 3, 10);
@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	if (input == "multiply1")
+	if (task == "multiply1")
 	{
 		auto mult0 = get_int_arg(argc, argv, 2, 5);
 		auto mult1 = get_int_arg(argc, argv, 3, 10);
@@ -113,31 +113,31 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	if (input == "multiply0_result")
+	if (task == "multiply0_steps")
 	{
 		auto mult0 = get_int_arg(argc, argv, 2, 5);
 		auto mult1 = get_int_arg(argc, argv, 3, 10);
 
-		auto result0 = multiply0_result(mult0, mult1, { 0, 0 });
+		auto result0 = multiply0_steps(mult0, mult1, { 0, 0 });
 
 		cout << result0.result << " " << result0.steps << endl;
 
 		return 0;
 	}
 
-	if (input == "multiply1_result")
+	if (task == "multiply1_steps")
 	{
 		auto mult0 = get_int_arg(argc, argv, 2, 5);
 		auto mult1 = get_int_arg(argc, argv, 3, 10);
 
-		auto result0 = multiply1_result(mult0, mult1, { 0, 0 });
+		auto result0 = multiply1_steps(mult0, mult1, { 0, 0 });
 
 		cout << result0.result << " " << result0.steps << endl;
 
 		return 0;
 	}
 
-	cerr << "Unrecognised task '" << input << "'" << endl;
+	cerr << "Unrecognised task '" << task << "'" << endl;
 
 	return 1;
 }
