@@ -14,3 +14,15 @@ let rec multiply1 n a =
                 let r = multiply1 (half n) (a + a) in
                 if odd n then r + a else r
             end
+
+let rec mult_acc0 r n a =
+    match n with
+    | 1 -> r + a
+    | _ ->
+            begin
+                if odd n then
+                    mult_acc0 (r + a) (half n) (a + a)
+                else
+                    mult_acc0 r (half n) (a + a)
+            end
+
