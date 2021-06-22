@@ -1,3 +1,6 @@
+(* See Chapter 1 of "From Mathematics to Generic Programming"
+ * by Stepanov and Rose *)
+
 let half n = n / 2
 let odd n = n mod 2 == 1
 
