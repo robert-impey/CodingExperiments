@@ -29,3 +29,11 @@ let rec mult_acc0 r n a =
                     mult_acc0 r (half n) (a + a)
             end
 
+let rec mult_acc1 r n a =
+    match n with
+    | 1 -> r + a
+    | _ ->
+            begin
+                let r_updated = if odd n then r + a else r in
+                mult_acc1 r_updated (half n) (a + a)
+            end
