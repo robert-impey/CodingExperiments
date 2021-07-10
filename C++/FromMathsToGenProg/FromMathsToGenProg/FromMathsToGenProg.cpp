@@ -68,6 +68,18 @@ int mult_acc2(int r, int n, int a) {
   return mult_acc2(r, half(n), a + a);
 }
 
+int mult_acc3(int r, int n, int a) {
+  if (odd(n)) {
+    r += a;
+    if (n == 1) {
+      return r;
+    }
+  }
+  n = half(n);
+  a = a + a;
+  return mult_acc3(r, n, a);
+}
+
 ResultSteps multiply0_steps(int n, int a, ResultSteps result) {
   if (n == 1)
     return {a, 1};
@@ -177,6 +189,15 @@ int main(int argc, char *argv[]) {
     auto mult1 = get_int_arg(argc, argv, 3, 10);
 
     cout << mult_acc2(0, mult0, mult1) << endl;
+
+    return 0;
+  }
+
+  if (task == "mult_acc3") {
+    auto mult0 = get_int_arg(argc, argv, 2, 5);
+    auto mult1 = get_int_arg(argc, argv, 3, 10);
+
+    cout << mult_acc3(0, mult0, mult1) << endl;
 
     return 0;
   }
