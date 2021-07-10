@@ -100,6 +100,17 @@ int multiply2(int n, int a) {
   return mult_acc4(a, n - 1, a);
 }
 
+int multiply3(int n, int a) {
+  while (!odd(n)) {
+    a += a;
+    n = half(n);
+  }
+  if (n == 1) {
+    return a;
+  }
+  return mult_acc4(a, n - 1, a);
+}
+
 ResultSteps multiply0_steps(int n, int a, ResultSteps result) {
   if (n == 1)
     return {a, 1};
@@ -236,6 +247,15 @@ int main(int argc, char *argv[]) {
     auto mult1 = get_int_arg(argc, argv, 3, 10);
 
     cout << multiply2(mult0, mult1) << endl;
+
+    return 0;
+  }
+
+  if (task == "multiply3") {
+    auto mult0 = get_int_arg(argc, argv, 2, 5);
+    auto mult1 = get_int_arg(argc, argv, 3, 10);
+
+    cout << multiply3(mult0, mult1) << endl;
 
     return 0;
   }
