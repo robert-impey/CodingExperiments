@@ -93,6 +93,13 @@ int mult_acc4(int r, int n, int a) {
   }
 }
 
+int multiply2(int n, int a) {
+  if (n == 1) {
+    return a;
+  }
+  return mult_acc4(a, n - 1, a);
+}
+
 ResultSteps multiply0_steps(int n, int a, ResultSteps result) {
   if (n == 1)
     return {a, 1};
@@ -216,12 +223,21 @@ int main(int argc, char *argv[]) {
   }
 
   if (task == "mult_acc4") {
-      auto mult0 = get_int_arg(argc, argv, 2, 5);
-      auto mult1 = get_int_arg(argc, argv, 3, 10);
+    auto mult0 = get_int_arg(argc, argv, 2, 5);
+    auto mult1 = get_int_arg(argc, argv, 3, 10);
 
-      cout << mult_acc4(0, mult0, mult1) << endl;
+    cout << mult_acc4(0, mult0, mult1) << endl;
 
-      return 0;
+    return 0;
+  }
+
+  if (task == "multiply2") {
+    auto mult0 = get_int_arg(argc, argv, 2, 5);
+    auto mult1 = get_int_arg(argc, argv, 3, 10);
+
+    cout << multiply2(mult0, mult1) << endl;
+
+    return 0;
   }
 
   cerr << "Unrecognised task '" << task << "'" << endl;
