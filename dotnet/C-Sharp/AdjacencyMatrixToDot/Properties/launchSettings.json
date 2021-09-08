@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AdjacencyMatrixToDot": {
+      "commandName": "Project",
+      "commandLineArgs": "AdjacencyMatrix.txt"
+    }
+  }
+}
