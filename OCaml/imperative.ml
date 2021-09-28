@@ -30,3 +30,7 @@ let smallest_power_of_two x =
     t := !t * 2
   done;
   !t
+
+let rec sp2_ x x_ = if x_ >= x then x_ else sp2_ x (2 * x_)
+
+let sp2 x = sp2_ x 1
