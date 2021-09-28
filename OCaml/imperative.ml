@@ -34,3 +34,16 @@ let smallest_power_of_two x =
 let rec sp2_ x x_ = if x_ >= x then x_ else sp2_ x (2 * x_)
 
 let sp2 x = sp2_ x 1
+
+let arr = [| 1; 2; 3 |];;
+
+print_string (string_of_int arr.(0));
+print_newline ();
+
+print_string (string_of_int arr.(1));
+print_newline ();
+
+arr.(1) <- 0;
+
+print_string (string_of_int arr.(1));
+print_newline ()
