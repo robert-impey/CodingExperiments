@@ -23,3 +23,10 @@ let table n =
 ;;
 
 table 10
+
+let smallest_power_of_two x =
+  let t = ref 1 in
+  while !t < x do
+    t := !t * 2
+  done;
+  !t
