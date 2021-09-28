@@ -2,10 +2,16 @@
 
 void Main()
 {
-	Console.WriteLine(SmallestPowerOf2(14));
-	Console.WriteLine(SmallestPowerOf2(15));
-	Console.WriteLine(SmallestPowerOf2(16));
-	Console.WriteLine(SmallestPowerOf2(17));
+	Print(SmallestPowerOf2);
+	Print(SP2Rec);
+}
+
+void Print(Func<int, int> calc)
+{
+	Console.WriteLine(calc(14));
+	Console.WriteLine(calc(15));
+	Console.WriteLine(calc(16));
+	Console.WriteLine(calc(17));
 }
 
 int SmallestPowerOf2(int x)
@@ -20,4 +26,13 @@ int SmallestPowerOf2(int x)
 	return t;
 }
 
-// You can define other methods, fields, classes and namespaces here
+int SP2Rec(int x)
+{
+	int SP2Rec_(int x_)
+	{
+		if (x_ >= x) return x_;
+		return SP2Rec_(x_ * 2);
+	}
+	
+	return SP2Rec_(1);
+}
