@@ -47,3 +47,22 @@ arr.(1) <- 0;
 
 print_string (string_of_int arr.(1));
 print_newline ()
+
+type person = { first_name : string; surname : string; mutable age : int }
+
+let birthday p = p.age <- p.age + 1
+
+let print_person p =
+  print_string p.first_name;
+  print_string " ";
+  print_string p.surname;
+  print_string " ";
+  print_string (string_of_int p.age);
+
+  print_newline ()
+
+let rob = { first_name = "Robert"; surname = "Impey"; age = 40 };;
+
+print_person rob;
+birthday rob;
+print_person rob
