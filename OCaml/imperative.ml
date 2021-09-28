@@ -4,3 +4,10 @@ let swap a b =
   let t = !a in
   a := !b;
   b := t
+
+let print_number n =
+  print_string (string_of_int n);
+  print_newline ()
+;;
+
+print_number 10
