@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AdjacencyListToDot": {
+      "commandName": "Project",
+      "commandLineArgs": "AdjacencyList.txt"
+    }
+  }
+}
