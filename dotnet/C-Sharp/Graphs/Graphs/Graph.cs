@@ -26,23 +26,26 @@ namespace Graphs
             _vertices.Add(vertex);
         }
 
-        public IEnumerable<Tuple<Vertex, Vertex>> GetEdges()
+        public IEnumerable<Tuple<Vertex, Vertex>> Edges
         {
-            var edges = new List<Tuple<Vertex, Vertex>>();
-
-            foreach (var vertex in Vertices)
+            get
             {
-                foreach (var neighbour in vertex.Neighbours)
+                var edges = new List<Tuple<Vertex, Vertex>>();
+
+                foreach (var vertex in Vertices)
                 {
-                    if (!edges.Any(t => (t.Item1.Value == vertex.Value && t.Item2.Value == neighbour.Value) 
-                        || (t.Item2.Value == vertex.Value && t.Item1.Value == neighbour.Value)))
+                    foreach (var neighbour in vertex.Neighbours)
                     {
-                        edges.Add(new Tuple<Vertex, Vertex>(vertex, neighbour));
+                        if (!edges.Any(t => (t.Item1.Value == vertex.Value && t.Item2.Value == neighbour.Value)
+                            || (t.Item2.Value == vertex.Value && t.Item1.Value == neighbour.Value)))
+                        {
+                            edges.Add(new Tuple<Vertex, Vertex>(vertex, neighbour));
+                        }
                     }
                 }
-            }
 
-            return edges;
+                return edges;
+            }
         }
     }
 }

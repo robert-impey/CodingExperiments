@@ -28,7 +28,7 @@ namespace Graphs
         {
             Console.WriteLine("graph {");
 
-            foreach (var edge in graph.GetEdges())
+            foreach (var edge in graph.Edges)
             {
                 Console.WriteLine($"\t{edge.Item1.Value} -- {edge.Item2.Value}");
             }
