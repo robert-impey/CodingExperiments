@@ -23,5 +23,17 @@ namespace Graphs
                 Console.WriteLine($"\t{vertex.Value} -- {neighbour.Value}");
             }
         }
+
+        public static void PrintOneWay(Graph graph)
+        {
+            Console.WriteLine("graph {");
+
+            foreach (var edge in graph.GetEdges())
+            {
+                Console.WriteLine($"\t{edge.Item1.Value} -- {edge.Item2.Value}");
+            }
+
+            Console.WriteLine("}");
+        }
     }
 }
