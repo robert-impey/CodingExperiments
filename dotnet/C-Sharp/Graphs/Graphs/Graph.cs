@@ -4,11 +4,24 @@ namespace Graphs
 {
     public class Graph
     {
-        public ISet<Vertex> Vertices;
+        private readonly ISet<Vertex> _vertices;
+
+        public IReadOnlySet<Vertex> Vertices 
+        { 
+            get
+            {
+                return (IReadOnlySet<Vertex>)_vertices;
+            }
+        }
 
         public Graph()
         {
-            Vertices = new HashSet<Vertex>();
+            _vertices = new HashSet<Vertex>();
+        }
+
+        public void AddVertex(Vertex vertex)
+        {
+            _vertices.Add(vertex);
         }
     }
 }

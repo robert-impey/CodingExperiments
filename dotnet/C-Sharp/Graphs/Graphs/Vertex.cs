@@ -4,13 +4,26 @@ namespace Graphs
 {
     public class Vertex
     {
+        private readonly ISet<Vertex> _neighbours;
+
         public string Value { get; }
-        public ISet<Vertex> Neighbours { get; }
+        public IReadOnlySet<Vertex> Neighbours
+        {
+            get
+            {
+                return (IReadOnlySet<Vertex>)_neighbours;
+            }
+        }
 
         public Vertex(string value)
         {
             Value = value;
-            Neighbours = new HashSet<Vertex>();
+            _neighbours = new HashSet<Vertex>();
+        }
+
+        public void AddNeighbour(Vertex neighbour)
+        {
+            _neighbours.Add(neighbour);
         }
     }
 }
