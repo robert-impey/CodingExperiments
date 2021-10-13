@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GenerateAdjacencyList": {
+      "commandName": "Project",
+      "commandLineArgs": "5 0.3"
+    }
+  }
+}
