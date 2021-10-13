@@ -5,12 +5,12 @@ namespace Graphs
     public class Vertex
     {
         public string Value { get; }
-        public IList<Vertex> Neighbours { get; }
+        public ISet<Vertex> Neighbours { get; }
 
         public Vertex(string value)
         {
             Value = value;
-            Neighbours = new List<Vertex>();
+            Neighbours = new HashSet<Vertex>();
         }
     }
 }

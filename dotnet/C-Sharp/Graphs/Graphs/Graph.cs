@@ -4,11 +4,11 @@ namespace Graphs
 {
     public class Graph
     {
-        public IList<Vertex> Vertices;
+        public ISet<Vertex> Vertices;
 
         public Graph()
         {
-            Vertices = new List<Vertex>();
+            Vertices = new HashSet<Vertex>();
         }
     }
 }
