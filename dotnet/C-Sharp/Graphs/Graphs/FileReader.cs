@@ -22,7 +22,7 @@ namespace Graphs
 
                 for (var i = 1; i < vertices.Length; i++)
                 {
-                    vertex.AddNeighbour(new Vertex(vertices[i]));
+                    vertex.AddNeighbour(vertices[i]);
                 }
 
                 graph.AddVertex(vertex);

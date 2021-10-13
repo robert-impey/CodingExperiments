@@ -21,9 +21,9 @@ namespace Graphs
             _neighbours = new HashSet<Vertex>();
         }
 
-        public void AddNeighbour(Vertex neighbour)
+        public void AddNeighbour(string neighbour)
         {
-            _neighbours.Add(neighbour);
+            _neighbours.Add(new Vertex(neighbour));
         }
     }
 }

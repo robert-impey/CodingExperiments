@@ -18,7 +18,7 @@ namespace Graphs
                 {
                     if (i == j  || rand.NextDouble() > threshold) continue;
 
-                    vertex.AddNeighbour(new Vertex($"{j}"));
+                    vertex.AddNeighbour($"{j}");
                 }
 
                 graph.AddVertex(vertex);
