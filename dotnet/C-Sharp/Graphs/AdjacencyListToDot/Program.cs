@@ -1,6 +1,5 @@
 ﻿using Graphs;
 using System;
-using System.IO;
 
 namespace AdjacencyListToDot
 {
@@ -12,9 +11,7 @@ namespace AdjacencyListToDot
             {
                 var fileName = args[0];
 
-                var graph = new Graph();
-
-                graph.ReadFile(fileName);
+                var graph = FileReader.ReadAdjacencyList(fileName);
 
                 graph.PrintDot();
             }
