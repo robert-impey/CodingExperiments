@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Graphs
 {
@@ -12,14 +11,6 @@ namespace Graphs
         {
             Value = value;
             Neighbours = new List<Vertex>();
-        }
-
-        public void PrintDot()
-        {
-            foreach (var neighbour in Neighbours)
-            {
-                Console.WriteLine($"\t{Value} -- {neighbour.Value}");
-            }
         }
     }
 }

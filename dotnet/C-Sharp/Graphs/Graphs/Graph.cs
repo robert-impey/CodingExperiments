@@ -11,17 +11,5 @@ namespace Graphs
         {
             Vertices = new List<Vertex>();
         }
-
-        public void PrintDot()
-        {
-            Console.WriteLine("graph {");
-
-            foreach (var vertex in Vertices)
-            {
-                vertex.PrintDot();
-            }
-
-            Console.WriteLine("}");
-        }
     }
 }
