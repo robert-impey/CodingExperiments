@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Graphs;
+using System;
 using System.IO;
 
 namespace AdjacencyListToDot
@@ -9,26 +10,13 @@ namespace AdjacencyListToDot
         {
             if (args.Length == 1)
             {
-                Console.WriteLine("graph {");
-
                 var fileName = args[0];
 
-                foreach (var line in File.ReadAllLines(fileName))
-                {
-                    var vertices = line.Split(',');
+                var graph = new Graph();
 
-                    if (vertices.Length < 2)
-                    {
-                        throw new Exception($"{line} does not have at least 2 vertices!");
-                    }
+                graph.ReadFile(fileName);
 
-                    for (var i = 1; i < vertices.Length; i++)
-                    {
-                        Console.WriteLine($"\t{vertices[0]} -- {vertices[i]}");
-                    }
-                }
-
-                Console.WriteLine("}");
+                graph.PrintDot();
             }
             else
             {

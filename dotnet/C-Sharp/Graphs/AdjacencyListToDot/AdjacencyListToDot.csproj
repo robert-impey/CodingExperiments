@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Graphs\Graphs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="AdjacencyList.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
