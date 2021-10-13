@@ -1,5 +1,6 @@
-﻿using Graphs;
-using System;
+﻿using CommandLine;
+using Graphs;
+using static System.Console;
 
 namespace GenerateAdjacencyList
 {
@@ -7,28 +8,25 @@ namespace GenerateAdjacencyList
     {
         static void Main(string[] args)
         {
-            if (args.Length != 2)
-            {
-                Console.WriteLine("Please give me a size and threshold!");
-                return;
-            }
-
-            int size;
-            if (!int.TryParse(args[0], out size))
-            {
-                Console.WriteLine($"Can't parse {args[0]}");
-                return;
-            }
-
-            double threshold;
-            if (!double.TryParse(args[1], out threshold))
-            {
-                Console.WriteLine($"Can't parse {args[1]}");
-                return;
-            }
-
-            var graph = GraphGenerator.Generate(size, threshold);
-            DotPrinter.PrintOneWay(graph);
+            Parser.Default.ParseArguments<Options>(args)
+               .WithNotParsed(_ =>
+               {
+                   WriteLine("Unable to parse the args!");
+               })
+               .WithParsed(opt =>
+               {
+                   var graph = GraphGenerator.Generate(opt.Size, opt.Threshold);
+                   DotPrinter.PrintOneWay(graph);
+               });
         }
+    }
+
+    internal class Options
+    {
+        [Option('s', "size", Default = 5, HelpText = "The size of the graph")]
+        public int Size { get; set; }
+
+        [Option('t', "threshold", Default = 0.3, HelpText = "The threshold for an edge")]
+        public double Threshold { get; set; }
     }
 }

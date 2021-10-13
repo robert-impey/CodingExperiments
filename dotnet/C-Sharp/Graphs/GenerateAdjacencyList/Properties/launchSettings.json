@@ -2,7 +2,7 @@
   "profiles": {
     "GenerateAdjacencyList": {
       "commandName": "Project",
-      "commandLineArgs": "5 0.3"
+      "commandLineArgs": "-s 6 -t 0.4"
     }
   }
 }
