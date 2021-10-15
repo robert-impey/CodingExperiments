@@ -13,7 +13,7 @@ namespace AdjacencyListToDot
 
                 var graph = FileReader.ReadAdjacencyList(fileName);
 
-                DotPrinter.PrintOneWay(graph);
+                DotPrinter.PrintBidirectional(graph);
             }
             else
             {

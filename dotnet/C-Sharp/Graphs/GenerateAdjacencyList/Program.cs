@@ -16,7 +16,15 @@ namespace GenerateAdjacencyList
                .WithParsed(opt =>
                {
                    var graph = GraphGenerator.Generate(opt.Size, opt.Threshold);
-                   DotPrinter.PrintOneWay(graph);
+
+                   if (opt.Bidirectional)
+                   {
+                       DotPrinter.PrintBidirectional(graph);
+                   }
+                   else
+                   {
+                       DotPrinter.Print(graph);
+                   }
                });
         }
     }
@@ -28,5 +36,8 @@ namespace GenerateAdjacencyList
 
         [Option('t', "threshold", Default = 0.3, HelpText = "The threshold for an edge")]
         public double Threshold { get; set; }
+
+        [Option('b', "bidi", Default = true, HelpText = "Edges are considered bidirectional")]
+        public bool Bidirectional { get; set; }
     }
 }

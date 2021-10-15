@@ -24,7 +24,7 @@ namespace Graphs
             }
         }
 
-        public static void PrintOneWay(Graph graph)
+        public static void PrintBidirectional(Graph graph)
         {
             Console.WriteLine("graph {");
 
