@@ -37,7 +37,7 @@ namespace GenerateAdjacencyList
         [Option('t', "threshold", Default = 0.3, HelpText = "The threshold for an edge")]
         public double Threshold { get; set; }
 
-        [Option('b', "bidi", Default = true, HelpText = "Edges are considered bidirectional")]
+        [Option('b', "bidi", Default = false, HelpText = "Edges are considered bidirectional")]
         public bool Bidirectional { get; set; }
     }
 }
