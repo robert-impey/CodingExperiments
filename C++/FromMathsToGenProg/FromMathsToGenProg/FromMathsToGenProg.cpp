@@ -56,7 +56,7 @@ int mult_acc1(int r, int n, int a) {
   if (odd(n)) {
     r += a;
   }
-  mult_acc1(r, half(n), a + a);
+  return mult_acc1(r, half(n), a + a);
 }
 
 int mult_acc2(int r, int n, int a) {
