@@ -5,7 +5,6 @@ let t = (1, "one", '1')
 type person = { first_name : string; surname : string; age : int }
 
 let frank = { first_name = "Frank"; surname = "Smith"; age = 40 }
-
 let s = frank.surname
 
 type colour = Red | Green | Blue | Yellow | RGB of int * int * int
@@ -23,5 +22,4 @@ let rec flip t =
   match t with Leaf -> Leaf | Node (l, x, r) -> Node (flip r, x, flip l)
 
 let all = total t
-
 let flipped = flip t
