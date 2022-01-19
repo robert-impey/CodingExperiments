@@ -2,6 +2,8 @@
 //
 
 #include "Strings.h"
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -21,7 +23,16 @@ int main(int argc, char* argv[]) {
 
 		string file_name(argv[2]);
 
-		cout << "Listing " << file_name << endl;
+		// See https://www.cplusplus.com/forum/general/281709/
+
+		if (ifstream file{ file_name })
+		{
+			string s;
+			while (file >> s)
+			{
+				cout << s << endl;
+			}
+		}
 
 		return 0;
 	}
