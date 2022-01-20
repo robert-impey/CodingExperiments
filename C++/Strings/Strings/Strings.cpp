@@ -4,6 +4,7 @@
 #include "Strings.h"
 #include <iostream>
 #include <fstream>
+#include <map>
 
 using namespace std;
 
@@ -24,7 +25,6 @@ int main(int argc, char* argv[]) {
 		string file_name(argv[2]);
 
 		// See https://www.cplusplus.com/forum/general/281709/
-
 		if (ifstream file{ file_name })
 		{
 			string s;
@@ -32,6 +32,37 @@ int main(int argc, char* argv[]) {
 			{
 				cout << s << endl;
 			}
+		}
+
+		return 0;
+	}
+
+	if (task == "count_lengths")
+	{
+		string file_name(argv[2]);
+		map<size_t, int> counts;
+
+		if (ifstream file{ file_name })
+		{
+			string s;
+			while (file >> s)
+			{
+				auto length = s.length();
+
+				if (counts.count(length))
+				{
+					counts[length] = counts[length] + 1;
+				}
+				else
+				{
+					counts[length] = 1;
+				}
+			}
+		}
+
+		for (auto& count : counts)
+		{
+			cout << count.first << " " << count.second << endl;
 		}
 
 		return 0;
