@@ -2,8 +2,8 @@
 
 #include <string>
 
-namespace VowelCounting
+namespace vowel_counting
 {
-	int countVowels(std::string);
-	bool tryCountVowels(std::string, int&);
+	int count_vowels(std::string);
+	bool try_count_vowels(const std::string&, int&);
 }

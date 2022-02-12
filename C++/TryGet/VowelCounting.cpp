@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool isVowel(char c)
+bool is_vowel(const char c)
 {
 	return c == 'a'
 		|| c == 'e'
@@ -12,7 +12,7 @@ bool isVowel(char c)
 		|| c == 'u';
 }
 
-bool isDigit(char c)
+bool is_digit(const char c)
 {
 	return c == '0'
 		|| c == '1'
@@ -26,14 +26,13 @@ bool isDigit(char c)
 		|| c == '9';
 }
 
-int VowelCounting::countVowels(string word)
+int vowel_counting::count_vowels(string word)
 {
 	int count = 0;
 
-	string::iterator it;
-	for (it = word.begin(); it < word.end(); it++)
+	for (auto it = word.begin(); it < word.end(); ++it)
 	{
-		if (isVowel(*it))
+		if (is_vowel(*it))
 		{
 			count++;
 		}
@@ -47,9 +46,9 @@ int VowelCounting::countVowels(string word)
 	return count;
 }
 
-bool VowelCounting::tryCountVowels(string word, int &count)
+bool vowel_counting::try_count_vowels(const string& word, int &count)
 {
-	count = countVowels(word);
+	count = count_vowels(word);
 
 	return count >= 0;
 }

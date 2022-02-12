@@ -4,19 +4,19 @@
 
 using namespace std;
 
-void printCount(string word)
+void print_count(const string& word)
 {
-	int count = VowelCounting::countVowels(word);
+	const int count = vowel_counting::count_vowels(word);
 
 	cout << "I found " << count << " vowels in '" << word << "'." << endl;
 }
 
-void printValidatedCount(string word)
+void print_validated_count(const string& word)
 {
-	int attemptedCount;
-	if (VowelCounting::tryCountVowels(word, attemptedCount))
+	int attempted_count;
+	if (vowel_counting::try_count_vowels(word, attempted_count))
 	{
-		cout << "I found " << attemptedCount << " vowels in '" << word << "'." << endl;
+		cout << "I found " << attempted_count << " vowels in '" << word << "'." << endl;
 	}
 	else {
 		cout << "The word '" << word << "' is not valid." << endl;
@@ -25,17 +25,17 @@ void printValidatedCount(string word)
 
 int main()
 {
-	string withVowels = "banana";
-	string withoutVowels = "bcdf";
-	string withNumbers = "de4d";
+	const string with_vowels = "banana";
+	const string without_vowels = "bcdf";
+	const string with_numbers = "de4d";
 
-	printCount(withVowels);
-	printCount(withoutVowels);
-	printCount(withNumbers);
+	print_count(with_vowels);
+	print_count(without_vowels);
+	print_count(with_numbers);
 
-	printValidatedCount(withVowels);
-	printValidatedCount(withoutVowels);
-	printValidatedCount(withNumbers);
+	print_validated_count(with_vowels);
+	print_validated_count(without_vowels);
+	print_validated_count(with_numbers);
 
 	return 0;
 }
