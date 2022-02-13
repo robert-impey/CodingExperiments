@@ -1,12 +1,12 @@
 # General variables and rules for Makefiles
 
-CC = g++
+include ../cxx.mk
 
 $(PROGRAM): main.cpp
-	$(CC) main.cpp -o $(PROGRAM)
+	$(CXX) $(CXXFLAGS) main.cpp -o $(PROGRAM)
 
 debug: main.cpp
-	$(CC) -g main.cpp -o $(PROGRAM)
+	$(CXX) $(CXXFLAGS) -g main.cpp -o $(PROGRAM)
 
 clean:
-	$(RM) $(PROGRAM)
+	$(RM) $(PROGRAM) $(PROGRAM).exe
