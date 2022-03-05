@@ -14,3 +14,16 @@ def multiply0(n, a)
   end
 end
 
+def multiply1(n, a)
+  if n == 1 then
+    return a
+  else
+    r = multiply1(half(n), a + a)
+    if odd(n) then
+      return r + a
+    else
+      return r
+    end
+  end
+end
+
