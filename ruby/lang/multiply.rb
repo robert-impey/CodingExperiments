@@ -10,7 +10,7 @@ def multiply0(n, a)
   if n == 1 then
     return a
   else
-    return a  + multiply(n - 1, a)
+    return a  + multiply0(n - 1, a)
   end
 end
 
