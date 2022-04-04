@@ -1,6 +1,6 @@
 fn main() {
-    let mut x = 10;
-    println!("x is {}", x);
-    x = 20;
-    println!("x is {}", x);
+    let mut my_var = 10;
+    println!("my_var is {}", my_var);
+    my_var = 20;
+    println!("my_var is {}", my_var);
 }
