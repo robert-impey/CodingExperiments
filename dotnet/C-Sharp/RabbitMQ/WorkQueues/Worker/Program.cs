@@ -24,7 +24,7 @@ namespace Worker
                     consumer.Received += (model, ea) =>
                     {
                         var body = ea.Body;
-                        var message = Encoding.UTF8.GetString(body);
+                        var message = Encoding.UTF8.GetString(body.ToArray());
                         Console.WriteLine(" [x] Received {0}", message);
 
                         var parts = message.Split(" ");

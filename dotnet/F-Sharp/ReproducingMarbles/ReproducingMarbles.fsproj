@@ -7,14 +7,16 @@
 
   <ItemGroup>
     <Compile Include="ReproducingMarbles.fs" />
-    <Compile Include="ColourListTests.fs" />
-    <Compile Include="CountingPopulationTests.fs" />
     <None Include="ReproducingMarbles.fsx" />
     <None Include="PopulationPickingSim.fsx" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FsUnit" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.3" />
   </ItemGroup>
 
 </Project>
