@@ -3,7 +3,7 @@
 // Create an array of strings
 let strs = [| "one"; "two"; "three" |]
 
-printfn "%s" (System.String.Format(fmt, strs))
+//printfn "%s" (System.String.Format(fmt, strs))
 (*
 > 
 System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
