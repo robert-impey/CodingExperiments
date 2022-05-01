@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="ColourListTests.fs" />
-    <Compile Include="CountingPopulationTests.fs" />
+    <Compile Include="Tests.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ReproducingMarbles\ReproducingMarbles.fsproj" />
+    <ProjectReference Include="..\Selection\Selection.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
