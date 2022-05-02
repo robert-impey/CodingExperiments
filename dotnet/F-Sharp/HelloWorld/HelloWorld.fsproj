@@ -8,10 +8,9 @@
 
   <ItemGroup>
     <Compile Include="Program.fs" />
+    <None Include="FizzBuzz.fsx" />
     <None Include="FormattingArrays.fsx" />
   </ItemGroup>
-
-  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="6.0.3" />
