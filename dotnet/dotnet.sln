@@ -63,9 +63,11 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ReproducingMarbles", "F-Sha
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ReproducingMarbles.Test", "F-Sharp\ReproducingMarbles.Test\ReproducingMarbles.Test.fsproj", "{E83BA901-EC37-497C-BBFF-C397977C5A2F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Selection", "F-Sharp\Selection\Selection.fsproj", "{FAD52ABE-861E-48A1-8647-9529099AD667}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Selection", "F-Sharp\Selection\Selection.fsproj", "{FAD52ABE-861E-48A1-8647-9529099AD667}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Selection.Test", "F-Sharp\Selection.Test\Selection.Test.fsproj", "{794B5035-F874-4B6E-8691-8DC9AEE1E67B}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Selection.Test", "F-Sharp\Selection.Test\Selection.Test.fsproj", "{794B5035-F874-4B6E-8691-8DC9AEE1E67B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "C-Sharp\FizzBuzz\FizzBuzz.csproj", "{C9A12D70-8931-4269-B996-84149987B805}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -275,6 +277,14 @@ Global
 		{794B5035-F874-4B6E-8691-8DC9AEE1E67B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{794B5035-F874-4B6E-8691-8DC9AEE1E67B}.Release|x86.ActiveCfg = Release|Any CPU
 		{794B5035-F874-4B6E-8691-8DC9AEE1E67B}.Release|x86.Build.0 = Release|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9A12D70-8931-4269-B996-84149987B805}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -310,6 +320,7 @@ Global
 		{E83BA901-EC37-497C-BBFF-C397977C5A2F} = {F2C61FE3-D013-4539-9849-E72CC07F11F1}
 		{FAD52ABE-861E-48A1-8647-9529099AD667} = {F2C61FE3-D013-4539-9849-E72CC07F11F1}
 		{794B5035-F874-4B6E-8691-8DC9AEE1E67B} = {F2C61FE3-D013-4539-9849-E72CC07F11F1}
+		{C9A12D70-8931-4269-B996-84149987B805} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
