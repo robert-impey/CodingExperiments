@@ -9,6 +9,7 @@
   <ItemGroup>
     <Compile Include="Program.fs" />
     <None Include="Ducks.fsx" />
+    <Compile Include="Euler1.fsx" />
     <None Include="FizzBuzz.fsx" />
     <None Include="FormattingArrays.fsx" />
     <None Include="Recursion.fsx" />
