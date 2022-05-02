@@ -10,6 +10,7 @@
     <Compile Include="Program.fs" />
     <None Include="FizzBuzz.fsx" />
     <None Include="FormattingArrays.fsx" />
+    <None Include="Recursion.fsx" />
   </ItemGroup>
 
   <ItemGroup>
