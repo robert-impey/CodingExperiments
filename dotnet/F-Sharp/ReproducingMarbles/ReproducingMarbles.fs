@@ -11,7 +11,7 @@ let countPopulation (population : Population) =
     |> Map.toSeq
     |> Seq.sumBy snd
 
-let private randomNumberGenerator = new System.Random()
+let private randomNumberGenerator = System.Random()
 
 let pickFromPopulation (population : Population) = 
     let size = countPopulation population

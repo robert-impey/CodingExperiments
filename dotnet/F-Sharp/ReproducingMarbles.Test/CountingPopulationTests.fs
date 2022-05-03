@@ -1,4 +1,4 @@
-﻿namespace CountingPopulation.Tests
+﻿module CountingPopulation.Tests
 
 open FsUnit
 open NUnit.Framework
