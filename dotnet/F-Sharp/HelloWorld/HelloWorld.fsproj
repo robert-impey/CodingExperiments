@@ -11,7 +11,7 @@
     <Compile Include="Euler1.fsx" />
     <None Include="FizzBuzz.fsx" />
     <None Include="FormattingArrays.fsx" />
-    <None Include="Multiply.fsx" />
+    <None Include="Folds.fsx" />
     <None Include="Recursion.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
