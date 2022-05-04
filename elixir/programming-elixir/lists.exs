@@ -7,4 +7,10 @@ defmodule MyList do
     
     def add_1([]), do: []
     def add_1([h|t]), do: [h + 1 | add_1(t)]
+    
+    def map([], _func), do: []
+    def map([h|t], func), do: [func.(h)|map(t,func)]
+    
+    def square_v2(l), do: map(l, &(&1 * &1))
+    def add_1_v2(l), do: map(l, &(&1 + 1))
 end
