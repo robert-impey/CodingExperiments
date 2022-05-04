@@ -21,4 +21,8 @@ defmodule MyList do
     
     def sum_of(l), do: reduce(l, 0, &(&1 + &2))
     def product_of(l), do: reduce(l, 1, &(&1 * &2))
+    
+    # Lists and Recursion, Ex. 1
+    def map_sum([], _f), do: 0
+    def map_sum(l, f), do: reduce(l, 0, &(f.(&1) + &2))
 end
