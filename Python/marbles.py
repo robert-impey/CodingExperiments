@@ -106,11 +106,11 @@ def main():
 
     for c in counts:
         message = ""
- 
+
         if "red" in c:
             message += "Red: %i " % c["red"]
         if "blue" in c:
-            message += "Blue: %i " %  c["blue"]
+            message += "Blue: %i " % c["blue"]
 
         print(message)
 
