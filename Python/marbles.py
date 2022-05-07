@@ -73,8 +73,8 @@ class Sim:
         self._generations.append(self._marbles)
 
     def ensure_has_run(self):
-        count = len(self._generations)
-        if count == 0:
+        gen_count = len(self._generations)
+        if gen_count == 0:
             raise "The simulation has not been run yet!"
 
     def count_generations(self):
