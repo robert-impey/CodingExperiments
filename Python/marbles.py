@@ -2,26 +2,6 @@ from math import floor
 from random import sample
 
 
-def init_marbles(blue, red):
-    marbles = []
-
-    for i in range(blue):
-        marbles.append("blue")
-
-    for i in range(red):
-        marbles.append("red")
-
-    return marbles
-
-
-def is_fixed(marbles):
-    for i in range(len(marbles) - 1):
-        if marbles[i] != marbles[i + 1]:
-            return False
-
-    return True
-
-
 def select(marbles, rate):
     sample_size = floor(len(marbles) * rate)
 
@@ -49,20 +29,90 @@ def new_gen(marbles, rate):
     return expand(selection, len(marbles))
 
 
+def count(marbles):
+    counts = {}
+
+    for marble in marbles:
+        if marble in counts:
+            counts[marble] += 1
+        else:
+            counts[marble] = 1
+
+    return counts
+
+
+class Sim:
+    def __init__(self, blue, red, rate):
+        self._marbles = []
+
+        for i in range(blue):
+            self._marbles.append("blue")
+
+        for i in range(red):
+            self._marbles.append("red")
+
+        self._rate = rate
+
+        self._generations = []
+
+    def is_fixed(self):
+        for i in range(len(self._marbles) - 1):
+            if self._marbles[i] != self._marbles[i + 1]:
+                return False
+
+        return True
+
+    def run(self):
+        if len(self._generations) > 0:
+            raise "Can't run a simulation more than once!"
+
+        while not self.is_fixed():
+            self._generations.append(self._marbles)
+            self._marbles = new_gen(self._marbles, self._rate)
+
+        self._generations.append(self._marbles)
+
+    def ensure_has_run(self):
+        count = len(self._generations)
+        if count == 0:
+            raise "The simulation has not been run yet!"
+
+    def count_generations(self):
+        self.ensure_has_run()
+
+        return len(self._generations)
+
+    def get_counts_by_generation(self):
+        self.ensure_has_run()
+
+        counts = []
+        for gen in self._generations:
+            counts.append(count(gen))
+
+        return counts
+
+
 def main():
     start_blue = 50
     start_red = 50
     rate = 0.1
 
-    generations = 0
+    sim = Sim(start_blue, start_red, rate)
+    sim.run()
 
-    pop = init_marbles(start_blue, start_red)
+    print("Generations: %i" % sim.count_generations())
 
-    while not is_fixed(pop):
-        pop = new_gen(pop, rate)
-        generations += 1
+    counts = sim.get_counts_by_generation()
 
-    print(generations)
+    for c in counts:
+        message = ""
+ 
+        if "red" in c:
+            message += "Red: %i " % c["red"]
+        if "blue" in c:
+            message += "Blue: %i " %  c["blue"]
+
+        print(message)
 
 
 if __name__ == "__main__":
