@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Linq;
+﻿using FindReversedWords.Lib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FindReversedWords.Lib;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FindReversedWords.Tests
 {

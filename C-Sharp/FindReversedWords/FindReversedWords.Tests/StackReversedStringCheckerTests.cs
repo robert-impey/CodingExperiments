@@ -1,10 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FindReversedWords.Lib;
+﻿using FindReversedWords.Lib;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FindReversedWords.Tests
 {
