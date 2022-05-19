@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ReverseString": {
+      "commandName": "Project",
+      "commandLineArgs": "one two three madamimadam"
+    }
+  }
+}
