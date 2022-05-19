@@ -8,7 +8,7 @@ namespace DataStructures.Test
         [Fact]
         public void Swap()
         {
-            var ary = new int[] { 1, 2 };
+            var ary = new[] { 1, 2 };
 
             Swapper.Swap(ary, 0, 1);
 
