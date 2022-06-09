@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SharedMutableData
 {
-    internal class ParallelForEachSumCalculator : ISumCalculator
+    internal class InterlockedParallelForLoopCalculator : ISumCalculator
     {
         private int _sum;
 
         public int Calculate(IEnumerable<int> xs)
         {
-            Parallel.ForEach(xs, x => _sum += x);
+            Parallel.ForEach(xs, x => Interlocked.Add(ref _sum, x));
 
             return _sum;
         }

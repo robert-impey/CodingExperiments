@@ -1,22 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using static System.Console;
 
 namespace SharedMutableData
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            const int Max = 10000;
+            const int max = 10000;
 
-            var sumCalculators = new List<ISumCalculator>();
+            const int expected = ((max + 1) * max) / 2;
 
-            sumCalculators.Add(new ForEachLoopSumCalculator());
-            sumCalculators.Add(new ParallelForEachSumCalculator());
-            sumCalculators.Add(new LockParallelForEachSumCalculator());
-            sumCalculators.Add(new VolatileParallelForEachSumCalculator());
+            var sumCalculators = new List<ISumCalculator>
+            {
+                new ForEachLoopSumCalculator(),
+                new ParallelForEachSumCalculator(),
+                new LockParallelForEachSumCalculator(),
+                new VolatileParallelForEachSumCalculator(),
+                new InterlockedParallelForLoopCalculator()
+            };
 
             var stopWatch = new Stopwatch();
 
@@ -25,16 +29,21 @@ namespace SharedMutableData
                 stopWatch.Reset();
 
                 stopWatch.Start();
-                var sum = sumCalculator.Calculate(Enumerable.Range(1, Max));
+                var sum = sumCalculator.Calculate(Enumerable.Range(1, max));
                 stopWatch.Stop();
 
-                Console.Write(sumCalculator.GetType().Name);
-                Console.Write(" - ");
-                Console.Write(sum);
-                Console.Write(" - ");
-                Console.Write(stopWatch.ElapsedTicks + " ticks");
+                Write(sumCalculator.GetType().Name);
+                Write(" - ");
 
-                Console.WriteLine();
+                Write(sum);
+                Write(" - ");
+
+                Write(sum == expected);
+                Write(" - ");
+
+                Write(stopWatch.ElapsedTicks + " ticks");
+
+                WriteLine();
             }
         }
     }

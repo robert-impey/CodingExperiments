@@ -3,22 +3,22 @@ using System.Threading.Tasks;
 
 namespace SharedMutableData
 {
-    class LockParallelForEachSumCalculator : ISumCalculator
+    internal class LockParallelForEachSumCalculator : ISumCalculator
     {
-        private object lockObject = new object();
-        private int sum = 0;
+        private readonly object _lockObject = new object();
+        private int _sum;
 
         public int Calculate(IEnumerable<int> xs)
         {
-            Parallel.ForEach(xs, x => IncreaseSum(x));
-            return sum;
+            Parallel.ForEach(xs, IncreaseSum);
+            return _sum;
         }
 
         private void IncreaseSum(int addend)
         {
-            lock (lockObject)
+            lock (_lockObject)
             {
-                sum += addend;
+                _sum += addend;
             }
         }
     }

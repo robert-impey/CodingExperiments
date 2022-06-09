@@ -2,7 +2,7 @@
 
 namespace SharedMutableData
 {
-    class ForEachLoopSumCalculator : ISumCalculator
+    internal class ForEachLoopSumCalculator : ISumCalculator
     {
         public int Calculate(IEnumerable<int> xs)
         {

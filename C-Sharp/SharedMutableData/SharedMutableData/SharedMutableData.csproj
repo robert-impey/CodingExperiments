@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ForEachLoopSumCalculator.cs" />
+    <Compile Include="InterlockedParallelForLoopCalculator.cs" />
     <Compile Include="ISumCalculator.cs" />
     <Compile Include="LockParallelForEachSumCalculator.cs" />
     <Compile Include="ParallelForEachSumCalculator.cs" />

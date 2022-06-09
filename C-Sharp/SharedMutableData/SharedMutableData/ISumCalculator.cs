@@ -2,7 +2,7 @@
 
 namespace SharedMutableData
 {
-    interface ISumCalculator
+    internal interface ISumCalculator
     {
         int Calculate(IEnumerable<int> xs);
     }
