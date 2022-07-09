@@ -13,3 +13,4 @@ ipch
 *.opendb
 *.o
 out
+cmake-build-debug

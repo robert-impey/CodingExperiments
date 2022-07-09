@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-struct ResultSteps {
-  int result;
-  int steps;
+struct result_steps {
+    int result;
+    int steps;
 };
