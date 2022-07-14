@@ -3,18 +3,18 @@ using static System.Console;
 
 namespace ImperativeMapping
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            const int Size = 10 * 1000 * 1000;
+            const int size = 10 * 1000 * 1000;
 
-            var ys = new int[Size];
+            var ys = new int[size];
 
             var stopWatch = new Stopwatch();
 
             stopWatch.Start();
-            for (var i = 0; i < Size; i++)
+            for (var i = 0; i < size; i++)
             {
                 ys[i] = i + i;
             }
@@ -24,7 +24,7 @@ namespace ImperativeMapping
             var zs = new int[10];
 
             stopWatch.Restart();
-            for (var i = 0; i < Size; i++)
+            for (var i = 0; i < size; i++)
             {
                 for (var j = 0; j < zs.Length; j++)
                 {
@@ -35,26 +35,26 @@ namespace ImperativeMapping
             WriteLine($"Time to run many loops with few iterations: {stopWatch.ElapsedMilliseconds}");
 
             stopWatch.Restart();
-            for (var i = 0; i < Size; i++)
+            for (var i = 0; i < size; i++)
             {
-                ys[i] = f(i);
+                ys[i] = F(i);
             }
             stopWatch.Stop();
             WriteLine($"Time to run one loop with a function with many iterations: {stopWatch.ElapsedMilliseconds}");
 
             stopWatch.Restart();
-            for (var i = 0; i < Size; i++)
+            for (var i = 0; i < size; i++)
             {
                 for (var j = 0; j < zs.Length; j++)
                 {
-                    zs[j] = f(j);
+                    zs[j] = F(j);
                 }
             }
             stopWatch.Stop();
             WriteLine($"Time to run with a function many loops with few iterations: {stopWatch.ElapsedMilliseconds}");
         }
 
-        static int f(int x)
+        private static int F(int x)
         {
             return x + x;
         }
