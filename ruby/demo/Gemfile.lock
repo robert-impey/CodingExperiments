@@ -92,7 +92,7 @@ GEM
     turn (0.9.7)
       ansi
       minitest (~> 4)
-    tzinfo (0.3.51)
+    tzinfo (0.3.61)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
 
