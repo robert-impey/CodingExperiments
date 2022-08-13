@@ -1,30 +1,13 @@
 #include <iostream>
 #include <chrono>
 #include <vector>
+#include <algorithm>
 
-void vector_push_back(const int size)
-{
-    using namespace std::chrono;
+using namespace std;
+using namespace std::chrono;
 
-    std::vector<int> ys;
-
-    auto t1 = high_resolution_clock::now();
-
-    for (auto i = 0; i < size; i++)
-        ys.push_back(i + i);
-
-    auto t2 = high_resolution_clock::now();
-
-    auto time_span = duration_cast<duration<double,std::milli>>(t2 - t1);
-
-    std::cout << "It took me " << time_span.count() << " milliseconds with a vector and push_back." << std::endl;
-}
-
-void arrays(const int size)
-{
-    using namespace std::chrono;
-
-    int *ys = new int[size];
+void arrays(const int size, const bool print_ys) {
+    auto ys = new int[size];
 
     auto t1 = high_resolution_clock::now();
 
@@ -33,18 +16,96 @@ void arrays(const int size)
 
     auto t2 = high_resolution_clock::now();
 
-    auto time_span = duration_cast<duration<double,std::milli>>(t2 - t1);
+    auto time_span = duration_cast<duration<double, milli>>(t2 - t1);
 
-    std::cout << "It took me " << time_span.count() << " milliseconds with an array on the heap." << std::endl;
+    cout << "It took me " << time_span.count() << " milliseconds with an array on the heap." << endl;
+
+    if (print_ys) {
+        cout << "ys:";
+
+        for (auto i = 0; i < size; i++)
+            cout << " " << ys[i];
+
+        cout << endl;
+    }
 
     delete[] ys;
 }
 
+void vector_push_back(const int size, const bool print_ys) {
+    vector<int> ys;
+
+    cout << "Capacity of ys: " << ys.capacity() << endl;
+
+    auto t1 = high_resolution_clock::now();
+
+    for (auto i = 0; i < size; i++)
+        ys.push_back(i + i);
+
+    auto t2 = high_resolution_clock::now();
+
+    auto time_span = duration_cast<duration<double, milli>>(t2 - t1);
+
+    cout << "It took me " << time_span.count() << " milliseconds with a vector and push_back." << endl;
+
+    cout << "Capacity of ys: " << ys.capacity() << endl;
+
+    if (print_ys) {
+        cout << "ys:";
+
+        for (auto i = 0; i < size; i++)
+            cout << " " << ys[i];
+
+        cout << endl;
+    }
+}
+
+void vector_back_insert_iterator(const int size, const bool print_ys) {
+    vector<int> ys;
+
+    cout << "Capacity of ys: " << ys.capacity() << endl;
+
+    auto t1 = high_resolution_clock::now();
+
+    generate_n(
+            back_insert_iterator<std::vector<int>>(ys),
+            size, [n=0]()mutable {
+                auto sum = n + n;
+                n++;
+                return sum;
+            }
+    );
+
+    auto t2 = high_resolution_clock::now();
+
+    auto time_span = duration_cast<duration<double, milli>>(t2 - t1);
+
+    cout << "It took me " << time_span.count() << " milliseconds with a vector and a back_insert_iterator." << endl;
+
+    cout << "Capacity of ys: " << ys.capacity() << endl;
+
+    if (print_ys) {
+        cout << "ys:";
+
+        for (auto i = 0; i < size; i++)
+            cout << " " << ys[i];
+
+        cout << endl;
+    }
+}
+
 int main() {
+    const int small_size = 10;
+
+    arrays(small_size, true);
+    vector_push_back(small_size, true);
+    vector_back_insert_iterator(small_size, true);
+
     const int size = 10 * 1000 * 1000;
 
-    //vector_push_back(size);
-    arrays(size);
+    arrays(size, false);
+    vector_push_back(size, false);
+    vector_back_insert_iterator(size, false);
 
     return 0;
 }
