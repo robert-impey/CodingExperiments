@@ -16,14 +16,13 @@ var
   HaystackIndex, NeedleIndex: integer;
   Found: boolean;
 begin
-  HaystackIndex := 0;
+  HaystackIndex := 1;
   Found := False;
 
   if (Length(Haystack) >= Length(Needle)) and (Length(Needle) > 0) then
   begin
     while (HaystackIndex <= Length(Haystack)) and (not Found) do
     begin
-      Inc(HaystackIndex);
       NeedleIndex := 1;
       while (Haystack[HaystackIndex + NeedleIndex - 1] = Needle[NeedleIndex]) and
         (not Found) do
@@ -37,6 +36,7 @@ begin
           Inc(NeedleIndex);
         end;
       end;
+      Inc(HaystackIndex);
     end;
   end;
   Result := Found;
