@@ -4,20 +4,15 @@
 #include <iostream>
 #include <map>
 
-using std::cout;
-using std::endl;
+using namespace std;
 
 int main()
 {
-	std::string text("Alice's Adventures in Wonderland");
-	std::map<char, int> counts;
+	string text("Alice's Adventures in Wonderland");
+	map<char, int> counts;
 
-	for (auto i = 0; i < text.size(); i++)
+	for (auto cur_char : text)
 	{
-		auto cur_char = text[i];
-
-		cout << cur_char << endl;
-
 		if (counts.count(cur_char))
 		{
 			counts[cur_char]++;
