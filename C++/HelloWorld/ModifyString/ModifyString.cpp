@@ -2,10 +2,9 @@
 //
 
 #include <iostream>
+#include <vector>
 
-using std::cout;
-using std::endl;
-using std::string;
+using namespace std;
 
 void modify_string(string text)
 {
@@ -22,6 +21,39 @@ void modify_cstr(const char* text)
 {
     // This won't compile
     //text[0] = "Z";
+}
+
+void print_char_vect(const vector<char> v)
+{
+    for (auto c : v)
+    {
+        cout << c;
+    }
+
+    cout << endl;
+}
+
+void modify_char_vect(vector<char> v)
+{
+    v[0] = 'H';
+
+    print_char_vect(v);
+}
+
+void modify_char_vect_ref(vector<char> v)
+{
+    v[0] = 'H';
+
+    print_char_vect(v);
+}
+
+vector<char> modify_and_return_vect_ref(vector<char> v)
+{
+    v[0] = 'S';
+
+    print_char_vect(v);
+
+    return v;
 }
 
 int main()
@@ -42,4 +74,17 @@ int main()
     modify_cstr(text.c_str());
 
     cout << text << endl;
+
+    vector<char> text_vect { 'D', 'A', 'M' };
+
+    print_char_vect(text_vect);
+
+    modify_char_vect(text_vect);
+
+    // This remains unchanged
+    print_char_vect(text_vect);
+
+    text_vect = modify_and_return_vect_ref(text_vect);
+
+    print_char_vect(text_vect);
 }
