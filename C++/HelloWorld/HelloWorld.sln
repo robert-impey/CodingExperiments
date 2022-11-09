@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloLoops", "HelloLoops\He
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountChars", "CountChars\CountChars.vcxproj", "{DE036041-4DB3-4978-88B0-623C7F824BDE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModifyString", "ModifyString\ModifyString.vcxproj", "{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -41,6 +43,14 @@ Global
 		{DE036041-4DB3-4978-88B0-623C7F824BDE}.Release|Win32.Build.0 = Release|Win32
 		{DE036041-4DB3-4978-88B0-623C7F824BDE}.Release|x64.ActiveCfg = Release|x64
 		{DE036041-4DB3-4978-88B0-623C7F824BDE}.Release|x64.Build.0 = Release|x64
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Debug|Win32.ActiveCfg = Debug|Win32
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Debug|Win32.Build.0 = Debug|Win32
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Debug|x64.ActiveCfg = Debug|x64
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Debug|x64.Build.0 = Debug|x64
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Release|Win32.ActiveCfg = Release|Win32
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Release|Win32.Build.0 = Release|Win32
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Release|x64.ActiveCfg = Release|x64
+		{49E93A5E-EF81-4E3D-A4D8-176B8D388F94}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
