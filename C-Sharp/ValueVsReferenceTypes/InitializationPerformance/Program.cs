@@ -13,15 +13,15 @@ namespace InitializationPerformance
 
         static void Main(string[] args)
         {
-
-            foreach (var arg in args)
+            int iterations = 100000000;
+            if (args.Length > 0)
             {
-                int iterations;
-                if (Int32.TryParse(arg, out iterations))
+                if (int.TryParse(args[0], out iterations))
                 {
-                    TimeInitializations(iterations);
+                    throw new ArgumentException(nameof(args));
                 }
             }
+            TimeInitializations(iterations);
         }
 
         private static void TimeInitializations(int iterations)
