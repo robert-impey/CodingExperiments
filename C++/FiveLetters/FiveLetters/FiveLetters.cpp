@@ -26,6 +26,27 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
+	if (task == "remove_words_with_non_latin") {
+		string s;
+		while (cin >> s)
+		{
+			auto all_latin = true;
+			for (auto c : s)
+			{
+				if (!((c >= int('a') && c <= int('z')) || (c >= int('A') && c <= int('Z'))))
+				{
+					all_latin = false;
+					break;
+				}
+			}
+
+			if (all_latin)
+				cout << s << endl;
+		}
+
+		return 0;
+	}
+
 	cerr << "Unrecognized task - " << task << endl;
 
 	return 1;
