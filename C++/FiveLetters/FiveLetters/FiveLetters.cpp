@@ -47,6 +47,71 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
+	if (task == "to_upper") {
+		string s;
+		auto diff = int('A') - int('a');
+
+		while (cin >> s)
+		{
+			for (auto c : s)
+			{
+				if (c >= int('a') && c <= int('z'))
+				{
+					cout << (char)(c + diff);
+				}
+				else
+				{
+					cout << c;
+				}
+			}
+
+			cout << endl;
+		}
+
+		return 0;
+	}
+
+	if (task == "remove_duplicates") {
+		string s, previous;
+		auto first = true;
+
+		while (cin >> s)
+		{
+			if (first)
+			{
+				cout << s << endl;
+				first = false;
+			}
+			else
+			{
+				if (s != previous)
+					cout << s << endl;
+			}
+
+			s = previous;
+		}
+	}
+
+	if (task == "all_different") {
+		string s;
+
+		while (cin >> s)
+		{
+			auto all_different = true;
+			for (auto i = 0; all_different && i < 4; i++)
+			{
+				for (auto j = i + 1; all_different && j < 5; j++)
+				{
+					if (s[i] == s[j])
+						all_different = false;
+				}
+			}
+
+			if (all_different)
+				cout << s << endl;
+		}
+	}
+
 	cerr << "Unrecognized task - " << task << endl;
 
 	return 1;
