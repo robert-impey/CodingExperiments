@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -69,6 +71,22 @@ int main(int argc, char* argv[])
 		}
 
 		return 0;
+	}
+
+	if (task == "sort") {
+		string s;
+
+		vector<string> v;
+
+		while (cin >> s)
+		{
+			v.push_back(s);
+		}
+
+		sort(v.begin(), v.end());
+
+		for (const auto& sr : v)
+			cout << sr << endl;
 	}
 
 	if (task == "remove_duplicates") {
