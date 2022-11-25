@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
+#include <set>
 
 using namespace std;
 
@@ -93,23 +94,22 @@ int main(int argc, char* argv[])
 	}
 
 	if (task == "remove_duplicates") {
-		string s, previous;
-		auto first = true;
+		string s;
+		set<string> ss;
 
 		while (cin >> s)
 		{
-			if (first)
-			{
-				cout << s << endl;
-				first = false;
-			}
-			else
-			{
-				if (s != previous)
-					cout << s << endl;
-			}
+			ss.insert(s);
+		}
 
-			s = previous;
+		vector<string> sorted;
+		for (auto& it : ss) {
+			sorted.push_back(it);
+		}
+
+		sort(sorted.begin(), sorted.end());
+		for (auto& it : sorted) {
+			cout << it << endl;
 		}
 
 		return 0;
