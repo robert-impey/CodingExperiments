@@ -20,3 +20,6 @@ Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_duplicates' -Redirec
 
 $allDifferentFile = "$($dataDir)\all-different.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'all_different' -RedirectStandardInput $uniqueFile -RedirectStandardOutput $allDifferentFile
+
+$anagramsFile = "$($dataDir)\anagrams.txt"
+Start-Process $exe -NoNewWindow -Wait -ArgumentList 'anagrams_to_sorted' -RedirectStandardInput $allDifferentFile -RedirectStandardOutput $anagramsFile

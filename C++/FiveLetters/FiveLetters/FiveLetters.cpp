@@ -5,6 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 
 using namespace std;
 
@@ -127,6 +128,35 @@ int main(int argc, char* argv[])
 
 			if (all_different)
 				cout << s << endl;
+		}
+	}
+
+	if (task == "anagrams_to_sorted") {
+		string s;
+		unordered_map<string, vector<string>> anagrams;
+
+		while (cin >> s) {
+			auto sorted = s;
+			sort(sorted.begin(), sorted.end());
+
+			anagrams[sorted].push_back(s);
+		}
+
+		vector<string> keys;
+		keys.reserve(anagrams.size());
+
+		for (auto& it : anagrams) {
+			keys.push_back(it.first);
+		}
+
+		sort(keys.begin(), keys.end());
+
+		for (auto& it : keys) {
+			cout << it << ": ";
+			for (auto& word : anagrams[it]) {
+				cout << word << " ";
+			}
+			cout << endl;
 		}
 	}
 
