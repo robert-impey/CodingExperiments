@@ -88,6 +88,8 @@ int main(int argc, char* argv[])
 
 		for (const auto& sr : v)
 			cout << sr << endl;
+		
+		return 0;
 	}
 
 	if (task == "remove_duplicates") {
@@ -109,6 +111,8 @@ int main(int argc, char* argv[])
 
 			s = previous;
 		}
+
+		return 0;
 	}
 
 	if (task == "all_different") {
@@ -129,6 +133,8 @@ int main(int argc, char* argv[])
 			if (all_different)
 				cout << s << endl;
 		}
+
+		return 0;
 	}
 
 	if (task == "anagrams_to_sorted") {
@@ -158,6 +164,8 @@ int main(int argc, char* argv[])
 			}
 			cout << endl;
 		}
+
+		return 0;
 	}
 
 	cerr << "Unrecognized task - " << task << endl;
