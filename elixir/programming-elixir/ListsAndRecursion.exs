@@ -34,4 +34,12 @@ defmodule MyList do
     IO.puts map([], &(&1 + 1))
     IO.puts map([0, 1, 2, 3, 4, 5, 6, 7], &(&1 + 1))
   end
+
+  def reduce([], value, _func), do: value
+  def reduce([head|tail], value, func), do: reduce(tail, func.(head, value), func)
+
+  def test_reduce() do
+    IO.puts reduce([1,2,3,4,5], 0, &(&1 + &2))
+    IO.puts reduce([1,2,3,4,5], 1, &(&1 * &2))
+  end
 end
