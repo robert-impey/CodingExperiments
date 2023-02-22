@@ -42,4 +42,25 @@ defmodule MyList do
     IO.puts reduce([1,2,3,4,5], 0, &(&1 + &2))
     IO.puts reduce([1,2,3,4,5], 1, &(&1 * &2))
   end
+
+  def fm_(true, old_max, _, []), do: old_max
+  def fm_(false, _, new_max, []), do: new_max
+  def fm_(_, nil, nil, []), do: nil
+  def fm_(true, old_max, _, [h|t]), do: fm_(old_max > h, old_max, h, t)
+  def fm_(false, _, new_max, [h|t]), do: fm_(new_max > h, new_max, h, t)
+  def fm_(_, nil, nil, [h|t]), do: fm_(false, nil, h, t)
+
+  def find_max(l) do
+    fm_(nil, nil, nil, l)
+  end
+
+  def test_find_max() do
+    IO.puts find_max([])
+    IO.puts find_max([1])
+    IO.puts find_max([1,2])
+    IO.puts find_max([2,1])
+    IO.puts find_max([1,2,3])
+    IO.puts find_max([1,3,2])
+    IO.puts find_max([3,2,3])
+  end
 end
