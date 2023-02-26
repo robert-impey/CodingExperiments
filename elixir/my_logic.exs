@@ -16,4 +16,16 @@ defmodule MyLogic do
   def my_xor(true, false), do: true
   def my_xor(false, true), do: true
   def my_xor(false, false), do: false
+
+  def test_logic() do
+    IO.puts(my_not(true))
+    IO.puts(my_not(false))
+
+    IO.puts(my_and(true, false))
+    IO.puts(my_or(false, my_not(false)))
+
+    IO.puts(my_xor(false, true))
+
+    IO.puts(my_xor(my_and(true, false), my_or(false, my_not(false))))
+  end
 end
