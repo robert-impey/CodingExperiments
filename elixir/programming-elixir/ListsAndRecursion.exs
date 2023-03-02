@@ -63,4 +63,26 @@ defmodule MyList do
     IO.puts find_max([1,3,2])
     IO.puts find_max([3,2,3])
   end
+
+  def return_bigger(a, b) do
+    if (is_nil b) or b < a do
+      a
+    else
+      b
+    end
+  end
+
+  def find_max_reduce(l) do
+    reduce(l, nil, &(return_bigger(&1, &2)))
+  end
+
+  def test_find_max_reduce() do
+    IO.puts find_max_reduce([])
+    IO.puts find_max_reduce([1])
+    IO.puts find_max_reduce([1,2])
+    IO.puts find_max_reduce([2,1])
+    IO.puts find_max_reduce([1,2,3])
+    IO.puts find_max_reduce([1,3,2])
+    IO.puts find_max_reduce([3,2,3])
+  end
 end
