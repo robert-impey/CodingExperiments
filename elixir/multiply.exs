@@ -15,4 +15,11 @@ defmodule Multiply do
     IO.puts(odd(37))
     IO.puts(odd(100))
   end
+
+  def half(n), do: div(n, 2)
+
+  def test_half() do
+    IO.puts(half(50))
+    IO.puts(half(51))
+  end
 end
