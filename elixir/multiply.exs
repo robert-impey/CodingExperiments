@@ -2,6 +2,13 @@ defmodule Multiply do
   def multiply(a, 1), do: a
   def multiply(a, n), do: a + multiply(a, n - 1)
 
+  def test_multiply() do
+    IO.puts(multiply(1, 1))
+    IO.puts(multiply(37, 41))
+    IO.puts(multiply(100_000_000, 100))
+    IO.puts(multiply(100, 100_000_000))
+  end
+
   def odd_(0, false), do: true
   def odd_(0, true), do: false
   def odd_(n, switch), do: odd_(n - 1, not switch)
