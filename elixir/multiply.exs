@@ -41,4 +41,17 @@ defmodule Multiply do
     IO.puts(half(50))
     IO.puts(half(51))
   end
+
+  def multiply1(a, 1), do: a
+  def multiply1(a, n) when rem(n, 2) == 1 do
+    a + multiply1(a + a, half(n))
+  end
+  def multiply1(a, n), do: multiply1(a + a, half(n))
+
+  def test_multiply1() do
+    IO.puts(multiply1(1, 1))
+    IO.puts(multiply1(37, 41))
+    IO.puts(multiply1(100_000_000, 100))
+    IO.puts(multiply1(100, 100_000_000))
+  end
 end
