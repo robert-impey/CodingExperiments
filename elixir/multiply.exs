@@ -54,4 +54,19 @@ defmodule Multiply do
     IO.puts(multiply1(100_000_000, 100))
     IO.puts(multiply1(100, 100_000_000))
   end
+
+  def mult_acc0_(r, 1, a), do: r + a
+  def mult_acc0_(r, n, a) when rem(n, 2) == 1 do
+    mult_acc0_(r + a, half(n), a + a)
+  end
+  def mult_acc0_(r, n, a), do: mult_acc0_(r, half(n), a + a)
+
+  def mult_acc0(a, n), do: mult_acc0_(0, n, a)
+
+  def test_mult_acc0() do
+    IO.puts(mult_acc0(1, 1))
+    IO.puts(mult_acc0(37, 41))
+    IO.puts(mult_acc0(100_000_000, 100))
+    IO.puts(mult_acc0(100, 100_000_000))
+  end
 end
