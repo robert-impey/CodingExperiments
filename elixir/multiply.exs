@@ -13,7 +13,19 @@ defmodule Multiply do
   def odd_(0, true), do: false
   def odd_(n, switch), do: odd_(n - 1, not switch)
 
-  def odd(n), do: odd_(n, true)
+  def odd_rec(n), do: odd_(n, true)
+
+  def test_odd_rec() do
+    IO.puts(odd_rec(0))
+    IO.puts(odd_rec(1))
+    IO.puts(odd_rec(2))
+    IO.puts(odd_rec(37))
+    IO.puts(odd_rec(100))
+  end
+
+  def odd(0), do: false
+  def odd(1), do: true
+  def odd(n), do: odd(rem(n, 2))
 
   def test_odd() do
     IO.puts(odd(0))
