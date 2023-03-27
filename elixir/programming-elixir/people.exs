@@ -14,4 +14,9 @@ defmodule People do
   def inspect_tall_people do
     IO.inspect(for person = %{height: height} <- @people, height > 1.5, do: person)
   end
+
+  # E.g. People.apply_to_people(&HotelRoom.book/1)
+  def apply_to_people func do
+    @people |> Enum.each(func)
+  end
 end
