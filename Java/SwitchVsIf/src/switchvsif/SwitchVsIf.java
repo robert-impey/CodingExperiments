@@ -34,23 +34,12 @@ public class SwitchVsIf {
         
         for (int i = 0; i < iterations; i++) {
             switch (randoms[i]) {
-                case 0:
-                    switchCounts[0]++;
-                    break;
-                case 1:
-                    switchCounts[1]++;
-                    break;
-                case 2:
-                    switchCounts[2]++;
-                    break;
-                case 3:
-                    switchCounts[3]++;
-                    break;
-                case 4:
-                    switchCounts[4]++;
-                    break;
-                default:
-                    throw new IndexOutOfBoundsException();
+                case 0 -> switchCounts[0]++;
+                case 1 -> switchCounts[1]++;
+                case 2 -> switchCounts[2]++;
+                case 3 -> switchCounts[3]++;
+                case 4 -> switchCounts[4]++;
+                default -> throw new IndexOutOfBoundsException();
             }
         }
         

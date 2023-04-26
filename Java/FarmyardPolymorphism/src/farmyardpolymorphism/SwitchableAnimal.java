@@ -17,12 +17,13 @@ public class SwitchableAnimal {
     
     public String speak() throws Exception {
         switch (species) {
-            case "dog":
+            case "dog" -> {
                 return "Woof!";
-            case "cat":
-                return "Meow!";               
-            default:
-                throw new Exception("I'm not sure what I am!");
+            }
+            case "cat" -> {
+                return "Meow!";
+            }
+            default -> throw new Exception("I'm not sure what I am!");
         }
     }
 }

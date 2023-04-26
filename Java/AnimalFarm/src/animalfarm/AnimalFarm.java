@@ -17,7 +17,7 @@ public class AnimalFarm {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        List<Animal> animals = new ArrayList<Animal>();
+        List<Animal> animals = new ArrayList<>();
         
         Dog rover = new Dog();
         Cat kitty = new Cat();
