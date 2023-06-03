@@ -10,5 +10,6 @@ defmodule MyLists do
     IO.puts(contains(1, [1,2]))
     IO.puts(contains(1, [2,3]))
     IO.puts(contains(1, [1,2,3]))
-    IO.puts(contains(1, [2,3,4]))  end
+    IO.puts(contains(1, [2,3,4]))
+  end
 end
