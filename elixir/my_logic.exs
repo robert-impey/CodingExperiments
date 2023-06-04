@@ -18,14 +18,15 @@ defmodule MyLogic do
   def my_xor(false, false), do: false
 
   def test_logic() do
-    IO.puts(my_not(true))
-    IO.puts(my_not(false))
+    IO.puts("my_not(true): #{my_not(true)}")
+    IO.puts("my_not(false): #{my_not(false)}")
 
-    IO.puts(my_and(true, false))
-    IO.puts(my_or(false, my_not(false)))
+    IO.puts("my_and(true, false): #{my_and(true, false)}")
+    IO.puts("my_or(false, my_not(false)): #{my_or(false, my_not(false))}")
 
-    IO.puts(my_xor(false, true))
+    IO.puts("my_xor(false, true): #{my_xor(false, true)}")
 
-    IO.puts(my_xor(my_and(true, false), my_or(false, my_not(false))))
+    long_expression = my_xor(my_and(true, false), my_or(false, my_not(false)))
+    IO.puts("my_xor(my_and(true, false), my_or(false, my_not(false))): #{long_expression}")
   end
 end
