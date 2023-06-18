@@ -11,10 +11,14 @@ defmodule MyVec do
     IO.puts(Enum.join(v, ", "))
   end
 
+  def add(a, b) when length(a) != length(b), do: {:error, [] }
   def add(a, b), do: add_(a, b, [])
   def add_([], [], v), do: {:ok, Enum.reverse v }
+
+  # These should never match because of the when check above.
   def add_(_a, [], _), do: {:error, [] }
   def add_([], _b, _), do: {:error, [] }
+
   def add_([h1|t1], [h2|t2], v) do
     add_(t1, t2, [h1 + h2 | v])
   end
