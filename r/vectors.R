@@ -9,4 +9,9 @@ u + v
 2 * u - 3 * v
 
 library(geometry)
-dot(u, v, d = TRUE)
+dot_prd <- dot(u, v, d = TRUE)
+
+# Addition
+a <- c(2,4)
+c <- c(3, 5)
+a + c
