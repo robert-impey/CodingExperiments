@@ -17,7 +17,7 @@ let listSum =
 let countingNumbers = 
     seq { 
         for i in 1 .. System.Int32.MaxValue do 
-            printfn "Yielding: %d" i
+            //printfn "Yielding: %d" i
             yield i 
     }
 
@@ -35,7 +35,7 @@ let divisibleBy3Or5 =
 let seqSum = Seq.sum divisibleBy3Or5
 
 let noisySum total next =
-    printfn "Adding %d to %d" next total
+    //printfn "Adding %d to %d" next total
     total + next
 
 let seqFoldSum = 
