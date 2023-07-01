@@ -25,3 +25,16 @@ foreach (var element in sumOfAAndB)
     Console.WriteLine(element);
 }
 
+// Dot product of two vectors (page 37)
+
+var u = new [] { 4.0, -2.0, 0.0, 1.0};
+var v = new [] {-1.0, -3.0, 1.0, 5 };
+
+var dotProduct = 0.0;
+
+for (var i = 0; i < u.Length; i++)
+{
+    dotProduct += u[i] * v[i];
+}
+
+Console.WriteLine(dotProduct);
