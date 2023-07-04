@@ -15,7 +15,7 @@ mag = Math.sqrt(sum_of_squares)
 
 puts mag
 
-# Sum of Vectors
+# Sum of Vectors (page 28)
 
 a = [2.0, 4.0]
 b = [3.0, 1.0]
@@ -27,3 +27,6 @@ a.zip(b).each do |element_of_a, element_of_b|
 end
 
 sum_of_a_and_b.each { |element| puts element }
+
+# Dot product of two vectors (page 37)
+

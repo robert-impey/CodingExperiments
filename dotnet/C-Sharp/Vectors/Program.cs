@@ -37,4 +37,4 @@ for (var i = 0; i < u.Length; i++)
     dotProduct += u[i] * v[i];
 }
 
-Console.WriteLine(dotProduct);
+Console.WriteLine($"dotProduct: {dotProduct}");
