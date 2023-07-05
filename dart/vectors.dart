@@ -30,4 +30,16 @@ void main() {
     for (final elementInSum in sum) {
         print(elementInSum);
     }
+
+    // Dot product
+    var us = [4.0, -2.0, 0.0, 1.0];
+    var vs = [-1.0, -3.0, 1.0, 5.0];
+
+    var dotProduct = 0.0;
+
+    for (var i = 0; i < us.length; i++) {
+        dotProduct += us[i] * vs[i];
+    }
+
+    print(dotProduct);
 }
