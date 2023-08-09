@@ -6,7 +6,7 @@
  * Also taking inspiration from
  * http://www.ictcool.com/2011/06/12/java-program-to-sort-and-reverse-a-string/
  */
-package stringdecoratordemo;
+package com.robertimpey.StringDecoratorDemo;
 
 /**
  *

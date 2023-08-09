@@ -1,4 +1,4 @@
-package concurrentincrdecr;
+package com.robertimpey.ConcurrentIncrDecr;
 
 import java.util.concurrent.CountDownLatch;
 

@@ -1,7 +1,7 @@
 /*
  * The main method of the package.
  */
-package concurrentincrdecr;
+package com.robertimpey.ConcurrentIncrDecr;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.robertimpey;
+package com.robertimpey.SubArrays;
 
 public class MaxSubArray {
     public int crossSum(int[] nums, int left, int right, int p) {

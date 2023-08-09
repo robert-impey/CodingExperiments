@@ -2,7 +2,7 @@
  * Testing the difference in execution time for
  * switch statements and if statements.
  */
-package switchvsif;
+package com.robertimpey.SwitchVsIf;
 
 import java.util.Random;
 
