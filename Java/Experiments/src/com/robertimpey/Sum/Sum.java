@@ -22,7 +22,7 @@ public class Sum {
             max = 10;
         }
                 
-        System.out.printf("Max: %d\tLoops: %d\tMultiplication: %d\n", max, loops(max), multiplacation(max));
+        System.out.printf("Max: %d\tLoops: %d\tMultiplication: %d\n", max, loops(max), multiplication(max));
     }
     
     static int loops(int max)
@@ -37,7 +37,7 @@ public class Sum {
         return sum;
     }
     
-    static int multiplacation(int max)
+    static int multiplication(int max)
     {
         return ((1 + max) * max) / 2;
     }
