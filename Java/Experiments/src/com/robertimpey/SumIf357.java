@@ -6,7 +6,11 @@ public class SumIf357 {
         int[] ns = new int[] { 0, 1, 3, 5, 7, 10, 50, 100 };
 
         for (int n : ns) {
-            System.out.printf("n = %d, sum = %d, sum TR = %d\n", n, findSum(n), findSumTr(n));
+            System.out.printf("n = %d, sum = %d, sum TR = %d, sum WL = %d\n",
+                    n,
+                    findSum(n),
+                    findSumTr(n),
+                    findSumWl(n));
         }
     }
 
@@ -40,13 +44,24 @@ public class SumIf357 {
             return acc;
         }
 
-        int nextAcc = acc;
-
         if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0)
         {
-            nextAcc += n;
+            acc += n;
         }
 
-        return findSumAcc(n - 1, nextAcc);
+        return findSumAccTr(n - 1, acc);
+    }
+
+    private static int findSumWl(int n)
+    {
+        int sum = 0;
+        while (n > 0) {
+            if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
+                sum += n;
+            }
+            n--;
+        }
+
+        return sum;
     }
 }
