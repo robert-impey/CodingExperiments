@@ -2,13 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.robertimpey.TwelveDaysOfChristmas;
+package com.robertimpey;
 
 /**
  *
  * @author Robert
  */
-public class Main {
+public class TwelveDaysOfChristmas {
 
     /**
      * @param args the command line arguments

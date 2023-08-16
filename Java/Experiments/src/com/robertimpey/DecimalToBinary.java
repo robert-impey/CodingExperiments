@@ -1,4 +1,4 @@
-package com.robertimpey.DecimalToBinary;
+package com.robertimpey;
 
 /**
  * @author Robert Impey
