@@ -50,5 +50,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="rabbitmq.amqp.client" level="project" />
+    <orderEntry type="library" name="junit" level="project" />
+    <orderEntry type="library" name="junit.jupiter" level="project" />
   </component>
 </module>
