@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="bsp 1" modules="Scala.hello-sbt,hello-sbt" />
-    <profile name="bsp 2" modules="Scala.hello-sbt-build,hello-sbt-build">
+    <profile name="bsp 1" modules="CodingExperiments.Scala.hello-sbt,Scala.hello-sbt,hello-sbt" />
+    <profile name="bsp 2" modules="CodingExperiments.Scala.hello-sbt-build,Scala.hello-sbt-build,hello-sbt-build">
       <option name="deprecationWarnings" value="true" />
       <parameters>
         <parameter value="-Wconf:cat=unused-nowarn:s" />
