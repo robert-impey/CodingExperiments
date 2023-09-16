@@ -25,7 +25,7 @@ public class SumIf357 {
             return acc;
         }
 
-        if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0)
+        if (testN(n))
         {
             return findSumAcc(n - 1, acc + n);
         }
@@ -44,7 +44,7 @@ public class SumIf357 {
             return acc;
         }
 
-        if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0)
+        if (testN(n))
         {
             acc += n;
         }
@@ -56,12 +56,17 @@ public class SumIf357 {
     {
         int sum = 0;
         while (n > 0) {
-            if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
+            if (testN(n)) {
                 sum += n;
             }
             n--;
         }
 
         return sum;
+    }
+
+    private static boolean testN(int n)
+    {
+        return n % 3 == 0 || n % 5 == 0 || n % 7 == 0;
     }
 }
