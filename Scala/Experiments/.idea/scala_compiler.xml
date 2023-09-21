@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="CodingExperiments.Scala.Experiments,Experiments,Scala.Experiments,code.CodingExperiments.Scala.Experiments,code.CodingExperiments.Scala.Experiments~1" />
+    <profile name="sbt 1" modules="CodingExperiments.Scala.Experiments,Experiments,Scala.Experiments,code.CodingExperiments.Scala.Experiments,code.CodingExperiments.Scala.Experiments~1,code.CodingExperiments.Scala.Experiments~2" />
   </component>
 </project>
