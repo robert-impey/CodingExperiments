@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodingExperiments.Scala.Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/CodingExperiments.Scala.Experiments.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/Experiments.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Experiments-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Experiments-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Experiments.project.Experiments-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Experiments.project.Experiments-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala.Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala.Experiments.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala.Experiments.project.Experiments-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala.Experiments.project.Experiments-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala.Experiments.project.Experiments-build~1.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala.Experiments.project.Experiments-build~1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala.Experiments.project.Experiments-build~2.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala.Experiments.project.Experiments-build~2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code.CodingExperiments.Scala.Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/code.CodingExperiments.Scala.Experiments.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code.CodingExperiments.Scala.Experiments~1.iml" filepath="$PROJECT_DIR$/.idea/modules/code.CodingExperiments.Scala.Experiments~1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/code.CodingExperiments.Scala.Experiments~2.iml" filepath="$PROJECT_DIR$/.idea/modules/code.CodingExperiments.Scala.Experiments~2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project.Experiments-build.iml" filepath="$PROJECT_DIR$/.idea/modules/project.Experiments-build.iml" />
     </modules>
   </component>
 </project>
