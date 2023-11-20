@@ -10,7 +10,7 @@ fn main() {
     let years: f64 = 100.0;
     let rate: f64 = 1.01;
 
-    let investment_return: f64 = f64::powf(rate, years);
+    let investment_return = rate.powf(years);
 
     println!("investment_return is {}", investment_return);
 }
