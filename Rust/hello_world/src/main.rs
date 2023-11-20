@@ -6,4 +6,11 @@ fn main() {
 
     let x: u8 = 255;
     println!("x is {}", x);
+
+    let years: f64 = 100.0;
+    let rate: f64 = 1.01;
+
+    let investment_return: f64 = f64::powf(rate, years);
+
+    println!("investment_return is {}", investment_return);
 }
