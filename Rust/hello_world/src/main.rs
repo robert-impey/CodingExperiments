@@ -13,4 +13,8 @@ fn main() {
     let investment_return = rate.powf(years);
 
     println!("investment_return is {}", investment_return);
+
+    println!("f64::powf(50.0, 50.0) = {}", f64::powf(50.0, 50.0));
+    println!("f64::powf(51.0, 49.0) = {}", f64::powf(51.0, 49.0));
+    println!("f64::powf(49.0, 51.0) = {}", f64::powf(49.0, 51.0));
 }
