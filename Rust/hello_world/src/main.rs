@@ -1,3 +1,6 @@
+use std::collections::{BTreeMap};
+use num_bigint::ToBigUint;
+
 fn main() {
     let mut my_var: i32 = 10;
     println!("my_var is {}", my_var);
@@ -14,7 +17,13 @@ fn main() {
 
     println!("investment_return is {}", investment_return);
 
-    println!("f64::powf(50.0, 50.0) = {}", f64::powf(50.0, 50.0));
-    println!("f64::powf(51.0, 49.0) = {}", f64::powf(51.0, 49.0));
-    println!("f64::powf(49.0, 51.0) = {}", f64::powf(49.0, 51.0));
+    let mut powers : BTreeMap<num_bigint::BigUint, &str> = BTreeMap::new();
+
+    powers.insert( 50.to_biguint().unwrap().pow(50), "50 ^ 50");
+    powers.insert( 51.to_biguint().unwrap().pow(49), "51 ^ 49");
+    powers.insert( 49.to_biguint().unwrap().pow(51), "49 ^ 51");
+
+    for (k, v) in powers {
+        println!("{} = {}", v, k);
+    }
 }
