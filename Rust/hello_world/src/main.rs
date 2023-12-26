@@ -1,4 +1,4 @@
-use std::collections::{BTreeMap};
+use std::collections::BTreeMap;
 use num_bigint::ToBigUint;
 
 fn main() {
