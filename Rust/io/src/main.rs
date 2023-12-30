@@ -30,13 +30,22 @@ fn main() {
         }
     }
 
-    let mut counter_b: BTreeMap<u32, String> = BTreeMap::new();
+    let mut counter_b: BTreeMap<u32, Vec<String>> = BTreeMap::new();
 
     for (k,v) in counts {
-        counter_b.insert(v, k);
+        let words_of_count = counter_b.get(&v);
+
+        let mut words = match words_of_count {
+            Some(ws) => ws.to_vec(),
+            None => vec![],
+        };
+
+        words.push(k);
+
+        counter_b.insert(v, words);
     }
 
     for (k,v) in counter_b {
-        println!("{} occurs {} times", v, k);
+        println!("The {} word(s) that occur(s) {} times: {}",  v.len(), k, v.join(", "));
     }
 }
