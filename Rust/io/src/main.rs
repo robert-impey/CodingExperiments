@@ -10,6 +10,8 @@ fn main() {
     let reader =  io::BufReader::new(file);
     let mut counts: HashMap<String, u32> = HashMap::new();
 
+    let mut word_count = 0;
+
     for line in reader.lines() {
         let unwrapped_line = line.unwrap().to_lowercase();
 
@@ -26,11 +28,16 @@ fn main() {
                 None => 1,
             };
 
+            word_count += 1;
             counts.insert(word, updated_count);
         }
     }
 
+    println!("Word count {}", word_count);
+
     let mut counter_b: BTreeMap<u32, Vec<String>> = BTreeMap::new();
+
+    let mut word_count_b = 0;
 
     for (k,v) in counts {
         let words_of_count = counter_b.get(&v);
@@ -42,8 +49,11 @@ fn main() {
 
         words.push(k);
 
+        word_count_b += v;
         counter_b.insert(v, words);
     }
+
+    println!("Word count from grouping phase {}", word_count_b);
 
     for (k,v) in counter_b {
         println!("The {} word(s) that occur(s) {} times: {}",  v.len(), k, v.join(", "));
