@@ -2,14 +2,13 @@
 {
     private static async Task Main(string[] args)
     {
-        await Hello();
+        await Task.Run(Hello);
         Goodbye();
     }
 
-    async static Task Hello()
+    static void Hello()
     {
-        await Task.Delay(TimeSpan.FromMilliseconds(50));
-        Console.WriteLine("Hello");
+        Console.WriteLine("Hello");    
     }
 
     static void Goodbye()
