@@ -1,10 +1,14 @@
-data_dir:getenv `DATA
-restaurants_file:"/" sv (data_dir; "BaltimoreRestaurants.xml")
-restaurants_file: hsym `$restaurants_file
-lines: read0 restaurants_file
+dataDir:getenv `DATA
+restaurantsFile:"/" sv (dataDir; "BaltimoreRestaurants.xml")
+restaurantsFile: hsym `$restaurantsFile
+lines: read0 restaurantsFile
 /count lines
 
-pattern: ".*<name>.*"
+pattern: "*<name>*"
+
+nameLines: lines like pattern
+
+nameLines
 
 /first_match: first lines where {x like pattern}
 
