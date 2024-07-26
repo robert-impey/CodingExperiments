@@ -10,3 +10,8 @@ nameLines: lines like pattern
 linesTable: ([] lines)
 
 firstNameLine: raze first select lines from linesTable where lines like pattern
+firstNameLine: ssr[firstNameLine; "\t"; ""]
+firstNameLine: ssr[firstNameLine; "<name>"; ""]
+firstNameLine: ssr[firstNameLine; "</name>"; ""]
+
+firstNameLine
