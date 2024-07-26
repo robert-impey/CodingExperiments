@@ -8,8 +8,6 @@ pattern: "*<name>*"
 
 nameLines: lines like pattern
 
-nameLines
+linesTable: ([] lines; nameLines)
 
-/first_match: first lines where {x like pattern}
-
-/first_match
+firstNameLine: raze first select lines from linesTable where nameLines=1
