@@ -42,8 +42,10 @@ defmodule Multiply do
     IO.puts(half(51))
   end
 
+  require Integer
+
   def multiply1(a, 1), do: a
-  def multiply1(a, n) when rem(n, 2) == 1 do
+  def multiply1(a, n) when Integer.is_odd(n) do
     a + multiply1(a + a, half(n))
   end
   def multiply1(a, n), do: multiply1(a + a, half(n))
@@ -56,7 +58,7 @@ defmodule Multiply do
   end
 
   def mult_acc0_(r, 1, a), do: r + a
-  def mult_acc0_(r, n, a) when rem(n, 2) == 1 do
+  def mult_acc0_(r, n, a) when Integer.is_odd(n) do
     mult_acc0_(r + a, half(n), a + a)
   end
   def mult_acc0_(r, n, a), do: mult_acc0_(r, half(n), a + a)
