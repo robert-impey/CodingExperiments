@@ -1,8 +1,13 @@
+open System.IO
 open System.Text.RegularExpressions
 
-let words = System.IO.File.ReadLines(@"C:\Users\Robert\data\british-english.csv")
+let dataDir = System.Environment.GetEnvironmentVariable("DATA")
 
-Seq.length words
+let englishCsv = Path.Join(dataDir, "british-english.csv")
+
+let words = System.IO.File.ReadLines(englishCsv)
+
+words |> Seq.length
 
 let isPossessiveRegex = Regex(@"'s\s*$")
 
@@ -10,7 +15,7 @@ let wordsWithoutPossessives =
     words 
     |> Seq.filter (fun word -> not <| isPossessiveRegex.IsMatch(word))
 
-Seq.length wordsWithoutPossessives
+wordsWithoutPossessives |> Seq.length
 
 let firstLetterIsRRegex = Regex(@"^R", RegexOptions.IgnoreCase)
 let thirdLetterIsRRegex = Regex(@"^\w{2}R", RegexOptions.IgnoreCase)
