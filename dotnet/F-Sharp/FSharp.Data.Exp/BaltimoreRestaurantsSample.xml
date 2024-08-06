@@ -1,0 +1,20 @@
+<response>
+	<row>
+		<row _id="1322" _uuid="B7F2E570-6EF9-42C9-ABAC-53947210921F" _position="1322" _address="http://data.baltimorecity.gov/resource/k5ry-ef3g/1322">
+			<name>ZEEBA LOUNGE</name>
+			<zipcode>21230</zipcode>
+			<neighborhood>Federal Hill</neighborhood>
+			<councildistrict>10</councildistrict>
+			<policedistrict>SOUTHERN</policedistrict>
+			<location_1 human_address="{&quot;address&quot;:&quot;916 LIGHT ST&quot;,&quot;city&quot;:&quot;Baltimore&quot;,&quot;state&quot;:&quot;MD&quot;,&quot;zip&quot;:&quot;&quot;}" needs_recoding="true"/>
+		</row>
+		<row _id="1323" _uuid="6393D088-D72D-4CB2-ABFB-8BBD6457204F" _position="1323" _address="http://data.baltimorecity.gov/resource/k5ry-ef3g/1323">
+			<name>ZEN WEST ROADSIDE CANTINA</name>
+			<zipcode>21212</zipcode>
+			<neighborhood>Rosebank</neighborhood>
+			<councildistrict>4</councildistrict>
+			<policedistrict>NORTHERN</policedistrict>
+			<location_1 human_address="{&quot;address&quot;:&quot;5916 YORK RD&quot;,&quot;city&quot;:&quot;Baltimore&quot;,&quot;state&quot;:&quot;MD&quot;,&quot;zip&quot;:&quot;&quot;}" needs_recoding="true"/>
+		</row>
+	</row>
+</response>
