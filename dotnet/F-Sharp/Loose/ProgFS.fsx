@@ -8,14 +8,14 @@ fst names
 snd names
 
 let allNames = ("Robert", "Francis", "Impey")
-fst allNames
+//fst allNames
 
 let add x y = x + y
 add 4 5
 
 let tupleAdd (x, y) = x + y
 tupleAdd (4, 5)
-tupleAdd 4 5
+//tupleAdd 4 5
 
 let vowels = ['a'; 'e'; 'i'; 'o'; 'u']
 let sometimes = 'y' :: vowels
