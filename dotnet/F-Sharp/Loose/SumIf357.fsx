@@ -1,6 +1,4 @@
-﻿module SumIf357
-
-let findSum n =
+﻿let findSum n =
     let rec findSum' n acc =
         if n < 1 then
             acc
@@ -10,8 +8,7 @@ let findSum n =
             findSum' (n - 1) acc
     findSum' n 0
 
-//> findSum 1;;
-//>val it: int = 0
+//findSum 1
 
 //> findSum 3;;
 //>val it: int = 3
@@ -28,5 +25,6 @@ let findSum n =
 //> findSum 50;;
 //>val it: int = 691
 
-//> findSum 100;;
+findSum 100
+
 //> val it: int = 2838
