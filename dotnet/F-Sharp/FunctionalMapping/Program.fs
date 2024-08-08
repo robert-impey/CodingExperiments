@@ -12,7 +12,7 @@ let main argv =
 
     stopWatch.Start()
     let xs = seq { 1 ..  size }
-    let mappedXs = xs |> Seq.map f |> Seq.toArray
+    xs |> Seq.map f |> Seq.toArray |> ignore
     stopWatch.Stop()
 
     printfn "Time to run one loop with many iterations: %d" stopWatch.ElapsedMilliseconds
