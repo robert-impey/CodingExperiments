@@ -7,18 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="ProgFS.fsx" />
-    <None Include="fcncomp.fsx" />
-    <None Include="JHRProgTransWeek2.fsx" />
-    <None Include="ListVsSeq.fsx" />
-    <None Include="DUMatching.fsx" />
-    <Compile Include="SumIf357.fsx" />
     <None Include="Ducks.fsx" />
+    <None Include="DUMatching.fsx" />
     <Compile Include="Euler1.fsx" />
     <None Include="FizzBuzz.fsx" />
-    <None Include="FormattingArrays.fsx" />
+    <None Include="fcncomp.fsx" />
     <None Include="Folds.fsx" />
+    <None Include="FormattingArrays.fsx" />
+    <None Include="JHRProgTransWeek2.fsx" />
+    <None Include="ListVsSeq.fsx" />
+    <None Include="MinimiseQuadratic.fsx" />
+    <None Include="PGA_1_1.fsx" />
+    <None Include="ProductPairs.fsx" />
+    <None Include="ProgFS.fsx" />
     <None Include="Recursion.fsx" />
+    <Compile Include="SumIf357.fsx" />
+    <None Include="ThirdLetterR.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
