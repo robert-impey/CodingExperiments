@@ -1,7 +1,4 @@
 // Translating the algebra at http://www.purplemath.com/modules/fcncomp.htm to F#
-// Robert Impey 2013-09-21
-
-module FcnComp
 
 let f = 
     function
