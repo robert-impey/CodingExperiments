@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="JHRProgTransWeek2.fsx" />
+    <None Include="ListVsSeq.fsx" />
     <None Include="DUMatching.fsx" />
     <Compile Include="SumIf357.fsx" />
     <None Include="Ducks.fsx" />
