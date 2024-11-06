@@ -31,3 +31,4 @@ Scala/hello-project/.idea/workspace.xml
 .pyenv
 *.pid
 *.log
+**/.idea/caches/*
