@@ -1,3 +1,5 @@
+#!/usr/bin/env julia
+
 function find_long_words(dictionary_file :: String)
     long_words = []
     
