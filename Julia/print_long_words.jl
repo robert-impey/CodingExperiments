@@ -1,18 +1,18 @@
 #!/usr/bin/env julia
 
 function find_words_by_predicate(dictionary_file::String, pred)
-	long_words = []
+	matching_words = []
 
 	# Read the dictionary file
 	fin = open(dictionary_file, "r") do fin
 		for line in eachline(fin)
 			if pred(line)
-				push!(long_words, line)
+				push!(matching_words, line)
 			end
 		end
 	end
 
-	return long_words
+	return matching_words
 end
 
 function print_words_by_predicate(dictionary_file::String, pred)
