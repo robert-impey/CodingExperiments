@@ -18,8 +18,7 @@ public class Receive {
         Channel channel;
         Connection connection = connectionFactory.newConnection();
         channel = connection.createChannel();
-
-
+        
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         System.out.println("Waiting for messages");
 
