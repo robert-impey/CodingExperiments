@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.robertimpey.RabbitMQTutorials;
 
 import com.rabbitmq.client.Channel;
@@ -9,10 +5,8 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 
-/**
- *
- * @author Robert
- */
+import java.nio.charset.StandardCharsets;
+
 public class Receive {
 
     private static final String QUEUE_NAME = "hello";
@@ -21,17 +15,20 @@ public class Receive {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");
 
-        Connection connection = connectionFactory.newConnection();
-        Channel channel = connection.createChannel();
+        Channel channel;
+        try (Connection connection = connectionFactory.newConnection()) {
+            channel = connection.createChannel();
 
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        System.out.println("Waiting for messages");
 
-        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody(), "UTF-8");
-            System.out.printf("Receive '%s'\n", message);
-        };
-        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
-        });
+            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+            System.out.println("Waiting for messages");
+
+            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+                String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
+                System.out.printf("Receive '%s'\n", message);
+            };
+            channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
+            });
+        }
     }
 }

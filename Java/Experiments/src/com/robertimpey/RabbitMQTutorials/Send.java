@@ -7,10 +7,6 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
-/**
- *
- * @author Robert
- */
 public class Send {
 
     private static final String QUEUE_NAME = "hello";
