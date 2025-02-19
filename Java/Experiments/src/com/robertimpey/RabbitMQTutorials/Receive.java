@@ -16,19 +16,18 @@ public class Receive {
         connectionFactory.setHost("localhost");
 
         Channel channel;
-        try (Connection connection = connectionFactory.newConnection()) {
-            channel = connection.createChannel();
+        Connection connection = connectionFactory.newConnection();
+        channel = connection.createChannel();
 
 
-            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-            System.out.println("Waiting for messages");
+        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        System.out.println("Waiting for messages");
 
-            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-                String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-                System.out.printf("Receive '%s'\n", message);
-            };
-            channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
-            });
-        }
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
+            System.out.printf("Receive '%s'\n", message);
+        };
+        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
+        });
     }
 }
