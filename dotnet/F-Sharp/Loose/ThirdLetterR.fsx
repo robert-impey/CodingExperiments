@@ -5,7 +5,7 @@ let dataDir = System.Environment.GetEnvironmentVariable("DATA")
 
 let englishCsv = Path.Join(dataDir, "british-english.csv")
 
-let words = System.IO.File.ReadLines(englishCsv)
+let words = File.ReadLines(englishCsv)
 
 words |> Seq.length
 
