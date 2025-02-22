@@ -85,6 +85,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FunctionalMapping", "F-Shar
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Loose", "F-Sharp\Loose\Loose.fsproj", "{009579A6-47B9-4AD1-9776-959E7F5990F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Differencing", "C-Sharp\Differencing\Differencing.csproj", "{53918002-A252-49A7-9A9D-002278862C44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -365,6 +367,14 @@ Global
 		{009579A6-47B9-4AD1-9776-959E7F5990F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{009579A6-47B9-4AD1-9776-959E7F5990F0}.Release|x86.ActiveCfg = Release|Any CPU
 		{009579A6-47B9-4AD1-9776-959E7F5990F0}.Release|x86.Build.0 = Release|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Debug|x86.Build.0 = Debug|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Release|x86.ActiveCfg = Release|Any CPU
+		{53918002-A252-49A7-9A9D-002278862C44}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -409,6 +419,7 @@ Global
 		{684FDF72-2B57-490E-BFB6-2E58DA11E447} = {F2C61FE3-D013-4539-9849-E72CC07F11F1}
 		{4AA22DDD-9BC9-46DC-92C0-B6BCEBCA4789} = {F2C61FE3-D013-4539-9849-E72CC07F11F1}
 		{009579A6-47B9-4AD1-9776-959E7F5990F0} = {F2C61FE3-D013-4539-9849-E72CC07F11F1}
+		{53918002-A252-49A7-9A9D-002278862C44} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
