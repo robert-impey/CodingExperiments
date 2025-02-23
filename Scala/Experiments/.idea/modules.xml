@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodingExperiments.Scala.Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/CodingExperiments.Scala.Experiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodingExperiments.Scala.Experiments.Experiments-build.iml" filepath="$PROJECT_DIR$/.idea/modules/CodingExperiments.Scala.Experiments.Experiments-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/Experiments.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Experiments-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Experiments-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala.Experiments.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala.Experiments.iml" />
