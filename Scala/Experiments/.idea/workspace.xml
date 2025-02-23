@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594c5d31-c48e-48d2-95d7-98153f362eb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Kotlin/Experiments/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Kotlin/Experiments/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Differencing.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Differencing.sc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Experiments" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -65,14 +72,14 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rober/code/CodingExperiments/Scala/Experiments",
+    "last_opened_file_path": "/home/robert/code/CodingExperiments/Scala/Experiments",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.scala.settings.ScalaProjectSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -120,6 +127,10 @@
       <workItem from="1698325353582" duration="713000" />
       <workItem from="1735853949528" duration="513000" />
       <workItem from="1740268115066" duration="1394000" />
+      <workItem from="1740345469200" duration="16000" />
+      <workItem from="1740345490131" duration="781000" />
+      <workItem from="1740348874582" duration="18000" />
+      <workItem from="1740349020429" duration="1131000" />
     </task>
     <servers />
   </component>
