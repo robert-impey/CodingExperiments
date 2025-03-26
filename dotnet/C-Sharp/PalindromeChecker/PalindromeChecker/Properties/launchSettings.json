@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PalindromeChecker": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\rober\\OneDrive\\data\\british-english.txt"
+    }
+  }
+}
