@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
     for i in range(int(len(string) / 2)):
         if string[i] != string[len(string) - (1 + i)]:
             return False
