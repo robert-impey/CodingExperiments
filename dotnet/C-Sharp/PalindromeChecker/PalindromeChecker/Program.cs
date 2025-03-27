@@ -22,7 +22,7 @@ class Program
 
                 var wordToCheck = line.Trim();
 
-                var palindromeChecker = new Lib.StackPalindromeChecker();
+                var palindromeChecker = new Lib.IndexPalindromeChecker();
                 if (palindromeChecker.IsPalindrome(wordToCheck))
                     Console.WriteLine(wordToCheck);
             }
