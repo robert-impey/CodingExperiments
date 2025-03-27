@@ -5,9 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/hello_world/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/io/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/is_palindrome/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/filter_non_alphanumeric/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/hello_world/target" />
       <excludeFolder url="file://$MODULE_DIR$/io/target" />
       <excludeFolder url="file://$MODULE_DIR$/is_palindrome/target" />
+      <excludeFolder url="file://$MODULE_DIR$/filter_non_alphanumeric/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
