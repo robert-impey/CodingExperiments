@@ -21,7 +21,8 @@ namespace FindReversedWords.Tests
         [TestInitialize]
         public void Initialize()
         {
-            reversedWordFinder = new NaiveReversedWordFinder();
+            reversedWordFinder = new NaiveReversedWordFinder(
+                new StackReversedStringChecker());
             emptyStringList = new List<string>().AsQueryable();
             emptyReversedWordPairs = new ReversedWordPair[0];
             wordsWithoutReversedWords = new[] { "apple", "banana", "coconut" };

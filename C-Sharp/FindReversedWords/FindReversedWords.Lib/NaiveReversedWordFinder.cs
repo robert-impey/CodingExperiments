@@ -5,16 +5,22 @@ namespace FindReversedWords.Lib
 {
     public class NaiveReversedWordFinder : IReversedWordFinder
     {
+        private readonly IReversedStringChecker _reversedStringChecker;
+
+        public NaiveReversedWordFinder(IReversedStringChecker reversedStringChecker)
+        {
+            _reversedStringChecker = reversedStringChecker;
+        }
+
         public IEnumerable<ReversedWordPair> FindReversedWords(IQueryable<string> allWords)
         {
             var reversedWords = new LinkedList<ReversedWordPair>();
-            var reversedStringChecker = new StackReversedStringChecker();
 
             foreach (var firstWord in allWords)
             {
                 foreach (var secondWord in allWords)
                 {
-                    if (reversedStringChecker.AreReversedPair(firstWord, secondWord))
+                    if (_reversedStringChecker.AreReversedPair(firstWord, secondWord))
                     {
                         reversedWords.AddLast(new ReversedWordPair(firstWord, secondWord));
                     }

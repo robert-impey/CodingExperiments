@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindReversedWords", "FindReversedWords\FindReversedWords.csproj", "{05195C6E-246F-4C02-BCEF-CC524721C40B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindReversedWords.Lib", "FindReversedWords.Lib\FindReversedWords.Lib.csproj", "{ADFFD0BB-2A34-4CD8-8AFA-4AB435835787}"
@@ -8,9 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindReversedWords.Tests", "FindReversedWords.Tests\FindReversedWords.Tests.csproj", "{F862AF00-71EC-4A86-AD10-45BAC2186418}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B2145C2-DE65-4E27-BF85-0B7665F3DFB5}"
-	ProjectSection(SolutionItems) = preProject
-		short-dictionary.txt = short-dictionary.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0BFA2D7-CD4F-45D1-BCD1-0EC6158AA59E}
 	EndGlobalSection
 EndGlobal

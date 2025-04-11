@@ -16,7 +16,8 @@ namespace FindReversedWords
             }
             else
             {
-                var reversedWordFinder = new NaiveReversedWordFinder();
+                var reversedWordFinder = new NaiveReversedWordFinder(
+                    new StackReversedStringChecker());
 
                 foreach (var fileName in args)
                 {
