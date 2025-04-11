@@ -6,7 +6,8 @@
         Dim sum = SumUpTo(10)
         Console.WriteLine(sum)
     End Sub
-    Function SumUpTo(ByVal max As Integer) As Integer
+
+    Function SumUpTo(max As Integer) As Integer
         Dim sum = 0
 
         For counter = 1 To max
@@ -15,7 +16,8 @@
 
         Return sum
     End Function
-    Sub Numbers(ByVal max As Integer)
+
+    Sub Numbers(max As Integer)
         For counter = 1 To max
             Console.WriteLine(counter)
         Next

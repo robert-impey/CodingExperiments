@@ -28,7 +28,7 @@
         End Try
     End Sub
 
-    Function Square(ByVal number)
+    Function Square(number As Integer) As Integer
         Return number * number
     End Function
 End Module
