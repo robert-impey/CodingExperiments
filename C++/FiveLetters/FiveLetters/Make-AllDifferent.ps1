@@ -1,25 +1,28 @@
-param($exe, $dataDir)
+param($exe, $inputDir, $outputDir)
 
-$dictionaryFile = "$($dataDir)\british-english.txt"
+# E.g. 
+# > .\Make-AllDifferent.ps1 ..\x64\Debug\FiveLetters.exe $env:DATA $env:DATA\FiveLetters\C++
 
-$fiveLetterWordsFile = "$($dataDir)\five-letter-words.txt"
+$dictionaryFile = "$($inputDir)\british-english.txt"
+
+$fiveLetterWordsFile = "$($outputDir)\five-letter-words.txt"
 
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'find_5_letter_words' -RedirectStandardInput $dictionaryFile -RedirectStandardOutput $fiveLetterWordsFile
 
-$allLatinFile = "$($dataDir)\five-letter-words-all-latin.txt"
+$allLatinFile = "$($outputDir)\five-letter-words-all-latin.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_words_with_non_latin' -RedirectStandardInput $fiveLetterWordsFile -RedirectStandardOutput $allLatinFile
 
-$upperFile = "$($dataDir)\five-letter-words-all-latin-upper.txt"
+$upperFile = "$($outputDir)\five-letter-words-all-latin-upper.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'to_upper' -RedirectStandardInput $allLatinFile -RedirectStandardOutput $upperFile
 
-$sortedFile = "$($dataDir)\sorted.txt"
+$sortedFile = "$($outputDir)\sorted.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'sort' -RedirectStandardInput $upperFile -RedirectStandardOutput $sortedFile
 
-$uniqueFile = "$($dataDir)\unique-five-letter-words-all-latin-upper.txt"
+$uniqueFile = "$($outputDir)\unique-five-letter-words-all-latin-upper.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_duplicates' -RedirectStandardInput $sortedFile -RedirectStandardOutput $uniqueFile
 
-$allDifferentFile = "$($dataDir)\all-different.txt"
+$allDifferentFile = "$($outputDir)\all-different.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'all_different' -RedirectStandardInput $uniqueFile -RedirectStandardOutput $allDifferentFile
 
-$anagramsFile = "$($dataDir)\anagrams.txt"
+$anagramsFile = "$($outputDir)\anagrams.txt"
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'anagrams_to_sorted' -RedirectStandardInput $allDifferentFile -RedirectStandardOutput $anagramsFile
