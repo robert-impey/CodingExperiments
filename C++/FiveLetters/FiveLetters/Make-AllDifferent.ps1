@@ -6,7 +6,6 @@ param($exe, $inputDir, $outputDir)
 $dictionaryFile = "$($inputDir)\british-english.txt"
 
 $fiveLetterWordsFile = "$($outputDir)\five-letter-words.txt"
-
 Start-Process $exe -NoNewWindow -Wait -ArgumentList 'find_5_letter_words' -RedirectStandardInput $dictionaryFile -RedirectStandardOutput $fiveLetterWordsFile
 
 $allLatinFile = "$($outputDir)\five-letter-words-all-latin.txt"
