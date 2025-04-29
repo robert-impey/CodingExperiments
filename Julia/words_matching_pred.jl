@@ -36,3 +36,8 @@ dict_file = joinpath(data_dir, fn)
 println("Words with more than 20 characters:")
 println("-----")
 print_words_by_predicate(dict_file, x -> length(x) > 20)
+
+println("Finding Words with 5 characters:")
+println("-----")
+five_letter_words = find_words_by_predicate(dict_file, x -> 5 == length(x))
+println("Number of words with 5 letters: ", length(five_letter_words))
