@@ -13,22 +13,10 @@ function read_dictionary(dictionary_file::String)
     return dictionary
 end
 
-function find_words_by_predicate(dictionary, pred)
-    matching_words = []
-
-    for line in dictionary
-        if pred(line)
-            push!(matching_words, line)
-        end
-    end
-
-    return matching_words
-end
-
 function print_long_words(dict)
     println("Words with more than 20 characters:")
     println("-----")
-    long_words = find_words_by_predicate(dict, x -> length(x) > 20)
+    long_words = filter(x -> length(x) > 20, dict)
 
     for word in long_words
         println(word)
@@ -44,7 +32,7 @@ function main()
 
     println("Finding Words with 5 characters:")
     println("-----")
-    five_letter_words = find_words_by_predicate(dict, x -> 5 == length(x))
+    five_letter_words = filter(x -> 5 == length(x), dict)
     println("Number of words with 5 letters: ", length(five_letter_words))
 end
 
