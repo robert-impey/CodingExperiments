@@ -29,7 +29,7 @@ public class FiveLetters {
                     Files.createDirectory(outputPath);
                 }
 
-                fivel(dictionaryPath, outputPath);
+                fiveLetters(dictionaryPath, outputPath);
             } else {
                 System.out.printf("Data dictionary file %s does not exist\n", dictionaryPath);
             }
@@ -38,8 +38,8 @@ public class FiveLetters {
         }
     }
 
-    public static void fivel(Path dictionaryPath,
-                             @NotNull Path outputPath) throws IOException {
+    public static void fiveLetters(Path dictionaryPath,
+                                   @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
         if (!Files.exists(fiveLetterWordsPath)) {
@@ -47,8 +47,11 @@ public class FiveLetters {
         }
     }
 
-    private static void find5LetterWords(@org.jetbrains.annotations.NotNull Path dictionaryPath, @NotNull Path fiveLetterWordsPath) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(dictionaryPath.toFile())));
+    private static void find5LetterWords(@NotNull Path dictionaryPath,
+                                         @NotNull Path fiveLetterWordsPath) throws IOException {
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(
+                        Files.newInputStream(dictionaryPath.toFile().toPath())));
         FileWriter writer = new FileWriter(fiveLetterWordsPath.toFile());
 
         String line;
