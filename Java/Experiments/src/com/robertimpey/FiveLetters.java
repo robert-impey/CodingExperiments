@@ -45,7 +45,7 @@ public class FiveLetters {
         if (Files.exists(fiveLetterWordsPath)) {
             System.out.printf("%s exists, skipping generating...", fiveLetterWordsPath);
         } else {
-            System.out.printf("%s does not, generating...", fiveLetterWordsPath);
+            System.out.printf("%s does not exist, generating...", fiveLetterWordsPath);
             find5LetterWords(dictionaryPath, fiveLetterWordsPath);
         }
     }
