@@ -1,5 +1,7 @@
 package com.robertimpey;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,7 +38,8 @@ public class FiveLetters {
         }
     }
 
-    public static void fivel(Path dictionaryPath, Path outputPath) throws IOException {
+    public static void fivel(Path dictionaryPath,
+                             @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
         if (!Files.exists(fiveLetterWordsPath)) {
@@ -44,7 +47,7 @@ public class FiveLetters {
         }
     }
 
-    private static void find5LetterWords(Path dictionaryPath, Path fiveLetterWordsPath) throws IOException {
+    private static void find5LetterWords(@org.jetbrains.annotations.NotNull Path dictionaryPath, @NotNull Path fiveLetterWordsPath) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(dictionaryPath.toFile())));
         FileWriter writer = new FileWriter(fiveLetterWordsPath.toFile());
 
