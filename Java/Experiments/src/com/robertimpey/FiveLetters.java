@@ -42,7 +42,10 @@ public class FiveLetters {
                                    @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
-        if (!Files.exists(fiveLetterWordsPath)) {
+        if (Files.exists(fiveLetterWordsPath)) {
+            System.out.printf("%s exists, skipping generating...", fiveLetterWordsPath);
+        } else {
+            System.out.printf("%s does not, generating...", fiveLetterWordsPath);
             find5LetterWords(dictionaryPath, fiveLetterWordsPath);
         }
     }
