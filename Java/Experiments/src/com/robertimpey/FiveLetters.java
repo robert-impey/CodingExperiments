@@ -47,21 +47,27 @@ public class FiveLetters {
         List<String> fiveLetterWords;
         if (Files.exists(fiveLetterWordsPath)) {
             System.out.printf("%s exists\nreading...\n", fiveLetterWordsPath);
-            fiveLetterWords = new ArrayList<>();
 
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(
-                            Files.newInputStream(fiveLetterWordsPath)));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                fiveLetterWords.add(line);
-            }
+            fiveLetterWords = readWordsFromFile(fiveLetterWordsPath);
         } else {
             System.out.printf("%s does not exist\ngenerating...\n", fiveLetterWordsPath);
             fiveLetterWords = find5LetterWords(dictionaryPath, fiveLetterWordsPath);
         }
 
         System.out.printf("Found %d 5 letter words\n", fiveLetterWords.toArray().length);
+    }
+
+    private static List<String> readWordsFromFile(Path fiveLetterWordsPath) throws IOException {
+        List<String> words = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(
+                        Files.newInputStream(fiveLetterWordsPath)));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            words.add(line);
+        }
+
+        return words;
     }
 
     private static List<String> find5LetterWords(@NotNull Path dictionaryPath,
