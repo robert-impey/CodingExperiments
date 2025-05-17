@@ -40,7 +40,7 @@ public class FiveLetters {
         }
     }
 
-    public static void fiveLetters(Path dictionaryPath,
+    public static void fiveLetters(@NotNull Path dictionaryPath,
                                    @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
@@ -57,7 +57,7 @@ public class FiveLetters {
         System.out.printf("Found %d 5 letter words\n", fiveLetterWords.toArray().length);
     }
 
-    private static List<String> readWordsFromFile(Path fiveLetterWordsPath) throws IOException {
+    private static @NotNull List<String> readWordsFromFile(Path fiveLetterWordsPath) throws IOException {
         List<String> words = new ArrayList<>();
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
@@ -70,8 +70,8 @@ public class FiveLetters {
         return words;
     }
 
-    private static List<String> find5LetterWords(@NotNull Path dictionaryPath,
-                                                 @NotNull Path fiveLetterWordsPath) throws IOException {
+    private static @NotNull List<String> find5LetterWords(@NotNull Path dictionaryPath,
+                                                          @NotNull Path fiveLetterWordsPath) throws IOException {
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
                         Files.newInputStream(dictionaryPath)));
