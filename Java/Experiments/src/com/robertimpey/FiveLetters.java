@@ -6,6 +6,8 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FiveLetters {
     public static void main(String[] args) throws IOException {
@@ -42,29 +44,45 @@ public class FiveLetters {
                                    @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
+        List<String> fiveLetterWords;
         if (Files.exists(fiveLetterWordsPath)) {
-            System.out.printf("%s exists, skipping generating...", fiveLetterWordsPath);
+            System.out.printf("%s exists\nreading...\n", fiveLetterWordsPath);
+            fiveLetterWords = new ArrayList<>();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(
+                            Files.newInputStream(fiveLetterWordsPath)));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                fiveLetterWords.add(line);
+            }
         } else {
-            System.out.printf("%s does not exist, generating...", fiveLetterWordsPath);
-            find5LetterWords(dictionaryPath, fiveLetterWordsPath);
+            System.out.printf("%s does not exist\ngenerating...\n", fiveLetterWordsPath);
+            fiveLetterWords = find5LetterWords(dictionaryPath, fiveLetterWordsPath);
         }
+
+        System.out.printf("Found %d 5 letter words\n", fiveLetterWords.toArray().length);
     }
 
-    private static void find5LetterWords(@NotNull Path dictionaryPath,
-                                         @NotNull Path fiveLetterWordsPath) throws IOException {
+    private static List<String> find5LetterWords(@NotNull Path dictionaryPath,
+                                                 @NotNull Path fiveLetterWordsPath) throws IOException {
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
-                        Files.newInputStream(dictionaryPath.toFile().toPath())));
+                        Files.newInputStream(dictionaryPath)));
         FileWriter writer = new FileWriter(fiveLetterWordsPath.toFile());
 
+        List<String> fiveLetterWords = new ArrayList<>();
         String line;
         while ((line = reader.readLine()) != null) {
             if (5 == line.length()) {
                 writer.write(line);
                 writer.write(System.lineSeparator());
+                fiveLetterWords.add(line);
             }
         }
 
         writer.close();
+
+        return fiveLetterWords;
     }
 }
