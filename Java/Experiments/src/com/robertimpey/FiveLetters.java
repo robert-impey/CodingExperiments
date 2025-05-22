@@ -55,6 +55,21 @@ public class FiveLetters {
         }
 
         System.out.printf("Found %d 5 letter words\n", fiveLetterWords.toArray().length);
+
+        Path fiveLetterWordsAllLatinPath = outputPath.resolve((Paths.get("five-letter-words-all-latin.txt")));
+
+        List<String> fiveLetterWordsAllLatin;
+        if (Files.exists(fiveLetterWordsAllLatinPath)) {
+            System.out.printf("%s exists\nreading...\n", fiveLetterWordsAllLatinPath);
+
+            fiveLetterWordsAllLatin = readWordsFromFile(fiveLetterWordsAllLatinPath);
+        } else {
+            System.out.printf("%s does not exist\ngenerating...\n", fiveLetterWordsAllLatinPath);
+
+            fiveLetterWordsAllLatin = find5LetterWordsAllLatin(fiveLetterWords, fiveLetterWordsAllLatinPath);
+        }
+
+        System.out.printf("Found %d 5 letter words all Latin\n", fiveLetterWordsAllLatin.toArray().length);
     }
 
     private static @NotNull List<String> readWordsFromFile(Path fiveLetterWordsPath) throws IOException {
@@ -90,5 +105,23 @@ public class FiveLetters {
         writer.close();
 
         return fiveLetterWords;
+    }
+
+    private static @NotNull List<String> find5LetterWordsAllLatin(@NotNull List<String> fiveLetterWords,
+                                                          @NotNull Path fiveLetterWordsAllLatinPath) throws IOException {
+        FileWriter writer = new FileWriter(fiveLetterWordsAllLatinPath.toFile());
+
+        List<String> fiveLetterWordsAllLatin = new ArrayList<>();
+        for (String word : fiveLetterWords) {
+            if (5 == word.length()) {
+                writer.write(word);
+                writer.write(System.lineSeparator());
+                fiveLetterWordsAllLatin.add(word);
+            }
+        }
+
+        writer.close();
+
+        return fiveLetterWordsAllLatin;
     }
 }
