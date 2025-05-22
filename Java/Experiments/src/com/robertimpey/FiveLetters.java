@@ -8,6 +8,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FiveLetters {
     public static void main(String[] args) throws IOException {
@@ -111,9 +113,11 @@ public class FiveLetters {
                                                           @NotNull Path fiveLetterWordsAllLatinPath) throws IOException {
         FileWriter writer = new FileWriter(fiveLetterWordsAllLatinPath.toFile());
 
+        Pattern pattern = Pattern.compile("^[a-z]{5}$", Pattern.CASE_INSENSITIVE);
         List<String> fiveLetterWordsAllLatin = new ArrayList<>();
         for (String word : fiveLetterWords) {
-            if (5 == word.length()) {
+            Matcher matcher = pattern.matcher(word);
+            if (matcher.find()) {
                 writer.write(word);
                 writer.write(System.lineSeparator());
                 fiveLetterWordsAllLatin.add(word);
