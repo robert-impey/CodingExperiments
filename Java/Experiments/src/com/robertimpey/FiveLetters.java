@@ -26,6 +26,8 @@ public class FiveLetters {
             if (Files.exists(dictionaryPath)) {
                 System.out.printf("Data dictionary file %s exists\n", dictionaryPath);
 
+                List<String> words = readWordsFromFile(dictionaryPath);
+
                 Path outputRelativePath = Paths.get("FiveLetters/Java");
                 Path outputPath = dataPath.resolve(outputRelativePath);
 
@@ -33,7 +35,7 @@ public class FiveLetters {
                     Files.createDirectory(outputPath);
                 }
 
-                fiveLetters(dictionaryPath, outputPath);
+                fiveLetters(words, outputPath);
             } else {
                 System.out.printf("Data dictionary file %s does not exist\n", dictionaryPath);
             }
@@ -42,7 +44,19 @@ public class FiveLetters {
         }
     }
 
-    public static void fiveLetters(@NotNull Path dictionaryPath,
+    private static @NotNull List<String> readWordsFromFile(Path wordsFilePath) throws IOException {
+        List<String> words = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(Files.newInputStream(wordsFilePath)));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            words.add(line);
+        }
+
+        return words;
+    }
+
+    public static void fiveLetters(@NotNull List<String> words,
                                    @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
@@ -53,7 +67,7 @@ public class FiveLetters {
             fiveLetterWords = readWordsFromFile(fiveLetterWordsPath);
         } else {
             System.out.printf("%s does not exist\ngenerating...\n", fiveLetterWordsPath);
-            fiveLetterWords = find5LetterWords(dictionaryPath, fiveLetterWordsPath);
+            fiveLetterWords = find5LetterWords(words, fiveLetterWordsPath);
         }
 
         System.out.printf("Found %d 5 letter words\n", fiveLetterWords.toArray().length);
@@ -74,33 +88,16 @@ public class FiveLetters {
         System.out.printf("Found %d 5 letter words all Latin\n", fiveLetterWordsAllLatin.toArray().length);
     }
 
-    private static @NotNull List<String> readWordsFromFile(Path fiveLetterWordsPath) throws IOException {
-        List<String> words = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(
-                        Files.newInputStream(fiveLetterWordsPath)));
-        String line;
-        while ((line = reader.readLine()) != null) {
-            words.add(line);
-        }
-
-        return words;
-    }
-
-    private static @NotNull List<String> find5LetterWords(@NotNull Path dictionaryPath,
+    private static @NotNull List<String> find5LetterWords(@NotNull List<String> words,
                                                           @NotNull Path fiveLetterWordsPath) throws IOException {
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(
-                        Files.newInputStream(dictionaryPath)));
         FileWriter writer = new FileWriter(fiveLetterWordsPath.toFile());
 
         List<String> fiveLetterWords = new ArrayList<>();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            if (5 == line.length()) {
-                writer.write(line);
+        for (String word : words) {
+            if (5 == word.length()) {
+                writer.write(word);
                 writer.write(System.lineSeparator());
-                fiveLetterWords.add(line);
+                fiveLetterWords.add(word);
             }
         }
 
@@ -110,7 +107,7 @@ public class FiveLetters {
     }
 
     private static @NotNull List<String> find5LetterWordsAllLatin(@NotNull List<String> fiveLetterWords,
-                                                          @NotNull Path fiveLetterWordsAllLatinPath) throws IOException {
+                                                                  @NotNull Path fiveLetterWordsAllLatinPath) throws IOException {
         FileWriter writer = new FileWriter(fiveLetterWordsAllLatinPath.toFile());
 
         Pattern pattern = Pattern.compile("^[a-z]{5}$", Pattern.CASE_INSENSITIVE);
