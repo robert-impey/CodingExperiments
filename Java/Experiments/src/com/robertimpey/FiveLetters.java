@@ -87,6 +87,21 @@ public class FiveLetters {
         }
 
         System.out.printf("Found %d 5 letter words all Latin\n", fiveLetterWordsAllLatin.toArray().length);
+
+        Path fiveLetterWordsAllLatinUpperPath = outputPath.resolve((Paths.get("five-letter-words-all-latin-upper.txt")));
+
+        List<String> fiveLetterWordsAllLatinUpper;
+        if (Files.exists(fiveLetterWordsAllLatinUpperPath)) {
+            System.out.printf("%s exists\nreading...\n", fiveLetterWordsAllLatinUpperPath);
+
+            fiveLetterWordsAllLatinUpper = readWordsFromFile(fiveLetterWordsAllLatinUpperPath);
+        } else {
+            System.out.printf("%s does not exist\ngenerating...\n", fiveLetterWordsAllLatinUpperPath);
+
+            fiveLetterWordsAllLatinUpper = find5LetterWordsAllLatinUpper(fiveLetterWordsAllLatin, fiveLetterWordsAllLatinUpperPath);
+        }
+
+        System.out.printf("Found %d 5 letter words all Latin, uppercase\n", fiveLetterWordsAllLatinUpper.toArray().length);
     }
 
     private static @NotNull List<String> find5LetterWords(@NotNull List<String> words, @NotNull Path fiveLetterWordsPath) throws IOException {
@@ -123,5 +138,21 @@ public class FiveLetters {
         writer.close();
 
         return fiveLetterWordsAllLatin;
+    }
+
+    private static @NotNull List<String> find5LetterWordsAllLatinUpper(@NotNull List<String> fiveLetterWordsAllLatin, @NotNull Path fiveLetterWordsAllLatinUpperPath) throws IOException {
+        FileWriter writer = new FileWriter(fiveLetterWordsAllLatinUpperPath.toFile());
+
+        List<String> fiveLetterWordsAllLatinUpper = new ArrayList<>();
+        for (String word : fiveLetterWordsAllLatin) {
+            String wordUpper = word.toUpperCase();
+            writer.write(wordUpper);
+            writer.write(System.lineSeparator());
+            fiveLetterWordsAllLatinUpper.add(wordUpper);
+        }
+
+        writer.close();
+
+        return fiveLetterWordsAllLatinUpper;
     }
 }
