@@ -7,19 +7,15 @@ package com.robertimpey.StringDecoratorDemo;
 import java.util.Arrays;
 
 /**
- *
  * @author robert
  */
-public class SortStringDecorator extends StringDecorator
-{
-    public SortStringDecorator(DecoratedString decoratedString)
-    {
+public class SortStringDecorator extends StringDecorator {
+    public SortStringDecorator(DecoratedString decoratedString) {
         super(decoratedString);
     }
-    
+
     @Override
-    public String getString()
-    {
+    public String getString() {
         char[] explode = super.decoratedString.getString().toCharArray();
         Arrays.sort(explode);
         return new String(explode);

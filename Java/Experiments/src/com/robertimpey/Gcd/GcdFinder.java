@@ -5,7 +5,6 @@
 package com.robertimpey.Gcd;
 
 /**
- *
  * @author Robert
  */
 public interface GcdFinder {

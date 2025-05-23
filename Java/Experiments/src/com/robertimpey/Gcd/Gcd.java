@@ -5,7 +5,6 @@
 package com.robertimpey.Gcd;
 
 /**
- *
  * @author Robert
  */
 public class Gcd {
@@ -28,19 +27,19 @@ public class Gcd {
         GcdFinderContext gfc = new GcdFinderContext(new RecursiveEuclidGcdFinder());
 
         int gcd = gfc.findGcd(a, b);
-        
+
         System.out.printf("gcd(%d, %d) = %d\n", a, b, gcd);
-        
+
         int product = a * b;
-        int absProduct;        
+        int absProduct;
         if (product < 0) {
             absProduct = -1 * product;
         } else {
-            absProduct =  product;
+            absProduct = product;
         }
-        
+
         int lcm = absProduct / gcd;
-        
+
         System.out.printf("lcm(%d, %d) = %d\n", a, b, lcm);
     }
 }

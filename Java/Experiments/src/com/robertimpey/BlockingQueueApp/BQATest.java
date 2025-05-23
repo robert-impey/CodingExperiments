@@ -17,7 +17,6 @@ import java.util.logging.Logger;
 import static org.junit.Assert.*;
 
 /**
- *
  * @author Robert
  */
 public class BQATest {

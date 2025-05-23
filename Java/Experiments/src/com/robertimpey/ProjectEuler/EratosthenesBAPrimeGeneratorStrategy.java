@@ -9,9 +9,9 @@ import java.util.List;
 
 /**
  * EratosthenesBAPrimeGeneratorStrategy
- * 
+ * <p>
  * Generating primes using a boolean array and the Sieve of Eratosthenes.
- * 
+ *
  * @author R.Impey
  */
 public class EratosthenesBAPrimeGeneratorStrategy implements PrimeGeneratorStrategy {
@@ -54,7 +54,7 @@ public class EratosthenesBAPrimeGeneratorStrategy implements PrimeGeneratorStrat
                 }
             }
         }
-        
+
         return primes;
     }
 }

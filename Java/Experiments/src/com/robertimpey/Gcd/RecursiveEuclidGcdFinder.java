@@ -5,16 +5,13 @@
 package com.robertimpey.Gcd;
 
 /**
- *
  * @author Robert
  */
-public class RecursiveEuclidGcdFinder implements GcdFinder
-{
+public class RecursiveEuclidGcdFinder implements GcdFinder {
     @Override
-    public int findGcd(int a, int b)
-    {
+    public int findGcd(int a, int b) {
         int larger, smaller;
-        
+
         if (a > b) {
             larger = a;
             smaller = b;
@@ -22,7 +19,7 @@ public class RecursiveEuclidGcdFinder implements GcdFinder
             larger = b;
             smaller = a;
         }
-        
+
         if (smaller == 0) {
             return larger;
         } else {

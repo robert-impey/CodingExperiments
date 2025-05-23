@@ -9,7 +9,7 @@ public class DecimalToBinary {
         for (int i = 0; i <= 7; i++) {
             System.out.printf("%d\t%s\n", i, decimalToBinary(i));
         }
-        
+
         System.out.println("Recursive Approach");
         int bits = 8;
         for (int i = 0; i <= Math.pow(2, bits) - 1; i++) {
@@ -77,10 +77,10 @@ public class DecimalToBinary {
         }
 
         // Find how many bits we need.
-        int bits = (int)(Math.log(input) / Math.log(2)) + 1;
+        int bits = (int) (Math.log(input) / Math.log(2)) + 1;
 
         // Find the greatest number that can be represented with this many bits.
-        int max = (int)Math.pow(2, bits);
+        int max = (int) Math.pow(2, bits);
 
         // We want to know how much to change this value by to search from the mid point.
         int delta = max / -2;

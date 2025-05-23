@@ -5,7 +5,6 @@
 package com.robertimpey.FarmyardPolymorphism;
 
 /**
- *
  * @author robert
  */
 public interface Animal {

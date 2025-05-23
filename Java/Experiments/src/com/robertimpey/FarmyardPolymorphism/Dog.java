@@ -5,7 +5,6 @@
 package com.robertimpey.FarmyardPolymorphism;
 
 /**
- *
  * @author robert
  */
 public class Dog implements Animal {

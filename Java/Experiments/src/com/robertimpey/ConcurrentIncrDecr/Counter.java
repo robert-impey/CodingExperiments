@@ -33,7 +33,6 @@ package com.robertimpey.ConcurrentIncrDecr;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *
  * @author Robert Impey
  */
 public class Counter {

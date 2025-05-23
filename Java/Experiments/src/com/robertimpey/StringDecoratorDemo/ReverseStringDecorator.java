@@ -5,19 +5,15 @@
 package com.robertimpey.StringDecoratorDemo;
 
 /**
- *
  * @author robert
  */
-public class ReverseStringDecorator extends StringDecorator
-{
-    public ReverseStringDecorator(DecoratedString decoratedString)
-    {
+public class ReverseStringDecorator extends StringDecorator {
+    public ReverseStringDecorator(DecoratedString decoratedString) {
         super(decoratedString);
     }
-    
+
     @Override
-    public String getString()
-    {
+    public String getString() {
         char[] explode = super.decoratedString.getString().toCharArray();
         int len = explode.length;
         char[] reverse = new char[len];

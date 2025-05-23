@@ -8,7 +8,6 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 
 /**
- *
  * @author Robert
  */
 public class Consumer implements Runnable {
@@ -18,7 +17,7 @@ public class Consumer implements Runnable {
     private int messagesReceived = 0;
 
     public Consumer(
-            BlockingQueue<String> drop, 
+            BlockingQueue<String> drop,
             CountDownLatch producingCountDownLatch,
             CountDownLatch consumingCountDownLatch) {
         this.drop = drop;

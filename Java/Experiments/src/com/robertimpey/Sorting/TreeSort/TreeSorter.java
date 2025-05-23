@@ -6,7 +6,6 @@
 package com.robertimpey.Sorting.TreeSort;
 
 /**
- *
  * @author Robert
  */
 public class TreeSorter {
@@ -16,17 +15,17 @@ public class TreeSorter {
             return unsorted;
         } else {
             Tree tree = new Tree(unsorted[0]);
-            
+
             for (int i = 1; i < unsorted.length; i++) {
                 tree.add(unsorted[i]);
             }
-            
+
             int[] sorted = new int[unsorted.length];
             int i = 0;
             for (int num : tree.traverse()) {
                 sorted[i++] = num;
             }
-            
+
             return sorted;
         }
     }

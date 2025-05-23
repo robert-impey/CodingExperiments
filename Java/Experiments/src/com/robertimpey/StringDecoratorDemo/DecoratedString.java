@@ -5,10 +5,8 @@
 package com.robertimpey.StringDecoratorDemo;
 
 /**
- *
  * @author robert
  */
-public interface DecoratedString
-{
+public interface DecoratedString {
     public String getString();
 }

@@ -11,26 +11,25 @@ import org.junit.*;
 import static junit.framework.TestCase.assertEquals;
 
 /**
- *
  * @author Robert
  */
 public class TreeSorterTest {
-    
+
     public TreeSorterTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -47,7 +46,7 @@ public class TreeSorterTest {
 
     @Test
     public void singletonTreeSort() {
-        int[] unsorted = { 1 };
+        int[] unsorted = {1};
 
         TreeSorter treeSorter = new TreeSorter();
         int[] sorted = treeSorter.sort(unsorted);

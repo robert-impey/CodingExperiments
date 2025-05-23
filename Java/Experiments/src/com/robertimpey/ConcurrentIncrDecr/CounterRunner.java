@@ -3,7 +3,6 @@ package com.robertimpey.ConcurrentIncrDecr;
 import java.util.concurrent.CountDownLatch;
 
 /**
- *
  * @author Robert Impey
  */
 public class CounterRunner implements Runnable {

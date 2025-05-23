@@ -8,7 +8,6 @@ package com.robertimpey.Sorting.TreeSort;
 import java.util.ArrayList;
 
 /**
- *
  * @author Robert
  */
 public class Tree {
@@ -39,17 +38,17 @@ public class Tree {
     public ArrayList<Integer> traverse() {
         ArrayList<Integer> collectedValues;
         collectedValues = new ArrayList<Integer>();
-        
+
         if (this.left != null) {
             collectedValues.addAll(this.left.traverse());
         }
-        
+
         collectedValues.add(this.value);
-        
+
         if (this.right != null) {
             collectedValues.addAll(this.right.traverse());
         }
-        
+
         return collectedValues;
     }
 }

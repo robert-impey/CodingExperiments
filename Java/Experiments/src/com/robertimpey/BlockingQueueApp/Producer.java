@@ -8,7 +8,6 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 
 /**
- *
  * @author Robert
  */
 public class Producer implements Runnable {

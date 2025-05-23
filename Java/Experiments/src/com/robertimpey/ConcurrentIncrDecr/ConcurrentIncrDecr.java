@@ -10,7 +10,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author Robert Impey
  */
 public class ConcurrentIncrDecr {
@@ -28,9 +27,9 @@ public class ConcurrentIncrDecr {
         boolean increment = true;
 
         CountDownLatch countDownLatch = new CountDownLatch(THREADS);
-        
+
         Object countingLocker = new Object();
-        
+
         /*
          * Create the runner objects.
          * Because they count up and down in turn, if we have an even

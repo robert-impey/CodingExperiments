@@ -5,15 +5,12 @@
 package com.robertimpey.StringDecoratorDemo;
 
 /**
- *
  * @author robert
  */
-public abstract class StringDecorator implements DecoratedString
-{
+public abstract class StringDecorator implements DecoratedString {
     protected DecoratedString decoratedString;
-    
-    public StringDecorator(DecoratedString decoratedString)
-    {
+
+    public StringDecorator(DecoratedString decoratedString) {
         this.decoratedString = decoratedString;
     }
 }

@@ -5,21 +5,17 @@
 package com.robertimpey.StringDecoratorDemo;
 
 /**
- *
  * @author robert
  */
-public class SimpleDecoratedString implements DecoratedString
-{
+public class SimpleDecoratedString implements DecoratedString {
     private final String theString;
-    
-    public SimpleDecoratedString(String theString)
-    {
+
+    public SimpleDecoratedString(String theString) {
         this.theString = theString;
     }
-    
+
     @Override
-    public String getString() 
-    {
+    public String getString() {
         return this.theString;
     }
 }

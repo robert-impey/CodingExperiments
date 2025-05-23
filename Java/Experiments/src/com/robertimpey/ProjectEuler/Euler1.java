@@ -5,7 +5,6 @@
 package com.robertimpey.ProjectEuler;
 
 /**
- *
  * @author rimpey
  */
 public class Euler1 {

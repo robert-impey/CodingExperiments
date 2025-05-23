@@ -7,7 +7,6 @@ package com.robertimpey.ProjectEuler;
 import java.util.List;
 
 /**
- *
  * @author R.Impey
  */
 public interface PrimeGeneratorStrategy {

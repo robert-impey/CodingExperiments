@@ -5,16 +5,15 @@
 package com.robertimpey.FarmyardPolymorphism;
 
 /**
- *
  * @author robert
  */
 public class SwitchableAnimal {
     String species;
-    
+
     public SwitchableAnimal(String species) {
         this.species = species;
     }
-    
+
     public String speak() throws Exception {
         switch (species) {
             case "dog" -> {

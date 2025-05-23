@@ -5,7 +5,6 @@
 package com.robertimpey;
 
 /**
- *
  * @author Robert
  */
 public class BinarySearch {
@@ -16,24 +15,24 @@ public class BinarySearch {
     public static void main(String[] args) {
         final int max = 10;
         final int[] soughtNumbers = {-1, 0, 5, 9, 10};
-        
+
         int[] as = new int[max];
         int i, j, k;
-        
+
         for (i = 0; i < max; i++) {
             as[i] = i;
         }
-        
+
         for (int soughtNumber : soughtNumbers) {
             System.out.printf("Seeking: %d\n", soughtNumber);
-            
+
             // Simple Search
             System.out.print("Searching with a loop: ");
             i = 0;
             while (!((i == max - 1) || (as[i] == soughtNumber))) {
                 i++;
             }
-            
+
             if (as[i] == soughtNumber) {
                 System.out.println("Found!");
             } else {

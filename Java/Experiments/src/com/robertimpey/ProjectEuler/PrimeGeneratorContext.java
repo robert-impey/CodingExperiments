@@ -7,7 +7,6 @@ package com.robertimpey.ProjectEuler;
 import java.util.List;
 
 /**
- *
  * @author R.Impey
  */
 public class PrimeGeneratorContext {
@@ -17,7 +16,7 @@ public class PrimeGeneratorContext {
     public PrimeGeneratorContext(PrimeGeneratorStrategy primeGeneratorStrategy) {
         this.primeGeneratorStrategy = primeGeneratorStrategy;
     }
-    
+
     public List<Integer> getPrimesUpTo(int max) {
         return this.primeGeneratorStrategy.getPrimesUpTo(max);
     }

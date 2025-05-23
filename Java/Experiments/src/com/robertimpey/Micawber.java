@@ -5,7 +5,6 @@
 package com.robertimpey;
 
 /**
- *
  * @author rimpey
  */
 public class Micawber {
@@ -19,18 +18,18 @@ public class Micawber {
         expenditure = 19.975;
         //expenditure = 20.025;
         String result;
-        
+
         if (income > expenditure) {
             result = "Happiness";
         } else {
             result = "Misery";
         }
-        
+
         System.out.printf(
-            "Income: %.3f\tExpenditure: %.3f\tResult: %s\n",
-            income,
-            expenditure,
-            result
+                "Income: %.3f\tExpenditure: %.3f\tResult: %s\n",
+                income,
+                expenditure,
+                result
         );
     }
 }

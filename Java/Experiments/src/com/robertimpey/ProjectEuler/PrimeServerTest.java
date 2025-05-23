@@ -12,7 +12,6 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 /**
- *
  * @author R.Impey
  */
 public class PrimeServerTest {
@@ -58,7 +57,7 @@ public class PrimeServerTest {
         }
     }
 
-    @Test(expected=IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testGettingPrimesUpToANegativeNumber() {
         for (PrimeGeneratorContext primeGeneratorContext : primeGeneratorContexts) {
             List<Integer> primes = primeGeneratorContext.getPrimesUpTo(-1);

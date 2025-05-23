@@ -6,14 +6,14 @@ public class MaxSubArray {
 
         int leftSubsum = Integer.MIN_VALUE;
         int currSum = 0;
-        for(int i = p; i > left - 1; --i) {
+        for (int i = p; i > left - 1; --i) {
             currSum += nums[i];
             leftSubsum = Math.max(leftSubsum, currSum);
         }
 
         int rightSubsum = Integer.MIN_VALUE;
         currSum = 0;
-        for(int i = p + 1; i < right + 1; ++i) {
+        for (int i = p + 1; i < right + 1; ++i) {
             currSum += nums[i];
             rightSubsum = Math.max(rightSubsum, currSum);
         }
@@ -33,8 +33,7 @@ public class MaxSubArray {
         return Math.max(Math.max(leftSum, rightSum), crossSum);
     }
 
-    public int solve(int[] nums)
-    {
+    public int solve(int[] nums) {
         return helper(nums, 0, nums.length - 1);
     }
 }

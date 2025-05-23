@@ -15,7 +15,7 @@ public class Send {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");
         try (Connection connection = connectionFactory.newConnection();
-            Channel channel = connection.createChannel()) {
+             Channel channel = connection.createChannel()) {
 
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
             String message = "Hello, World!";
