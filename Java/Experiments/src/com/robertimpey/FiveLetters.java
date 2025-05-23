@@ -2,7 +2,10 @@ package com.robertimpey;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -46,8 +49,7 @@ public class FiveLetters {
 
     private static @NotNull List<String> readWordsFromFile(Path wordsFilePath) throws IOException {
         List<String> words = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(Files.newInputStream(wordsFilePath)));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(Files.newInputStream(wordsFilePath)));
         String line;
         while ((line = reader.readLine()) != null) {
             words.add(line);
@@ -56,8 +58,7 @@ public class FiveLetters {
         return words;
     }
 
-    public static void fiveLetters(@NotNull List<String> words,
-                                   @NotNull Path outputPath) throws IOException {
+    public static void fiveLetters(@NotNull List<String> words, @NotNull Path outputPath) throws IOException {
         Path fiveLetterWordsPath = outputPath.resolve(Paths.get("five-letter-words.txt"));
 
         List<String> fiveLetterWords;
@@ -88,8 +89,7 @@ public class FiveLetters {
         System.out.printf("Found %d 5 letter words all Latin\n", fiveLetterWordsAllLatin.toArray().length);
     }
 
-    private static @NotNull List<String> find5LetterWords(@NotNull List<String> words,
-                                                          @NotNull Path fiveLetterWordsPath) throws IOException {
+    private static @NotNull List<String> find5LetterWords(@NotNull List<String> words, @NotNull Path fiveLetterWordsPath) throws IOException {
         FileWriter writer = new FileWriter(fiveLetterWordsPath.toFile());
 
         List<String> fiveLetterWords = new ArrayList<>();
@@ -106,8 +106,7 @@ public class FiveLetters {
         return fiveLetterWords;
     }
 
-    private static @NotNull List<String> find5LetterWordsAllLatin(@NotNull List<String> fiveLetterWords,
-                                                                  @NotNull Path fiveLetterWordsAllLatinPath) throws IOException {
+    private static @NotNull List<String> find5LetterWordsAllLatin(@NotNull List<String> fiveLetterWords, @NotNull Path fiveLetterWordsAllLatinPath) throws IOException {
         FileWriter writer = new FileWriter(fiveLetterWordsAllLatinPath.toFile());
 
         Pattern pattern = Pattern.compile("^[a-z]{5}$", Pattern.CASE_INSENSITIVE);
