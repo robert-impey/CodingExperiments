@@ -20,5 +20,5 @@ def test_palindromes():
         ("abab", False),
     ]
 
-    for (test_input, expectation) in tests:
+    for test_input, expectation in tests:
         assert is_palindrome(test_input) == expectation
