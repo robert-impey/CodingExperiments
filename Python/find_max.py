@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def find_max(the_list):
+def find_max(the_list: list[float]) -> float | None:
     if len(the_list) == 0:
         return
 
@@ -14,6 +14,7 @@ def find_max(the_list):
     return max_found
 
 
-my_list = [1, 2, 3, 2]
+if __name__ == "__main__":
+    my_list = [1.0, 2, 3, 2]
 
-print(find_max(my_list))
+    print(find_max(my_list))
