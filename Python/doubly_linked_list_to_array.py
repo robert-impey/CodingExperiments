@@ -1,5 +1,8 @@
 # See https://leetcode.com/problems/convert-doubly-linked-list-to-array-i/
 
+from typing import List, Optional
+
+
 # Definition for a Node.
 class Node:
     def __init__(self, val, prev=None, next=None):
@@ -8,11 +11,8 @@ class Node:
         self.next = next
 
 
-from typing import List, Optional
-
-
 class Solution:
-    def toArray(self, root: 'Optional[Node]') -> List[int]:
+    def toArray(self, root: "Optional[Node]") -> List[int]:
         answer = []
 
         current = root
