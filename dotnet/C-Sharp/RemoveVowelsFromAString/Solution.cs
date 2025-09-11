@@ -1,4 +1,6 @@
-﻿namespace RemoveVowelsFromAString;
+﻿// https://leetcode.com/problems/remove-vowels-from-a-string/description/
+
+namespace RemoveVowelsFromAString;
 
 public class Solution
 {
