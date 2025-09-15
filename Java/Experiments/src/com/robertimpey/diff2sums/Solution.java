@@ -1,5 +1,7 @@
 package com.robertimpey.diff2sums;
 
+// See https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/description
+
 public class Solution {
     public int differenceOfSums(int n, int m) {
         var num1 = 0;
