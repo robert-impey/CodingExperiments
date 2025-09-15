@@ -7,11 +7,13 @@
       <sourceFolder url="file://$MODULE_DIR$/is_palindrome/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/filter_non_alphanumeric/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/count_digits/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/latest_midnight/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/hello_world/target" />
       <excludeFolder url="file://$MODULE_DIR$/io/target" />
       <excludeFolder url="file://$MODULE_DIR$/is_palindrome/target" />
       <excludeFolder url="file://$MODULE_DIR$/filter_non_alphanumeric/target" />
       <excludeFolder url="file://$MODULE_DIR$/count_digits/target" />
+      <excludeFolder url="file://$MODULE_DIR$/latest_midnight/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
