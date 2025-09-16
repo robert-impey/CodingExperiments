@@ -1,5 +1,6 @@
-// https://leetcode.com/problems/find-the-maximum-achievable-number/
+#![allow(dead_code)]
 
+// https://leetcode.com/problems/find-the-maximum-achievable-number/
 fn the_maximum_achievable_x(num: i32, t: i32) -> i32 {
     num + (2 * t)
 }
@@ -14,7 +15,7 @@ fn get_concatenation(nums: Vec<i32>) -> Vec<i32> {
         ans[i + n] = *val;
     }
 
-    return ans;
+    ans
 }
 
 #[cfg(test)]
