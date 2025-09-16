@@ -1,4 +1,5 @@
-// https://leetcode.com/problems/find-the-maximum-achievable-number/?envType=problem-list-v2&envId=vpmy63kg
+// https://leetcode.com/problems/find-the-maximum-achievable-number/
+
 fn the_maximum_achievable_x(num: i32, t: i32) -> i32 {
     num + (2 * t)
 }
