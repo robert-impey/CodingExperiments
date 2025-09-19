@@ -1,6 +1,6 @@
 using Shouldly;
 
-namespace FindWordsContainingCharacter.Test;
+namespace LeetCode.Test;
 
 internal static class ListHelpers
 {
