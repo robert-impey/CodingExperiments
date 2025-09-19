@@ -1,8 +1,8 @@
 ﻿using Shouldly;
 
-namespace BuildArrayFromPermutation.Test;
+namespace LeetCode.Test;
 
-public class SolutionTest
+public class BuildArrayFromPermutationTest
 {
     [Fact]
     public void Ex1()
@@ -10,7 +10,7 @@ public class SolutionTest
         var input = new[] { 0, 2, 1, 5, 3, 4 };
         var expected = new[] { 0, 1, 2, 4, 5, 3 };
 
-        var solution = new Solution();
+        var solution = new BuildArrayFromPermutation();
         var output = solution.BuildArray(input);
 
         output.ShouldBe(expected);
@@ -22,7 +22,7 @@ public class SolutionTest
         var input = new[] { 5, 0, 1, 2, 3, 4 };
         var expected = new[] { 4, 5, 0, 1, 2, 3 };
 
-        var solution = new Solution();
+        var solution = new BuildArrayFromPermutation();
         var output = solution.BuildArray(input);
 
         output.ShouldBe(expected);

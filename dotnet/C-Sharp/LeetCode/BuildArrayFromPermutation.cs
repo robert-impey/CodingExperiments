@@ -1,6 +1,6 @@
-﻿namespace BuildArrayFromPermutation;
+﻿namespace LeetCode;
 
-public class Solution {
+public class BuildArrayFromPermutation {
     public int[] BuildArray(int[] nums) {
         var ans =  new int[nums.Length];
 
