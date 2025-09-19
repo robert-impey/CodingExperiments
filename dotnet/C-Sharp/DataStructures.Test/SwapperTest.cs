@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+﻿using Shouldly;
 using Xunit;
 
 namespace DataStructures.Test
@@ -12,8 +12,8 @@ namespace DataStructures.Test
 
             Swapper.Swap(ary, 0, 1);
 
-            ary[0].Should().Be(2);
-            ary[1].Should().Be(1);
+            ary[0].ShouldBe(2);
+            ary[1].ShouldBe(1);
         }
     }
 }

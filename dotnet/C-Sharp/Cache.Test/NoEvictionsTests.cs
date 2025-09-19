@@ -1,52 +1,44 @@
 using System;
-using FluentAssertions;
+using Shouldly;
 
-namespace Cache.Test
+namespace Cache.Test;
+
+internal class NoEvictionsTests(Func<int, IIntCache> getCache)
 {
-    internal class NoEvictionsTests
+    public void Test()
     {
-        private readonly Func<int, IIntCache> _getCache;
+        TestGetFromEmpty();
+        GetValue();
+        GetMissingValue();
+    }
 
-        public NoEvictionsTests(Func<int, IIntCache> getCache)
-        {
-            _getCache = getCache;
-        }
+    private void TestGetFromEmpty()
+    {
+        var cache = getCache(1);
+        var got = cache.Get(1);
 
-        public void Test()
-        {
-            TestGetFromEmpty();
-            GetValue();
-            GetMissingValue();
-        }
+        got.ShouldBe(-1);
+    }
 
-        private void TestGetFromEmpty()
-        {
-            var cache = _getCache(1);
-            var got = cache.Get(1);
+    private void GetValue()
+    {
+        var cache = getCache(1);
 
-            got.Should().Be(-1);
-        }
+        cache.Put(1, 1);
 
-        private void GetValue()
-        {
-            var cache = _getCache(1);
+        var got = cache.Get(1);
 
-            cache.Put(1, 1);
+        got.ShouldBe(1);
+    }
 
-            var got = cache.Get(1);
+    private void GetMissingValue()
+    {
+        var cache = getCache(1);
 
-            got.Should().Be(1);
-        }
+        cache.Put(1, 1);
 
-        private void GetMissingValue()
-        {
-            var cache = _getCache(1);
+        var got = cache.Get(2);
 
-            cache.Put(1, 1);
-
-            var got = cache.Get(2);
-
-            got.Should().Be(-1);
-        }
+        got.ShouldBe(-1);
     }
 }

@@ -1,43 +1,42 @@
-using FluentAssertions;
+using Shouldly;
 using Xunit;
 
-namespace DataStructures.Test.Heap
+namespace DataStructures.Test.Heap;
+
+public class MaxHeapTest
 {
-    public class MaxHeapTest
+    [Fact]
+    public void Empty()
     {
-        [Fact]
-        public void Empty()
-        {
-            var heap = new DataStructures.Heap(System.Array.Empty<int>());
-            heap.IsMaxHeap().Should().BeTrue();
-        }
+        var heap = new DataStructures.Heap([]);
+        heap.IsMaxHeap().ShouldBeTrue();
+    }
 
-        [Fact]
-        public void Single()
-        {
-            var heap = new DataStructures.Heap(new int[] { 1 });
-            heap.IsMaxHeap().Should().BeTrue();
-        }
+    [Fact]
+    public void Single()
+    {
+        var heap = new DataStructures.Heap([1]);
+        heap.IsMaxHeap().ShouldBeTrue();
+    }
 
-        [Fact]
-        public void NonMaxHeap()
-        {
-            var heap = new DataStructures.Heap(new int[] { 1, 2 });
-            heap.IsMaxHeap().Should().BeFalse();
-        }
+    [Fact]
+    public void NonMaxHeap()
+    {
+        var heap = new DataStructures.Heap([1, 2]);
+        heap.IsMaxHeap().ShouldBeFalse();
+    }
 
-        [Fact]
-        public void ManyItemsMaxHeap()
-        {
-            var heap = new DataStructures.Heap(new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 4, 12 });
-            heap.IsMaxHeap().Should().BeTrue();
-        }
+    [Fact]
+    public void ManyItemsMaxHeap()
+    {
+        var heap = new DataStructures.Heap([23, 17, 14, 6, 13, 10, 1, 5, 4, 12]);
+        heap.IsMaxHeap().ShouldBeTrue();
+    }
 
-        [Fact]
-        public void ManyItemsNonMaxHeap()
-        {
-            var heap = new DataStructures.Heap(new int[] { 23, 17, 14, 6, 13, 10, 1, 5, 7, 12 });
-            heap.IsMaxHeap().Should().BeFalse();
-        }
+    [Fact]
+    public void ManyItemsNonMaxHeap()
+    {
+        var heap = new DataStructures.Heap([23, 17, 14, 6, 13, 10, 1, 5, 7, 12]);
+        heap.IsMaxHeap().ShouldBeFalse();
     }
 }
