@@ -1,7 +1,6 @@
-﻿namespace Permutations
+﻿namespace Permutations;
+
+internal interface IPermutationCounter
 {
-    interface IPermutationCounter
-    {
-        Fraction Count();
-    }
+    Fraction Count();
 }

@@ -1,10 +1,9 @@
-﻿namespace Permutations
+﻿namespace Permutations;
+
+internal class ThreeAscendingPairsPermutationCounter : ThreePairsPermutationCounter
 {
-    class ThreeAscendingPairsPermutationCounter : ThreePairsPermutationCounter
+    protected override bool Test(int i, int j, int k)
     {
-        protected override bool Test(int i, int j, int k)
-        {
-            return i <= j && j <= k;
-        }
+        return i <= j && j <= k;
     }
 }

@@ -1,59 +1,50 @@
 ﻿using static System.Console;
 
-namespace Permutations
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            if (args.Length > 0)
-            {
-                if (args[0] == "count")
-                {
-                    if (args.Length > 1)
-                    {
-                        Fraction? fraction = null;
-                        if (args[1] == "three-pairs")
-                        {
-                            fraction = new ThreePairsPermutationCounter().Count();
-                        } 
-                        else if (args[1] == "three-unequal-pairs")
-                        {
-                            fraction = new ThreeUnequalPairsPermutationCounter().Count();
-                        }
-                        else if (args[1] == "three-ascending-pairs")
-                        {
-                            fraction = new ThreeAscendingPairsPermutationCounter().Count();
-                        }
-                        else if (args[1] == "three-strictly-ascending-pairs")
-                        {
-                            fraction = new ThreeStrictlyAscendingPairsPermutationsCounter().Count();
-                        }
+namespace Permutations;
 
-                        if (fraction.HasValue)
-                        {
-                            WriteLine($"Matching Count: {fraction.Value.Matching}");
-                            WriteLine($"Total Count: {fraction.Value.Total}");
-                        }
-                        else
-                        {
-                            WriteLine("Unrecognised thing to count!");
-                        }
+internal static class Program
+{
+    private static void Main(string[] args)
+    {
+        if (args.Length > 0)
+        {
+            if (args[0] == "count")
+            {
+                if (args.Length > 1)
+                {
+                    Fraction? fraction = args[1] switch
+                    {
+                        "three-pairs" => new ThreePairsPermutationCounter().Count(),
+                        "three-unequal-pairs" => new ThreeUnequalPairsPermutationCounter().Count(),
+                        "three-ascending-pairs" => new ThreeAscendingPairsPermutationCounter().Count(),
+                        "three-strictly-ascending-pairs" =>
+                            new ThreeStrictlyAscendingPairsPermutationsCounter().Count(),
+                        _ => null
+                    };
+
+                    if (fraction.HasValue)
+                    {
+                        WriteLine($"Matching Count: {fraction.Value.Matching}");
+                        WriteLine($"Total Count: {fraction.Value.Total}");
                     }
                     else
                     {
-                        WriteLine("What do you want me to count?");
+                        WriteLine("Unrecognised thing to count!");
                     }
                 }
                 else
                 {
-                    WriteLine("Unrecognised action!");
+                    WriteLine("What do you want me to count?");
                 }
             }
             else
             {
-                WriteLine("Tell me what to do!");
+                WriteLine("Unrecognised action!");
             }
-        }       
-    }
+        }
+        else
+        {
+            WriteLine("Tell me what to do!");
+        }
+    }       
 }

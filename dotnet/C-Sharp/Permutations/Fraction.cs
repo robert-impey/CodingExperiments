@@ -1,14 +1,7 @@
-﻿namespace Permutations
-{
-    struct Fraction
-    {
-        public int Matching { get; }
-        public int Total { get; }
+﻿namespace Permutations;
 
-        public Fraction(int matching, int total)
-        {
-            Matching = matching;
-            Total = total;
-        }
-    }
+internal readonly struct Fraction(int matching, int total)
+{
+    public int Matching { get; } = matching;
+    public int Total { get; } = total;
 }
