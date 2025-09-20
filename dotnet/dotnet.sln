@@ -99,6 +99,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "C-Sharp\LeetCod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode.Test", "C-Sharp\LeetCode.Test\LeetCode.Test.csproj", "{AFBFAE2E-2F7E-4283-AC63-D71F02AE01A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsPermutation", "C-Sharp\IsPermutation\IsPermutation.csproj", "{8B4241D6-7118-0FAB-9EAA-382595913FB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -427,6 +429,14 @@ Global
 		{AFBFAE2E-2F7E-4283-AC63-D71F02AE01A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFBFAE2E-2F7E-4283-AC63-D71F02AE01A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{AFBFAE2E-2F7E-4283-AC63-D71F02AE01A7}.Release|x86.Build.0 = Release|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Debug|x86.Build.0 = Debug|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Release|x86.ActiveCfg = Release|Any CPU
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -478,6 +488,7 @@ Global
 		{70B7B338-C7BE-4D04-AFA3-FC9CB2F5D188} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{7BBE222C-3656-4E08-A4F0-6071AB22020C} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 		{AFBFAE2E-2F7E-4283-AC63-D71F02AE01A7} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
+		{8B4241D6-7118-0FAB-9EAA-382595913FB8} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}

@@ -2,7 +2,7 @@
   "profiles": {
     "IsPermutation": {
       "commandName": "Project",
-      "commandLineArgs": "lemon lemon"
+      "commandLineArgs": "lemon melon"
     }
   }
 }
