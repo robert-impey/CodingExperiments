@@ -1,0 +1,47 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "name": "FromMathsToGenProg.exe"
+    },
+    {
+      "name": "multiply0",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "multiply0", "50", "100" ]
+    },
+    {
+      "name": "multiply1",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "multiply1", "50", "100" ]
+    },
+    {
+      "name": "multiply2",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "multiply2", "50", "100" ]
+    },
+    {
+      "name": "multiply3",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "multiply3", "50", "100" ]
+    },
+    {
+      "name": "multiply4",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "multiply4", "50", "100" ]
+    }
+  ]
+}
