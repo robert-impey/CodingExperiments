@@ -9,6 +9,20 @@
       "name": "FromMathsToGenProg.exe"
     },
     {
+      "name": "half",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "half" ]
+    },
+    {
+      "name": "odd",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "odd" ]
+    },
+    {
       "name": "multiply0",
       "project": "CMakeLists.txt",
       "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
