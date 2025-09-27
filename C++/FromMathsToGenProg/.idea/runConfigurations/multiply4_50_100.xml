@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="multiply4 50 100" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="multiply4 50 100" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FromMathsToGenProg" TARGET_NAME="FromMathsToGenProg" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FromMathsToGenProg" RUN_TARGET_NAME="FromMathsToGenProg">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
