@@ -1,4 +1,4 @@
-﻿// FromMathsToGenProg.cpp : Defines the entry point for the application.
+// FromMathsToGenProg.cpp : Defines the entry point for the application.
 // See Chapter 1 of "From Mathematics to Generic Programming"
 // by Alexander Stepanov and Daniel Rose
 //
