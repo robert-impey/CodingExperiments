@@ -9,20 +9,20 @@
 /* Begin PBXAggregateTarget section */
 		9B8219C7EA172A5EEC7195AC /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = EEA0A8BCED9B4C88A1E8FF11 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = FA6C6B0464B04DD283FE6984 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				722A3D0100165FA2F0D021DA /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				755AB22EF9184088BD75E4FF /* PBXTargetDependency */,
-				9CB19D6877F44157B8FB281A /* PBXTargetDependency */,
+				C6B940193F7B404FA24135BE /* PBXTargetDependency */,
+				D85CE6BE893A419D8A8798FE /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		B48EC233A83CDBEDB62A41C2 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 2EC02EFDB87345BE9AB06775 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = EFD5E08636EB4DC98C338761 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				C8D5D36A88E6411931DBDCAA /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -34,76 +34,76 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		5A678C5BAE60413CAC856DFB /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7117F7EF63E54A69A7D0D9D8 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */; };
-		B2A4DB359168427AB0E4FF33 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */ = {isa = PBXBuildFile; fileRef = 8658740EE84A4E5792F25D78 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */; };
-		D3A3592562EC40BB9819A1A1 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */ = {isa = PBXBuildFile; fileRef = 582DD1F1F2AB410487E3E897 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */; };
+		5A61EBB3BCBB463EBEB35AB3 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */ = {isa = PBXBuildFile; fileRef = FA652384634F4157A072D6C2 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */; };
+		866B977B8D09407C8002C952 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */ = {isa = PBXBuildFile; fileRef = 406C06CFFBFC43F0BF463ABD /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */; };
+		E09216FF08F5467E8727E37F /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 62739A25307C49A2B490F6AE /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		5C13B1DCBAB84B3C921F5EAF /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		68293EDA214B41B98CAD4A64 /* Release */ = {
+		20E01B0A8FE140EA9C870BF6 /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Release;
 		};
-		7BBC166745654630BBE98E8F /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		8B7B0A45FEB44ECDB1DACBE0 /* RelWithDebInfo */ = {
+		7D50C42394F8487695CAF4C5 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
+		DD5C05FC0C724DA489E8A1A4 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		FFD105E38D754707A61495AB /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		3E9699F463594C459D455FE0 /* PBXContainerItemProxy */ = {
+		0041730DF16F4B53B6CA6DF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 31CDAC17C32A491397D70378 /* Project object */;
+			containerPortal = 1479E33238074119B57D1CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B48EC233A83CDBEDB62A41C2;
+			remoteInfo = ZERO_CHECK;
+		};
+		37135F5ED384498E92456AE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1479E33238074119B57D1CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B48EC233A83CDBEDB62A41C2;
+			remoteInfo = ZERO_CHECK;
+		};
+		C6AE3A761C82484CB38819BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1479E33238074119B57D1CAD /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 32BBB12C9D3C00506B726A4F;
 			remoteInfo = FromMathsToGenProg;
 		};
-		3FE9E0C251DC4B3C9BAE4926 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31CDAC17C32A491397D70378 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B48EC233A83CDBEDB62A41C2;
-			remoteInfo = ZERO_CHECK;
-		};
-		D4BC356C18484D97B9F276B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31CDAC17C32A491397D70378 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B48EC233A83CDBEDB62A41C2;
-			remoteInfo = ZERO_CHECK;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21802EC7E3E44C95BBCB9441 /* FromMathsToGenProg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = FromMathsToGenProg; sourceTree = BUILT_PRODUCTS_DIR; };
-		582DD1F1F2AB410487E3E897 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FromMathsToGenProg.h; path = FromMathsToGenProg/FromMathsToGenProg.h; sourceTree = SOURCE_ROOT; };
-		7117F7EF63E54A69A7D0D9D8 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = FromMathsToGenProg/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		8658740EE84A4E5792F25D78 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = FromMathsToGenProg.cpp; path = FromMathsToGenProg/FromMathsToGenProg.cpp; sourceTree = SOURCE_ROOT; };
-		AD39223DFC964EF1B48CD545 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		406C06CFFBFC43F0BF463ABD /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = FromMathsToGenProg.cpp; path = FromMathsToGenProg/FromMathsToGenProg.cpp; sourceTree = SOURCE_ROOT; };
+		62739A25307C49A2B490F6AE /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = FromMathsToGenProg/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6FB7181074D640219B060135 /* FromMathsToGenProg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = FromMathsToGenProg; sourceTree = BUILT_PRODUCTS_DIR; };
+		F505E2386E59405F92A74CA3 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FA652384634F4157A072D6C2 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FromMathsToGenProg.h; path = FromMathsToGenProg/FromMathsToGenProg.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4662F89013EA448C8DBFC32B /* Frameworks */ = {
+		8FF8F36E4A0048ED95A7E591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -113,77 +113,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1593E2C237294C1B81FE1778 /* Products */ = {
+		26AF34CB5406472A92566D26 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				21802EC7E3E44C95BBCB9441 /* FromMathsToGenProg */,
+				FA652384634F4157A072D6C2 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		2A510A0E8CA24E5A830D1B4A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				5A7F44CD34C34596B5E36419 /* CMake Rules */,
+				F505E2386E59405F92A74CA3 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		3069A4DF6A0242C592642C1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FB7181074D640219B060135 /* FromMathsToGenProg */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2BABBE0D26A84749BD4A3F59 /* Frameworks */ = {
+		3EE73156AE3F40DE9DB50416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		691BFA0EDB694017A60332D1 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				582DD1F1F2AB410487E3E897 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		6F5820884900409DB8DDDD8C /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				A84B24A261B9445CA69E7E4E /* CMake Rules */,
-				AD39223DFC964EF1B48CD545 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		9CA88816057B46D089AEFB6E = {
-			isa = PBXGroup;
-			children = (
-				6F5820884900409DB8DDDD8C /* ALL_BUILD */,
-				FC0CCEAC1C9240A19D8DC631 /* FromMathsToGenProg */,
-				1593E2C237294C1B81FE1778 /* Products */,
-				2BABBE0D26A84749BD4A3F59 /* Frameworks */,
-				CFAEECEC759F410D9A7FEED9 /* Resources */,
-			);
-			sourceTree = "<group>";
-		};
-		A84B24A261B9445CA69E7E4E /* CMake Rules */ = {
+		5A7F44CD34C34596B5E36419 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		CFAEECEC759F410D9A7FEED9 /* Resources */ = {
+		65BF2CC000F34A2790B155C7 = {
+			isa = PBXGroup;
+			children = (
+				2A510A0E8CA24E5A830D1B4A /* ALL_BUILD */,
+				DCF7B521F7B54ED7B62A4ACD /* FromMathsToGenProg */,
+				3069A4DF6A0242C592642C1D /* Products */,
+				3EE73156AE3F40DE9DB50416 /* Frameworks */,
+				C3A4CB7769514B5C8D5148AC /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		79F2A35281824E87BB5CE5DD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				406C06CFFBFC43F0BF463ABD /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C3A4CB7769514B5C8D5148AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		F9618B589547479099099029 /* Source Files */ = {
+		DCF7B521F7B54ED7B62A4ACD /* FromMathsToGenProg */ = {
 			isa = PBXGroup;
 			children = (
-				8658740EE84A4E5792F25D78 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		FC0CCEAC1C9240A19D8DC631 /* FromMathsToGenProg */ = {
-			isa = PBXGroup;
-			children = (
-				F9618B589547479099099029 /* Source Files */,
-				691BFA0EDB694017A60332D1 /* Header Files */,
-				7117F7EF63E54A69A7D0D9D8 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */,
+				79F2A35281824E87BB5CE5DD /* Source Files */,
+				26AF34CB5406472A92566D26 /* Header Files */,
+				62739A25307C49A2B490F6AE /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/CMakeLists.txt */,
 			);
 			name = FromMathsToGenProg;
 			sourceTree = "<group>";
@@ -193,42 +193,42 @@
 /* Begin PBXNativeTarget section */
 		32BBB12C9D3C00506B726A4F /* FromMathsToGenProg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55C68EEBC3184EEDA6A32B70 /* Build configuration list for PBXNativeTarget "FromMathsToGenProg" */;
+			buildConfigurationList = 29B789BBA1FC467C8891B5C1 /* Build configuration list for PBXNativeTarget "FromMathsToGenProg" */;
 			buildPhases = (
-				86DAF101D11F4154BAD4EAA2 /* Sources */,
-				4662F89013EA448C8DBFC32B /* Frameworks */,
+				49C80AF2B4F84EA5A9D9DFBB /* Sources */,
+				8FF8F36E4A0048ED95A7E591 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1218074170BC46AD80CC7E57 /* PBXTargetDependency */,
+				82D7B48473084B6792271932 /* PBXTargetDependency */,
 			);
 			name = FromMathsToGenProg;
 			productName = FromMathsToGenProg;
-			productReference = 21802EC7E3E44C95BBCB9441 /* FromMathsToGenProg */;
+			productReference = 6FB7181074D640219B060135 /* FromMathsToGenProg */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		31CDAC17C32A491397D70378 /* Project object */ = {
+		1479E33238074119B57D1CAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2600;
 			};
-			buildConfigurationList = FC740FC71652464798E6371C /* Build configuration list for PBXProject "FromMathsToGenProg" */;
+			buildConfigurationList = 152766F8FB874743B7F06DAE /* Build configuration list for PBXProject "FromMathsToGenProg" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				7BBC166745654630BBE98E8F /* Debug */,
-				68293EDA214B41B98CAD4A64 /* Release */,
-				5C13B1DCBAB84B3C921F5EAF /* MinSizeRel */,
-				8B7B0A45FEB44ECDB1DACBE0 /* RelWithDebInfo */,
+				FFD105E38D754707A61495AB /* Debug */,
+				20E01B0A8FE140EA9C870BF6 /* Release */,
+				DD5C05FC0C724DA489E8A1A4 /* MinSizeRel */,
+				7D50C42394F8487695CAF4C5 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 9CA88816057B46D089AEFB6E;
+			mainGroup = 65BF2CC000F34A2790B155C7;
 			projectDirPath = .;
 			projectRoot = "";
 			targets = (
@@ -339,58 +339,36 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		86DAF101D11F4154BAD4EAA2 /* Sources */ = {
+		49C80AF2B4F84EA5A9D9DFBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2A4DB359168427AB0E4FF33 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */,
+				866B977B8D09407C8002C952 /* /Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/FromMathsToGenProg.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1218074170BC46AD80CC7E57 /* PBXTargetDependency */ = {
+		82D7B48473084B6792271932 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B48EC233A83CDBEDB62A41C2 /* ZERO_CHECK */;
-			targetProxy = D4BC356C18484D97B9F276B3 /* PBXContainerItemProxy */;
+			targetProxy = 0041730DF16F4B53B6CA6DF0 /* PBXContainerItemProxy */;
 		};
-		755AB22EF9184088BD75E4FF /* PBXTargetDependency */ = {
+		C6B940193F7B404FA24135BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 32BBB12C9D3C00506B726A4F /* FromMathsToGenProg */;
-			targetProxy = 3E9699F463594C459D455FE0 /* PBXContainerItemProxy */;
+			targetProxy = C6AE3A761C82484CB38819BC /* PBXContainerItemProxy */;
 		};
-		9CB19D6877F44157B8FB281A /* PBXTargetDependency */ = {
+		D85CE6BE893A419D8A8798FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B48EC233A83CDBEDB62A41C2 /* ZERO_CHECK */;
-			targetProxy = 3FE9E0C251DC4B3C9BAE4926 /* PBXContainerItemProxy */;
+			targetProxy = 37135F5ED384498E92456AE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0536510E967E4866A2BDD114 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		15C9C20404474F72A77BCCCF /* RelWithDebInfo */ = {
+		0987BA1ABC47468DB086C212 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -412,7 +390,7 @@ fi
 			};
 			name = RelWithDebInfo;
 		};
-		21034B16E443451D90799D6C /* MinSizeRel */ = {
+		0E1079A3290548429858FCBA /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -439,7 +417,51 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		29217C5CD8964A9FA833FD3A /* Debug */ = {
+		12853BEBA179482DA0CC70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		134E55E63ADD4A9BAEB3CA09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		2C63E15FC2F44E56A34A7416 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -461,7 +483,17 @@ fi
 			};
 			name = Debug;
 		};
-		3A31E23EF8A741A0ACF13B78 /* Debug */ = {
+		2F51BE7505274288845CB3A1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build";
+			};
+			name = MinSizeRel;
+		};
+		37AC09BC94EB4C34B569B0FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -470,7 +502,7 @@ fi
 			};
 			name = Debug;
 		};
-		3B808D19E45B47DD91B6B521 /* Release */ = {
+		4288A19E9C2643EE91D5D6D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -497,130 +529,7 @@ fi
 			};
 			name = Release;
 		};
-		3D2904A9D70941298EC70078 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		44A59B33C6AE4648ADE3D71A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/RelWithDebInfo";
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++20' ";
-				OTHER_LDFLAGS = (" '-Wl,-search_paths_first' '-Wl,-headerpad_max_install_names'","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = FromMathsToGenProg;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build/FromMathsToGenProg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		5F517DE1139E4F3C9CCFDAE7 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build";
-			};
-			name = RelWithDebInfo;
-		};
-		5F8E78832EFE4997AA55D4FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		7AB0315734F8438EB7A210D0 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		89E91353481D446C9779268F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build";
-			};
-			name = Release;
-		};
-		C54290D6F0EC463CAB698536 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build";
-			};
-			name = MinSizeRel;
-		};
-		DBD085F54BC5443C8DC4120D /* MinSizeRel */ = {
+		464CEA125B4F4F77A90AC808 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -642,7 +551,17 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		E4BAA9D300184C7F8A942263 /* Debug */ = {
+		4D53F48223FC4568A4CEFE01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build";
+			};
+			name = Release;
+		};
+		532D121D57FE4D76BA1F8295 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -669,7 +588,7 @@ fi
 			};
 			name = Debug;
 		};
-		F97EAD69A1104C19A79FF504 /* Release */ = {
+		8639D73CCA8440939830B1DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -691,54 +610,135 @@ fi
 			};
 			name = Release;
 		};
+		ABC385CE0C2340F7A375FF97 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/FromMathsToGenProg/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" '-Wl,-search_paths_first' '-Wl,-headerpad_max_install_names'","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = FromMathsToGenProg;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build/FromMathsToGenProg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AEB377C2F672476CB78EBC73 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/robert/code/CodingExperiments/C++/FromMathsToGenProg/build";
+			};
+			name = RelWithDebInfo;
+		};
+		D7E3C0D1D3924D0D81D42CB0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D9FE93BBF4394371AA4EA66B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EC02EFDB87345BE9AB06775 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		152766F8FB874743B7F06DAE /* Build configuration list for PBXProject "FromMathsToGenProg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29217C5CD8964A9FA833FD3A /* Debug */,
-				5F8E78832EFE4997AA55D4FA /* Release */,
-				DBD085F54BC5443C8DC4120D /* MinSizeRel */,
-				15C9C20404474F72A77BCCCF /* RelWithDebInfo */,
+				37AC09BC94EB4C34B569B0FD /* Debug */,
+				4D53F48223FC4568A4CEFE01 /* Release */,
+				2F51BE7505274288845CB3A1 /* MinSizeRel */,
+				AEB377C2F672476CB78EBC73 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		55C68EEBC3184EEDA6A32B70 /* Build configuration list for PBXNativeTarget "FromMathsToGenProg" */ = {
+		29B789BBA1FC467C8891B5C1 /* Build configuration list for PBXNativeTarget "FromMathsToGenProg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4BAA9D300184C7F8A942263 /* Debug */,
-				3B808D19E45B47DD91B6B521 /* Release */,
-				21034B16E443451D90799D6C /* MinSizeRel */,
-				44A59B33C6AE4648ADE3D71A /* RelWithDebInfo */,
+				532D121D57FE4D76BA1F8295 /* Debug */,
+				4288A19E9C2643EE91D5D6D0 /* Release */,
+				0E1079A3290548429858FCBA /* MinSizeRel */,
+				ABC385CE0C2340F7A375FF97 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		EEA0A8BCED9B4C88A1E8FF11 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		EFD5E08636EB4DC98C338761 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D2904A9D70941298EC70078 /* Debug */,
-				F97EAD69A1104C19A79FF504 /* Release */,
-				0536510E967E4866A2BDD114 /* MinSizeRel */,
-				7AB0315734F8438EB7A210D0 /* RelWithDebInfo */,
+				2C63E15FC2F44E56A34A7416 /* Debug */,
+				12853BEBA179482DA0CC70D9 /* Release */,
+				464CEA125B4F4F77A90AC808 /* MinSizeRel */,
+				0987BA1ABC47468DB086C212 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		FC740FC71652464798E6371C /* Build configuration list for PBXProject "FromMathsToGenProg" */ = {
+		FA6C6B0464B04DD283FE6984 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A31E23EF8A741A0ACF13B78 /* Debug */,
-				89E91353481D446C9779268F /* Release */,
-				C54290D6F0EC463CAB698536 /* MinSizeRel */,
-				5F517DE1139E4F3C9CCFDAE7 /* RelWithDebInfo */,
+				134E55E63ADD4A9BAEB3CA09 /* Debug */,
+				8639D73CCA8440939830B1DD /* Release */,
+				D9FE93BBF4394371AA4EA66B /* MinSizeRel */,
+				D7E3C0D1D3924D0D81D42CB0 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 31CDAC17C32A491397D70378 /* Project object */;
+	rootObject = 1479E33238074119B57D1CAD /* Project object */;
 }
