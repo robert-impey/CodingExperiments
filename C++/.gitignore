@@ -19,6 +19,7 @@ build
 CMakeFiles
 CMakeScripts
 CMakeCache.txt
+**/.vs/CMake Overview
 
 **/*.xcodeproj/project.xcworkspace/
 **/*.xcodeproj/xcuserdata/
