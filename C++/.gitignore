@@ -20,7 +20,8 @@ CMakeFiles
 CMakeScripts
 CMakeCache.txt
 
-**/*.xcodeproj/
+**/*.xcodeproj/project.xcworkspace/
+**/*.xcodeproj/xcuserdata/
 
 cmake-build-debug
 cmake-build-debug-coverage
