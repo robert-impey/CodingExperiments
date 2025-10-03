@@ -1,7 +1,7 @@
 ﻿# CMakeList.txt : CMake project for Strings, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 4.1)
 
 # Add source to this project's executable.
 add_executable (Strings "Strings.cpp" "Strings.h")
