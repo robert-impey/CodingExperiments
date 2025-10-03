@@ -13,14 +13,14 @@
       "project": "CMakeLists.txt",
       "projectTarget": "Strings.exe (Strings\\Strings.exe)",
       "type": "default",
-      "args": [ "list", "${env:DATA}\\boys-names.txt" ]
+      "args": [ "list", "C:\\Users\\rober\\Dropbox\\data\\boys-names.txt" ]
     },
     {
       "name": "count_lengths",
       "project": "CMakeLists.txt",
       "projectTarget": "Strings.exe (Strings\\Strings.exe)",
       "type": "default",
-      "args": [ "count_lengths", "${env:DATA}\\boys-names.txt" ]
+      "args": [ "count_lengths", "C:\\Users\\rober\\Dropbox\\data\\boys-names.txt" ]
     }
   ]
 }
