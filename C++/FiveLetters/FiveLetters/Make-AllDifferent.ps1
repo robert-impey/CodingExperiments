@@ -1,7 +1,7 @@
 param($exe, $inputDir, $outputDir)
 
 # E.g. 
-# > .\Make-AllDifferent.ps1 ..\x64\Debug\FiveLetters.exe $env:DATA $env:DATA\FiveLetters\C++
+# > .\FiveLetters\Make-AllDifferent.ps1 .\x64\Debug\FiveLetters.exe $env:DATA $env:DATA\FiveLetters\C++
 
 $dictionaryFile = "$($inputDir)\british-english.txt"
 
