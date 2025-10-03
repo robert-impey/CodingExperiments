@@ -1,0 +1,26 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "Strings.exe (Strings\\Strings.exe)",
+      "name": "Strings.exe"
+    },
+    {
+      "name": "list",
+      "project": "CMakeLists.txt",
+      "projectTarget": "Strings.exe (Strings\\Strings.exe)",
+      "type": "default",
+      "args": [ "list", "${env:DATA}\\boys-names.txt" ]
+    },
+    {
+      "name": "count_lengths",
+      "project": "CMakeLists.txt",
+      "projectTarget": "Strings.exe (Strings\\Strings.exe)",
+      "type": "default",
+      "args": [ "count_lengths", "${env:DATA}\\boys-names.txt" ]
+    }
+  ]
+}
