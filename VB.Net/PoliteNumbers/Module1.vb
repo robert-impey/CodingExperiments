@@ -1,4 +1,7 @@
-﻿Module Module1
+﻿' https://en.wikipedia.org/wiki/Polite_number
+' A polite number is a positive integer that can be expressed as the sum of two or more consecutive positive integers.
+
+Module Module1
 
     Sub Main()
         Try
