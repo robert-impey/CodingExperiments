@@ -34,5 +34,3 @@ cmake-build-release-visual-studio
 cmake_install.cmake
 
 main
-
-**/.idea/editor.xml

@@ -12,7 +12,6 @@
 *.Test.VisualState.xml
 *.user
 *.userprefs
-**/.idea/caches/*
 ~$*.xlsx
 Backup
 bin
@@ -23,7 +22,11 @@ pingme.txt
 private.xml
 publish
 Release
-Scala/hello-project/.idea/workspace.xml
+
+**/.idea/caches/*
+**/.idea/editor.xml
+**/.idea/workspace.xml
+
 StyleCop.cache
 target
 test-results
