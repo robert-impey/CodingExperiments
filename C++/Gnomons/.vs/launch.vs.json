@@ -1,0 +1,19 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "Gnomons.exe (Gnomons\\Gnomons.exe)",
+      "name": "Gnomons.exe"
+    },
+    {
+      "name": "5",
+      "project": "CMakeLists.txt",
+      "projectTarget": "Gnomons.exe (Gnomons\\Gnomons.exe)",
+      "type": "default",
+      "args": [ "5" ]
+    }
+  ]
+}
