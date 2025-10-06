@@ -13,10 +13,10 @@ int main(const int argc, char* argv[]) {
         cerr << "Please set the max!" << endl;
     }
     else {
-        string input(argv[1]);
+        const string input(argv[1]);
 
         try {
-            auto max = stoi(input);
+            const auto max = stoi(input);
 
             if (max < 1) {
                 cerr << "Please set an integer greater than 0!" << endl;
