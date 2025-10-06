@@ -1,4 +1,4 @@
-﻿// Gnomons.cpp : Defines the entry point for the application.
+// Gnomons.cpp : Defines the entry point for the application.
 //
 
 #include "Gnomons.h"
@@ -39,6 +39,7 @@ int main(const int argc, char* argv[]) {
             for (auto i = 1; i <= max; i++) {
                 cout << i << endl;
 				print_gnomon(i);
+                cout << endl;
             }
         }
         catch (const std::invalid_argument& ia) {
