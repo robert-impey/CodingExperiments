@@ -8,6 +8,20 @@
 
 using namespace std;
 
+static void print_gnomon(const int n) {
+    for (auto i = 0; i < n; i++) {
+        cout << "a";
+    }
+    cout << endl;
+
+    for (auto i = 0; i < n - 1; i++) {
+        for (auto j = 0; j < n - 1; j++) {
+            cout << " ";
+        }
+        cout << "a" << endl;
+    }
+}
+
 int main(const int argc, char* argv[]) {
     if (argc != 2) {
         cerr << "Please set the max!" << endl;
@@ -24,6 +38,7 @@ int main(const int argc, char* argv[]) {
 
             for (auto i = 1; i <= max; i++) {
                 cout << i << endl;
+				print_gnomon(i);
             }
         }
         catch (const std::invalid_argument& ia) {
@@ -31,3 +46,4 @@ int main(const int argc, char* argv[]) {
         }
     }
 }
+
