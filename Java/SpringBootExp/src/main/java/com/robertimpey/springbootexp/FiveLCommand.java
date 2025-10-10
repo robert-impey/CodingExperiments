@@ -1,8 +1,5 @@
 package com.robertimpey.springbootexp;
 
-import jakarta.annotation.Nonnull;
-import picocli.CommandLine.Command;
-
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,6 +12,9 @@ import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import jakarta.annotation.Nonnull;
+import picocli.CommandLine.Command;
 
 @Command(name = "fivel", mixinStandardHelpOptions = true, description = "The Five Letters Experiment")
 public class FiveLCommand implements Callable<Integer> {
@@ -65,16 +65,14 @@ public class FiveLCommand implements Callable<Integer> {
     }
 
     private static void writeWordsToFile(@Nonnull List<String> words, @Nonnull Path path) throws IOException {
-        FileWriter writer = new FileWriter(path.toFile());
-
-        for (String word : words) {
-            if (5 == word.length()) {
-                writer.write(word);
-                writer.write(System.lineSeparator());
+        try (FileWriter writer = new FileWriter(path.toFile())) {
+            for (String word : words) {
+                if (5 == word.length()) {
+                    writer.write(word);
+                    writer.write(System.lineSeparator());
+                }
             }
         }
-
-        writer.close();
     }
 
     public static void fiveLetters(@Nonnull List<String> words, @Nonnull Path outputPath) throws IOException {
