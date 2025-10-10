@@ -1,6 +1,5 @@
 .DS_Store
 .pyenv
-.vscode
 *_TemporaryKey.pfx
 *.exe
 *.log
