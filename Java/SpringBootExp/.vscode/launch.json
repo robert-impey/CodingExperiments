@@ -17,6 +17,14 @@
             "request": "launch",
             "mainClass": "com.robertimpey.springbootexp.SpringBootExpApplication",
             "projectName": "SpringBootExp"
+        },
+        {
+            "type": "java",
+            "name": "Five L",
+            "request": "launch",
+            "mainClass": "com.robertimpey.springbootexp.SpringBootExpApplication",
+            "projectName": "SpringBootExp",
+             "args": "fivel"
         }
     ]
 }
