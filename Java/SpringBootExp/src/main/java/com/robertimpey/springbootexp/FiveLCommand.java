@@ -124,7 +124,7 @@ public class FiveLCommand implements Callable<Integer> {
         System.out.printf("Found %d 5 letter words all Latin, uppercase\n", fiveLetterWordsAllLatinUpper.toArray().length);
     }
 
-    private static @Nonnull List<String> find5LetterWords(@Nonnull List<String> words) {
+    public static @Nonnull List<String> find5LetterWords(@Nonnull List<String> words) {
         List<String> fiveLetterWords = new ArrayList<>();
         for (String word : words) {
             if (5 == word.length()) {
