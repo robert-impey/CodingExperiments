@@ -1,10 +1,10 @@
 ﻿namespace Strings;
 
-public static class HammingDistance
+public class NoJumpsHammingDistanceCalculator : HammingDistanceCalculator
 {
     // Pascal Style
     // That is, no jumps
-    public static int? Distance(string a, string b)
+    public override int? CalculateDistance(string a, string b)
     {
         int? distance;
 
