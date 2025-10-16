@@ -53,11 +53,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "count_lengths"
+            argument = "list"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = " /Users/robert/Library/CloudStorage/Dropbox/data/boys-names.txt"
+            argument = "/Users/robert/Library/CloudStorage/Dropbox/data/boys-names.txt"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
