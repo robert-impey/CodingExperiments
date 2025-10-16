@@ -33,6 +33,8 @@ cmake-build-release-mingw
 cmake-build-release-visual-studio
 cmake_install.cmake
 
+_deps
+
 main
 
 **/*.dSYM/

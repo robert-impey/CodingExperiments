@@ -3,7 +3,16 @@
 #
 cmake_minimum_required (VERSION 3.31)
 
-# Add source to this project's executable.
+include(FetchContent)
+
+FetchContent_Declare(
+  CLI11
+  GIT_REPOSITORY https://github.com/CLIUtils/CLI11.git
+  GIT_TAG        v2.5.0  # Use a stable release tag
+)
+
+FetchContent_MakeAvailable(CLI11)
+
 add_executable (Strings "Strings.cpp" "Strings.h")
 
-# TODO: Add tests and install targets if needed.
+target_link_libraries(Strings PRIVATE CLI11::CLI11)
