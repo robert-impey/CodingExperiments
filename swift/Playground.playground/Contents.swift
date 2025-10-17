@@ -1,3 +1,5 @@
+import Cocoa
+
 // https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID462
 
 let individualScores = [73, 43, 103, 87, 12]
@@ -9,24 +11,20 @@ for score in individualScores {
         teamScore += 1
     }
 }
-print(teamScore)
 
 var optionalString: String? = "Hello"
-print(optionalString == nil)
 
-var optionalName: String? = nil //"John Appleseed"
+var optionalName: String? = "John Appleseed" //nil
 var greeting = "Hello!"
 if let name = optionalName {
     greeting = "Hello, \(name)"
 } else {
     greeting = "Hello, stranger!"
 }
-print(greeting)
 
 let nickname: String? = "Johnny" //nil
 let fullName: String = "John Appleseed"
 let informalGreeting = "Hi, \(nickname ?? fullName)"
-print(informalGreeting)
 
 let vegetable = "red pepper"
 switch vegetable {
@@ -55,7 +53,7 @@ for (kind, numbers) in interestingNumbers {
         }
     }
 }
-print(largest)
+
 // See https://www.andyibanez.com/posts/pattern-matching/#:~:text=In%20Swift%2C%20Optionals%20are%20just%20syntactic%20sugar%20for,even.%20Take%20a%20look%20at%20the%20following%20code%3A
 if case let lk? = largestKind {
     print("The kind of the largest number was \(lk)")
@@ -67,16 +65,13 @@ var n = 2
 while n < 100 {
     n *= 2
 }
-print(n)
 
 var m = 2
 repeat {
     m *= 2
 } while m < 100
-print(m)
 
 var total = 0
 for i in 0..<4 {
     total += i
 }
-print(total)
