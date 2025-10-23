@@ -3,9 +3,11 @@
 
 // https://www.swift.org/getting-started/cli-swiftpm/
 
+import Figlet
+
 @main
-struct MyCLI {
+struct FigletTool {
     static func main() {
-        print("Hello, world!")
+        Figlet.say("Hello, world!")
     }
 }
