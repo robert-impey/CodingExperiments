@@ -1,23 +1,4 @@
 {
 	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "swift",
-			"args": [
-				"build",
-				"-c",
-				"release",
-				"--product",
-				"MyCLI"
-			],
-			"env": {},
-			"cwd": "c:\\Users\\rober\\code\\CodingExperiments\\swift\\MyCLI",
-			"disableTaskQueue": true,
-			"dontTriggerTestDiscovery": true,
-			"group": "build",
-			"problemMatcher": [],
-			"label": "swift: Build Release MyCLI",
-			"detail": "swift build -c release --product MyCLI"
-		}
-	]
+	"tasks": []
 }
