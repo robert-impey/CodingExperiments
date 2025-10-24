@@ -3,7 +3,7 @@
         {
             "type": "swift",
             "request": "launch",
-            "args": [],
+            "args": ["--input", "Hello, Swift Args!"],
             "cwd": "${workspaceFolder:MyCLI}",
             "name": "Debug MyCLI",
             "program": "${workspaceFolder:MyCLI}/.build/debug/MyCLI",
