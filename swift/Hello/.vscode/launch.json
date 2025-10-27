@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Hello}",
+            "name": "Debug Hello",
+            "program": "${workspaceFolder:Hello}/.build/debug/Hello",
+            "preLaunchTask": "swift: Build Debug Hello"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Hello}",
+            "name": "Release Hello",
+            "program": "${workspaceFolder:Hello}/.build/release/Hello",
+            "preLaunchTask": "swift: Build Release Hello"
+        }
+    ]
+}
