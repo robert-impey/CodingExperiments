@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/count_digits/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/latest_midnight/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/leetcode/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/double_split/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/hello_world/target" />
       <excludeFolder url="file://$MODULE_DIR$/io/target" />
       <excludeFolder url="file://$MODULE_DIR$/is_palindrome/target" />
@@ -16,6 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/count_digits/target" />
       <excludeFolder url="file://$MODULE_DIR$/latest_midnight/target" />
       <excludeFolder url="file://$MODULE_DIR$/leetcode/target" />
+      <excludeFolder url="file://$MODULE_DIR$/double_split/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
