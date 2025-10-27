@@ -1,4 +1,4 @@
-﻿var input = "abc*$%123";
+﻿const string input = "abc*$%123";
 
 var alphaNum = input.Where(c => char.IsLetter(c) || char.IsNumber(c) ).ToArray();
 
