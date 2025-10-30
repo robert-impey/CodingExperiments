@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ControlFlow}",
+            "name": "Debug ControlFlow",
+            "target": "ControlFlow",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug ControlFlow"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ControlFlow}",
+            "name": "Release ControlFlow",
+            "target": "ControlFlow",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release ControlFlow"
+        }
+    ]
+}

@@ -3,11 +3,15 @@
         {
             "type": "swift",
             "request": "launch",
-            "args": ["--input", "Hello, Swift Args!"],
+            "args": [
+                "--input",
+                "Hello, Swift Args!"
+            ],
             "cwd": "${workspaceFolder:MyCLI}",
             "name": "Debug MyCLI",
-            "program": "${workspaceFolder:MyCLI}/.build/debug/MyCLI",
-            "preLaunchTask": "swift: Build Debug MyCLI"
+            "preLaunchTask": "swift: Build Debug MyCLI",
+            "target": "MyCLI",
+            "configuration": "debug"
         },
         {
             "type": "swift",
@@ -15,8 +19,9 @@
             "args": [],
             "cwd": "${workspaceFolder:MyCLI}",
             "name": "Release MyCLI",
-            "program": "${workspaceFolder:MyCLI}/.build/release/MyCLI",
-            "preLaunchTask": "swift: Build Release MyCLI"
+            "preLaunchTask": "swift: Build Release MyCLI",
+            "target": "MyCLI",
+            "configuration": "release"
         }
     ]
 }
