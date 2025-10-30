@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:FunctionsAndClosures}",
+            "name": "Debug FunctionsAndClosures",
+            "target": "FunctionsAndClosures",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug FunctionsAndClosures"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:FunctionsAndClosures}",
+            "name": "Release FunctionsAndClosures",
+            "target": "FunctionsAndClosures",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release FunctionsAndClosures"
+        }
+    ]
+}
