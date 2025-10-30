@@ -22,10 +22,10 @@ struct ControlFlow {
         }
         print(teamScore)
         
-        var optionalString: String? = "Hello"
+        let optionalString: String? = "Hello"
         print(optionalString == nil)
         
-        var optionalName: String? = nil //"John Appleseed"
+        let optionalName: String? = nil //"John Appleseed"
         var greeting = "Hello!"
         if let name = optionalName {
             greeting = "Hello, \(name)"
