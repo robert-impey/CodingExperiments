@@ -45,9 +45,7 @@ int main(int argc, char* argv[])
             string s;
             while (file >> s)
             {
-                auto length = s.length();
-                
-                if (counts.count(length))
+                if (auto length = s.length(); counts.count(length))
                 {
                     counts[length] = counts[length] + 1;
                 }
@@ -58,9 +56,9 @@ int main(int argc, char* argv[])
             }
         }
         
-        for (auto& count : counts)
+        for (auto& [len, cnt] : counts)
         {
-            cout << count.first << " " << count.second << endl;
+            cout << len << " " << cnt << endl;
         }
         
         return 0;
