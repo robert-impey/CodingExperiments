@@ -1,7 +1,6 @@
-﻿# CMakeList.txt : CMake project for Strings, include source and define
+# CMakeList.txt : CMake project for Strings, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.31)
 
 include(FetchContent)
 
@@ -14,5 +13,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(CLI11)
 
 add_executable (Strings "Strings.cpp" "Strings.h")
+
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET Strings PROPERTY CXX_STANDARD 20)
+endif()
 
 target_link_libraries(Strings PRIVATE CLI11::CLI11)
