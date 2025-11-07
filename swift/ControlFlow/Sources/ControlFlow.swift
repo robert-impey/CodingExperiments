@@ -68,7 +68,7 @@ struct ControlFlow {
         }
         print(largest)
         // See https://www.andyibanez.com/posts/pattern-matching/#:~:text=In%20Swift%2C%20Optionals%20are%20just%20syntactic%20sugar%20for,even.%20Take%20a%20look%20at%20the%20following%20code%3A
-        if case let lk? = largestKind {
+        if case let lk: String? = largestKind {
             print("The kind of the largest number was \(lk)")
         } else {
             print("No largest kind found!")
