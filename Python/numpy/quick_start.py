@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# See https://numpy.org/devdocs/user/quickstart.html
+# See https://numpy.org/doc/stable/user/quickstart.html
 
 import numpy as np
 
