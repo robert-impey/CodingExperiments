@@ -23,6 +23,7 @@
     <None Include="Recursion.fsx" />
     <Compile Include="SumIf357.fsx" />
     <None Include="ThirdLetterR.fsx" />
+    <None Include="Multiply.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
