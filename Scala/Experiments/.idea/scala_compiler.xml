@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="CodingExperiments.Scala.Experiments,Experiments,Experiments~1,Scala.Experiments,code.CodingExperiments.Scala.Experiments,experiments_4436" />
+    <option name="separateProdTestSources" value="true" />
+    <profile name="sbt 1" modules="CodingExperiments.Scala.Experiments,Experiments,Experiments~1,Experiments~2,Experiments~2.main,Experiments~2.test,Scala.Experiments,code.CodingExperiments.Scala.Experiments,experiments_4436" />
   </component>
 </project>
