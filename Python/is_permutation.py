@@ -24,5 +24,5 @@ def test_permutations():
         ("ab", "ac", False),
     ]
 
-    for (a, b, expectation) in tests:
+    for a, b, expectation in tests:
         assert is_permutation(a, b) == expectation

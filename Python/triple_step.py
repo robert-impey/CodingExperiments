@@ -32,5 +32,5 @@ def test_count():
         (3, 4),  # 3, 1-2, 2-1, 1-1-1
         (4, 7),  # 3-1, 2-2, 2-1-1, 1-3, 1-2-1, 1-1-2, 1-1-1-1
     ]
-    for (input, expectation) in tests:
+    for input, expectation in tests:
         assert count_possible_steps(input) == expectation

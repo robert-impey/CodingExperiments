@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/score-of-a-string/
 
+
 class Solution(object):
     def scoreOfString(self, s):
         score = 0
