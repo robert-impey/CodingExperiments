@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import unittest
 
 from doubly_linked_list_to_array import Solution, Node
