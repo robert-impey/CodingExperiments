@@ -310,11 +310,11 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "matplotlib", specifier = "==3.10.7" },
-    { name = "numpy", specifier = "==2.3.5" },
-    { name = "pandas", specifier = "==2.3.3" },
-    { name = "pytest", specifier = "==9.0.1" },
-    { name = "ruff", specifier = "==0.14.6" },
+    { name = "matplotlib", specifier = ">=3.10.7" },
+    { name = "numpy", specifier = ">=2.3.5" },
+    { name = "pandas", specifier = ">=2.3.3" },
+    { name = "pytest", specifier = ">=9.0.1" },
+    { name = "ruff", specifier = ">=0.14.6" },
 ]
 
 [[package]]
