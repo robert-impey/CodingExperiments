@@ -23,11 +23,11 @@
       "args": [ "odd" ]
     },
     {
-      "name": "multiply0",
+      "name": "multiply0 3 5",
       "project": "CMakeLists.txt",
       "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
       "type": "default",
-      "args": [ "multiply0", "50", "100" ]
+      "args": [ "multiply0", "3", "5" ]
     },
     {
       "name": "multiply1",
@@ -56,6 +56,13 @@
       "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
       "type": "default",
       "args": [ "multiply4", "50", "100" ]
+    }, 
+    {
+      "name": "multiply5 12 13",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FromMathsToGenProg.exe (FromMathsToGenProg\\FromMathsToGenProg.exe)",
+      "type": "default",
+      "args": [ "multiply5", "12", "13" ]
     }
   ]
 }

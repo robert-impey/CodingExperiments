@@ -125,6 +125,19 @@ int multiply4(int n, int a) {
     return mult_acc4(a, half(n), a + a);
 }
 
+// Suggested by Copilot
+int multiply5(int n, int a) {
+	auto r = 0;
+    while (n > 0) {
+        if (odd(n)) {
+            r += a;
+        }
+        n = half(n);
+        a = a + a;
+    }
+    return r;
+}
+
 result_steps multiply0_steps(int n, int a, result_steps result) {
     if (n == 1)
         return {a, 1};
@@ -280,6 +293,14 @@ int main(int argc, char *argv[]) {
 
         cout << multiply4(mult0, mult1) << endl;
 
+        return 0;
+    }
+
+    if (task == "multiply5") {
+        auto mult0 = get_int_arg(argc, argv, 2, 5);
+        auto mult1 = get_int_arg(argc, argv, 3, 10);
+
+        cout << multiply5(mult0, mult1) << endl;
         return 0;
     }
 
