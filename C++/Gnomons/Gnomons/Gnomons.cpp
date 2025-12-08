@@ -5,8 +5,13 @@
 
 #include <iostream>
 #include <string>
+#include <stdexcept>
 
-using namespace std;
+using std::cout;
+using std::cerr;
+using std::endl;
+
+using std::string; // Add this after includes to bring 'string' into scope
 
 static void print_gnomon(const int n) {
     for (auto i = 0; i < n; i++) {
