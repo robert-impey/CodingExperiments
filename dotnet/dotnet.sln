@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32421.90
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C-Sharp", "C-Sharp", "{251BEFF5-6819-42B5-B17E-E3B56D1C57F7}"
 EndProject
@@ -108,6 +108,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimizeQuadratic", "C-Sharp\MinimizeQuadratic\MinimizeQuadratic.csproj", "{FF11AEED-B4AA-4524-9E01-920EE446C197}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleSplit", "C-Sharp\DoubleSplit\DoubleSplit.csproj", "{21042E8F-2CAD-4CBA-A5EE-FF4759A7F793}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerableCounting", "C-Sharp\EnumerableCounting\EnumerableCounting.csproj", "{6096275D-8BF4-4E1E-BDD3-4306847AE23A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -477,6 +479,14 @@ Global
 		{21042E8F-2CAD-4CBA-A5EE-FF4759A7F793}.Release|Any CPU.Build.0 = Release|Any CPU
 		{21042E8F-2CAD-4CBA-A5EE-FF4759A7F793}.Release|x86.ActiveCfg = Release|Any CPU
 		{21042E8F-2CAD-4CBA-A5EE-FF4759A7F793}.Release|x86.Build.0 = Release|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Debug|x86.Build.0 = Debug|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -533,6 +543,7 @@ Global
 		{2ABC5580-5E33-4AD1-A125-90A502EC84F2} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 		{FF11AEED-B4AA-4524-9E01-920EE446C197} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 		{21042E8F-2CAD-4CBA-A5EE-FF4759A7F793} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
+		{6096275D-8BF4-4E1E-BDD3-4306847AE23A} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
