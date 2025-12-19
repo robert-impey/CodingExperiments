@@ -4,7 +4,7 @@
 
 import numpy as np
 
-def f(x, y):
+def f(x: int, y: int) -> int:
     return 10 * x + y
 
 b = np.fromfunction(f, (5, 4), dtype=np.int_)
