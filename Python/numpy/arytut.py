@@ -4,7 +4,6 @@
 
 import numpy as np
 from numpy import pi
-import matplotlib.pyplot as pp
 
 a = np.array([2, 3, 4])
 zs = np.zeros((3, 4))
