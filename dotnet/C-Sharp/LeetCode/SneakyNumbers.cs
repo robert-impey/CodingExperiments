@@ -1,5 +1,7 @@
 ﻿namespace LeetCode;
 
+// https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville
+
 public class SneakyNumbers
 {
     private const int MaxValue = 100;
