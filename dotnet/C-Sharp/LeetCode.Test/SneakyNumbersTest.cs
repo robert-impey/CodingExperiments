@@ -14,7 +14,6 @@ public class SneakyNumbersTest
         ListHelpers.OutcomeListMatches(expected, output);
     }
 
-
     [Fact]
     public void Ex2()
     {
@@ -26,7 +25,6 @@ public class SneakyNumbersTest
 
         ListHelpers.OutcomeListMatches(expected, output);
     }
-
 
     [Fact]
     public void Ex3()
