@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="SpringBootExp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/21.0.8-tem" />
+    <option name="ALTERNATIVE_JRE_PATH" value="openjdk-25" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <module name="SpringBootExp" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.robertimpey.springbootexp.SpringBootExpApplication" />
