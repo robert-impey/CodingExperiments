@@ -11,7 +11,7 @@ public class SneakyNumbersTest
         var solution = new SneakyNumbers();
         var output = solution.GetSneakyNumbers(input);
 
-        ListHelpers.OutcomeListMatches(expected, output);
+        ListHelpers.OutputListMatches(output, expected);
     }
 
     [Fact]
@@ -23,7 +23,7 @@ public class SneakyNumbersTest
         var solution = new SneakyNumbers();
         var output = solution.GetSneakyNumbers(input);
 
-        ListHelpers.OutcomeListMatches(expected, output);
+        ListHelpers.OutputListMatches(output, expected);
     }
 
     [Fact]
@@ -35,6 +35,6 @@ public class SneakyNumbersTest
         var solution = new SneakyNumbers();
         var output = solution.GetSneakyNumbers(input);
 
-        ListHelpers.OutcomeListMatches(expected, output);
+        ListHelpers.OutputListMatches(output, expected);
     }
 }

@@ -41,8 +41,8 @@ public class FindWordsContainingCharacterTest
     private static void ListTest(string[] words, char x, IList<int> expected)
     {
         var sln = new FindWordsContainingCharacter();
-        var outcome = sln.FindWordsContaining(words, x);
+        var output = sln.FindWordsContaining(words, x);
 
-        ListHelpers.OutcomeListMatches(outcome, expected);
+        ListHelpers.OutputListMatches(output, expected);
     }
 }
