@@ -23,16 +23,16 @@ def is_unique_no_data_structure(input_str):
 
 
 def is_unique_rec(input_str, pivot=0):
-    if pivot < len(input_str):
-        c = input_str[pivot]
+    if pivot >= len(input_str):
+        return True
 
-        for i in range(pivot):
-            if input_str[i] == c:
-                return False
+    c = input_str[pivot]
 
-        return is_unique_rec(input_str, pivot + 1)
+    for i in range(pivot):
+        if input_str[i] == c:
+            return False
 
-    return True
+    return is_unique_rec(input_str, pivot + 1)
 
 
 def print_uniqueness(input_str):
