@@ -1,5 +1,4 @@
-﻿Module Module1
-
+Module Program
     Sub Main()
         Dim code = Asc("A")
         Console.WriteLine(code)
@@ -8,6 +7,7 @@
 
         Dim nextLetter = Chr(code + 1)
         Console.WriteLine(nextLetter)
+        Console.WriteLine()
 
         Dim plainText = "James Bond"
 
@@ -15,18 +15,20 @@
             Console.WriteLine(Asc(letter))
         Next
 
+        Console.WriteLine()
+
         Dim cipherText = Encrypt(plainText)
 
         Console.WriteLine(cipherText)
     End Sub
 
-    Function Encrypt(ByVal plainText As String) As String
+    Function Encrypt(plainText As String) As String
         Dim cipherText = ""
 
         For Each letter In plainText
             Dim code = Asc(letter)
             Dim nextLetterCode = code + 1
-            cipherText = cipherText & Chr(nextLetterCode)
+            cipherText &= Chr(nextLetterCode)
         Next
 
         Return cipherText
