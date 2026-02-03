@@ -1,6 +1,10 @@
 {
   "profiles": {
-    "IsPermutation": {
+    "IsPermutation | True": {
+      "commandName": "Project",
+      "commandLineArgs": "lemon melon"
+    },
+    "IsPermutation | False": {
       "commandName": "Project",
       "commandLineArgs": "lemon apple"
     }
