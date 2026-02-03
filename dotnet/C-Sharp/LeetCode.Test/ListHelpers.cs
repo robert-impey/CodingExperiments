@@ -19,13 +19,27 @@ internal static class ListHelpers
         }
     }
 
-    public static void OutputListMatchesInOrder(int[] output, int[] expected)
+    public static void MatchesInOrder<T>(IList<T> output, IList<T> expected)
     {
-        output.Length.ShouldBe(expected.Length);
-
-        for (var i = 0; i < expected.Length; i++)
+        if (expected is null)
         {
-            output[i].ShouldBe(expected[i]);
+            Assert.NotNull(output);
+        }
+        else
+        {
+            if (output is null)
+            {
+                Assert.Fail("Expected is not null but the output is!");
+            }
+            else
+            {
+                output.Count.ShouldBe(expected.Count);
+
+                for (var i = 0; i < expected.Count; i++)
+                {
+                    output[i].ShouldBe(expected[i]);
+                }
+            }
         }
     }
 }

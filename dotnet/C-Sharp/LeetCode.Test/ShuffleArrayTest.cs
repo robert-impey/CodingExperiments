@@ -11,7 +11,7 @@ public class ShuffleArrayTest
         var solution = new ShuffleArray();
         var output = solution.Shuffle(input, input.Length / 2);
 
-        ListHelpers.OutputListMatchesInOrder(output, expected);
+        ListHelpers.MatchesInOrder(output, expected);
     }
 
     [Fact]
@@ -23,7 +23,7 @@ public class ShuffleArrayTest
         var solution = new ShuffleArray();
         var output = solution.Shuffle(input, input.Length / 2);
 
-        ListHelpers.OutputListMatchesInOrder(output, expected);
+        ListHelpers.MatchesInOrder(output, expected);
     }
 
     [Fact]
@@ -35,6 +35,6 @@ public class ShuffleArrayTest
         var solution = new ShuffleArray();
         var output = solution.Shuffle(input, input.Length / 2);
 
-        ListHelpers.OutputListMatchesInOrder(output, expected);
+        ListHelpers.MatchesInOrder(output, expected);
     }
 }
