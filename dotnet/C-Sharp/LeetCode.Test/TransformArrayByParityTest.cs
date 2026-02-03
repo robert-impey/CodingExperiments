@@ -11,7 +11,7 @@ public class TransformArrayByParityTest
         var solution = new TransformArrayByParity();
         var output = solution.TransformArray(input);
 
-        ListHelpers.OutputListMatches(output, expected);
+        ListHelpers.OutputListContent(output, expected);
     }
 
     [Fact]
@@ -23,6 +23,6 @@ public class TransformArrayByParityTest
         var solution = new TransformArrayByParity();
         var output = solution.TransformArray(input);
 
-        ListHelpers.OutputListMatches(output, expected);
+        ListHelpers.OutputListContent(output, expected);
     }
 }

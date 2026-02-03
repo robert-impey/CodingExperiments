@@ -43,6 +43,6 @@ public class FindWordsContainingCharacterTest
         var sln = new FindWordsContainingCharacter();
         var output = sln.FindWordsContaining(words, x);
 
-        ListHelpers.OutputListMatches(output, expected);
+        ListHelpers.OutputListContent(output, expected);
     }
 }

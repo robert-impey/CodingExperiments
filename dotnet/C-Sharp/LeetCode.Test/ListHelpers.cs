@@ -4,7 +4,7 @@ namespace LeetCode.Test;
 
 internal static class ListHelpers
 {
-    public static void OutputListMatches(IList<int> output, IList<int> expected)
+    public static void OutputListContent(IList<int> output, IList<int> expected)
     {
         output.Count.ShouldBe(expected.Count);
         
