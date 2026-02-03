@@ -9,7 +9,7 @@ Module Program
         Console.WriteLine(nextLetter)
         Console.WriteLine()
 
-        Dim plainText = "James Bond"
+        Const plainText As String = "James Bond"
 
         For Each letter In plainText
             Console.WriteLine(Asc(letter))
@@ -22,7 +22,7 @@ Module Program
         Console.WriteLine(cipherText)
     End Sub
 
-    Function Encrypt(plainText As String) As String
+    Private Function Encrypt(plainText As String) As String
         Dim cipherText = ""
 
         For Each letter In plainText
