@@ -1,6 +1,4 @@
-﻿using Shouldly;
-
-namespace LeetCode.Test;
+﻿namespace LeetCode.Test;
 
 public class KidsWithGreatestCandiesTest
 {
