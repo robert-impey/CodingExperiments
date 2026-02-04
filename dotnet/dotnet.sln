@@ -119,6 +119,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Encryption", "VB\Encryption
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsUnique", "C-Sharp\IsUnique\IsUnique.csproj", "{F5D92CCC-1716-4FC2-83FD-AAD61C8369EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryInitializers", "C-Sharp\DictionaryInitializers\DictionaryInitializers.csproj", "{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -519,6 +521,14 @@ Global
 		{F5D92CCC-1716-4FC2-83FD-AAD61C8369EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5D92CCC-1716-4FC2-83FD-AAD61C8369EE}.Release|x86.ActiveCfg = Release|Any CPU
 		{F5D92CCC-1716-4FC2-83FD-AAD61C8369EE}.Release|x86.Build.0 = Release|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -579,6 +589,7 @@ Global
 		{35EC286B-C1B6-C86A-DBD3-13AF561AB9A5} = {BF026F98-20A8-4016-84EE-2F488203ACF5}
 		{F740B39C-B1F4-4515-B57C-C965FE3CFD72} = {BF026F98-20A8-4016-84EE-2F488203ACF5}
 		{F5D92CCC-1716-4FC2-83FD-AAD61C8369EE} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
+		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
