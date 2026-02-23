@@ -7,6 +7,10 @@
     "FindDictionaryLine | macOS": {
       "commandName": "Project",
       "commandLineArgs": "/Users/robert/Library/CloudStorage/OneDrive-Personal/data/british-english.txt"
+    },
+    "FindDictionaryLine | Linux": {
+      "commandName": "Project",
+      "commandLineArgs": "/home/robert/data/british-english.txt"
     }
   }
 }
