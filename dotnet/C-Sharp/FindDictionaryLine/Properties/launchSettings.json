@@ -3,6 +3,10 @@
     "FindDictionaryLine | Windows": {
       "commandName": "Project",
       "commandLineArgs": "C:\\Users\\rober\\OneDrive\\data\\british-english.txt"
+    },
+    "FindDictionaryLine | macOS": {
+      "commandName": "Project",
+      "commandLineArgs": "/Users/robert/Library/CloudStorage/OneDrive-Personal/data/british-english.txt"
     }
   }
 }
