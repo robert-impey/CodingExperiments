@@ -1,5 +1,4 @@
-﻿Module Module1
-
+Module Program
     Sub Main()
         Dim totalNumberOfItems = 0
 
@@ -11,5 +10,4 @@
 
         Console.WriteLine("Total number of Items: " & totalNumberOfItems)
     End Sub
-
 End Module

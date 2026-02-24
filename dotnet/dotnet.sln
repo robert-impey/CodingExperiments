@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryInitializers", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDictionaryLine", "C-Sharp\FindDictionaryLine\FindDictionaryLine.csproj", "{940B9968-26AE-495F-8301-455B3A28DDBC}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "12DaysOfChristmas", "VB\12DaysOfChristmas\12DaysOfChristmas.vbproj", "{866C7456-423A-409B-BD63-D82F4F10C04C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -539,6 +541,14 @@ Global
 		{940B9968-26AE-495F-8301-455B3A28DDBC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{940B9968-26AE-495F-8301-455B3A28DDBC}.Release|x86.ActiveCfg = Release|Any CPU
 		{940B9968-26AE-495F-8301-455B3A28DDBC}.Release|x86.Build.0 = Release|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Debug|x86.Build.0 = Debug|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Release|x86.ActiveCfg = Release|Any CPU
+		{866C7456-423A-409B-BD63-D82F4F10C04C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -601,6 +611,7 @@ Global
 		{F5D92CCC-1716-4FC2-83FD-AAD61C8369EE} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 		{EA3E34AD-07D2-A43C-CB37-F87D4DECFE46} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
 		{940B9968-26AE-495F-8301-455B3A28DDBC} = {251BEFF5-6819-42B5-B17E-E3B56D1C57F7}
+		{866C7456-423A-409B-BD63-D82F4F10C04C} = {BF026F98-20A8-4016-84EE-2F488203ACF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
