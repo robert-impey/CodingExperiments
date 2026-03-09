@@ -1,8 +1,7 @@
-﻿using System;
+﻿using CommandLine;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CommandLine;
 using static System.Console;
 
 namespace FindEquilibriumIndex
