@@ -37,6 +37,26 @@
             "target": "FunctionsAndClosures",
             "configuration": "release",
             "preLaunchTask": "swift: Build Release FunctionsAndClosures (FunctionsAndClosures)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift}/Hello",
+            "name": "Debug Hello (Hello)",
+            "target": "Hello",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug Hello (Hello)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift}/Hello",
+            "name": "Release Hello (Hello)",
+            "target": "Hello",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release Hello (Hello)"
         }
     ]
 }
