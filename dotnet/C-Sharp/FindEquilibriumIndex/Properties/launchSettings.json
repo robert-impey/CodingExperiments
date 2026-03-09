@@ -1,8 +1,12 @@
 {
   "profiles": {
-    "FindEquilibriumIndex": {
+    "4 1s": {
       "commandName": "Project",
-      "commandLineArgs": "-f C:\\tmp\\start.txt"
+      "commandLineArgs": "-f 4-1s.txt"
+    },
+    "5 1s": {
+      "commandName": "Project",
+      "commandLineArgs": "-f 5-1s.txt"
     }
   }
 }
