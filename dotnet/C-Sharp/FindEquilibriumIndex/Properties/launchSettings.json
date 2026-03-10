@@ -2,11 +2,11 @@
   "profiles": {
     "4 1s": {
       "commandName": "Project",
-      "commandLineArgs": "-f 4-1s.txt"
+      "commandLineArgs": "-f ../../../../../../_Test_Data/4-1s.txt"
     },
     "5 1s": {
       "commandName": "Project",
-      "commandLineArgs": "-f 5-1s.txt"
+      "commandLineArgs": "-f ../../../../../../_Test_Data/5-1s.txt"
     }
   }
 }
