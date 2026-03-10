@@ -2,30 +2,31 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using static System.Console;
 
 namespace FindEquilibriumIndex
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            Parser.Default.ParseArguments<Options>(args)
+            await Parser.Default.ParseArguments<Options>(args)
                 .WithNotParsed(_ =>
                 {
                     WriteLine("Unable to parse the args!");
                 })
-                .WithParsed(opt =>
+                .WithParsedAsync(async opt =>
                 {
-                    PrintEquilibriumIndex(opt.FileName);
+                    await PrintEquilibriumIndex(opt.FileName);
                 });
         }
 
-        static void PrintEquilibriumIndex(string fileName)
+        private static async Task PrintEquilibriumIndex(string fileName)
         {
             var numbers = ReadFile(fileName);
 
-            var a = numbers.ToArray();
+            var a = await numbers.ToArrayAsync();
 
             var equilibriumIndex = FindEquilibriumIndex(a, a.Length);
 
@@ -59,9 +60,9 @@ namespace FindEquilibriumIndex
             return -1;
         }
 
-        private static IEnumerable<int> ReadFile(string fileName)
+        private static async IAsyncEnumerable<int> ReadFile(string fileName)
         {
-            foreach (var line in File.ReadAllLines(fileName))
+            foreach (var line in await File.ReadAllLinesAsync(fileName))
             {
                 if (int.TryParse(line, out int n))
                 {
