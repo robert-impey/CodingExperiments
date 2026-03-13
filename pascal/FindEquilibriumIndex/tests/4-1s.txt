@@ -1,0 +1,3 @@
+FindEquilibriumIndex ../../_Test_Data/4-1s.txt
+
+-1
