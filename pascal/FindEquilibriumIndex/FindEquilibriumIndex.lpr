@@ -6,12 +6,51 @@ uses
   {$IFDEF UNIX}
   cthreads,
   {$ENDIF}
-  SysUtils, Classes;
+  SysUtils,
+  Classes;
+
+  function FindEquilibriumIndex(const a: array of integer): integer;
+  var
+    sum, left, right: int64;
+    i: integer;
+    found: boolean;
+    idx: integer;
+    Count: integer;
+  begin
+    Count := Length(a);
+
+    sum := 0;
+    for i := 0 to Count - 1 do
+      sum := sum + a[i];
+
+    left := 0;
+    right := sum;
+    found := False;
+    idx := -1;
+
+    i := 0;
+    while (i < Count) and (not found) do
+    begin
+      right := right - a[i];
+
+      if left = right then
+      begin
+        found := True;
+        idx := i;
+      end
+      else
+        left := left + a[i];
+
+      Inc(i);
+    end;
+
+    Result := idx;
+  end;
 
 var
   Lines: TStringList;
-  Numbers: array of Integer;
-  i: Integer;
+  Numbers: array of integer;
+  i: integer;
 begin
   if ParamCount < 1 then
   begin
@@ -42,7 +81,5 @@ begin
     Lines.Free;
   end;
 
-  for i := 0 to High(Numbers) do
-    WriteLn('Numbers[', i, '] = ', Numbers[i]);
+  WriteLn(FindEquilibriumIndex(Numbers));
 end.
-
