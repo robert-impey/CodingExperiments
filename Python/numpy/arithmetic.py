@@ -14,7 +14,7 @@ print(-1 * v)
 
 print(2 * u - 3 * v)
 
-print(np.dot(u, v))
+print(u @ v)
 
 # Finding the magnitude of a vector
 # See https://stackoverflow.com/questions/9171158/how-do-you-get-the-magnitude-of-a-vector-in-numpy
@@ -45,5 +45,5 @@ print(mag_a_to_b * mag_a_to_b)  # Answer given as sqrt(120)
 
 xs = np.array([1, 2, 3])
 ys = np.array([6, 7, 8])
-print(np.dot(xs, ys))
+print(xs @ ys)
 print(xs * ys)

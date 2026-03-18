@@ -21,7 +21,7 @@ a = np.random.rand(size)
 b = np.random.rand(size)
 
 start = time.time()
-c = np.dot(a, b)
+c = a @ b
 finish = time.time()
 
 print(c)
