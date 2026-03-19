@@ -61,6 +61,7 @@ begin
   Lines := TStringList.Create;
   try
     Lines.LoadFromFile(ParamStr(1));
+    Numbers := nil;
 
     SetLength(Numbers, Lines.Count);
 
@@ -77,9 +78,8 @@ begin
       end;
     end;
 
+    WriteLn(FindEquilibriumIndex(Numbers));
   finally
     Lines.Free;
   end;
-
-  WriteLn(FindEquilibriumIndex(Numbers));
 end.
