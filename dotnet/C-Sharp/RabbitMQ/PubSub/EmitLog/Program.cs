@@ -22,5 +22,5 @@ string GetMessage(string[] args)
 {
     return ((args.Length > 0)
         ? string.Join(" ", args)
-        : "info: Hello World!");
+        : $"info: Hello World! {Guid.NewGuid()}");
 }
