@@ -28,9 +28,11 @@ namespace FindDictionaryLine
                     WriteLine("Look up which word?");
                     var lookUp = ReadLine();
 
-                    int lineNumberFromDictionary;
+                    if (string.IsNullOrWhiteSpace(lookUp))
+                        continue;
+                    
                     stopwatch.Restart();
-                    var found = dictionary.TryGetValue(lookUp, out lineNumberFromDictionary);
+                    var found = dictionary.TryGetValue(lookUp, out var lineNumberFromDictionary);
                     stopwatch.Stop();
                     WriteLine($"TryGetValue took {stopwatch.ElapsedMilliseconds} ms.");
 
