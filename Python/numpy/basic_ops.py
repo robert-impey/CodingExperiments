@@ -9,6 +9,22 @@ b = np.arange(4)
 
 c = a - b
 
+A = np.array([[1,1],
+              [0,1]])
+
+B = np.array([[2,0],
+              [3, 4]])
+
+# >>> basic_ops.A * basic_ops.B
+# array([[2, 0],
+#        [0, 4]])
+# >>> basic_ops.A @ basic_ops.B
+# array([[5, 4],
+#        [3, 4]])
+# >>> basic_ops.A.dot(basic_ops.B)
+# array([[5, 4],
+#        [3, 4]])
+
 def main():
     print(b)
     print(c)
