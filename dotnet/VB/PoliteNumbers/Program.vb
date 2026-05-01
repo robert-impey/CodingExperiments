@@ -1,18 +1,18 @@
-﻿' https://en.wikipedia.org/wiki/Polite_number
+' https://en.wikipedia.org/wiki/Polite_number
 ' A polite number is a positive integer that can be expressed as the sum of two or more consecutive positive integers.
 
 Module Module1
 
-    Sub Main()
+    Sub Main(args As String())
         Try
             Dim numConsecutiveIntegers As Integer
             Dim max As Integer
 
-            If 0 = My.Application.CommandLineArgs.Count Then
+            If 0 = args.Length Then
                 numConsecutiveIntegers = 2
                 max = 10
-            ElseIf 2 = My.Application.CommandLineArgs.Count Then
-                Dim argNumConsecutiveIntegers As String = My.Application.CommandLineArgs(0)
+            ElseIf 2 = args.Length Then
+                Dim argNumConsecutiveIntegers As String = args(0)
                 If Integer.TryParse(argNumConsecutiveIntegers, numConsecutiveIntegers) Then
                     If numConsecutiveIntegers < 2 Then
                         Throw New Exception("The number of consecutive integers must be 2 or greater!")
@@ -21,7 +21,7 @@ Module Module1
                     Throw New Exception("The number of consecutive integers must be an integer!")
                 End If
 
-                Dim argMax As String = My.Application.CommandLineArgs(1)
+                Dim argMax As String = args(1)
                 If Integer.TryParse(argMax, max) Then
                     If max < 1 Then
                         Throw New Exception("The max must be 1 or greater!")
@@ -39,7 +39,7 @@ Module Module1
         End Try
     End Sub
 
-    Sub PrintSumsOfConsecutiveIntegers(ByVal numberOfConsecutiveIntegers As Integer, ByVal max As Integer)
+    Sub PrintSumsOfConsecutiveIntegers(numberOfConsecutiveIntegers As Integer, max As Integer)
         Dim sum, currentInteger As Integer
         For currentStart = 1 To max
             sum = 0
