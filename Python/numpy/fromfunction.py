@@ -4,10 +4,13 @@
 
 import numpy as np
 
+
 def f(x: int, y: int) -> int:
     return 10 * x + y
 
+
 b = np.fromfunction(f, (5, 4), dtype=np.int_)
+
 
 def main():
     #print('Building an array with a function')
@@ -18,6 +21,7 @@ def main():
 
     for elem in b.flat:
         print(elem)
+
 
 if __name__ == '__main__':
     main()
