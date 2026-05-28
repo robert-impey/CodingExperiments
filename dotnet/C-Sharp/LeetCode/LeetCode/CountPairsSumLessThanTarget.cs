@@ -1,5 +1,7 @@
 ﻿namespace LeetCode;
 
+// https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/
+
 public class CountPairsSumLessThanTarget
 {
     public int CountPairs(IList<int> nums, int target)
