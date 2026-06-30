@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Test;
+﻿using Shouldly;
+
+namespace LeetCode.Test;
 
 public class TransformArrayByParityTest
 {
@@ -11,7 +13,7 @@ public class TransformArrayByParityTest
         var solution = new TransformArrayByParity();
         var output = solution.TransformArray(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 
     [Fact]
@@ -23,6 +25,6 @@ public class TransformArrayByParityTest
         var solution = new TransformArrayByParity();
         var output = solution.TransformArray(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 }

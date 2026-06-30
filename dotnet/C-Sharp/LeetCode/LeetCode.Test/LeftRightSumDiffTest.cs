@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Test;
+﻿using Shouldly;
+
+namespace LeetCode.Test;
 
 public class LeftRightSumDiffTest
 {
@@ -11,7 +13,7 @@ public class LeftRightSumDiffTest
         var solution = new LeftRightSumDiff();
         var output = solution.LeftRightDifference(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 
     [Fact]
@@ -23,6 +25,6 @@ public class LeftRightSumDiffTest
         var solution = new LeftRightSumDiff();
         var output = solution.LeftRightDifference(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 }

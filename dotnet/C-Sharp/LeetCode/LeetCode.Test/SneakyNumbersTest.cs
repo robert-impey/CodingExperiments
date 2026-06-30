@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Test;
+﻿using Shouldly;
+
+namespace LeetCode.Test;
 
 public class SneakyNumbersTest
 {
@@ -11,7 +13,7 @@ public class SneakyNumbersTest
         var solution = new SneakyNumbers();
         var output = solution.GetSneakyNumbers(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 
     [Fact]
@@ -23,7 +25,7 @@ public class SneakyNumbersTest
         var solution = new SneakyNumbers();
         var output = solution.GetSneakyNumbers(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 
     [Fact]
@@ -35,6 +37,6 @@ public class SneakyNumbersTest
         var solution = new SneakyNumbers();
         var output = solution.GetSneakyNumbers(input);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 }

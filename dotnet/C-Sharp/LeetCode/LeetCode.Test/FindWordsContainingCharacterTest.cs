@@ -7,34 +7,34 @@ public class FindWordsContainingCharacterTest
     [Fact]
     public void Ex1()
     {
-        var words = new [] {"leet", "code"};
+        var words = new[] { "leet", "code" };
         const char x = 'e';
-        
+
         var expected = new[] { 0, 1 };
-        
+
         ListTest(words, x, expected);
     }
 
     [Fact]
     public void Ex2()
     {
-        var words = new [] {"abc","bcd","aaaa","cbc"};
+        var words = new[] { "abc", "bcd", "aaaa", "cbc" };
         const char x = 'a';
-        
-        var expected = new[] { 0,2 };
-        
+
+        var expected = new[] { 0, 2 };
+
         ListTest(words, x, expected);
     }
 
     [Fact]
     public void Ex3()
     {
-        var words = new [] {"abc","bcd","aaaa","cbc"};
+        var words = new[] { "abc", "bcd", "aaaa", "cbc" };
         const char x = 'z';
-        
+
         var sln = new FindWordsContainingCharacter();
         var outcome = sln.FindWordsContaining(words, x);
-        
+
         outcome.ShouldBeEmpty();
     }
 
@@ -43,6 +43,6 @@ public class FindWordsContainingCharacterTest
         var sln = new FindWordsContainingCharacter();
         var output = sln.FindWordsContaining(words, x);
 
-        ListHelpers.OutputListContent(output, expected);
+        output.ShouldBe(expected, ignoreOrder: true);
     }
 }
