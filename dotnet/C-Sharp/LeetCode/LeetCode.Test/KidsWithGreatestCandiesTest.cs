@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Test;
+﻿using Shouldly;
+
+namespace LeetCode.Test;
 
 public class KidsWithGreatestCandiesTest
 {
@@ -12,7 +14,7 @@ public class KidsWithGreatestCandiesTest
         var solution = new KidsWithGreatestCandies();
         var output = solution.KidsWithCandies(candies, extraCandies);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 
     [Fact]
@@ -25,7 +27,7 @@ public class KidsWithGreatestCandiesTest
         var solution = new KidsWithGreatestCandies();
         var output = solution.KidsWithCandies(candies, extraCandies);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 
     [Fact]
@@ -38,6 +40,6 @@ public class KidsWithGreatestCandiesTest
         var solution = new KidsWithGreatestCandies();
         var output = solution.KidsWithCandies(candies, extraCandies);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 }

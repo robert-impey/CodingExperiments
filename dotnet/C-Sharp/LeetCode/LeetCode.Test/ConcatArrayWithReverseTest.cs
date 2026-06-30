@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Test;
+﻿using Shouldly;
+
+namespace LeetCode.Test;
 
 public class ConcatArrayWithReverseTest
 {
@@ -11,7 +13,7 @@ public class ConcatArrayWithReverseTest
         var solution = new ConcatArrayWithReverse();
         var output = solution.ConcatWithReverse(nums);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 
     [Fact]
@@ -23,6 +25,6 @@ public class ConcatArrayWithReverseTest
         var solution = new ConcatArrayWithReverse();
         var output = solution.ConcatWithReverse(nums);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 }

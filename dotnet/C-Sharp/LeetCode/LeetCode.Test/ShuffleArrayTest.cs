@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Test;
+﻿using Shouldly;
+
+namespace LeetCode.Test;
 
 public class ShuffleArrayTest
 {
@@ -11,7 +13,7 @@ public class ShuffleArrayTest
         var solution = new ShuffleArray();
         var output = solution.Shuffle(input, input.Length / 2);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 
     [Fact]
@@ -23,7 +25,7 @@ public class ShuffleArrayTest
         var solution = new ShuffleArray();
         var output = solution.Shuffle(input, input.Length / 2);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 
     [Fact]
@@ -35,6 +37,6 @@ public class ShuffleArrayTest
         var solution = new ShuffleArray();
         var output = solution.Shuffle(input, input.Length / 2);
 
-        ListHelpers.MatchesInOrder(output, expected);
+        output.ShouldBe(expected);
     }
 }
