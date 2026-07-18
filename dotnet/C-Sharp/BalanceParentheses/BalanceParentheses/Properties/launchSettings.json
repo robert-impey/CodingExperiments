@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BalanceParentheses": {
+      "commandName": "Project",
+      "commandLineArgs": "()"
+    }
+  }
+}
