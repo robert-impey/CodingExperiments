@@ -16,14 +16,14 @@ Module StringLength
         Dim ShortString As String = BuildTestString(ShortStringLength)
         Dim ValidString As String = BuildTestString(ValidStringLength)
 
-        Dim RangeCheckingFunctions As List(Of RangeCheckingFunction) = New List(Of RangeCheckingFunction)
-
-        RangeCheckingFunctions.Add(New BuiltInMethods(LongString, MinLength, MaxLength))
-        RangeCheckingFunctions.Add(New RegexChecking(LongString, MinLength, MaxLength))
-        RangeCheckingFunctions.Add(New BuiltInMethods(ShortString, MinLength, MaxLength))
-        RangeCheckingFunctions.Add(New RegexChecking(ShortString, MinLength, MaxLength))
-        RangeCheckingFunctions.Add(New BuiltInMethods(ValidString, MinLength, MaxLength))
-        RangeCheckingFunctions.Add(New RegexChecking(ValidString, MinLength, MaxLength))
+        Dim RangeCheckingFunctions As New List(Of RangeCheckingFunction) From {
+            New BuiltInMethods(LongString, MinLength, MaxLength),
+            New RegexChecking(LongString, MinLength, MaxLength),
+            New BuiltInMethods(ShortString, MinLength, MaxLength),
+            New RegexChecking(ShortString, MinLength, MaxLength),
+            New BuiltInMethods(ValidString, MinLength, MaxLength),
+            New RegexChecking(ValidString, MinLength, MaxLength)
+        }
 
         RangeCheckingFunctions.ForEach(AddressOf TestRangeCheckingFunction)
     End Sub
