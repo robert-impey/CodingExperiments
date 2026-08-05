@@ -141,6 +141,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceParentheses.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceParentheses", "C-Sharp\BalanceParentheses\BalanceParentheses\BalanceParentheses.csproj", "{9DB166DB-8D4C-4219-A329-E518B0AE3AD7}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StringLength", "VB\StringLength\StringLength.vbproj", "{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -613,6 +615,14 @@ Global
 		{9DB166DB-8D4C-4219-A329-E518B0AE3AD7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DB166DB-8D4C-4219-A329-E518B0AE3AD7}.Release|x86.ActiveCfg = Release|Any CPU
 		{9DB166DB-8D4C-4219-A329-E518B0AE3AD7}.Release|x86.Build.0 = Release|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Debug|x86.Build.0 = Debug|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Release|x86.ActiveCfg = Release|Any CPU
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -684,6 +694,7 @@ Global
 		{2D7F60B4-8180-45A9-BA10-0C328070CB25} = {BA7F1FC7-0CF0-4B62-A224-1CD614F47E80}
 		{694B85B9-A99F-448A-9CEF-DD391592BBE5} = {BA7F1FC7-0CF0-4B62-A224-1CD614F47E80}
 		{9DB166DB-8D4C-4219-A329-E518B0AE3AD7} = {BA7F1FC7-0CF0-4B62-A224-1CD614F47E80}
+		{3BE6D71E-ACE3-4803-A5A1-11B0A2CD8BD6} = {BF026F98-20A8-4016-84EE-2F488203ACF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABAABA-2D46-42D7-BEB0-F54C7EDBEA9C}
