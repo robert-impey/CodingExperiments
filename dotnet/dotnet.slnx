@@ -1,0 +1,86 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/C-Sharp/">
+    <Project Path="C-Sharp/Cache.Test/Cache.Test.csproj" />
+    <Project Path="C-Sharp/Cache/Cache.csproj" />
+    <Project Path="C-Sharp/CountUpCountDown/CountUpCountDown.csproj" />
+    <Project Path="C-Sharp/DataStructures.Test/DataStructures.Test.csproj" />
+    <Project Path="C-Sharp/DataStructures/DataStructures.csproj" />
+    <Project Path="C-Sharp/DictionaryInitializers/DictionaryInitializers.csproj" />
+    <Project Path="C-Sharp/Differencing/Differencing.csproj" />
+    <Project Path="C-Sharp/DoubleSplit/DoubleSplit.csproj" />
+    <Project Path="C-Sharp/EnumerableCounting/EnumerableCounting.csproj" />
+    <Project Path="C-Sharp/FindDictionaryLine/FindDictionaryLine.csproj" />
+    <Project Path="C-Sharp/FindEquilibriumIndex/FindEquilibriumIndex.csproj" />
+    <Project Path="C-Sharp/FizzBuzz/FizzBuzz.csproj" />
+    <Project Path="C-Sharp/FullDeck/FullDeck.csproj" />
+    <Project Path="C-Sharp/HelloAsync/HelloAsync.csproj" />
+    <Project Path="C-Sharp/IsPermutation/IsPermutation.csproj" />
+    <Project Path="C-Sharp/IsUnique/IsUnique.csproj" />
+    <Project Path="C-Sharp/Logarithms/Logarithms.csproj" />
+    <Project Path="C-Sharp/MinimizeQuadratic/MinimizeQuadratic.csproj" />
+    <Project Path="C-Sharp/MultipleAsync/MultipleAsync.csproj" />
+    <Project Path="C-Sharp/Permutations/Permutations.csproj" />
+    <Project Path="C-Sharp/PrintBinary/PrintBinary.csproj" />
+    <Project Path="C-Sharp/ReverseString/ReverseString.csproj" />
+    <Project Path="C-Sharp/Sorting.Lib/Sorting.Lib.csproj" />
+    <Project Path="C-Sharp/Sorting.Test/Sorting.Test.csproj" />
+    <Project Path="C-Sharp/Sorting/Sorting.csproj" />
+    <Project Path="C-Sharp/Strings.Test/Strings.Test.csproj" />
+    <Project Path="C-Sharp/Strings/Strings.csproj" />
+    <Project Path="C-Sharp/Vectors/Vectors.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/BalanceParentheses/">
+    <Project Path="C-Sharp/BalanceParentheses/BalanceParentheses.Lib/BalanceParentheses.Lib.csproj" />
+    <Project Path="C-Sharp/BalanceParentheses/BalanceParentheses.Test/BalanceParentheses.Test.csproj" />
+    <Project Path="C-Sharp/BalanceParentheses/BalanceParentheses/BalanceParentheses.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/Graphs/">
+    <Project Path="C-Sharp/Graphs/AdjacencyListToDot/AdjacencyListToDot.csproj" />
+    <Project Path="C-Sharp/Graphs/AdjacencyMatrixToDot/AdjacencyMatrixToDot.csproj" />
+    <Project Path="C-Sharp/Graphs/GenerateAdjacencyList/GenerateAdjacencyList.csproj" />
+    <Project Path="C-Sharp/Graphs/Graphs/Graphs.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/LeetCode/">
+    <Project Path="C-Sharp/LeetCode/LeetCode.Test/LeetCode.Test.csproj" />
+    <Project Path="C-Sharp/LeetCode/LeetCode/LeetCode.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/PalindromeChecker/">
+    <Project Path="C-Sharp/PalindromeChecker/PalindromeChecker.Lib/PalindromeChecker.Lib.csproj" />
+    <Project Path="C-Sharp/PalindromeChecker/PalindromeChecker.Tests/PalindromeChecker.Tests.csproj" />
+    <Project Path="C-Sharp/PalindromeChecker/PalindromeChecker/PalindromeChecker.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/RabbitMQ/" />
+  <Folder Name="/C-Sharp/RabbitMQ/PubSub/">
+    <Project Path="C-Sharp/RabbitMQ/PubSub/EmitLog/EmitLog.csproj" />
+    <Project Path="C-Sharp/RabbitMQ/PubSub/ReceiveLogs/ReceiveLogs.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/RabbitMQ/SendReceive/">
+    <Project Path="C-Sharp/RabbitMQ/SendReceive/Receive/Receive.csproj" />
+    <Project Path="C-Sharp/RabbitMQ/SendReceive/Send/Send.csproj" />
+  </Folder>
+  <Folder Name="/C-Sharp/RabbitMQ/WorkQueues/">
+    <Project Path="C-Sharp/RabbitMQ/WorkQueues/NewTask/NewTask.csproj" />
+    <Project Path="C-Sharp/RabbitMQ/WorkQueues/Worker/Worker.csproj" />
+  </Folder>
+  <Folder Name="/F-Sharp/">
+    <Project Path="F-Sharp/AttributeTargets/AttributeTargets.fsproj" />
+    <Project Path="F-Sharp/FSharp.Data.Exp/FSharp.Data.Exp.fsproj" />
+    <Project Path="F-Sharp/FunctionalMapping/FunctionalMapping.fsproj" />
+    <Project Path="F-Sharp/Loose/Loose.fsproj" />
+    <Project Path="F-Sharp/ReproducingMarbles.Test/ReproducingMarbles.Test.fsproj" />
+    <Project Path="F-Sharp/ReproducingMarbles/ReproducingMarbles.fsproj" />
+    <Project Path="F-Sharp/Selection.Test/Selection.Test.fsproj" />
+    <Project Path="F-Sharp/Selection/Selection.fsproj" />
+  </Folder>
+  <Folder Name="/VB/">
+    <Project Path="VB/12DaysOfChristmas/12DaysOfChristmas.vbproj" />
+    <Project Path="VB/Encryption/Encryption.vbproj" />
+    <Project Path="VB/HelloWorld/HelloWorld.vbproj" />
+    <Project Path="VB/PoliteNumbers/PoliteNumbers.vbproj" />
+    <Project Path="VB/StringLength/StringLength.vbproj" />
+  </Folder>
+</Solution>
