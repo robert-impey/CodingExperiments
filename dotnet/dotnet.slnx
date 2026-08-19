@@ -78,6 +78,7 @@
   </Folder>
   <Folder Name="/VB/">
     <Project Path="VB/12DaysOfChristmas/12DaysOfChristmas.vbproj" />
+    <Project Path="VB/BooleanConversions/BooleanConversions.vbproj" Id="0c69e2c3-a7fe-426d-9394-b03189efea92" />
     <Project Path="VB/Encryption/Encryption.vbproj" />
     <Project Path="VB/HelloWorld/HelloWorld.vbproj" />
     <Project Path="VB/PoliteNumbers/PoliteNumbers.vbproj" />
