@@ -1,5 +1,4 @@
-﻿Module Module1
-
+Module Program
     Sub Main()
         Console.WriteLine("Do you go to Wren?")
         Dim wren = Console.ReadLine()
@@ -10,5 +9,4 @@
             Console.WriteLine("Other")
         End If
     End Sub
-
 End Module
