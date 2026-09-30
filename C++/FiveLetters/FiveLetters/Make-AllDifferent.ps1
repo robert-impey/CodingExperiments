@@ -6,22 +6,36 @@ param($exe, $inputDir, $outputDir)
 $dictionaryFile = "$($inputDir)\british-english.txt"
 
 $fiveLetterWordsFile = "$($outputDir)\five-letter-words.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'find_5_letter_words' -RedirectStandardInput $dictionaryFile -RedirectStandardOutput $fiveLetterWordsFile
+if (-not (Test-Path $fiveLetterWordsFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'find_5_letter_words' -RedirectStandardInput $dictionaryFile -RedirectStandardOutput $fiveLetterWordsFile
+}
 
 $allLatinFile = "$($outputDir)\five-letter-words-all-latin.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_words_with_non_latin' -RedirectStandardInput $fiveLetterWordsFile -RedirectStandardOutput $allLatinFile
+if (-not (Test-Path $allLatinFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_words_with_non_latin' -RedirectStandardInput $fiveLetterWordsFile -RedirectStandardOutput $allLatinFile
+}
 
 $upperFile = "$($outputDir)\five-letter-words-all-latin-upper.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'to_upper' -RedirectStandardInput $allLatinFile -RedirectStandardOutput $upperFile
+if (-not (Test-Path $upperFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'to_upper' -RedirectStandardInput $allLatinFile -RedirectStandardOutput $upperFile
+}
 
 $sortedFile = "$($outputDir)\sorted.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'sort' -RedirectStandardInput $upperFile -RedirectStandardOutput $sortedFile
+if (-not (Test-Path $sortedFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'sort' -RedirectStandardInput $upperFile -RedirectStandardOutput $sortedFile
+}
 
 $uniqueFile = "$($outputDir)\unique-five-letter-words-all-latin-upper.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_duplicates' -RedirectStandardInput $sortedFile -RedirectStandardOutput $uniqueFile
+if (-not (Test-Path $uniqueFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'remove_duplicates' -RedirectStandardInput $sortedFile -RedirectStandardOutput $uniqueFile
+}
 
 $allDifferentFile = "$($outputDir)\all-different.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'all_different' -RedirectStandardInput $uniqueFile -RedirectStandardOutput $allDifferentFile
+if (-not (Test-Path $allDifferentFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'all_different' -RedirectStandardInput $uniqueFile -RedirectStandardOutput $allDifferentFile
+}
 
 $anagramsFile = "$($outputDir)\anagrams.txt"
-Start-Process $exe -NoNewWindow -Wait -ArgumentList 'anagrams_to_sorted' -RedirectStandardInput $allDifferentFile -RedirectStandardOutput $anagramsFile
+if (-not (Test-Path $anagramsFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'anagrams_to_sorted' -RedirectStandardInput $allDifferentFile -RedirectStandardOutput $anagramsFile
+}
