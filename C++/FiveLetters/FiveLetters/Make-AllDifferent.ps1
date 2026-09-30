@@ -39,3 +39,8 @@ $anagramsFile = "$($outputDir)\anagrams.txt"
 if (-not (Test-Path $anagramsFile)) {
     Start-Process $exe -NoNewWindow -Wait -ArgumentList 'anagrams_to_sorted' -RedirectStandardInput $allDifferentFile -RedirectStandardOutput $anagramsFile
 }
+
+$gridsFile = "$($outputDir)\grids.txt"
+if (-not (Test-Path $gridsFile)) {
+    Start-Process $exe -NoNewWindow -Wait -ArgumentList 'all_diff_to_grid' -RedirectStandardInput $anagramsFile -RedirectStandardOutput $gridsFile
+}
