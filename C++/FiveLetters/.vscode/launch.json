@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run all_diff_to_grid from grids.txt (CMake)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "preLaunchTask": "cmake: build",
+            "program": "${workspaceFolder}/FiveLetters/x64/Debug/FiveLetters.exe",
+            "args": ["all_diff_to_grid"],
+            "cwd": "${workspaceFolder}/FiveLetters",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "MIMode": "cpp-local",
+            "miDebuggerPath": "${command:CMakeSelectActiveKit.msdvc}"
+        }
+    ]
+}
