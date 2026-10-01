@@ -1,116 +1,22 @@
-set(PROJECT_NAME FiveLetters)
+﻿# CMakeList.txt : CMake project for FiveLetters, include source and define
+# project specific logic here.
+#
 
-################################################################################
-# Source groups
-################################################################################
-set(Source_Files
-    "FiveLetters.cpp"
-)
-source_group("Source Files" FILES ${Source_Files})
+include(FetchContent)
 
-set(ALL_FILES
-    ${Source_Files}
+FetchContent_Declare(
+  CLI11
+  GIT_REPOSITORY https://github.com/CLIUtils/CLI11.git
+  GIT_TAG        v2.5.0  # Use a stable release tag
 )
 
-################################################################################
-# Target
-################################################################################
-add_executable(${PROJECT_NAME} ${ALL_FILES})
-target_link_libraries(${PROJECT_NAME} PRIVATE CLI11::CLI11)
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES)
+FetchContent_MakeAvailable(CLI11)
 
-use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
-set(ROOT_NAMESPACE FiveLetters)
+# Add source to this project's executable.
+add_executable (FiveLetters "FiveLetters.cpp" "FiveLetters.h")
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    VS_GLOBAL_KEYWORD "Win32Proj"
-)
-if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-    set_target_properties(${PROJECT_NAME} PROPERTIES
-        INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
-    )
-elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
-    set_target_properties(${PROJECT_NAME} PROPERTIES
-        INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
-    )
-endif()
-################################################################################
-# Compile definitions
-################################################################################
-if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-    target_compile_definitions(${PROJECT_NAME} PRIVATE
-        "$<$<CONFIG:Debug>:"
-            "_DEBUG"
-        ">"
-        "$<$<CONFIG:Release>:"
-            "NDEBUG"
-        ">"
-        "_CONSOLE;"
-        "UNICODE;"
-        "_UNICODE"
-    )
-elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
-    target_compile_definitions(${PROJECT_NAME} PRIVATE
-        "$<$<CONFIG:Debug>:"
-            "_DEBUG"
-        ">"
-        "$<$<CONFIG:Release>:"
-            "NDEBUG"
-        ">"
-        "WIN32;"
-        "_CONSOLE;"
-        "UNICODE;"
-        "_UNICODE"
-    )
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET FiveLetters PROPERTY CXX_STANDARD 20)
 endif()
 
-################################################################################
-# Compile and link options
-################################################################################
-if(MSVC)
-    if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-        target_compile_options(${PROJECT_NAME} PRIVATE
-            $<$<CONFIG:Release>:
-                /Oi;
-                /Gy
-            >
-            /permissive-;
-            /sdl;
-            /W3;
-            ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
-            ${DEFAULT_CXX_EXCEPTION_HANDLING}
-        )
-    elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
-        target_compile_options(${PROJECT_NAME} PRIVATE
-            $<$<CONFIG:Release>:
-                /Oi;
-                /Gy
-            >
-            /permissive-;
-            /sdl;
-            /W3;
-            ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
-            ${DEFAULT_CXX_EXCEPTION_HANDLING}
-        )
-    endif()
-    if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-        target_link_options(${PROJECT_NAME} PRIVATE
-            $<$<CONFIG:Release>:
-                /OPT:REF;
-                /OPT:ICF
-            >
-            /DEBUG;
-            /SUBSYSTEM:CONSOLE
-        )
-    elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
-        target_link_options(${PROJECT_NAME} PRIVATE
-            $<$<CONFIG:Release>:
-                /OPT:REF;
-                /OPT:ICF
-            >
-            /DEBUG;
-            /SUBSYSTEM:CONSOLE
-        )
-    endif()
-endif()
-
+target_link_libraries(FiveLetters PRIVATE CLI11::CLI11)
