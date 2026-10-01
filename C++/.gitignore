@@ -34,6 +34,7 @@ _deps
 main
 
 # These can be recreated with
-# cmake -S <PROJ> -B Strings -G Xcode
+# cd <PROJ>
+# cmake -S . -B Strings -G Xcode
 **/*.dSYM/
 **/*.xcodeproj/project.pbxproj
