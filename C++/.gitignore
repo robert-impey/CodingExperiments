@@ -35,6 +35,6 @@ main
 
 # These can be recreated with
 # cd <PROJ>
-# cmake -S . -B Strings -G Xcode
+# cmake -S . -B . -G Xcode
 **/*.dSYM/
 **/*.xcodeproj/project.pbxproj
