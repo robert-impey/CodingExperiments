@@ -6,7 +6,7 @@
       "name": "Generate five-letter word files",
       "type": "default",
       "project": "CMakeLists.txt",
-      "projectTarget": "FiveLetters.exe (x64\\Debug\\FiveLetters.exe)",
+      "projectTarget": "FiveLetters",
       "currentDir": "${workspaceRoot}",
       "args": [
         "C:\\Users\\rober\\OneDrive\\data",
@@ -16,8 +16,12 @@
     {
       "type": "default",
       "project": "CMakeLists.txt",
-      "projectTarget": "FiveLetters.exe (x64\\Debug\\FiveLetters.exe)",
-      "name": "FiveLetters.exe (x64\\Debug\\FiveLetters.exe)"
+      "projectTarget": "FiveLetters",
+      "name": "FiveLetters.exe (x64\\Debug\\FiveLetters.exe)",
+      "args": [
+        "C:\\Users\\rober\\OneDrive\\data",
+        "C:\\Users\\rober\\OneDrive\\data\\FiveLetters\\C++"
+      ]
     }
   ]
 }
