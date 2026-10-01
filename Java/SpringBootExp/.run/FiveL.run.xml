@@ -2,6 +2,9 @@
   <configuration default="false" name="FiveL" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
     <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/26.0.2-tem" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="DATA" value="$USER_HOME$/Library/CloudStorage/OneDrive-Personal/data" />
+    </envs>
     <module name="SpringBootExp" />
     <option name="PROGRAM_PARAMETERS" value="fivel" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.robertimpey.springbootexp.SpringBootExpApplication" />
