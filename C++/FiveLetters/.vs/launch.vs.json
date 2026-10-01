@@ -3,15 +3,15 @@
   "defaults": {},
   "configurations": [
     {
-      "name": "Run all_diff_to_grid from anagrams.txt",
+      "name": "Generate five-letter word files",
       "type": "default",
       "project": "CMakeLists.txt",
-      "projectTarget": "FiveLetters.exe",
-      "currentDir": "${workspaceRoot}\\FiveLetters",
+      "projectTarget": "FiveLetters.exe (x64\\Debug\\FiveLetters.exe)",
+      "currentDir": "${workspaceRoot}",
       "args": [
-        "all_diff_to_grid"
-      ],
-      "stdin": "${env.DATA}\\FiveLetters\\C++\\anagrams.txt"
+        "C:\\Users\\rober\\OneDrive\\data",
+        "C:\\Users\\rober\\OneDrive\\data\\FiveLetters\\C++"
+      ]
     },
     {
       "type": "default",

@@ -9,24 +9,20 @@
 #include <set>
 #include <sstream>
 #include <functional>
+#include <filesystem>
+#include <stdexcept>
+#include <CLI/CLI.hpp>
 
 using namespace std;
 
-int main(int argc, char* argv[]) 
+static int run_task(const string& task, istream& input, ostream& output)
 {
-	if (argc <= 1) {
-		cerr << "Tell me what to do." << endl;
-		return 1;
-	}
-
-	string task(argv[1]);
-
 	if (task == "find_5_letter_words") {
 		string s;
-		while (cin >> s)
+		while (input >> s)
 		{
 			if (s.size() == 5)
-				cout << s << endl;
+				output << s << endl;
 		}
 
 		return 0;
@@ -34,7 +30,7 @@ int main(int argc, char* argv[])
 
 	if (task == "remove_words_with_non_latin") {
 		string s;
-		while (cin >> s)
+		while (input >> s)
 		{
 			auto all_latin = true;
 			for (auto c : s)
@@ -47,7 +43,7 @@ int main(int argc, char* argv[])
 			}
 
 			if (all_latin)
-				cout << s << endl;
+				output << s << endl;
 		}
 
 		return 0;
@@ -57,21 +53,21 @@ int main(int argc, char* argv[])
 		string s;
 		auto diff = int('A') - int('a');
 
-		while (cin >> s)
+		while (input >> s)
 		{
 			for (auto c : s)
 			{
 				if (c >= int('a') && c <= int('z'))
 				{
-					cout << (char)(c + diff);
+					output << (char)(c + diff);
 				}
 				else
 				{
-					cout << c;
+					output << c;
 				}
 			}
 
-			cout << endl;
+			output << endl;
 		}
 
 		return 0;
@@ -82,7 +78,7 @@ int main(int argc, char* argv[])
 
 		vector<string> v;
 
-		while (cin >> s)
+		while (input >> s)
 		{
 			v.push_back(s);
 		}
@@ -90,7 +86,7 @@ int main(int argc, char* argv[])
 		sort(v.begin(), v.end());
 
 		for (const auto& sr : v)
-			cout << sr << endl;
+			output << sr << endl;
 		
 		return 0;
 	}
@@ -99,7 +95,7 @@ int main(int argc, char* argv[])
 		string s;
 		set<string> ss;
 
-		while (cin >> s)
+		while (input >> s)
 		{
 			ss.insert(s);
 		}
@@ -111,7 +107,7 @@ int main(int argc, char* argv[])
 
 		sort(sorted.begin(), sorted.end());
 		for (auto& it : sorted) {
-			cout << it << endl;
+			output << it << endl;
 		}
 
 		return 0;
@@ -120,7 +116,7 @@ int main(int argc, char* argv[])
 	if (task == "all_different") {
 		string s;
 
-		while (cin >> s)
+		while (input >> s)
 		{
 			auto all_different = true;
 			for (auto i = 0; all_different && i < 4; i++)
@@ -133,7 +129,7 @@ int main(int argc, char* argv[])
 			}
 
 			if (all_different)
-				cout << s << endl;
+				output << s << endl;
 		}
 
 		return 0;
@@ -143,7 +139,7 @@ int main(int argc, char* argv[])
 		string s;
 		unordered_map<string, vector<string>> anagrams;
 
-		while (cin >> s) {
+		while (input >> s) {
 			auto sorted = s;
 			sort(sorted.begin(), sorted.end());
 
@@ -160,11 +156,11 @@ int main(int argc, char* argv[])
 		sort(keys.begin(), keys.end());
 
 		for (auto& it : keys) {
-			cout << it << ": ";
+			output << it << ": ";
 			for (auto& word : anagrams[it]) {
-				cout << word << " ";
+				output << word << " ";
 			}
-			cout << endl;
+			output << endl;
 		}
 
 		return 0;
@@ -194,7 +190,7 @@ int main(int argc, char* argv[])
 			return true;
 		};
 
-		while (getline(cin, line)) {
+		while (getline(input, line)) {
 			auto colon = line.find(':');
 			if (colon == string::npos)
 				continue;
@@ -225,15 +221,15 @@ int main(int argc, char* argv[])
 		function<void(size_t, unsigned int)> find_grids = [&](size_t start, unsigned int used_mask) {
 			if (selected.size() == 5) {
 				for (const auto& key : selected) {
-					cout << key << ":";
+					output << key << ":";
 					for (const auto& word : anagrams[key])
-						cout << " " << word;
-					cout << endl;
+						output << " " << word;
+					output << endl;
 				}
 
 				for (auto letter = 'A'; letter <= 'Z'; ++letter) {
 					if ((used_mask & (1u << (letter - 'A'))) == 0) {
-						cout << letter << endl << endl;
+						output << letter << endl << endl;
 						break;
 					}
 				}
@@ -259,4 +255,58 @@ int main(int argc, char* argv[])
 	cerr << "Unrecognized task - " << task << endl;
 
 	return 1;
+}
+
+int main(int argc, char* argv[])
+{
+	CLI::App app{ "Generate the five-letter word files." };
+	string input_directory;
+	string output_directory;
+	app.add_option("input-dir", input_directory, "Directory containing british-english.txt")->required();
+	app.add_option("output-dir", output_directory, "Directory for generated files")->required();
+
+	CLI11_PARSE(app, argc, argv);
+
+	try {
+		const filesystem::path input_dir(input_directory);
+		const filesystem::path output_dir(output_directory);
+		filesystem::create_directories(output_dir);
+
+		const vector<pair<string, string>> stages = {
+			{ "british-english.txt", "five-letter-words.txt" },
+			{ "five-letter-words.txt", "five-letter-words-all-latin.txt" },
+			{ "five-letter-words-all-latin.txt", "five-letter-words-all-latin-upper.txt" },
+			{ "five-letter-words-all-latin-upper.txt", "sorted.txt" },
+			{ "sorted.txt", "unique-five-letter-words-all-latin-upper.txt" },
+			{ "unique-five-letter-words-all-latin-upper.txt", "all-different.txt" },
+			{ "all-different.txt", "anagrams.txt" },
+			{ "anagrams.txt", "grids.txt" }
+		};
+		const vector<string> tasks = {
+			"find_5_letter_words", "remove_words_with_non_latin", "to_upper", "sort",
+			"remove_duplicates", "all_different", "anagrams_to_sorted", "all_diff_to_grid"
+		};
+
+		for (size_t i = 0; i < stages.size(); ++i) {
+			const filesystem::path source = i == 0 ? input_dir / stages[i].first : output_dir / stages[i].first;
+			const filesystem::path destination = output_dir / stages[i].second;
+			if (filesystem::exists(destination))
+				continue;
+
+			ifstream input(source);
+			if (!input)
+				throw runtime_error("Cannot open input file: " + source.string());
+			ofstream output(destination);
+			if (!output)
+				throw runtime_error("Cannot create output file: " + destination.string());
+			if (run_task(tasks[i], input, output) != 0 || !input.eof() || !output)
+				throw runtime_error("Failed while processing: " + source.string());
+		}
+	}
+	catch (const exception& error) {
+		cerr << error.what() << endl;
+		return 1;
+	}
+
+	return 0;
 }
