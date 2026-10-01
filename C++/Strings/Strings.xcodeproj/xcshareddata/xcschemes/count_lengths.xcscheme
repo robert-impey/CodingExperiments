@@ -57,7 +57,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = " /Users/robert/Library/CloudStorage/Dropbox/data/boys-names.txt"
+            argument = "/Users/robert/Library/CloudStorage/OneDrive-Personal/data/british-english.txt"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

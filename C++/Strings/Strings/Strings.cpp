@@ -64,5 +64,7 @@ int main(int argc, char* argv[])
         return 0;
     }
     
+    cout << "Tell me what to do!" << endl;
+    
     return 0;
 }
