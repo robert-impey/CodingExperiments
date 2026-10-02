@@ -1,7 +1,7 @@
 ﻿# CMakeList.txt : Top-level CMake project file, do global configuration
 # and include sub-projects here.
 #
-cmake_minimum_required (VERSION 3.10)
+cmake_minimum_required (VERSION 3.13)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -11,5 +11,11 @@ endif()
 
 project ("FiveLetters")
 
+include(CTest)
+
 # Include sub-projects.
 add_subdirectory ("FiveLetters")
+
+if (BUILD_TESTING)
+  add_subdirectory ("tests")
+endif()
