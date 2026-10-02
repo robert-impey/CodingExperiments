@@ -19,6 +19,10 @@ build
 CMakeFiles
 CMakeScripts
 CMakeCache.txt
+**/CTestTestfile.cmake
+**/DartConfiguration.tcl
+**/*_discovery.cmake
+**/*_include.cmake
 **/.vs/CMake Overview
 
 cmake-build-debug
