@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="FiveLetters" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/home/robert/data /home/robert/data/FiveLetters/C++" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FiveLetters" TARGET_NAME="FiveLetters" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FiveLetters" RUN_TARGET_NAME="FiveLetters">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
