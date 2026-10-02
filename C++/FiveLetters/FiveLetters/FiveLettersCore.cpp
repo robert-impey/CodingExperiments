@@ -6,6 +6,7 @@
 #include <set>
 #include <sstream>
 #include <unordered_map>
+#include <utility>
 #include <vector>
 
 namespace fiveletters
@@ -138,11 +139,9 @@ namespace fiveletters
 		}
 	}
 
-	void all_diff_to_grid(istream& input, ostream& output)
+	vector<AllDiffGrid> find_all_diff_grids(
+		const unordered_map<string, vector<string>>& anagrams)
 	{
-		unordered_map<string, vector<string>> anagrams;
-		string line;
-
 		auto get_letter_mask = [](const string& key, unsigned int& mask) {
 			if (key.size() != 5)
 				return false;
@@ -163,49 +162,31 @@ namespace fiveletters
 			return true;
 		};
 
-		while (getline(input, line)) {
-			auto colon = line.find(':');
-			if (colon == string::npos)
-				continue;
-
-			istringstream key_stream(line.substr(0, colon));
-			string key;
-			if (!(key_stream >> key))
-				continue;
-
-			std::sort(key.begin(), key.end());
-			unsigned int mask;
-			if (!get_letter_mask(key, mask))
-				continue;
-
-			istringstream words_stream(line.substr(colon + 1));
-			string word;
-			while (words_stream >> word)
-				anagrams[key].push_back(word);
-		}
-
 		vector<string> keys;
 		keys.reserve(anagrams.size());
-		for (const auto& entry : anagrams)
-			keys.push_back(entry.first);
+		for (const auto& entry : anagrams) {
+			unsigned int mask;
+			if (get_letter_mask(entry.first, mask) && !entry.second.empty())
+				keys.push_back(entry.first);
+		}
 		std::sort(keys.begin(), keys.end());
 
 		vector<string> selected;
+		vector<AllDiffGrid> grids;
 		function<void(size_t, unsigned int)> find_grids = [&](size_t start, unsigned int used_mask) {
 			if (selected.size() == 5) {
-				for (const auto& key : selected) {
-					output << key << ":";
-					for (const auto& word : anagrams[key])
-						output << " " << word;
-					output << endl;
+				AllDiffGrid grid;
+				for (size_t i = 0; i < selected.size(); ++i) {
+					grid.keys[i] = selected[i];
+					grid.words[i] = anagrams.at(selected[i]);
 				}
-
 				for (auto letter = 'A'; letter <= 'Z'; ++letter) {
 					if ((used_mask & (1u << (letter - 'A'))) == 0) {
-						output << letter << endl << endl;
+						grid.spare_letter = letter;
 						break;
 					}
 				}
+				grids.push_back(std::move(grid));
 				return;
 			}
 
@@ -222,6 +203,41 @@ namespace fiveletters
 		};
 
 		find_grids(0, 0);
+		return grids;
+	}
+
+	void all_diff_to_grid(istream& input, ostream& output)
+	{
+		unordered_map<string, vector<string>> anagrams;
+		string line;
+
+		while (getline(input, line)) {
+			auto colon = line.find(':');
+			if (colon == string::npos)
+				continue;
+
+			istringstream key_stream(line.substr(0, colon));
+			string key;
+			if (!(key_stream >> key))
+				continue;
+
+			std::sort(key.begin(), key.end());
+
+			istringstream words_stream(line.substr(colon + 1));
+			string word;
+			while (words_stream >> word)
+				anagrams[key].push_back(word);
+		}
+
+		for (const auto& grid : find_all_diff_grids(anagrams)) {
+			for (size_t i = 0; i < grid.keys.size(); ++i) {
+				output << grid.keys[i] << ":";
+				for (const auto& word : grid.words[i])
+					output << " " << word;
+				output << endl;
+			}
+			output << grid.spare_letter << endl << endl;
+		}
 	}
 
 	int run_task(const string& task, istream& input, ostream& output)
