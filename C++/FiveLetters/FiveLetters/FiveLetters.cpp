@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 			{ "sorted.txt", "unique-five-letter-words-all-latin-upper.txt" },
 			{ "unique-five-letter-words-all-latin-upper.txt", "all-different.txt" },
 			{ "all-different.txt", "anagrams.txt" },
-			{ "anagrams.txt", "grids.txt" }
+			{ "anagrams.txt", "grids-" + to_string(word_count) + ".txt" }
 		};
 		const vector<string> tasks = {
 			"find_5_letter_words", "remove_words_with_non_latin", "to_upper", "sort",
