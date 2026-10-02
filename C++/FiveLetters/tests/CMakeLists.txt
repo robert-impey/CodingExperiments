@@ -15,4 +15,12 @@ target_compile_features(FiveLettersTests PRIVATE cxx_std_20)
 target_link_libraries(FiveLettersTests PRIVATE FiveLettersCore GTest::gtest_main)
 
 include(GoogleTest)
-gtest_discover_tests(FiveLettersTests)
+
+# Discover tests when CTest runs, rather than in Xcode's post-build phase.
+# This avoids failing an otherwise successful build when startup exceeds the
+# default five-second discovery limit.
+gtest_discover_tests(
+  FiveLettersTests
+  DISCOVERY_MODE PRE_TEST
+  DISCOVERY_TIMEOUT 30
+)
