@@ -17,6 +17,30 @@
         "C:\\Users\\rober\\OneDrive\\data",
         "C:\\Users\\rober\\OneDrive\\data\\FiveLetters\\C++"
       ]
+    },
+    {
+      "name": "Generate five-letter word files 4",
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FiveLetters.exe (FiveLetters\\FiveLetters.exe)",
+      "args": [
+        "C:\\Users\\rober\\OneDrive\\data",
+        "C:\\Users\\rober\\OneDrive\\data\\FiveLetters\\C++",
+        "--word-count",
+        "4"
+      ]
+    },
+    {
+      "name": "Generate five-letter word files 3",
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "FiveLetters.exe (FiveLetters\\FiveLetters.exe)",
+      "args": [
+        "C:\\Users\\rober\\OneDrive\\data",
+        "C:\\Users\\rober\\OneDrive\\data\\FiveLetters\\C++",
+        "--word-count",
+        "3"
+      ]
     }
   ]
 }
