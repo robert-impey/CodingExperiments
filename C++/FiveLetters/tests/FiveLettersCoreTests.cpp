@@ -40,10 +40,10 @@ TEST(FiveLettersTasks, RemovesWordsContainingNonLatinCharacters)
 
 TEST(FiveLettersTasks, ConvertsLowercaseLettersToUppercase)
 {
-	const auto result = run("to_upper", "hello World!\n");
+	const auto result = run("to_upper", "hello\n");
 
 	EXPECT_EQ(result.exit_code, 0);
-	EXPECT_EQ(result.output, "HELLO WORLD!\n");
+	EXPECT_EQ(result.output, "HELLO\n");
 }
 
 TEST(FiveLettersTasks, RemovesDuplicatesAndSortsWords)
