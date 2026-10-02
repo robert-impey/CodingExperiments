@@ -8,7 +8,7 @@
 
 namespace fiveletters
 {
-	int run_task(const std::string& task, std::istream& input, std::ostream& output);
+	int run_task(const std::string& task, std::istream& input, std::ostream& output, int word_count = 5);
 
 	void find_5_letter_words(std::istream& input, std::ostream& output);
 	void remove_words_with_non_latin(std::istream& input, std::ostream& output);
@@ -22,10 +22,10 @@ namespace fiveletters
 	{
 		std::array<std::string, 5> keys;
 		std::array<std::vector<std::string>, 5> words;
-		char spare_letter;
+		std::vector<char> spare_letters;
 	};
 
 	std::vector<AllDiffGrid> find_all_diff_grids(
-		const std::unordered_map<std::string, std::vector<std::string>>& anagrams);
-	void all_diff_to_grid(std::istream& input, std::ostream& output);
+		const std::unordered_map<std::string, std::vector<std::string>>& anagrams, int word_count = 5);
+	void all_diff_to_grid(std::istream& input, std::ostream& output, int word_count = 5);
 }

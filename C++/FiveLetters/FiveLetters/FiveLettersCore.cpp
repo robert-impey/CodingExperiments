@@ -140,8 +140,11 @@ namespace fiveletters
 	}
 
 	vector<AllDiffGrid> find_all_diff_grids(
-		const unordered_map<string, vector<string>>& anagrams)
+		const unordered_map<string, vector<string>>& anagrams, int word_count)
 	{
+		if (word_count < 1 || word_count > 5)
+			return {};
+
 		auto get_letter_mask = [](const string& key, unsigned int& mask) {
 			if (key.size() != 5)
 				return false;
@@ -174,17 +177,15 @@ namespace fiveletters
 		vector<string> selected;
 		vector<AllDiffGrid> grids;
 		function<void(size_t, unsigned int)> find_grids = [&](size_t start, unsigned int used_mask) {
-			if (selected.size() == 5) {
+			if (selected.size() == static_cast<size_t>(word_count)) {
 				AllDiffGrid grid;
 				for (size_t i = 0; i < selected.size(); ++i) {
 					grid.keys[i] = selected[i];
 					grid.words[i] = anagrams.at(selected[i]);
 				}
 				for (auto letter = 'A'; letter <= 'Z'; ++letter) {
-					if ((used_mask & (1u << (letter - 'A'))) == 0) {
-						grid.spare_letter = letter;
-						break;
-					}
+					if ((used_mask & (1u << (letter - 'A'))) == 0)
+						grid.spare_letters.push_back(letter);
 				}
 				grids.push_back(std::move(grid));
 				return;
@@ -206,7 +207,7 @@ namespace fiveletters
 		return grids;
 	}
 
-	void all_diff_to_grid(istream& input, ostream& output)
+	void all_diff_to_grid(istream& input, ostream& output, int word_count)
 	{
 		unordered_map<string, vector<string>> anagrams;
 		string line;
@@ -229,18 +230,20 @@ namespace fiveletters
 				anagrams[key].push_back(word);
 		}
 
-		for (const auto& grid : find_all_diff_grids(anagrams)) {
-			for (size_t i = 0; i < grid.keys.size(); ++i) {
+		for (const auto& grid : find_all_diff_grids(anagrams, word_count)) {
+			for (size_t i = 0; i < static_cast<size_t>(word_count); ++i) {
 				output << grid.keys[i] << ":";
 				for (const auto& word : grid.words[i])
 					output << " " << word;
 				output << endl;
 			}
-			output << grid.spare_letter << endl << endl;
+			for (const auto letter : grid.spare_letters)
+				output << letter;
+			output << endl << endl;
 		}
 	}
 
-	int run_task(const string& task, istream& input, ostream& output)
+	int run_task(const string& task, istream& input, ostream& output, int word_count)
 	{
 		if (task == "find_5_letter_words") {
 			find_5_letter_words(input, output);
@@ -278,7 +281,7 @@ namespace fiveletters
 		}
 
 		if (task == "all_diff_to_grid") {
-			all_diff_to_grid(input, output);
+			all_diff_to_grid(input, output, word_count);
 			return 0;
 		}
 

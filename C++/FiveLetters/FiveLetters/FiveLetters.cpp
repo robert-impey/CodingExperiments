@@ -17,8 +17,11 @@ int main(int argc, char* argv[])
 	CLI::App app{ "Generate the five-letter word files." };
 	string input_directory;
 	string output_directory;
+	int word_count = 5;
 	app.add_option("input-dir", input_directory, "Directory containing british-english.txt")->required();
 	app.add_option("output-dir", output_directory, "Directory for generated files")->required();
+	app.add_option("--word-count", word_count, "Number of words in each generated grid")
+		->check(CLI::Range(1, 5));
 
 	CLI11_PARSE(app, argc, argv);
 
@@ -45,7 +48,7 @@ int main(int argc, char* argv[])
 		for (size_t i = 0; i < stages.size(); ++i) {
 			const filesystem::path source = i == 0 ? input_dir / stages[i].first : output_dir / stages[i].first;
 			const filesystem::path destination = output_dir / stages[i].second;
-			if (filesystem::exists(destination))
+			if (filesystem::exists(destination) && i != stages.size() - 1)
 				continue;
 
 			ifstream input(source);
@@ -54,7 +57,7 @@ int main(int argc, char* argv[])
 			ofstream output(destination);
 			if (!output)
 				throw runtime_error("Cannot create output file: " + destination.string());
-			if (fiveletters::run_task(tasks[i], input, output) != 0 || !input.eof() || !output)
+			if (fiveletters::run_task(tasks[i], input, output, word_count) != 0 || !input.eof() || !output)
 				throw runtime_error("Failed while processing: " + source.string());
 		}
 	}

@@ -100,6 +100,21 @@ TEST(FiveLettersTasks, GeneratesGridsFromDistinctAnagramKeys)
 	EXPECT_EQ(result.output, expected_output);
 }
 
+TEST(FiveLettersTasks, GeneratesGridsWithRequestedWordCount)
+{
+	const std::string input_data =
+		"abcde: abcde\n"
+		"fghij: fghij\n"
+		"klmno: klmno\n";
+	std::istringstream input(input_data);
+	std::ostringstream output;
+
+	const auto exit_code = fiveletters::run_task("all_diff_to_grid", input, output, 3);
+
+	EXPECT_EQ(exit_code, 0);
+	EXPECT_EQ(output.str(), "abcde: abcde\nfghij: fghij\nklmno: klmno\nPQRSTUVWXYZ\n\n");
+}
+
 TEST(FiveLettersCore, FindsGridsWithoutStreamIO)
 {
 	const std::unordered_map<std::string, std::vector<std::string>> anagrams = {
@@ -115,7 +130,7 @@ TEST(FiveLettersCore, FindsGridsWithoutStreamIO)
 	ASSERT_EQ(grids.size(), 1);
 	EXPECT_EQ(grids[0].keys, (std::array<std::string, 5>{ "ABCDE", "FGHIJ", "KLMNO", "PQRST", "UVWXY" }));
 	EXPECT_EQ(grids[0].words[0], (std::vector<std::string>{ "ABCDE", "EDCBA" }));
-	EXPECT_EQ(grids[0].spare_letter, 'Z');
+	EXPECT_EQ(grids[0].spare_letters, (std::vector<char>{ 'Z' }));
 }
 
 TEST(FiveLettersTasks, ReturnsErrorOnUnrecognizedTask)
