@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
 		for (size_t i = 0; i < stages.size(); ++i) {
 			const filesystem::path source = i == 0 ? input_dir / stages[i].first : output_dir / stages[i].first;
 			const filesystem::path destination = output_dir / stages[i].second;
-			if (filesystem::exists(destination) && i != stages.size() - 1)
+			if (filesystem::exists(destination))
 				continue;
 
 			ifstream input(source);
