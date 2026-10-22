@@ -26,8 +26,8 @@
       "args": [
         "C:\\Users\\rober\\OneDrive\\data",
         "C:\\Users\\rober\\OneDrive\\data\\FiveLetters\\C++",
-        "--word-count",
-        "4"
+        "--task", "all_diff_to_grid",
+        "--word-count", "4"
       ]
     },
     {

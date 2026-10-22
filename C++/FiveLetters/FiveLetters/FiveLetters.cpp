@@ -14,12 +14,20 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+	const vector<string> tasks = {
+		"find_5_letter_words", "remove_words_with_non_latin", "to_upper", "sort",
+		"remove_duplicates", "all_different", "anagrams_to_sorted", "all_diff_to_grid"
+	};
+
 	CLI::App app{ "Generate the five-letter word files." };
 	string input_directory;
 	string output_directory;
+	string task;
 	int word_count = 5;
 	app.add_option("input-dir", input_directory, "Directory containing british-english.txt")->required();
 	app.add_option("output-dir", output_directory, "Directory for generated files")->required();
+	app.add_option("--task", task, "Run tasks through this named task")
+		->check(CLI::IsMember(tasks));
 	app.add_option("--word-count", word_count, "Number of words in each generated grid")
 		->check(CLI::Range(1, 5));
 
@@ -40,25 +48,23 @@ int main(int argc, char* argv[])
 			{ "all-different.txt", "anagrams.txt" },
 			{ "anagrams.txt", "grids-" + to_string(word_count) + ".txt" }
 		};
-		const vector<string> tasks = {
-			"find_5_letter_words", "remove_words_with_non_latin", "to_upper", "sort",
-			"remove_duplicates", "all_different", "anagrams_to_sorted", "all_diff_to_grid"
-		};
 
 		for (size_t i = 0; i < stages.size(); ++i) {
 			const filesystem::path source = i == 0 ? input_dir / stages[i].first : output_dir / stages[i].first;
 			const filesystem::path destination = output_dir / stages[i].second;
-			if (filesystem::exists(destination))
-				continue;
+			if (!filesystem::exists(destination)) {
+				ifstream input(source);
+				if (!input)
+					throw runtime_error("Cannot open input file: " + source.string());
+				ofstream output(destination);
+				if (!output)
+					throw runtime_error("Cannot create output file: " + destination.string());
+				if (fiveletters::run_task(tasks[i], input, output, word_count) != 0 || !input.eof() || !output)
+					throw runtime_error("Failed while processing: " + source.string());
+			}
 
-			ifstream input(source);
-			if (!input)
-				throw runtime_error("Cannot open input file: " + source.string());
-			ofstream output(destination);
-			if (!output)
-				throw runtime_error("Cannot create output file: " + destination.string());
-			if (fiveletters::run_task(tasks[i], input, output, word_count) != 0 || !input.eof() || !output)
-				throw runtime_error("Failed while processing: " + source.string());
+			if (!task.empty() && tasks[i] == task)
+				break;
 		}
 	}
 	catch (const exception& error) {
