@@ -14,6 +14,10 @@ add_executable(FiveLettersTests FiveLettersCoreTests.cpp)
 target_compile_features(FiveLettersTests PRIVATE cxx_std_20)
 target_link_libraries(FiveLettersTests PRIVATE FiveLettersCore GTest::gtest_main)
 
+add_executable(FiveLettersMainTests FiveLettersMainTests.cpp)
+target_compile_features(FiveLettersMainTests PRIVATE cxx_std_20)
+target_link_libraries(FiveLettersMainTests PRIVATE CLI11::CLI11 FiveLettersCore GTest::gtest_main)
+
 include(GoogleTest)
 
 # Discover tests when CTest runs, rather than in Xcode's post-build phase.
@@ -21,6 +25,12 @@ include(GoogleTest)
 # default five-second discovery limit.
 gtest_discover_tests(
   FiveLettersTests
+  DISCOVERY_MODE PRE_TEST
+  DISCOVERY_TIMEOUT 30
+)
+
+gtest_discover_tests(
+  FiveLettersMainTests
   DISCOVERY_MODE PRE_TEST
   DISCOVERY_TIMEOUT 30
 )
