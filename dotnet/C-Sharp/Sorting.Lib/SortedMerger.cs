@@ -6,44 +6,35 @@ namespace Sorting.Lib
     {
         public static LinkedList<int> Merge(LinkedList<int> left, LinkedList<int> right)
         {
-            LinkedList<int> MergeHelper(LinkedList<int> leftInner, LinkedList<int> rightInner, LinkedList<int> accumulator)
+            var accumulator = new LinkedList<int>();
+
+            while (left.Count > 0 && right.Count > 0)
             {
-                if (leftInner.Count > 0 && rightInner.Count > 0)
+                if (left.First.Value < right.First.Value)
                 {
-                    if (leftInner.First.Value < rightInner.First.Value)
-                    {
-                        accumulator.AddLast(leftInner.First.Value);
-                        leftInner.RemoveFirst();
-                    }
-                    else
-                    {
-                        accumulator.AddLast(rightInner.First.Value);
-                        rightInner.RemoveFirst();
-                    }
-
-                    return MergeHelper(leftInner, rightInner, accumulator);
+                    accumulator.AddLast(left.First.Value);
+                    left.RemoveFirst();
                 }
-
-                if (leftInner.Count > 0)
+                else
                 {
-                    accumulator.AddLast(leftInner.First.Value);
-                    leftInner.RemoveFirst();
-
-                    return MergeHelper(leftInner, rightInner, accumulator);
+                    accumulator.AddLast(right.First.Value);
+                    right.RemoveFirst();
                 }
-
-                if (rightInner.Count > 0)
-                {
-                    accumulator.AddLast(rightInner.First.Value);
-                    rightInner.RemoveFirst();
-
-                    return MergeHelper(leftInner, rightInner, accumulator);
-                }
-
-                return accumulator;
             }
 
-            return MergeHelper(left, right, new LinkedList<int>());
+            while (left.Count > 0)
+            {
+                accumulator.AddLast(left.First.Value);
+                left.RemoveFirst();
+            }
+
+            while (right.Count > 0)
+            {
+                accumulator.AddLast(right.First.Value);
+                right.RemoveFirst();
+            }
+
+            return accumulator;
         }
     }
 }
