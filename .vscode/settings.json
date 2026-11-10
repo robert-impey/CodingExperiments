@@ -1,1 +1,4 @@
-{}
+{
+    "dotnet.defaultSolution": "C-Sharp/FindReversedWords/FindReversedWords.sln",
+    "dotnet.preferCSharpExtension": true
+}
