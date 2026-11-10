@@ -1,42 +1,41 @@
 ﻿using System.Text;
 
-namespace ReverseString
+namespace ReverseString;
+
+internal class Program
 {
-    internal class Program
+    private static void Main(string[] args)
     {
-        private static void Main(string[] args)
+        if (args.Length == 0)
         {
-            if (args.Length == 0)
-            {
-                Console.WriteLine("Give me a string to work with!");
-                return;
-            }
-
-            foreach (var stringToReverse in args)
-            {
-                var reversedString = ReverseString(stringToReverse);
-
-                Console.WriteLine(reversedString);
-            }
+            Console.WriteLine("Give me a string to work with!");
+            return;
         }
 
-        private static string ReverseString(string stringToReverse)
+        foreach (var stringToReverse in args)
         {
-            var tempStack = new Stack<char>();
+            var reversedString = ReverseString(stringToReverse);
 
-            foreach (var c in stringToReverse)
-            {
-                tempStack.Push(c);
-            }
-
-            var reversedString = new StringBuilder();
-
-            foreach (var c in tempStack)
-            {
-                reversedString.Append(c);
-            }
-
-            return reversedString.ToString();
+            Console.WriteLine(reversedString);
         }
+    }
+
+    private static string ReverseString(string stringToReverse)
+    {
+        var tempStack = new Stack<char>();
+
+        foreach (var c in stringToReverse)
+        {
+            tempStack.Push(c);
+        }
+
+        var reversedString = new StringBuilder();
+
+        foreach (var c in tempStack)
+        {
+            reversedString.Append(c);
+        }
+
+        return reversedString.ToString();
     }
 }
