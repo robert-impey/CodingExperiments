@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FindReversedWords": {
+      "commandName": "Project",
+      "commandLineArgs": "short-dictionary.txt"
+    }
+  }
+}

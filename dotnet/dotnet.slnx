@@ -39,6 +39,11 @@
     <Project Path="C-Sharp/BalanceParentheses/BalanceParentheses.Test/BalanceParentheses.Test.csproj" />
     <Project Path="C-Sharp/BalanceParentheses/BalanceParentheses/BalanceParentheses.csproj" />
   </Folder>
+  <Folder Name="/C-Sharp/FindReversedWords/">
+    <Project Path="C-Sharp/FindReversedWords/FindReversedWords.Lib/FindReversedWords.Lib.csproj" />
+    <Project Path="C-Sharp/FindReversedWords/FindReversedWords.Tests/FindReversedWords.Tests.csproj" />
+    <Project Path="C-Sharp/FindReversedWords/FindReversedWords/FindReversedWords.csproj" />
+  </Folder>
   <Folder Name="/C-Sharp/Graphs/">
     <Project Path="C-Sharp/Graphs/AdjacencyListToDot/AdjacencyListToDot.csproj" />
     <Project Path="C-Sharp/Graphs/AdjacencyMatrixToDot/AdjacencyMatrixToDot.csproj" />
