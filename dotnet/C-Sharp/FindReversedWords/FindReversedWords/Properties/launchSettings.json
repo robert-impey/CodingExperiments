@@ -3,6 +3,10 @@
     "FindReversedWords": {
       "commandName": "Project",
       "commandLineArgs": "short-dictionary.txt"
+    },
+    "British English": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\rober\\OneDrive\\data\\british-english-without-apostrophe-s.txt"
     }
   }
 }
