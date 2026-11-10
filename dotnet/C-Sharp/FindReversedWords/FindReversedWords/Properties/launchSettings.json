@@ -4,9 +4,13 @@
       "commandName": "Project",
       "commandLineArgs": "short-dictionary.txt"
     },
-    "British English": {
+    "British English | Windows": {
       "commandName": "Project",
       "commandLineArgs": "C:\\Users\\rober\\OneDrive\\data\\british-english-without-apostrophe-s.txt"
+    },
+    "British English | Darwin": {
+      "commandName": "Project",
+      "commandLineArgs": "/Users/robert/Library/CloudStorage/OneDrive-Personal/data/british-english-without-apostrophe-s.txt"
     }
   }
 }
