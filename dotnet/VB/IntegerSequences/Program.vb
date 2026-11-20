@@ -1,17 +1,15 @@
-﻿Imports System.Numerics
-
-Module Main
-    Sub Main()
+Module Program
+    Sub Main(args As String())
         Try
             Dim Sequence As String
 
-            If 0 = My.Application.CommandLineArgs.Count Then
+            If 0 = args.Count Then
                 Usage()
-            ElseIf 2 = My.Application.CommandLineArgs.Count Then
-                Sequence = My.Application.CommandLineArgs.Item(0)
+            ElseIf 2 = args.Count Then
+                Sequence = args(0)
 
                 Dim Max As Integer
-                If Integer.TryParse(My.Application.CommandLineArgs.Item(1), Max) Then
+                If Integer.TryParse(args(1), Max) Then
                     If Max < 1 Then
                         Throw New Exception("The maximum must be 1 or greater!")
                     End If
@@ -29,12 +27,13 @@ Module Main
         End Try
     End Sub
 
+
     ' Printing Functions
     Sub Usage()
         Console.WriteLine("Sequences.exe [SEQUENCE] [MAX]")
     End Sub
 
-    Sub PrintSequence(ByVal Sequence As String, ByVal Max As UInteger)
+    Sub PrintSequence(Sequence As String, Max As UInteger)
         Sequence = Sequence.ToLower
 
         Dim Stategy As IIntegerSequenceStrategy

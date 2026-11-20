@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IntegerSequences": {
+      "commandName": "Project",
+      "commandLineArgs": "square 10"
+    }
+  }
+}
