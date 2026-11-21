@@ -1,7 +1,9 @@
-﻿Public Class CatalanStrategy
+﻿Imports System.Numerics
+
+Public Class CatalanStrategy
     Implements IIntegerSequenceStrategy
 
-    Public Function CalculateNthTerm(ByVal N As UInteger) As System.Numerics.BigInteger Implements IIntegerSequenceStrategy.CalculateNthTerm
-        Return IntegerSequenceFunctions.Catalan(N)
+    Public Function CalculateNthTerm(N As UInteger) As BigInteger Implements IIntegerSequenceStrategy.CalculateNthTerm
+        Return Catalan(N)
     End Function
 End Class
