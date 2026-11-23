@@ -2,7 +2,7 @@
   "profiles": {
     "ArrayAndListAccess": {
       "commandName": "Project",
-      "commandLineArgs": "10000"
+      "commandLineArgs": "-S 1000000 -A 100"
     }
   }
 }

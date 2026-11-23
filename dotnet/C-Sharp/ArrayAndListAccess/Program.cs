@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using CommandLine;
+using System.Diagnostics;
 using static System.Console;
 
 namespace ArrayAndListAccess;
@@ -7,23 +8,29 @@ class Program
 {
     static void Main(string[] args)
     {
-        foreach (var arg in args)
-        {
-            int sizeOfSequence;
-            if (int.TryParse(arg, out sizeOfSequence))
+        Parser.Default.ParseArguments<Options>(args)
+            .WithParsed(options =>
             {
-                WriteLine($"Experimenting with a sequence of {sizeOfSequence} numbers.");
+                WriteLine($"Experimenting with a sequence of {options.SizeOfSequence} numbers.");
 
-                TestEmpty(sizeOfSequence);
-                TestArray(sizeOfSequence);
-                TestList(sizeOfSequence);
-                TestListElementAt(sizeOfSequence);
-                TestLinkedList(sizeOfSequence);
-            }
-        }
+                TestEmpty(options.SizeOfSequence, options.NumberOfAccesses);
+                TestArray(options.SizeOfSequence, options.NumberOfAccesses);
+                TestList(options.SizeOfSequence, options.NumberOfAccesses);
+                TestListElementAt(options.SizeOfSequence, options.NumberOfAccesses);
+                TestLinkedList(options.SizeOfSequence, options.NumberOfAccesses);
+            });
     }
 
-    private static void TestEmpty(int sizeOfSequence)
+    private sealed class Options
+    {
+        [Option('S', "sizeOfSequence", Required = true)]
+        public int SizeOfSequence { get; set; }
+
+        [Option('A', "numberOfAccesses", Required = true)]
+        public int NumberOfAccesses { get; set; }
+    }
+
+    private static void TestEmpty(int sizeOfSequence, int numberOfAccesses)
     {
         WriteLine("Testing doing nothing");
 
@@ -33,7 +40,7 @@ class Program
 
         var rand = new Random();
 
-        for (var i = 0; i < sizeOfSequence; i++)
+        for (var i = 0; i < numberOfAccesses; i++)
         {
             var index = rand.Next(sizeOfSequence);
         }
@@ -43,7 +50,7 @@ class Program
         WriteLine($"Nothing accessed in {stopwatch.ElapsedMilliseconds} ms.");
     }
 
-    private static void TestArray(int sizeOfSequence)
+    private static void TestArray(int sizeOfSequence, int numberOfAccesses)
     {
         WriteLine("Testing the array");
 
@@ -60,7 +67,7 @@ class Program
 
         var rand = new Random();
 
-        for (var i = 0; i < sizeOfSequence; i++)
+        for (var i = 0; i < numberOfAccesses; i++)
         {
             var index = rand.Next(sizeOfSequence);
 
@@ -72,7 +79,7 @@ class Program
         WriteLine($"Accessed in {stopwatch.ElapsedMilliseconds} ms.");
     }
 
-    private static void TestList(int sizeOfSequence)
+    private static void TestList(int sizeOfSequence, int numberOfAccesses)
     {
         WriteLine("Testing the list");
 
@@ -89,7 +96,7 @@ class Program
 
         var rand = new Random();
 
-        for (var i = 0; i < sizeOfSequence; i++)
+        for (var i = 0; i < numberOfAccesses; i++)
         {
             var index = rand.Next(sizeOfSequence);
 
@@ -101,7 +108,7 @@ class Program
         WriteLine($"Accessed in {stopwatch.ElapsedMilliseconds} ms.");
     }
 
-    private static void TestListElementAt(int sizeOfSequence)
+    private static void TestListElementAt(int sizeOfSequence, int numberOfAccesses)
     {
         WriteLine("Testing the list with element at");
 
@@ -118,7 +125,7 @@ class Program
 
         var rand = new Random();
 
-        for (var i = 0; i < sizeOfSequence; i++)
+        for (var i = 0; i < numberOfAccesses; i++)
         {
             var index = rand.Next(sizeOfSequence);
 
@@ -130,7 +137,7 @@ class Program
         WriteLine($"Accessed in {stopwatch.ElapsedMilliseconds} ms.");
     }
 
-    private static void TestLinkedList(int sizeOfSequence)
+    private static void TestLinkedList(int sizeOfSequence, int numberOfAccesses)
     {
         WriteLine("Testing the linked list");
 
@@ -147,7 +154,7 @@ class Program
 
         var rand = new Random();
 
-        for (var i = 0; i < sizeOfSequence; i++)
+        for (var i = 0; i < numberOfAccesses; i++)
         {
             var index = rand.Next(sizeOfSequence);
 
