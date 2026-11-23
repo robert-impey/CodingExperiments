@@ -17,7 +17,7 @@ Module Program
                     Throw New Exception("The maximum must be a number!")
                 End If
 
-                PrintSequence(Sequence, CUInt(Max))
+                PrintSequence(Sequence, Max)
             Else
                 Throw New Exception("Please set the sequence and the maximum!")
             End If
@@ -50,7 +50,7 @@ Module Program
                 Throw New Exception("Unimplemented sequence!")
         End Select
 
-        Dim Context As Context = New Context(Stategy)
+        Dim Context As New Context(Stategy)
 
         For Index As UInteger = 1 To Max
             Console.Write(Context.ExecuteStrategy(Index))
