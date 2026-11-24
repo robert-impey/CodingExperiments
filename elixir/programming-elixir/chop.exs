@@ -1,11 +1,11 @@
 # Modules and Functions 6, p. 63
 
 defmodule Chop do
-    def guess(target, low..high) when target < low or target > high do
+    def guess(target, low..high//_) when target < low or target > high do
         IO.puts "#{target} is out of range!"
     end
     
-    def guess(target, low..high) do
+    def guess(target, low..high//_) do
         range = high - low
         min_guesses = round(:math.ceil(:math.log(range)))
         allowed_guesses = min_guesses + 2
@@ -13,7 +13,7 @@ defmodule Chop do
         guess(target, low..high, allowed_guesses)
     end
     
-    def guess(target, low..high, allowed_guesses) do
+    def guess(target, low..high//_, allowed_guesses) do
         IO.puts "> It's in the range #{low} to #{high}"
         range = high - low
         new_guess = div(range, 2) + low
@@ -32,12 +32,12 @@ defmodule Chop do
         current_guess
     end
     
-    def guess(target, low.._, current_guess, allowed_guesses) when current_guess > target do
+    def guess(target, low.._//_, current_guess, allowed_guesses) when current_guess > target do
         IO.puts "< Too high!"
         guess(target, low..current_guess - 1, allowed_guesses - 1)
     end
     
-    def guess(target, _..high, current_guess, allowed_guesses) when current_guess < target  do
+    def guess(target, _..high//_, current_guess, allowed_guesses) when current_guess < target  do
         IO.puts "< Too low!"
         guess(target,  current_guess + 1..high, allowed_guesses - 1)
     end
