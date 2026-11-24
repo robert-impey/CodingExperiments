@@ -1,6 +1,5 @@
-﻿Module Module1
-
-    Sub Main()
+Module Program
+    Sub Main(args As String())
         Dim Rows = 10
         Dim CurrentNumber = 0
 
@@ -13,7 +12,5 @@
             Next
             Console.WriteLine()
         Next
-
     End Sub
-
 End Module
