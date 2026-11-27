@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
 
+from collections.abc import Sequence
+from typing import Protocol, Self
 
-def sorted_merge(l1, l2):
+
+class SupportsLe(Protocol):
+    """Protocol for types supporting <= comparison."""
+
+    def __le__(self, other: Self, /) -> bool: ...
+
+
+def sorted_merge[T: SupportsLe](l1: Sequence[T], l2: Sequence[T]) -> list[T]:
     if len(l1) == 0:
-        return l2
+        return list(l2)
 
     if len(l2) == 0:
-        return l1
+        return list(l1)
 
-    merged = []
+    merged: list[T] = []
 
     index1 = index2 = 0
     while True:
@@ -31,8 +40,8 @@ def sorted_merge(l1, l2):
     return merged
 
 
-def test_sorted_merge():
-    tests = [
+def test_sorted_merge() -> None:
+    tests: list[tuple[list[int], list[int], list[int]]] = [
         ([], [], []),
         ([1], [1], [1, 1]),
         ([1], [2], [1, 2]),
